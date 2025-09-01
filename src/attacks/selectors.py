@@ -37,4 +37,13 @@ class ClassBalancedSelector(SampleSelector):
         k = min(len(cand), num_poison)
         return list(self.rng.choice(cand, size=k, replace=False))
 
+# TSSO: Efficient and persistent backdoor attack by boundary trigger set constructing against federated learning.
+# boundary-based sample selection: get latent representations of all samples, use LSH to find samples near decision boundary
+class BoundaryBasedSelector(SampleSelector):
+    def __init__(self):
+        pass
+
+    def select(self, indices, labels=None, num_poison: int = 1):
+        pass  # Placeholder for actual implementation
+
 

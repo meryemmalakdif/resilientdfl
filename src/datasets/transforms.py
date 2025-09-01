@@ -31,6 +31,41 @@ def get_transforms(dataset_name: str, image_size: Tuple[int,int]=None, train: bo
             transforms.ToTensor(),
             transforms.Normalize((0.1307,), (0.3081,))
         ])
+    
+    if dataset_name.lower() == 'gtsrb':
+        if train:
+            return transforms.Compose([
+                transforms.Resize((48, 48)),
+                transforms.RandomRotation(15),
+                transforms.RandomAffine(degrees=0, translate=(0.1, 0.1), scale=(0.9, 1.1)),
+                transforms.ColorJitter(brightness=0.3, contrast=0.3, saturation=0.3),
+                transforms.GaussianBlur(kernel_size=3, sigma=(0.1, 1.0)),
+                transforms.ToTensor(),
+                transforms.Normalize(mean=[0.5, 0.5, 0.5],
+                std=[0.5, 0.5, 0.5])
+            ])
+        else:
+            return  transforms.Compose([
+                    transforms.Resize((48, 48)),
+                    transforms.ToTensor(),
+                    transforms.Normalize(mean=[0.5, 0.5, 0.5],
+                                         std=[0.5, 0.5, 0.5])
+                ])
+        
+    if dataset_name.lower() == 'femnist':
+        if train:
+            return transforms.Compose([
+                transforms.RandomRotation(10),
+                transforms.RandomAffine(degrees=0, translate=(0.1, 0.1), scale=(0.9, 1.1)),
+                transforms.ToTensor(),
+                transforms.Normalize((0.1307,), (0.3081,))
+            ])
+        else:
+            return transforms.Compose([
+                transforms.ToTensor(),
+                transforms.Normalize((0.1307,), (0.3081,))
+            ])
+
 
 
     # fallback: basic transform (resize if requested)
