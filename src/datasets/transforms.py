@@ -55,16 +55,18 @@ def get_transforms(dataset_name: str, image_size: Tuple[int,int]=None, train: bo
     if dataset_name.lower() == 'femnist':
         if train:
             return transforms.Compose([
-                transforms.RandomRotation(10),
-                transforms.RandomAffine(degrees=0, translate=(0.1, 0.1), scale=(0.9, 1.1)),
-                transforms.ToTensor(),
-                transforms.Normalize((0.1307,), (0.3081,))
-            ])
+                    transforms.Resize((28, 28)),             # FEMNIST usually 28x28
+                    transforms.RandomRotation(10),
+                    transforms.RandomAffine(degrees=0, translate=(0.1,0.1), scale=(0.9,1.1)),
+                    transforms.ToTensor(),                   # -> shape (1, H, W)
+                    transforms.Normalize((0.1307,), (0.3081,))  # single-channel mean/std
+                ])
         else:
             return transforms.Compose([
-                transforms.ToTensor(),
-                transforms.Normalize((0.1307,), (0.3081,))
-            ])
+                    transforms.Resize((28, 28)),
+                    transforms.ToTensor(),
+                    transforms.Normalize((0.1307,), (0.3081,))
+                ])
 
 
 
