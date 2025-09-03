@@ -29,8 +29,7 @@ def set_seed(seed: int):
         torch.cuda.manual_seed_all(seed)
 
 
-def build_clients(num_clients: int,
-                  client_loaders: Dict[Any, torch.utils.data.DataLoader],
+def build_clients(client_loaders: Dict[Any, torch.utils.data.DataLoader],
                   test_loader: torch.utils.data.DataLoader,
                   model_cls,
                   lr: float,
@@ -93,7 +92,7 @@ def main():
 
     # create clients (each with its own model instance)
     clients = build_clients(
-        num_clients=args.num_clients,
+        
         client_loaders=client_loaders,
         test_loader=test_loader,
         model_cls=LeNet5,
@@ -127,3 +126,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# PYTHONPATH=. python experiments/basefl.py --num-clients 5 --num-rounds 10 --batch-size 64 --lr 0.05 --seed 42 --strategy iid
