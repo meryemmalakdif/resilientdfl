@@ -89,7 +89,7 @@ def main():
     # --- Configuration ---
     CONFIG = {
         "NUM_CLIENTS": 10,
-        "NUM_MALICIOUS": 2,
+        "NUM_MALICIOUS": 1,
         "NUM_ROUNDS": 20,
         "ATTACK_ROUND": 18,      # Attack will only happen on this round (late in training)
         "LOCAL_EPOCHS": 1,
