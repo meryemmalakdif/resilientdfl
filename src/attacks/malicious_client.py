@@ -1,4 +1,3 @@
-# src/attacks/malicious_client.py
 from typing import Any, Dict, Optional, Sequence, Set, List
 import logging
 import numpy as np

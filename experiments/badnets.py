@@ -29,6 +29,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(mess
 from src.fl.baseserver import FedAvgAggregator
 from src.fl.baseclient import BenignClient
 from src.attacks.malicious_client import MaliciousClient
+from src.defenses.krum import MKrumServer
 
 # components
 try:
@@ -212,7 +213,7 @@ def run_badnets(
     # server
     global_model = ModelClass()
     server = FedAvgAggregator(model=global_model, testloader=test_loader, device=device)
-
+    # server = MKrumServer(model=global_model, testloader=test_loader, device=device, num_byzantine=num_mal, num_selected_updates=15)
     # attack rounds set
     attack_rounds = list(range(attack_start, min(rounds, attack_start + attack_length)))
     log.info("Attack active in rounds: %s", attack_rounds)

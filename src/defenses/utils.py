@@ -2,6 +2,7 @@ import math
 import torch
 import copy as cp
 import numpy as np
+from typing import Tuple
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
