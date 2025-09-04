@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+"""
+run_scaling_experiment.py
+
+Runs a dedicated FedAvg simulation for the Model Scaling backdoor attack on FEMNIST.
+"""
 import random
 import numpy as np
 import torch
@@ -10,8 +16,8 @@ from src.datasets.femnist import FEMNISTAdapter
 from src.models.lenet import LeNet5
 from src.datasets.backdoor import make_triggered_loader
 
-# Import BadNets specific components
-from src.attacks.badnets_client import BadNetsClient
+# Import Scaling Attack specific components
+from src.attacks.scaling_client import ScalingAttackClient
 from src.attacks.triggers.patch import PatchTrigger
 from src.attacks.selectors.randomselector import RandomSelector
 
@@ -27,7 +33,6 @@ def evaluate_asr(model: torch.nn.Module, test_dataset: Dataset, trigger, target_
     """
     Evaluates the Attack Success Rate (ASR) of the model on a triggered test set.
     """
-    # Use the helper to create a fully poisoned test loader
     backdoor_loader = make_triggered_loader(
         base_dataset=test_dataset,
         trigger=trigger,
@@ -52,7 +57,7 @@ def evaluate_asr(model: torch.nn.Module, test_dataset: Dataset, trigger, target_
     return asr
 
 def build_clients(client_loaders, test_loader, model_cls, config, selector, trigger):
-    """Builds a mix of benign and BadNets clients."""
+    """Builds a mix of benign and ScalingAttack clients."""
     clients = []
     for cid, loader in client_loaders.items():
         client_kwargs = {
@@ -66,11 +71,14 @@ def build_clients(client_loaders, test_loader, model_cls, config, selector, trig
             'device': config['DEVICE']
         }
         if cid < config['NUM_MALICIOUS']:
-            client = BadNetsClient(
+            client = ScalingAttackClient(
                 **client_kwargs,
                 selector=selector,
                 trigger=trigger,
-                target_class=config['TARGET_CLASS']
+                target_class=config['TARGET_CLASS'],
+                attack_round=config['ATTACK_ROUND'],
+                num_total_clients=config['NUM_CLIENTS'],
+                num_malicious_clients=config['NUM_MALICIOUS']
             )
         else:
             client = BenignClient(**client_kwargs)
@@ -81,17 +89,19 @@ def main():
     # --- Configuration ---
     CONFIG = {
         "NUM_CLIENTS": 10,
-        "NUM_MALICIOUS": 5,
-        "NUM_ROUNDS": 10,
+        "NUM_MALICIOUS": 2,
+        "NUM_ROUNDS": 20,
+        "ATTACK_ROUND": 18,      # Attack will only happen on this round (late in training)
         "LOCAL_EPOCHS": 1,
         "BATCH_SIZE": 32,
-        "LEARNING_RATE": 0.05,
+        "LEARNING_RATE": 0.01,
         "TARGET_CLASS": 5,
-        "POISONING_RATE": 0.3,
+        "POISONING_RATE": 0.5,   # Poison 50% of a malicious client's data
         "SEED": 42,
         "DATA_ROOT": "data",
         "DEVICE": torch.device("cuda" if torch.cuda.is_available() else "cpu")
     }
+    # --- End Configuration ---
 
     set_seed(CONFIG['SEED'])
     print(f"Running on device: {CONFIG['DEVICE']}, seed: {CONFIG['SEED']}")
@@ -104,15 +114,15 @@ def main():
     test_loader = dataset_adapter.get_test_loader(batch_size=CONFIG['BATCH_SIZE'])
 
     # Setup attack components
-    badnets_selector = RandomSelector(poisoning_rate=CONFIG['POISONING_RATE'])
-    badnets_trigger = PatchTrigger(position=(25, 25), size=(3, 3), color=(2.0,))
+    attack_selector = RandomSelector(poisoning_rate=CONFIG['POISONING_RATE'])
+    attack_trigger = PatchTrigger(position=(25, 25), size=(3, 3), color=(2.0,))
 
     # Server setup
     global_model = LeNet5(num_classes=62).to(CONFIG['DEVICE'])
     server = FedAvgAggregator(model=global_model, testloader=test_loader, device=CONFIG['DEVICE'])
 
     # Client setup
-    clients = build_clients(client_loaders, test_loader, LeNet5, CONFIG, badnets_selector, badnets_trigger)
+    clients = build_clients(client_loaders, test_loader, LeNet5, CONFIG, attack_selector, attack_trigger)
 
     # Main federated training loop
     for round_idx in range(CONFIG['NUM_ROUNDS']):
@@ -130,12 +140,12 @@ def main():
         main_metrics = server.evaluate()
         print(f"Round {round_idx + 1}: Main Accuracy = {main_metrics['metrics']['main_accuracy']:.4f}")
         
-        asr = evaluate_asr(server.model, test_loader.dataset, badnets_trigger, CONFIG['TARGET_CLASS'], CONFIG['DEVICE'])
+        asr = evaluate_asr(server.model, test_loader.dataset, attack_trigger, CONFIG['TARGET_CLASS'], CONFIG['DEVICE'])
         print(f"Round {round_idx + 1}: Backdoor Accuracy = {asr:.4f}")
 
     print("\n--- Training Finished ---")
     final_main_metrics = server.evaluate()
-    final_asr = evaluate_asr(server.model, test_loader.dataset, badnets_trigger, CONFIG['TARGET_CLASS'], CONFIG['DEVICE'])
+    final_asr = evaluate_asr(server.model, test_loader.dataset, attack_trigger, CONFIG['TARGET_CLASS'], CONFIG['DEVICE'])
     print(f"Final Main Accuracy: {final_main_metrics['metrics']['main_accuracy']:.4f}")
     print(f"Final Backdoor Accuracy (ASR): {final_asr:.4f}")
 
