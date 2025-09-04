@@ -44,7 +44,7 @@ class MaliciousClient(BenignClient):
         """
         Overrides the benign training process to inject a backdoor.
         """
-        print(f"\n--- Malicious Client [{self.get_id()}] starting training for round {round_idx} ---")
+        # print(f"\n--- Malicious Client [{self.get_id()}] starting training for round {round_idx} ---")
 
         # 1. Update trigger if it's trainable (e.g., A3FL, IBA)
         if hasattr(self.trigger, 'train_trigger'):
@@ -55,7 +55,7 @@ class MaliciousClient(BenignClient):
 
         # 2. Select samples to poison for this round
         poisoned_indices = self.selector.select(self.trainloader.dataset)
-        print(f"Client [{self.get_id()}]: Selected {len(poisoned_indices)} samples to poison.")
+        # print(f"Client [{self.get_id()}]: Selected {len(poisoned_indices)} samples to poison.")
 
         # 3. Create a poisoned view of the dataset for training
         poisoned_dataset = PoisonedDataset(
@@ -67,7 +67,7 @@ class MaliciousClient(BenignClient):
         poisoned_dataloader = DataLoader(poisoned_dataset, batch_size=self.trainloader.batch_size, shuffle=True)
 
         # 4. Use the specified Poisoner to train the model
-        print(f"Client [{self.get_id()}]: Handing off to {self.poisoner.__class__.__name__}.")
+        # print(f"Client [{self.get_id()}]: Handing off to {self.poisoner.__class__.__name__}.")
         self._model = self.poisoner.poison(
             model=self.model,
             dataloader=poisoned_dataloader,
@@ -87,5 +87,5 @@ class MaliciousClient(BenignClient):
             'metrics': metrics,
             'round_idx': round_idx
         }
-        print(f"--- Malicious Client [{self.get_id()}] finished training. ---")
+        # print(f"--- Malicious Client [{self.get_id()}] finished training. ---")
         return result

@@ -23,7 +23,7 @@ class ScalingPoisoner(BasePoisoner):
                                   update (e.g., 10.0).
         """
         self.scale_factor = scale_factor
-        print(f"ScalingPoisoner initialized with scale_factor: {self.scale_factor}")
+        # print(f"ScalingPoisoner initialized with scale_factor: {self.scale_factor}")
 
     def poison(self, model: nn.Module, dataloader: DataLoader, 
                poisoned_indices: Set[int], epochs: int, 
@@ -46,7 +46,7 @@ class ScalingPoisoner(BasePoisoner):
                 loss.backward()
                 optimizer.step()
         
-        print("Naive training complete. Now scaling the update.")
+        # print("Naive training complete. Now scaling the update.")
         
         # --- Step 2: Calculate and apply the scaled update ---
         final_state_dict = model.state_dict()
@@ -58,6 +58,6 @@ class ScalingPoisoner(BasePoisoner):
             scaled_state_dict[key] += scaled_update
         
         model.load_state_dict(scaled_state_dict)
-        print("Model update scaled and applied.")
+        # print("Model update scaled and applied.")
         
         return model

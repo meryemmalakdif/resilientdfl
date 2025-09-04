@@ -16,10 +16,8 @@ import torch
 from src.fl.baseclient import BenignClient
 from src.fl.baseserver import FedAvgAggregator
 from src.datasets.femnist import FEMNISTAdapter
-from src.datasets.mnist import MNISTAdapter
 from src.models.lenet import LeNet5
-from src.models.alexnet import AlexNet_FMNIST
-from src.models.mnist import MNIST
+
 
 def set_seed(seed: int):
     random.seed(seed)
@@ -118,11 +116,13 @@ def main():
 
         # aggregate and evaluate on server
         aggregated_weights = server.aggregate()
-        metrics = server.evaluate()
-        print(f"Server evaluation (round {round_idx+1}): {metrics}")
+        # metrics = server.evaluate()
+        # print(f"Server evaluation (round {round_idx+1}): {metrics}")
 
     print("\nTraining finished.")
 
+    metrics = server.evaluate()
+    print(f"Server evaluation: {metrics}")
 
 if __name__ == "__main__":
     main()

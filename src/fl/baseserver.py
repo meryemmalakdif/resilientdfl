@@ -1,8 +1,11 @@
 from abc import ABC, abstractmethod
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional
 import copy as cp
 import torch
 import torch.nn as nn
+from torch.utils.data import DataLoader
+from ..datasets.backdoor import PoisonedDataset
+from ..attacks.triggers.base import BaseTrigger
 
 class BaseServer(ABC):
     @abstractmethod
@@ -85,3 +88,32 @@ class FedAvgAggregator(BaseServer):
     def save_model(self, path: str) -> None:
         # save state_dict for portability
         torch.save(self.model.state_dict(), path)
+
+    def evaluate_backdoor(self, trigger: BaseTrigger, target_class: int) -> Dict[str, Any]:
+        """
+        Evaluates the global model's backdoor accuracy (Attack Success Rate).
+        """
+        self.model.eval()
+        
+        # 1. Create a backdoor test set on the fly
+        poisoned_test_dataset = PoisonedDataset(
+            original_dataset=self.testloader.dataset,
+            poisoned_indices=set(range(len(self.testloader.dataset))), # Poison all samples
+            trigger=trigger,
+            target_class=target_class
+        )
+        backdoor_loader = DataLoader(poisoned_test_dataset, batch_size=self.testloader.batch_size)
+
+        # 2. Evaluate the model on this set
+        correct, total = 0, 0
+        with torch.no_grad():
+            for inputs, targets in backdoor_loader:
+                inputs, targets = inputs.to(self.device), targets.to(self.device)
+                outputs = self.model(inputs)
+                _, preds = torch.max(outputs.data, 1)
+                # Check how many were successfully misclassified to the target class
+                correct += (preds == targets).sum().item()
+                total += targets.size(0)
+
+        asr = (correct / total) if total > 0 else float('nan')
+        return {'metrics': {'backdoor_accuracy': asr}}
