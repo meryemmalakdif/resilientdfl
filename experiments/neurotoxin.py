@@ -9,7 +9,7 @@ from src.fl.baseclient import BenignClient
 from src.fl.baseserver import FedAvgAggregator
 from src.datasets.femnist import FEMNISTAdapter
 from src.models.lenet import LeNet5
-from src.datasets.backdoor import make_triggered_loader
+from src.datasets.backdoor import create_asr_test_loader
 
 # Import Neurotoxin specific components
 from src.attacks.neurotoxin_client import NeurotoxinClient
@@ -28,16 +28,13 @@ def evaluate_asr(model: torch.nn.Module, test_dataset: Dataset, trigger, target_
     """
     Evaluates the Attack Success Rate (ASR) of the model on a triggered test set.
     """
-    backdoor_loader = make_triggered_loader(
+    # Use the helper to create a fully poisoned test loader
+    backdoor_loader = create_asr_test_loader(
         base_dataset=test_dataset,
         trigger=trigger,
-        keep_label=False,
-        forced_label=target_label,
-        fraction=1.0, # Test on all samples
-        batch_size=batch_size,
-        shuffle=False
-    )
-
+        target_class=target_label,
+        batch_size=batch_size)
+    
     model.eval()
     correct, total = 0, 0
     with torch.no_grad():
@@ -84,13 +81,13 @@ def main():
         "NUM_CLIENTS": 10,
         "NUM_MALICIOUS": 4,
         "NUM_ROUNDS": 5,
-        "ATTACK_START_ROUND": 2, # Attack starts on round 2
+        "ATTACK_START_ROUND": 0, # Attack starts on round 2
         "MASK_K_PERCENT": 0.05,
         "LOCAL_EPOCHS": 1,
         "BATCH_SIZE": 32,
-        "LEARNING_RATE": 0.01,
+        "LEARNING_RATE": 0.05,
         "TARGET_CLASS": 5,
-        "POISONING_RATE": 0.5,
+        "POISONING_RATE": 0.3,
         "SEED": 42,
         "DATA_ROOT": "data",
         "DEVICE": torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -164,6 +161,7 @@ def main():
     final_asr = evaluate_asr(server.model, test_loader.dataset, attack_trigger, CONFIG['TARGET_CLASS'], CONFIG['DEVICE'])
     print(f"Final Main Accuracy: {final_main_metrics['metrics']['main_accuracy']:.4f}")
     print(f"Final Backdoor Accuracy (ASR): {final_asr:.4f}")
+
 
 if __name__ == "__main__":
     main()

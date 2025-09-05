@@ -8,7 +8,7 @@ from src.fl.baseclient import BenignClient
 from src.fl.baseserver import FedAvgAggregator
 from src.datasets.femnist import FEMNISTAdapter
 from src.models.lenet import LeNet5
-from src.datasets.backdoor import make_triggered_loader
+from src.datasets.backdoor import create_backdoor_train_loader, create_asr_test_loader
 
 # Import BadNets specific components
 from src.attacks.badnets_client import BadNetsClient
@@ -28,16 +28,12 @@ def evaluate_asr(model: torch.nn.Module, test_dataset: Dataset, trigger, target_
     Evaluates the Attack Success Rate (ASR) of the model on a triggered test set.
     """
     # Use the helper to create a fully poisoned test loader
-    backdoor_loader = make_triggered_loader(
+    backdoor_loader = create_asr_test_loader(
         base_dataset=test_dataset,
         trigger=trigger,
-        keep_label=False,
-        forced_label=target_label,
-        fraction=1.0, # Test on all samples
-        batch_size=batch_size,
-        shuffle=False
-    )
-
+        target_class=target_label,
+        batch_size=batch_size)
+    
     model.eval()
     correct, total = 0, 0
     with torch.no_grad():
@@ -67,10 +63,10 @@ def build_clients(client_loaders, test_loader, model_cls, config, selector, trig
         }
         if cid < config['NUM_MALICIOUS']:
             client = BadNetsClient(
-                **client_kwargs,
                 selector=selector,
                 trigger=trigger,
-                target_class=config['TARGET_CLASS']
+                target_class=config['TARGET_CLASS'],
+                **client_kwargs,
             )
         else:
             client = BenignClient(**client_kwargs)
@@ -81,13 +77,13 @@ def main():
     # --- Configuration ---
     CONFIG = {
         "NUM_CLIENTS": 10,
-        "NUM_MALICIOUS": 5,
-        "NUM_ROUNDS": 10,
+        "NUM_MALICIOUS": 10,
+        "NUM_ROUNDS": 5,
         "LOCAL_EPOCHS": 1,
         "BATCH_SIZE": 32,
         "LEARNING_RATE": 0.05,
         "TARGET_CLASS": 5,
-        "POISONING_RATE": 0.3,
+        "POISONING_RATE": 0.4,
         "SEED": 42,
         "DATA_ROOT": "data",
         "DEVICE": torch.device("cuda" if torch.cuda.is_available() else "cpu")

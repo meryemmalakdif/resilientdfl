@@ -1,110 +1,102 @@
-# src/datasets/backdoor.py
-from typing import Optional, Sequence, List, Tuple
-import random
-from torch.utils.data import Dataset, DataLoader, Subset
 import torch
+from torch.utils.data import Dataset, DataLoader
+from typing import Set
+
+from ..attacks.selectors.base import BaseSelector
+from ..attacks.triggers.base import BaseTrigger
 
 class PoisonedDataset(Dataset):
     """
-    Dataset wrapper used for backdoor evaluation: returns inputs with the trigger applied.
-    - base_dataset: any torch Dataset (e.g., torchvision MNIST/CIFAR test dataset, or your adapter.dataset)
-    - trigger: object with method apply(x) -> x_triggered. Should support input types returned by base_dataset:
-               either PIL.Image or torch.Tensor.
-    - keep_label: if True keep original labels (useful for clean-label attacks). If False and forced_label is not None,
-                  relabel triggered samples to forced_label (classic BadNets evaluation).
-    - forced_label: int or None. If not None and keep_label=False, the wrapper returns (triggered_input, forced_label).
-    - fraction: float in (0,1] or int >=1:
-         - if fraction <= 1.0 treated as fraction of dataset to trigger (randomly sample fraction*N examples)
-         - if fraction >= 1 treated as absolute number of triggered examples (capped at dataset length)
-    - seed: random seed used when selecting subset for partial triggering
-    - transform_after: optional callable applied to the triggered input before returning (useful if base dataset
-                       returned PIL and you want to re-apply transforms; default uses base_dataset.transform if present).
+    A Dataset wrapper that applies a trigger to specified indices on the fly.
+    
+    This is the core component for creating both poisoned training sets (for clients)
+    and fully poisoned test sets (for ASR evaluation).
     """
-    def __init__(
-        self,
-        base_dataset: Dataset,
-        trigger,
-        keep_label: bool = False,
-        forced_label: Optional[int] = None,
-        fraction: float = 1.0,
-        seed: int = 0,
-        transform_after = None,
-    ):
-        super().__init__()
-        if fraction <= 0:
-            raise ValueError("fraction must be > 0")
-        self.base = base_dataset
+    def __init__(self, 
+                 original_dataset: Dataset, 
+                 poisoned_indices: Set[int], 
+                 trigger: BaseTrigger,  
+                 target_class: int):
+        self.original_dataset = original_dataset
+        self.poisoned_indices = poisoned_indices
         self.trigger = trigger
-        self.keep_label = bool(keep_label)
-        self.forced_label = None if keep_label else forced_label
-        self.fraction = fraction
-        self.seed = int(seed)
-        # if transform_after is provided use it, otherwise use base.transform if available
-        self.transform_after = transform_after if transform_after is not None else getattr(base_dataset, "transform", None)
-
-        # prepare list of indices that will be triggered
-        self._prepare_trigger_indices()
-
-    def _prepare_trigger_indices(self):
-        N = len(self.base)
-        if self.fraction <= 1.0:
-            n_trigger = max(1, int(round(self.fraction * N)))
-        else:
-            n_trigger = min(int(self.fraction), N)
-        rng = random.Random(self.seed)
-        all_idxs = list(range(N))
-        rng.shuffle(all_idxs)
-        self.triggered_indices = set(sorted(all_idxs[:n_trigger]))
+        self.target_class = target_class
 
     def __len__(self):
-        return len(self.base)
+        return len(self.original_dataset)
 
-    def __getitem__(self, idx):
+    def __getitem__(self, index):
         """
-        Returns (x, y) where x is triggered if idx in triggered_indices, and y is either original label
-        (if keep_label=True) or forced_label (if provided) else original label.
+        Returns the sample at the given index. If the index is in the
+        poisoned set, it applies the trigger and replaces the label.
         """
-        x, y = self.base[idx]
-        # If base dataset had a transform that returns tensors, leaving transform_after None means
-        # we will apply trigger on the returned type (tensor or PIL). If base returns PIL and transform_after
-        # is provided, we will apply transform_after after triggering.
-        if idx in self.triggered_indices:
-            x = self.trigger.apply(x)
-            if not self.keep_label and self.forced_label is not None:
-                y = self.forced_label
-        # optionally reapply transform (only useful if base returned PIL but you want tensors)
-        if getattr(self.base, "transform", None) is None and self.transform_after is not None:
-            x = self.transform_after(x)
-        return x, y
+        image, label = self.original_dataset[index]
+        
+        if index in self.poisoned_indices:
+            image = self.trigger.apply(image)
+            label = self.target_class
+            
+        return image, label
 
-
-def make_triggered_loader(
+def create_backdoor_train_loader(
     base_dataset: Dataset,
-    trigger,
-    keep_label: bool = False,
-    forced_label: Optional[int] = None,
-    fraction: float = 1.0,
-    seed: int = 42,
-    transform_after = None,
-    batch_size: int = 256,
-    shuffle: bool = False,
-    num_workers: int = 2,
+    selector: BaseSelector, 
+    trigger: BaseTrigger,  
+    target_class: int,
+    batch_size: int,
+    shuffle: bool = True
 ) -> DataLoader:
     """
-    Convenience helper: returns a DataLoader wrapping a TriggeredTestset.
-    - base_dataset: dataset to wrap (e.g., adapter.dataset or test_loader.dataset)
-    - trigger: trigger object with apply(x)
-    - keep_label / forced_label / fraction: passed to TriggeredTestset
-    - transform_after: optional transform callable to apply after triggering (e.g., transforms.ToTensor + Normalize)
-    - batch_size / shuffle / num_workers: DataLoader args
+    Creates a DataLoader for training a malicious client.
+    
+    It uses a Selector to choose a subset of the base_dataset to poison.
+    
+    Args:
+        base_dataset: The client's original, clean local dataset.
+        selector: The selector object to choose which samples to poison.
+        trigger: The trigger object to apply to the samples.
+        target_class: The label to assign to poisoned samples.
+        batch_size: The batch size for the DataLoader.
+        shuffle: Whether to shuffle the DataLoader.
+        
+    Returns:
+        A DataLoader that yields a mix of clean and poisoned data.
     """
-    ds = PoisonedDataset(
-        base_dataset=base_dataset,
+    poisoned_indices = selector.select(base_dataset)
+    poisoned_dataset = PoisonedDataset(
+        original_dataset=base_dataset,
+        poisoned_indices=set(poisoned_indices),
         trigger=trigger,
-        keep_label=keep_label,
-        forced_label=forced_label,
-        fraction=fraction,
-        seed=seed,
-        transform_after=transform_after
+        target_class=target_class
     )
-    return DataLoader(ds, batch_size=batch_size, shuffle=shuffle, num_workers=num_workers)
+    return DataLoader(poisoned_dataset, batch_size=batch_size, shuffle=shuffle)
+
+def create_asr_test_loader(
+    base_dataset: Dataset,
+    trigger,  # BaseTrigger
+    target_class: int,
+    batch_size: int
+) -> DataLoader:
+    """
+    Creates a DataLoader for evaluating the Attack Success Rate (ASR).
+    
+    It poisons ALL samples in the base_dataset (typically the test set).
+    
+    Args:
+        base_dataset: The dataset to use for evaluation (e.g., test_loader.dataset).
+        trigger: The trigger object to apply to all samples.
+        target_class: The expected label for all triggered samples.
+        batch_size: The batch size for the DataLoader.
+        
+    Returns:
+        A DataLoader that yields a fully poisoned dataset.
+    """
+    # To poison all samples, we create a set of all indices
+    all_indices = set(range(len(base_dataset)))
+    poisoned_test_dataset = PoisonedDataset(
+        original_dataset=base_dataset,
+        poisoned_indices=all_indices,
+        trigger=trigger,
+        target_class=target_class
+    )
+    return DataLoader(poisoned_test_dataset, batch_size=batch_size, shuffle=False)
