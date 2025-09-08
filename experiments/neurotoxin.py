@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import random
 import copy
 import numpy as np
@@ -23,6 +24,18 @@ def set_seed(seed: int):
     torch.manual_seed(seed)
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(seed)
+
+def model_to_vec_numpy(model: torch.nn.Module) -> np.ndarray:
+    """
+    Flatten model parameters into a single numpy 1D array on CPU (float32).
+    Order matches model.parameters() iteration.
+    """
+    parts = []
+    for p in model.parameters():
+        parts.append(p.detach().cpu().float().view(-1))
+    if len(parts) == 0:
+        return np.array([], dtype=np.float32)
+    return torch.cat(parts).numpy()
 
 def evaluate_asr(model: torch.nn.Module, test_dataset: Dataset, trigger, target_label: int, device: torch.device, batch_size: int = 256):
     """
@@ -69,7 +82,9 @@ def build_clients(client_loaders, test_loader, model_cls, config, selector, trig
                 trigger=trigger,
                 target_class=config['TARGET_CLASS'],
                 attack_start_round=config['ATTACK_START_ROUND'],
-                mask_k_percent=config['MASK_K_PERCENT']
+                topk_ratio=config['MASK_K_PERCENT'],            # using Neurotoxin naming
+                num_sample_for_mask=config.get('NUM_SAMPLE_MASK', 64),
+                norm_threshold=config.get('NORM_THRESHOLD', 0.2)
             )
         else:
             client = BenignClient(**client_kwargs)
@@ -81,8 +96,8 @@ def main():
         "NUM_CLIENTS": 10,
         "NUM_MALICIOUS": 4,
         "NUM_ROUNDS": 5,
-        "ATTACK_START_ROUND": 0, # Attack starts on round 2
-        "MASK_K_PERCENT": 0.05,
+        "ATTACK_START_ROUND": 0, # Attack starts on round 0
+        "MASK_K_PERCENT": 0.05,  # topk_ratio (fraction of coords to KEEP)
         "LOCAL_EPOCHS": 1,
         "BATCH_SIZE": 32,
         "LEARNING_RATE": 0.05,
@@ -105,7 +120,8 @@ def main():
 
     # Setup attack components
     attack_selector = RandomSelector(poisoning_rate=CONFIG['POISONING_RATE'])
-    attack_trigger = PatchTrigger(position=(25, 25), size=(3, 3), color=(2.0,))
+    # Use normalized patch color (1.0) for float tensors in [0,1]; change if your transforms differ
+    attack_trigger = PatchTrigger(position=(25, 25), size=(3, 3), color=(1.0,))
 
     # Server setup
     global_model = LeNet5(num_classes=62).to(CONFIG['DEVICE'])
@@ -114,55 +130,57 @@ def main():
     # Client setup
     clients = build_clients(client_loaders, test_loader, LeNet5, CONFIG, attack_selector, attack_trigger)
     
-    # Variables for tracking previous state
-    prev_model_params = None
-    agg_grad = None
-
     # Main federated training loop
     for round_idx in range(CONFIG['NUM_ROUNDS']):
         print(f"\n--- Round {round_idx + 1}/{CONFIG['NUM_ROUNDS']} ---")
         
+        # get the current global params (server.model already holds the up-to-date global model)
+        # vectorize global model (CPU numpy vector) to pass to malicious clients for clipping
+        global_state_vec = model_to_vec_numpy(server.model)
+
+        # Get state_dict to broadcast (clients expect state_dict in set_params)
         model_params = server.get_params()
-        
-        # Calculate aggregated gradient from previous round *before* updating prev_model_params
-        if prev_model_params is not None:
-            agg_grad = {name: model_params[name].to(CONFIG['DEVICE']) - prev_model_params[name].to(CONFIG['DEVICE']) for name in model_params}
-        
-        # Store the current model state *before* training, for the next round's calculation
-        prev_model_params = copy.deepcopy(model_params)
 
         for client in clients:
-            # `set_params` is now redundant because the model is already correct, but it's harmless.
-            client.set_params(model_params)
-            
+            client.set_params(model_params)  # ensure client model == global
             if isinstance(client, NeurotoxinClient):
+                # pass the global vector for clipping/reference
                 update = client.local_train(
                     epochs=CONFIG['LOCAL_EPOCHS'], 
                     round_idx=round_idx, 
-                    prev_global_grad=agg_grad
+                    global_state_vec=global_state_vec
                 )
             else:
                 update = client.local_train(
                     epochs=CONFIG['LOCAL_EPOCHS'], 
                     round_idx=round_idx
                 )
+
             server.receive_update(update['weights'], length=update['num_samples'])
         
+        # aggregate selected updates and update server.model internally
         server.aggregate()
         
         main_metrics = server.evaluate()
-        print(f"Round {round_idx + 1}: Main Accuracy = {main_metrics['metrics']['main_accuracy']:.4f}")
-        
+
+        try:
+            print(f"Round {round_idx + 1}: Main Accuracy = {main_metrics['metrics']['main_accuracy']:.4f}")
+        except Exception:
+            print(f"Round {round_idx + 1}: Main metrics = {main_metrics}")
+
+        # Evaluate ASR on fully triggered test set
         asr = evaluate_asr(server.model, test_loader.dataset, attack_trigger, CONFIG['TARGET_CLASS'], CONFIG['DEVICE'])
         print(f"Round {round_idx + 1}: Backdoor Accuracy = {asr:.4f}")
 
     print("\n--- Training Finished ---")
     final_main_metrics = server.evaluate()
     final_asr = evaluate_asr(server.model, test_loader.dataset, attack_trigger, CONFIG['TARGET_CLASS'], CONFIG['DEVICE'])
-    print(f"Final Main Accuracy: {final_main_metrics['metrics']['main_accuracy']:.4f}")
+    try:
+        print(f"Final Main Accuracy: {final_main_metrics['metrics']['main_accuracy']:.4f}")
+    except Exception:
+        print(f"Final Main Metrics: {final_main_metrics}")
     print(f"Final Backdoor Accuracy (ASR): {final_asr:.4f}")
 
 
 if __name__ == "__main__":
     main()
-

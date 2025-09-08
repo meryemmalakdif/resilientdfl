@@ -39,7 +39,7 @@ class DatasetAdapter(ABC):
         num_clients: int,
         strategy: str = "iid",
         batch_size: int = 64,
-        num_workers: int = 2,
+        num_workers: int = 4,
         seed: int = 0,
         **strategy_args
     ) -> Dict[int, DataLoader]:

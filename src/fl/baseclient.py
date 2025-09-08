@@ -78,11 +78,8 @@ class BenignClient(BaseClient):
 
     def set_params(self, params: Dict[str, torch.Tensor]) -> None:
         # load params and ensure model lives on device
-        # accept cpu-state-dicts too
-        self._model.load_state_dict({k: v.to(self.device) for k, v in params.items()})
-        # re-init optimizer to avoid optimizer/param mismatch
-        self._create_optimizer()
-
+        self.model.load_state_dict(params)
+        
     def get_params(self) -> Dict[str, torch.Tensor]:
         # return CPU tensors for safe transport
         return {k: v.cpu().clone() for k, v in self._model.state_dict().items()}

@@ -4,9 +4,10 @@ import torch
 from torch.utils.data import DataLoader
 
 from ..fl.baseclient import BenignClient
-from ..datasets.backdoor import make_triggered_loader
+from ..datasets.backdoor import create_backdoor_train_loader
 from .selectors.base import BaseSelector
 from .triggers.base import BaseTrigger
+import copy as cp 
 
 class ScalingAttackClient(BenignClient):
     """
@@ -37,6 +38,14 @@ class ScalingAttackClient(BenignClient):
         self.scale_factor = scale_factor
         self.num_total_clients = num_total_clients
         self.num_malicious_clients = num_malicious_clients
+        poisoned_dataloader = create_backdoor_train_loader(
+            base_dataset=cp.deepcopy(self.trainloader.dataset),
+            selector=self.selector,
+            trigger=self.trigger,
+            target_class=self.target_class,
+            batch_size=self.trainloader.batch_size,
+            shuffle=True)
+        self.backdoor_trainloader = poisoned_dataloader
 
         print(f"ScalingAttackClient created. Will attack ONLY on round: {self.attack_round}")
 
@@ -56,21 +65,10 @@ class ScalingAttackClient(BenignClient):
         
         initial_state_dict = copy.deepcopy(self.model.state_dict())
 
-        poisoned_dataloader = make_triggered_loader(
-            base_dataset=self.trainloader.dataset,
-            trigger=self.trigger,
-            keep_label=False,
-            forced_label=self.target_class,
-            fraction=self.selector.poisoning_rate,
-            batch_size=self.trainloader.batch_size,
-            shuffle=True,
-            num_workers=self.trainloader.num_workers
-        )
-
         self._model.train()
         epoch_count = epochs if epochs is not None else self.epochs_default
         for _ in range(epoch_count):
-            for inputs, targets in poisoned_dataloader:
+            for inputs, targets in self.backdoor_trainloader:
                 inputs, targets = inputs.to(self.device), targets.to(self.device)
                 self.optimizer.zero_grad()
                 outputs = self._model(inputs)

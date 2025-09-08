@@ -38,6 +38,7 @@ class PoisonedDataset(Dataset):
             
         return image, label
 
+
 def create_backdoor_train_loader(
     base_dataset: Dataset,
     selector: BaseSelector, 
