@@ -48,3 +48,57 @@ class MNISTNet(nn.Module):
         x = self.fc2(x)
         output = F.log_softmax(x, dim=1)
         return output
+    
+
+class FashionCNN(nn.Module):
+    def __init__(self, num_classes):
+        super(FashionCNN, self).__init__()
+        # Input images are 28x28x1
+        self.conv_layers = nn.Sequential(
+            nn.Conv2d(in_channels=1, out_channels=32, kernel_size=3, padding=1), # 28x28x1 -> 28x28x32
+            nn.ReLU(),
+            nn.MaxPool2d(kernel_size=2, stride=2),      # 28x28x32 -> 14x14x32
+
+            nn.Conv2d(in_channels=32, out_channels=64, kernel_size=3, padding=1),# 14x14x32 -> 14x14x64
+            nn.ReLU(),
+            nn.MaxPool2d(kernel_size=2, stride=2)       # 14x14x64 -> 7x7x64
+        )
+        self.fc_layers = nn.Sequential(
+            nn.Linear(7 * 7 * 64, 128),
+            nn.ReLU(),
+            nn.Dropout(0.5),
+            nn.Linear(128, num_classes)
+        )
+
+    def forward(self, x):
+        x = self.conv_layers(x)
+        x = x.view(x.size(0), -1) # Flatten the feature maps
+        x = self.fc_layers(x)
+        return x
+    
+
+class EMNIST_CNN(nn.Module):
+    def __init__(self, num_classes):
+        super(EMNIST_CNN, self).__init__()
+        # Input images are 28x28x1
+        self.conv_layers = nn.Sequential(
+            nn.Conv2d(in_channels=1, out_channels=32, kernel_size=3, padding=1),
+            nn.ReLU(),
+            nn.MaxPool2d(kernel_size=2, stride=2),
+            nn.Conv2d(in_channels=32, out_channels=64, kernel_size=3, padding=1),
+            nn.ReLU(),
+            nn.MaxPool2d(kernel_size=2, stride=2) # 28x28 -> 14x14 -> 7x7
+        )
+        self.fc_layers = nn.Sequential(
+            nn.Dropout(0.5),
+            nn.Linear(7 * 7 * 64, 512),
+            nn.ReLU(),
+            nn.Dropout(0.5),
+            nn.Linear(512, num_classes)
+        )
+
+    def forward(self, x):
+        x = self.conv_layers(x)
+        x = x.view(x.size(0), -1) # Flatten
+        x = self.fc_layers(x)
+        return x

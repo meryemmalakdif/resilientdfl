@@ -15,7 +15,8 @@ NUM_CLASSES = {
     "FEMNIST": 62,
     "TINYIMAGENET": 200,
     "SENTIMENT140": 2,
-    "REDDIT": 50000
+    "REDDIT": 50000,
+    "GTSRB": 43,
 }
 
 IMG_SIZE = {
@@ -27,6 +28,7 @@ IMG_SIZE = {
     "EMNIST_DIGITS": (28, 28, 1),
     "FEMNIST": (28, 28, 1),
     "TINYIMAGENET": (64, 64, 3),
+    "GTSRB": (32, 32, 3)
 }
 
 Metrics = Dict[str, float]

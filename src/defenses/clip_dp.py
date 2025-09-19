@@ -2,16 +2,16 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
 from typing import Dict, List, Optional
-import copy
 
+# Import the specific FedAvgAggregator from your project structure
 from ..fl.baseserver import FedAvgAggregator
 
 class NormClippingServer(FedAvgAggregator):
     """
     Implements a robust aggregation server that clips the L2 norm of client updates.
 
-    This defense limits the maximum influence any single client can have on the
-    global model in a given round, mitigating attacks like model scaling.
+    This version first calculates the update deltas (local_model - global_model),
+    clips them, and then aggregates the clipped deltas.
     """
     def __init__(self, model: nn.Module, testloader: DataLoader = None, device: Optional[torch.device] = None, config: Optional[Dict] = None):
         super().__init__(model, testloader, device)
@@ -20,57 +20,60 @@ class NormClippingServer(FedAvgAggregator):
         self.clipping_norm = self.config.get('clipping_norm', 5.0)
         self.eta = self.config.get('eta', 1.0) # Server-side learning rate
         
-        # Keep a CPU copy of the global model params for calculating diffs
-        self.global_model_params = {k: v.cpu().clone() for k, v in self.model.state_dict().items()}
         print(f"Initialized NormClippingServer with clipping_norm={self.clipping_norm}, eta={self.eta}")
 
     def aggregate(self) -> Dict[str, torch.Tensor]:
         """
-        Clips client updates before performing federated averaging.
+        Clips client update deltas before performing federated averaging.
         """
-        if not self.updates:
+        if not self.received_params:
             print("Warning: No updates to aggregate.")
             return self.get_params()
 
-        # --- Step 1: Calculate the difference (update) for each client ---
-        client_diffs = []
-        client_num_samples = []
-        for update in self.updates:
-            diff = {name: param.to(self.device) - self.global_model_params[name].to(self.device)
-                    for name, param in update['weights'].items() if not name.endswith('num_batches_tracked')}
-            client_diffs.append(diff)
-            client_num_samples.append(update['length'])
+        # Get the current global model state on the CPU
+        global_params = self.get_params()
 
-        # --- Step 2: Clip each client's update based on its L2 norm ---
-        for diff in client_diffs:
+        # --- Step 1: Calculate the difference (update delta) for each client ---
+        client_deltas = []
+        for local_params in self.received_params:
+            delta = {name: local_params[name] - global_params[name] for name in local_params}
+            client_deltas.append(delta)
+
+        # --- Step 2: Clip each client's delta based on its L2 norm ---
+        for delta in client_deltas:
             # Flatten all tensors to calculate the total norm of the update
-            flat_diff = torch.cat([p.flatten() for p in diff.values()])
-            diff_norm = torch.linalg.norm(flat_diff)
+            flat_delta = torch.cat([p.flatten() for p in delta.values()])
+            delta_norm = torch.linalg.norm(flat_delta)
 
-            if diff_norm > self.clipping_norm:
-                scaling_factor = self.clipping_norm / diff_norm
-                for name in diff:
-                    diff[name].mul_(scaling_factor)
+            if delta_norm > self.clipping_norm:
+                scaling_factor = self.clipping_norm / delta_norm
+                for name in delta:
+                    delta[name].mul_(scaling_factor)
         
-        # --- Step 3: Perform standard federated averaging on the clipped diffs ---
-        total_samples = sum(client_num_samples)
-        weight_accumulator = {name: torch.zeros_like(param) for name, param in self.model.state_dict().items()}
+        # --- Step 3: Perform federated averaging on the clipped deltas ---
+        total_samples = sum(self.received_lens)
+        # Accumulator for the final aggregated delta
+        aggregated_delta = {name: torch.zeros_like(param) for name, param in global_params.items()}
 
-        for i, diff in enumerate(client_diffs):
-            weight_fraction = client_num_samples[i] / total_samples
-            for name, param_diff in diff.items():
-                if name in weight_accumulator:
-                    weight_accumulator[name].add_(param_diff * weight_fraction)
+        for i, delta in enumerate(client_deltas):
+            weight_fraction = self.received_lens[i] / total_samples
+            for name, param_delta in delta.items():
+                if name in aggregated_delta:
+                    aggregated_delta[name].add_(param_delta * weight_fraction)
 
-        # --- Step 4: Apply the aggregated update to the global model ---
-        final_state_dict = self.model.state_dict()
-        for name, param in final_state_dict.items():
-            if name in weight_accumulator:
-                param.add_(weight_accumulator[name] * self.eta)
+        # --- Step 4: Apply the aggregated delta to the global model ---
+        new_global_params = self.model.state_dict()
+        for name, param in new_global_params.items():
+            if name in aggregated_delta:
+                # Apply update with server-side learning rate
+                param.add_(aggregated_delta[name].to(self.device) * self.eta)
         
-        self.model.load_state_dict(final_state_dict)
-        self.updates.clear()
-        self.global_model_params = {k: v.cpu().clone() for k, v in self.model.state_dict().items()}
+        self.model.load_state_dict(new_global_params)
+        
+        # Clear buffers for the next round
+        self.received_params = []
+        self.received_lens = []
+        
         return self.get_params()
 
 
@@ -93,7 +96,7 @@ class WeakDPServer(NormClippingServer):
         """
         First performs clipping and aggregation, then adds Gaussian noise.
         """
-        # Perform the norm clipping and aggregation from the parent class
+        # Perform the norm clipping and aggregation from the parent class, which updates self.model
         super().aggregate()
 
         # Add Gaussian noise to the updated global model parameters
@@ -105,6 +108,5 @@ class WeakDPServer(NormClippingServer):
                     param.add_(noise)
             self.model.load_state_dict(final_state_dict)
 
-        # Update the stored params again after adding noise
-        self.global_model_params = {k: v.cpu().clone() for k, v in self.model.state_dict().items()}
         return self.get_params()
+

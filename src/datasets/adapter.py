@@ -29,17 +29,16 @@ class DatasetAdapter(ABC):
         assert self._dataset is not None, "Dataset not loaded"
         return self._dataset
 
-    def get_test_loader(self, batch_size: int = 256, shuffle: bool = False, num_workers: int = 2) -> DataLoader:
+    def get_test_loader(self, batch_size: int = 256, shuffle: bool = False) -> DataLoader:
         """Return a DataLoader for evaluation (test/val). For adapters that only load train/test separately,
         call with train=False when constructing adapter instance for test dataset."""
-        return DataLoader(self.dataset, batch_size=batch_size, shuffle=shuffle, num_workers=num_workers)
+        return DataLoader(self.dataset, batch_size=batch_size, shuffle=shuffle)
 
     def get_client_loaders(
         self,
         num_clients: int,
         strategy: str = "iid",
         batch_size: int = 64,
-        num_workers: int = 4,
         seed: int = 0,
         **strategy_args
     ) -> Dict[int, DataLoader]:
@@ -62,7 +61,7 @@ class DatasetAdapter(ABC):
         loaders: Dict[int, DataLoader] = {}
         for cid, idxs in parts.items():
             subset = Subset(self.dataset, idxs)
-            loaders[cid] = DataLoader(subset, batch_size=batch_size, shuffle=True, num_workers=num_workers)
+            loaders[cid] = DataLoader(subset, batch_size=batch_size, shuffle=True)
         return loaders
 
     # ---------- partition helpers ----------

@@ -17,9 +17,11 @@ class ScalingAttackClient(BenignClient):
     def __init__(
         self,
         # New parameters for single-shot attack and dynamic scaling
-        attack_round: int,
+        attack_start_round: int,
+        attack_end_round: int, # -1 means attack until the end
         num_total_clients: int,
         num_malicious_clients: int,
+        num_malicious_epochs: int,
         # Attack specific components
         selector: BaseSelector,
         trigger: BaseTrigger,
@@ -34,10 +36,12 @@ class ScalingAttackClient(BenignClient):
         self.target_class = target_class
         
         # Store new parameters
-        self.attack_round = attack_round
+        self.attack_start_round = attack_start_round
+        self.attack_end_round = attack_end_round if attack_end_round > 0 else float('inf')
         self.scale_factor = scale_factor
         self.num_total_clients = num_total_clients
         self.num_malicious_clients = num_malicious_clients
+        self.num_malicious_epochs = num_malicious_epochs
         poisoned_dataloader = create_backdoor_train_loader(
             base_dataset=cp.deepcopy(self.trainloader.dataset),
             selector=self.selector,
@@ -47,7 +51,6 @@ class ScalingAttackClient(BenignClient):
             shuffle=True)
         self.backdoor_trainloader = poisoned_dataloader
 
-        print(f"ScalingAttackClient created. Will attack ONLY on round: {self.attack_round}")
 
     def local_train(self, epochs: int, round_idx: int) -> Dict[str, Any]:
         """
@@ -55,7 +58,7 @@ class ScalingAttackClient(BenignClient):
         except for the specified `attack_round`.
         """
         # Check if it's the designated attack round
-        if round_idx != self.attack_round:
+        if round_idx < self.attack_start_round or round_idx > self.attack_end_round:
             # If not, behave exactly like a benign client by calling the parent's method.
             print(f"--- ScalingAttack Client [{self.get_id()}] acting benignly in round {round_idx} ---")
             return super().local_train(epochs, round_idx)
@@ -66,7 +69,7 @@ class ScalingAttackClient(BenignClient):
         initial_state_dict = copy.deepcopy(self.model.state_dict())
 
         self._model.train()
-        epoch_count = epochs if epochs is not None else self.epochs_default
+        epoch_count = self.num_malicious_epochs
         for _ in range(epoch_count):
             for inputs, targets in self.backdoor_trainloader:
                 inputs, targets = inputs.to(self.device), targets.to(self.device)
@@ -97,11 +100,11 @@ class ScalingAttackClient(BenignClient):
         
         self.model.load_state_dict(scaled_state_dict)
 
-        metrics = self.local_evaluate()['metrics']
+        # metrics = self.local_evaluate()['metrics']
         return {
             'client_id': self.get_id(),
             'num_samples': self.num_samples(),
             'weights': self.get_params(),
-            'metrics': metrics,
+            'metrics': {'loss': float('nan'), 'accuracy': float('nan')},
             'round_idx': round_idx
         }

@@ -20,7 +20,7 @@ class ResultsLogger:
         
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         exp_name_from_config = config.get('experiment_name', 'experiment')
-        self.filename = os.path.join(self.log_dir, f"{exp_name_from_config}_{timestamp}.csv")
+        self.filename = os.path.join(self.log_dir, f"{exp_name_from_config}.csv")
         
         self._write_header()
 
