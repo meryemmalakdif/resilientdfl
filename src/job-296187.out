@@ -1,0 +1,3879 @@
+--- Configuration ---
+experiment_name: a3fl_clip_cifar
+dataset: cifar10
+num_clients: 5
+num_parallel_clients: 5
+num_rounds: 100
+local_epochs: 1
+batch_size: 32
+test_batch_size: 256
+lr: 0.01
+seed: 42
+attack: a3fl
+num_malicious: 2
+target_class: 7
+poisoning_rate: 0.25
+attack_start_round: 20
+attack_end_round: 50
+scale_factor: 5.0
+malicious_epochs: 5
+mask_k_percent: 0.05
+trigger_epochs: 5
+trigger_lr: 0.01
+defense: clip
+clipping_norm: 4.0
+dp_std_dev: 0.025
+deepsight_num_samples: 256
+deepsight_num_seeds: 3
+deepsight_batch_size: 64
+deepsight_tau: 0.5
+flame_lamda: 0.001
+flame_eta: 1.0
+krum_f: 2
+krum_m: 5
+device: cuda
+---------------------
+Files already downloaded and verified
+Files already downloaded and verified
+Initialized NormClippingServer with clipping_norm=4.0, eta=1.0
+Client [0]: Behaving benignly in round 1 (outside attack window).
+
+--- A3FL Client [0] optimizing trigger for round 21 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 23 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 26 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 28 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 31 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 33 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 36 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 38 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 41 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 43 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 46 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 48 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [0]: Behaving benignly in round 51 (outside attack window).
+Client [0]: Behaving benignly in round 52 (outside attack window).
+Client [0]: Behaving benignly in round 53 (outside attack window).
+Client [0]: Behaving benignly in round 54 (outside attack window).
+Client [0]: Behaving benignly in round 55 (outside attack window).
+Client [0]: Behaving benignly in round 56 (outside attack window).
+Client [0]: Behaving benignly in round 57 (outside attack window).
+Client [0]: Behaving benignly in round 58 (outside attack window).
+Client [0]: Behaving benignly in round 59 (outside attack window).
+Client [0]: Behaving benignly in round 60 (outside attack window).
+Client [0]: Behaving benignly in round 61 (outside attack window).
+Client [0]: Behaving benignly in round 62 (outside attack window).
+Client [0]: Behaving benignly in round 63 (outside attack window).
+Client [0]: Behaving benignly in round 64 (outside attack window).
+Client [0]: Behaving benignly in round 65 (outside attack window).
+Client [0]: Behaving benignly in round 66 (outside attack window).
+Client [0]: Behaving benignly in round 67 (outside attack window).
+Client [0]: Behaving benignly in round 68 (outside attack window).
+Client [0]: Behaving benignly in round 69 (outside attack window).
+Client [0]: Behaving benignly in round 70 (outside attack window).
+Client [0]: Behaving benignly in round 71 (outside attack window).
+Client [0]: Behaving benignly in round 72 (outside attack window).
+Client [0]: Behaving benignly in round 73 (outside attack window).
+Client [0]: Behaving benignly in round 74 (outside attack window).
+Client [0]: Behaving benignly in round 75 (outside attack window).
+Client [0]: Behaving benignly in round 76 (outside attack window).
+Client [0]: Behaving benignly in round 77 (outside attack window).
+Client [0]: Behaving benignly in round 78 (outside attack window).
+Client [0]: Behaving benignly in round 79 (outside attack window).
+Client [0]: Behaving benignly in round 80 (outside attack window).
+Client [0]: Behaving benignly in round 81 (outside attack window).
+Client [0]: Behaving benignly in round 82 (outside attack window).
+Client [0]: Behaving benignly in round 83 (outside attack window).
+Client [0]: Behaving benignly in round 84 (outside attack window).
+Client [0]: Behaving benignly in round 85 (outside attack window).
+Client [0]: Behaving benignly in round 86 (outside attack window).
+Client [0]: Behaving benignly in round 87 (outside attack window).
+Client [0]: Behaving benignly in round 88 (outside attack window).
+Client [0]: Behaving benignly in round 89 (outside attack window).
+Client [0]: Behaving benignly in round 90 (outside attack window).
+Client [0]: Behaving benignly in round 91 (outside attack window).
+Client [0]: Behaving benignly in round 92 (outside attack window).
+Client [0]: Behaving benignly in round 93 (outside attack window).
+Client [0]: Behaving benignly in round 94 (outside attack window).
+Client [0]: Behaving benignly in round 95 (outside attack window).
+Client [0]: Behaving benignly in round 96 (outside attack window).
+Client [0]: Behaving benignly in round 97 (outside attack window).
+Client [0]: Behaving benignly in round 98 (outside attack window).
+Client [0]: Behaving benignly in round 99 (outside attack window).
+Client [0]: Behaving benignly in round 100 (outside attack window).
+Client [1]: Behaving benignly in round 1 (outside attack window).
+Client [1]: Behaving benignly in round 2 (outside attack window).
+Client [1]: Behaving benignly in round 3 (outside attack window).
+Client [1]: Behaving benignly in round 4 (outside attack window).
+Client [1]: Behaving benignly in round 5 (outside attack window).
+Client [1]: Behaving benignly in round 6 (outside attack window).
+Client [1]: Behaving benignly in round 7 (outside attack window).
+Client [1]: Behaving benignly in round 8 (outside attack window).
+Client [1]: Behaving benignly in round 9 (outside attack window).
+Client [1]: Behaving benignly in round 10 (outside attack window).
+Client [1]: Behaving benignly in round 11 (outside attack window).
+Client [1]: Behaving benignly in round 12 (outside attack window).
+Client [1]: Behaving benignly in round 13 (outside attack window).
+Client [1]: Behaving benignly in round 14 (outside attack window).
+Client [1]: Behaving benignly in round 15 (outside attack window).
+Client [1]: Behaving benignly in round 16 (outside attack window).
+Client [1]: Behaving benignly in round 17 (outside attack window).
+Client [1]: Behaving benignly in round 18 (outside attack window).
+Client [1]: Behaving benignly in round 19 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 20 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 23 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 25 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 28 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 30 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 33 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 35 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 38 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 40 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 43 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 45 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 48 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 50 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [0]: Behaving benignly in round 2 (outside attack window).
+Client [0]: Behaving benignly in round 3 (outside attack window).
+Client [0]: Behaving benignly in round 4 (outside attack window).
+Client [0]: Behaving benignly in round 5 (outside attack window).
+Client [0]: Behaving benignly in round 6 (outside attack window).
+Client [0]: Behaving benignly in round 7 (outside attack window).
+Client [0]: Behaving benignly in round 8 (outside attack window).
+Client [0]: Behaving benignly in round 9 (outside attack window).
+Client [0]: Behaving benignly in round 10 (outside attack window).
+Client [0]: Behaving benignly in round 11 (outside attack window).
+Client [0]: Behaving benignly in round 12 (outside attack window).
+Client [0]: Behaving benignly in round 13 (outside attack window).
+Client [0]: Behaving benignly in round 14 (outside attack window).
+Client [0]: Behaving benignly in round 15 (outside attack window).
+Client [0]: Behaving benignly in round 16 (outside attack window).
+Client [0]: Behaving benignly in round 17 (outside attack window).
+Client [0]: Behaving benignly in round 18 (outside attack window).
+Client [0]: Behaving benignly in round 19 (outside attack window).
+
+--- A3FL Client [0] optimizing trigger for round 20 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 22 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 25 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 27 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 30 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 32 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 35 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 37 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 40 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 42 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 45 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 47 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 50 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 21 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 24 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 26 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 29 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 31 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 34 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 36 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 39 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 41 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 44 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 46 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 49 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [1]: Behaving benignly in round 51 (outside attack window).
+Client [1]: Behaving benignly in round 52 (outside attack window).
+Client [1]: Behaving benignly in round 53 (outside attack window).
+Client [1]: Behaving benignly in round 54 (outside attack window).
+Client [1]: Behaving benignly in round 55 (outside attack window).
+Client [1]: Behaving benignly in round 56 (outside attack window).
+Client [1]: Behaving benignly in round 57 (outside attack window).
+Client [1]: Behaving benignly in round 58 (outside attack window).
+Client [1]: Behaving benignly in round 59 (outside attack window).
+Client [1]: Behaving benignly in round 60 (outside attack window).
+Client [1]: Behaving benignly in round 61 (outside attack window).
+Client [1]: Behaving benignly in round 62 (outside attack window).
+Client [1]: Behaving benignly in round 63 (outside attack window).
+Client [1]: Behaving benignly in round 64 (outside attack window).
+Client [1]: Behaving benignly in round 65 (outside attack window).
+Client [1]: Behaving benignly in round 66 (outside attack window).
+Client [1]: Behaving benignly in round 67 (outside attack window).
+Client [1]: Behaving benignly in round 68 (outside attack window).
+Client [1]: Behaving benignly in round 69 (outside attack window).
+Client [1]: Behaving benignly in round 70 (outside attack window).
+Client [1]: Behaving benignly in round 71 (outside attack window).
+Client [1]: Behaving benignly in round 72 (outside attack window).
+Client [1]: Behaving benignly in round 73 (outside attack window).
+Client [1]: Behaving benignly in round 74 (outside attack window).
+Client [1]: Behaving benignly in round 75 (outside attack window).
+Client [1]: Behaving benignly in round 76 (outside attack window).
+Client [1]: Behaving benignly in round 77 (outside attack window).
+Client [1]: Behaving benignly in round 78 (outside attack window).
+Client [1]: Behaving benignly in round 79 (outside attack window).
+Client [1]: Behaving benignly in round 80 (outside attack window).
+Client [1]: Behaving benignly in round 81 (outside attack window).
+Client [1]: Behaving benignly in round 82 (outside attack window).
+Client [1]: Behaving benignly in round 83 (outside attack window).
+Client [1]: Behaving benignly in round 84 (outside attack window).
+Client [1]: Behaving benignly in round 85 (outside attack window).
+Client [1]: Behaving benignly in round 86 (outside attack window).
+Client [1]: Behaving benignly in round 87 (outside attack window).
+Client [1]: Behaving benignly in round 88 (outside attack window).
+Client [1]: Behaving benignly in round 89 (outside attack window).
+Client [1]: Behaving benignly in round 90 (outside attack window).
+Client [1]: Behaving benignly in round 91 (outside attack window).
+Client [1]: Behaving benignly in round 92 (outside attack window).
+Client [1]: Behaving benignly in round 93 (outside attack window).
+Client [1]: Behaving benignly in round 94 (outside attack window).
+Client [1]: Behaving benignly in round 95 (outside attack window).
+Client [1]: Behaving benignly in round 96 (outside attack window).
+Client [1]: Behaving benignly in round 97 (outside attack window).
+Client [1]: Behaving benignly in round 98 (outside attack window).
+Client [1]: Behaving benignly in round 99 (outside attack window).
+Client [1]: Behaving benignly in round 100 (outside attack window).
+
+--- A3FL Client [0] optimizing trigger for round 22 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 24 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 27 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 29 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 32 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 34 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 37 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 39 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 42 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 44 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 47 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 49 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- Round 1/100 ---
+Round 1: Main Acc = 0.2883, Backdoor ASR = 0.0000, Attack Active: False, took 46.059752225875854 seconds
+
+--- Round 2/100 ---
+Round 2: Main Acc = 0.3804, Backdoor ASR = 0.0000, Attack Active: False, took 28.287156105041504 seconds
+
+--- Round 3/100 ---
+Round 3: Main Acc = 0.4161, Backdoor ASR = 0.0000, Attack Active: False, took 28.432993412017822 seconds
+
+--- Round 4/100 ---
+Round 4: Main Acc = 0.4496, Backdoor ASR = 0.0000, Attack Active: False, took 28.335512399673462 seconds
+
+--- Round 5/100 ---
+Round 5: Main Acc = 0.4682, Backdoor ASR = 0.0000, Attack Active: False, took 28.166056632995605 seconds
+
+--- Round 6/100 ---
+Round 6: Main Acc = 0.4884, Backdoor ASR = 0.0000, Attack Active: False, took 28.228123903274536 seconds
+
+--- Round 7/100 ---
+Round 7: Main Acc = 0.5150, Backdoor ASR = 0.0000, Attack Active: False, took 28.234891891479492 seconds
+
+--- Round 8/100 ---
+Round 8: Main Acc = 0.5333, Backdoor ASR = 0.0000, Attack Active: False, took 28.200197458267212 seconds
+
+--- Round 9/100 ---
+Round 9: Main Acc = 0.5459, Backdoor ASR = 0.0000, Attack Active: False, took 28.36934804916382 seconds
+
+--- Round 10/100 ---
+Round 10: Main Acc = 0.5665, Backdoor ASR = 0.0000, Attack Active: False, took 28.30988383293152 seconds
+
+--- Round 11/100 ---
+Round 11: Main Acc = 0.5911, Backdoor ASR = 0.0000, Attack Active: False, took 28.529814958572388 seconds
+
+--- Round 12/100 ---
+Round 12: Main Acc = 0.6210, Backdoor ASR = 0.0000, Attack Active: False, took 28.67296314239502 seconds
+
+--- Round 13/100 ---
+Round 13: Main Acc = 0.6413, Backdoor ASR = 0.0000, Attack Active: False, took 28.180660486221313 seconds
+
+--- Round 14/100 ---
+Round 14: Main Acc = 0.6446, Backdoor ASR = 0.0000, Attack Active: False, took 28.043542623519897 seconds
+
+--- Round 15/100 ---
+Round 15: Main Acc = 0.6639, Backdoor ASR = 0.0000, Attack Active: False, took 28.225154161453247 seconds
+
+--- Round 16/100 ---
+Round 16: Main Acc = 0.6684, Backdoor ASR = 0.0000, Attack Active: False, took 28.207139492034912 seconds
+
+--- Round 17/100 ---
+Round 17: Main Acc = 0.6901, Backdoor ASR = 0.0000, Attack Active: False, took 28.498554706573486 seconds
+
+--- Round 18/100 ---
+Round 18: Main Acc = 0.6959, Backdoor ASR = 0.0000, Attack Active: False, took 28.160853147506714 seconds
+
+--- Round 19/100 ---
+Round 19: Main Acc = 0.7068, Backdoor ASR = 0.0000, Attack Active: False, took 28.342060804367065 seconds
+
+--- Round 20/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 20: Main Acc = 0.7356, Backdoor ASR = 0.1089, Attack Active: True, took 230.1448712348938 seconds
+
+--- Round 21/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 21: Main Acc = 0.7472, Backdoor ASR = 0.1298, Attack Active: True, took 230.3957290649414 seconds
+
+--- Round 22/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 22: Main Acc = 0.7576, Backdoor ASR = 0.1688, Attack Active: True, took 231.0061104297638 seconds
+
+--- Round 23/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 23: Main Acc = 0.7746, Backdoor ASR = 0.1837, Attack Active: True, took 229.9939742088318 seconds
+
+--- Round 24/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 24: Main Acc = 0.7792, Backdoor ASR = 0.1831, Attack Active: True, took 231.2434344291687 seconds
+
+--- Round 25/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 25: Main Acc = 0.7961, Backdoor ASR = 0.2375, Attack Active: True, took 230.27893328666687 seconds
+
+--- Round 26/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 26: Main Acc = 0.8055, Backdoor ASR = 0.2425, Attack Active: True, took 230.77961254119873 seconds
+
+--- Round 27/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 27: Main Acc = 0.8129, Backdoor ASR = 0.3670, Attack Active: True, took 231.37778043746948 seconds
+
+--- Round 28/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 28: Main Acc = 0.8204, Backdoor ASR = 0.4961, Attack Active: True, took 229.9504680633545 seconds
+
+--- Round 29/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 29: Main Acc = 0.8217, Backdoor ASR = 0.5389, Attack Active: True, took 231.50535678863525 seconds
+
+--- Round 30/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 30: Main Acc = 0.8327, Backdoor ASR = 0.6359, Attack Active: True, took 229.83563089370728 seconds
+
+--- Round 31/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 31: Main Acc = 0.8330, Backdoor ASR = 0.6716, Attack Active: True, took 230.94078707695007 seconds
+
+--- Round 32/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 32: Main Acc = 0.8401, Backdoor ASR = 0.7869, Attack Active: True, took 231.31712913513184 seconds
+
+--- Round 33/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 33: Main Acc = 0.8428, Backdoor ASR = 0.8073, Attack Active: True, took 229.7194802761078 seconds
+
+--- Round 34/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 34: Main Acc = 0.8386, Backdoor ASR = 0.8244, Attack Active: True, took 231.68003916740417 seconds
+
+--- Round 35/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 35: Main Acc = 0.8444, Backdoor ASR = 0.8473, Attack Active: True, took 230.4565076828003 seconds
+
+--- Round 36/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 36: Main Acc = 0.8514, Backdoor ASR = 0.8865, Attack Active: True, took 230.9023299217224 seconds
+
+--- Round 37/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 37: Main Acc = 0.8555, Backdoor ASR = 0.9434, Attack Active: True, took 231.42785811424255 seconds
+
+--- Round 38/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 38: Main Acc = 0.8592, Backdoor ASR = 0.9490, Attack Active: True, took 229.91876602172852 seconds
+
+--- Round 39/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 39: Main Acc = 0.8629, Backdoor ASR = 0.9574, Attack Active: True, took 231.29356980323792 seconds
+
+--- Round 40/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 40: Main Acc = 0.8627, Backdoor ASR = 0.9491, Attack Active: True, took 230.27834510803223 seconds
+
+--- Round 41/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 41: Main Acc = 0.8688, Backdoor ASR = 0.9632, Attack Active: True, took 229.08285903930664 seconds
+
+--- Round 42/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 42: Main Acc = 0.8702, Backdoor ASR = 0.9691, Attack Active: True, took 226.5040419101715 seconds
+
+--- Round 43/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 43: Main Acc = 0.8749, Backdoor ASR = 0.9815, Attack Active: True, took 226.1112344264984 seconds
+
+--- Round 44/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 44: Main Acc = 0.8749, Backdoor ASR = 0.9811, Attack Active: True, took 226.5173637866974 seconds
+
+--- Round 45/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 45: Main Acc = 0.8766, Backdoor ASR = 0.9808, Attack Active: True, took 226.22251677513123 seconds
+
+--- Round 46/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 46: Main Acc = 0.8759, Backdoor ASR = 0.9881, Attack Active: True, took 225.87589311599731 seconds
+
+--- Round 47/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 47: Main Acc = 0.8788, Backdoor ASR = 0.9833, Attack Active: True, took 226.46180319786072 seconds
+
+--- Round 48/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 48: Main Acc = 0.8793, Backdoor ASR = 0.9904, Attack Active: True, took 225.16992139816284 seconds
+
+--- Round 49/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 49: Main Acc = 0.8782, Backdoor ASR = 0.9857, Attack Active: True, took 225.94806456565857 seconds
+
+--- Round 50/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 50: Main Acc = 0.8809, Backdoor ASR = 0.9884, Attack Active: True, took 225.46677684783936 seconds
+
+--- Round 51/100 ---
+Round 51: Main Acc = 0.8831, Backdoor ASR = 0.9894, Attack Active: False, took 30.60695505142212 seconds
+
+--- Round 52/100 ---
+Round 52: Main Acc = 0.8826, Backdoor ASR = 0.9876, Attack Active: False, took 30.49347710609436 seconds
+
+--- Round 53/100 ---
+Round 53: Main Acc = 0.8838, Backdoor ASR = 0.9844, Attack Active: False, took 30.342795848846436 seconds
+
+--- Round 54/100 ---
+Round 54: Main Acc = 0.8826, Backdoor ASR = 0.9801, Attack Active: False, took 30.751657485961914 seconds
+
+--- Round 55/100 ---
+Round 55: Main Acc = 0.8849, Backdoor ASR = 0.9690, Attack Active: False, took 30.183506727218628 seconds
+
+--- Round 56/100 ---
+Round 56: Main Acc = 0.8832, Backdoor ASR = 0.9744, Attack Active: False, took 30.320885181427002 seconds
+
+--- Round 57/100 ---
+Round 57: Main Acc = 0.8893, Backdoor ASR = 0.9678, Attack Active: False, took 30.53718900680542 seconds
+
+--- Round 58/100 ---
+Round 58: Main Acc = 0.8897, Backdoor ASR = 0.9589, Attack Active: False, took 30.7185001373291 seconds
+
+--- Round 59/100 ---
+Round 59: Main Acc = 0.8877, Backdoor ASR = 0.9479, Attack Active: False, took 30.47923707962036 seconds
+
+--- Round 60/100 ---
+Round 60: Main Acc = 0.8811, Backdoor ASR = 0.8876, Attack Active: False, took 30.29004669189453 seconds
+
+--- Round 61/100 ---
+Round 61: Main Acc = 0.8888, Backdoor ASR = 0.9418, Attack Active: False, took 30.35103678703308 seconds
+
+--- Round 62/100 ---
+Round 62: Main Acc = 0.8868, Backdoor ASR = 0.9270, Attack Active: False, took 30.07503056526184 seconds
+
+--- Round 63/100 ---
+Round 63: Main Acc = 0.8898, Backdoor ASR = 0.9279, Attack Active: False, took 30.348735094070435 seconds
+
+--- Round 64/100 ---
+Round 64: Main Acc = 0.8882, Backdoor ASR = 0.9233, Attack Active: False, took 30.35456156730652 seconds
+
+--- Round 65/100 ---
+Round 65: Main Acc = 0.8939, Backdoor ASR = 0.9176, Attack Active: False, took 30.258607149124146 seconds
+
+--- Round 66/100 ---
+Round 66: Main Acc = 0.8937, Backdoor ASR = 0.8890, Attack Active: False, took 30.49788236618042 seconds
+
+--- Round 67/100 ---
+Round 67: Main Acc = 0.8917, Backdoor ASR = 0.8840, Attack Active: False, took 30.5604829788208 seconds
+
+--- Round 68/100 ---
+Round 68: Main Acc = 0.8916, Backdoor ASR = 0.8881, Attack Active: False, took 30.90387773513794 seconds
+
+--- Round 69/100 ---
+Round 69: Main Acc = 0.8852, Backdoor ASR = 0.9048, Attack Active: False, took 30.61377239227295 seconds
+
+--- Round 70/100 ---
+Round 70: Main Acc = 0.8943, Backdoor ASR = 0.8694, Attack Active: False, took 29.906431436538696 seconds
+
+--- Round 71/100 ---
+Round 71: Main Acc = 0.8933, Backdoor ASR = 0.9225, Attack Active: False, took 30.718647241592407 seconds
+
+--- Round 72/100 ---
+Round 72: Main Acc = 0.8948, Backdoor ASR = 0.8961, Attack Active: False, took 30.253059148788452 seconds
+
+--- Round 73/100 ---
+Round 73: Main Acc = 0.8947, Backdoor ASR = 0.8559, Attack Active: False, took 30.077552556991577 seconds
+
+--- Round 74/100 ---
+Round 74: Main Acc = 0.8954, Backdoor ASR = 0.8707, Attack Active: False, took 30.386423349380493 seconds
+
+--- Round 75/100 ---
+Round 75: Main Acc = 0.8953, Backdoor ASR = 0.8548, Attack Active: False, took 30.15679955482483 seconds
+
+--- Round 76/100 ---
+Round 76: Main Acc = 0.8977, Backdoor ASR = 0.8388, Attack Active: False, took 30.431230306625366 seconds
+
+--- Round 77/100 ---
+Round 77: Main Acc = 0.8965, Backdoor ASR = 0.8579, Attack Active: False, took 30.395950317382812 seconds
+
+--- Round 78/100 ---
+Round 78: Main Acc = 0.8968, Backdoor ASR = 0.8332, Attack Active: False, took 30.991926670074463 seconds
+
+--- Round 79/100 ---
+Round 79: Main Acc = 0.8986, Backdoor ASR = 0.8617, Attack Active: False, took 30.67392611503601 seconds
+
+--- Round 80/100 ---
+Round 80: Main Acc = 0.8997, Backdoor ASR = 0.7971, Attack Active: False, took 30.831186532974243 seconds
+
+--- Round 81/100 ---
+Round 81: Main Acc = 0.8966, Backdoor ASR = 0.8407, Attack Active: False, took 30.894413948059082 seconds
+
+--- Round 82/100 ---
+Round 82: Main Acc = 0.8981, Backdoor ASR = 0.8239, Attack Active: False, took 30.85304856300354 seconds
+
+--- Round 83/100 ---
+Round 83: Main Acc = 0.8960, Backdoor ASR = 0.8792, Attack Active: False, took 30.612047910690308 seconds
+
+--- Round 84/100 ---
+Round 84: Main Acc = 0.9001, Backdoor ASR = 0.7871, Attack Active: False, took 30.705180644989014 seconds
+
+--- Round 85/100 ---
+Round 85: Main Acc = 0.8974, Backdoor ASR = 0.7963, Attack Active: False, took 30.771019458770752 seconds
+
+--- Round 86/100 ---
+Round 86: Main Acc = 0.8976, Backdoor ASR = 0.7840, Attack Active: False, took 30.61018395423889 seconds
+
+--- Round 87/100 ---
+Round 87: Main Acc = 0.9015, Backdoor ASR = 0.8061, Attack Active: False, took 31.062452793121338 seconds
+
+--- Round 88/100 ---
+Round 88: Main Acc = 0.9010, Backdoor ASR = 0.7549, Attack Active: False, took 30.902497053146362 seconds
+
+--- Round 89/100 ---
+Round 89: Main Acc = 0.8998, Backdoor ASR = 0.7619, Attack Active: False, took 30.915303945541382 seconds
+
+--- Round 90/100 ---
+Round 90: Main Acc = 0.9002, Backdoor ASR = 0.7302, Attack Active: False, took 30.917934894561768 seconds
+
+--- Round 91/100 ---
+Round 91: Main Acc = 0.9003, Backdoor ASR = 0.7401, Attack Active: False, took 30.758968591690063 seconds
+
+--- Round 92/100 ---
+Round 92: Main Acc = 0.8996, Backdoor ASR = 0.7164, Attack Active: False, took 30.699338674545288 seconds
+
+--- Round 93/100 ---
+Round 93: Main Acc = 0.9000, Backdoor ASR = 0.7484, Attack Active: False, took 30.61881160736084 seconds
+
+--- Round 94/100 ---
+Round 94: Main Acc = 0.9015, Backdoor ASR = 0.7376, Attack Active: False, took 30.956150770187378 seconds
+
+--- Round 95/100 ---
+Round 95: Main Acc = 0.8972, Backdoor ASR = 0.7767, Attack Active: False, took 30.69258427619934 seconds
+
+--- Round 96/100 ---
+Round 96: Main Acc = 0.8981, Backdoor ASR = 0.8065, Attack Active: False, took 30.72091269493103 seconds
+
+--- Round 97/100 ---
+Round 97: Main Acc = 0.9004, Backdoor ASR = 0.7623, Attack Active: False, took 30.91486668586731 seconds
+
+--- Round 98/100 ---
+Round 98: Main Acc = 0.9026, Backdoor ASR = 0.7192, Attack Active: False, took 30.795488357543945 seconds
+
+--- Round 99/100 ---
+Round 99: Main Acc = 0.9024, Backdoor ASR = 0.7096, Attack Active: False, took 31.01642942428589 seconds
+
+--- Round 100/100 ---
+Round 100: Main Acc = 0.9016, Backdoor ASR = 0.7551, Attack Active: False, took 30.73248267173767 seconds
+
+--- Training Finished ---
+--- Configuration ---
+experiment_name: base_experiment_mnist
+dataset: mnist
+num_clients: 5
+num_parallel_clients: 5
+num_rounds: 20
+local_epochs: 1
+batch_size: 32
+lr: 0.01
+seed: 42
+attack: badnets
+num_malicious: 2
+target_class: 7
+poisoning_rate: 0.5
+attack_start_round: 1
+attack_end_round: 20
+scale_factor: 20.0
+malicious_epochs: 5
+mask_k_percent: 0.05
+trigger_epochs: 5
+trigger_lr: 0.01
+defense: none
+clipping_norm: 4.0
+dp_std_dev: 0.025
+deepsight_num_samples: 256
+deepsight_num_seeds: 3
+deepsight_batch_size: 64
+deepsight_tau: 0.5
+flame_lamda: 0.001
+flame_eta: 1.0
+krum_f: 2
+krum_m: 5
+device: cuda
+---------------------
+Traceback (most recent call last):
+  File "/Utilisateurs/mdif01/llm/BackdoorFramework/experiments/run_parallel.py", line 366, in <module>
+    main(args.config)
+  File "/Utilisateurs/mdif01/llm/BackdoorFramework/experiments/run_parallel.py", line 238, in main
+    test_loader = adapter.get_test_loader(config['test_batch_size'])
+                                          ~~~~~~^^^^^^^^^^^^^^^^^^^
+KeyError: 'test_batch_size'
+--- Configuration ---
+experiment_name: iba_fedAvg_gtsrb
+dataset: gtsrb
+num_clients: 20
+num_parallel_clients: 20
+num_rounds: 100
+local_epochs: 1
+batch_size: 32
+test_batch_size: 256
+lr: 0.01
+seed: 42
+attack: iba
+num_malicious: 2
+target_class: 7
+poisoning_rate: 0.25
+attack_start_round: 20
+attack_end_round: 50
+scale_factor: 5.0
+malicious_epochs: 5
+mask_k_percent: 0.05
+trigger_epochs: 5
+trigger_lr: 0.01
+defense: none
+clipping_norm: 4.0
+dp_std_dev: 0.025
+deepsight_num_samples: 256
+deepsight_num_seeds: 3
+deepsight_batch_size: 64
+deepsight_tau: 0.5
+flame_lamda: 0.001
+flame_eta: 1.0
+krum_f: 2
+krum_m: 5
+device: cuda
+---------------------
+
+--- IBA Client [1] optimizing U-Net generator for round 21 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [1] finished training, GPU cache cleared.
+
+--- IBA Client [1] optimizing U-Net generator for round 33 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [1] finished training, GPU cache cleared.
+
+--- IBA Client [1] optimizing U-Net generator for round 46 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [1] finished training, GPU cache cleared.
+
+--- IBA Client [0] optimizing U-Net generator for round 22 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [0] finished training, GPU cache cleared.
+
+--- IBA Client [1] optimizing U-Net generator for round 29 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [1] finished training, GPU cache cleared.
+
+--- IBA Client [1] optimizing U-Net generator for round 35 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [1] finished training, GPU cache cleared.
+
+--- IBA Client [1] optimizing U-Net generator for round 22 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [1] finished training, GPU cache cleared.
+
+--- IBA Client [0] optimizing U-Net generator for round 33 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [0] finished training, GPU cache cleared.
+
+--- IBA Client [1] optimizing U-Net generator for round 40 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [1] finished training, GPU cache cleared.
+
+--- IBA Client [0] optimizing U-Net generator for round 26 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [0] finished training, GPU cache cleared.
+
+--- IBA Client [0] optimizing U-Net generator for round 34 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [0] finished training, GPU cache cleared.
+
+--- IBA Client [0] optimizing U-Net generator for round 42 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [0] finished training, GPU cache cleared.
+
+--- IBA Client [0] optimizing U-Net generator for round 23 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [0] finished training, GPU cache cleared.
+
+--- IBA Client [1] optimizing U-Net generator for round 36 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [1] finished training, GPU cache cleared.
+
+--- IBA Client [1] optimizing U-Net generator for round 47 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [1] finished training, GPU cache cleared.
+
+--- IBA Client [1] optimizing U-Net generator for round 20 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [1] finished training, GPU cache cleared.
+
+--- IBA Client [1] optimizing U-Net generator for round 28 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [1] finished training, GPU cache cleared.
+
+--- IBA Client [0] optimizing U-Net generator for round 36 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [0] finished training, GPU cache cleared.
+
+--- IBA Client [1] optimizing U-Net generator for round 45 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [1] finished training, GPU cache cleared.
+
+--- IBA Client [1] optimizing U-Net generator for round 25 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [1] finished training, GPU cache cleared.
+
+--- IBA Client [1] optimizing U-Net generator for round 32 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [1] finished training, GPU cache cleared.
+
+--- IBA Client [1] optimizing U-Net generator for round 44 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [1] finished training, GPU cache cleared.
+
+--- IBA Client [0] optimizing U-Net generator for round 30 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [0] finished training, GPU cache cleared.
+
+--- IBA Client [0] optimizing U-Net generator for round 38 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [0] finished training, GPU cache cleared.
+
+--- IBA Client [0] optimizing U-Net generator for round 43 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [0] finished training, GPU cache cleared.
+
+--- IBA Client [1] optimizing U-Net generator for round 48 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [1] finished training, GPU cache cleared.
+
+--- IBA Client [1] optimizing U-Net generator for round 23 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [1] finished training, GPU cache cleared.
+
+--- IBA Client [0] optimizing U-Net generator for round 32 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [0] finished training, GPU cache cleared.
+
+--- IBA Client [0] optimizing U-Net generator for round 40 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [0] finished training, GPU cache cleared.
+
+--- IBA Client [1] optimizing U-Net generator for round 50 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [1] finished training, GPU cache cleared.
+
+--- IBA Client [0] optimizing U-Net generator for round 31 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [0] finished training, GPU cache cleared.
+
+--- IBA Client [0] optimizing U-Net generator for round 44 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [0] finished training, GPU cache cleared.
+
+--- IBA Client [1] optimizing U-Net generator for round 30 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [1] finished training, GPU cache cleared.
+
+--- IBA Client [0] optimizing U-Net generator for round 45 ---
+--- Training IBA Generator for 5 epochs ---
+--- IBA Generator training finished ---
+IBAClient [0] finished training, GPU cache cleared.
+
+--- Round 1/100 ---
+Round 1: Main Acc = 0.0804, Backdoor ASR = 0.0000, Attack Active: False, took 129.85663294792175 seconds
+
+--- Round 2/100 ---
+Round 2: Main Acc = 0.1508, Backdoor ASR = 0.0000, Attack Active: False, took 22.486514806747437 seconds
+
+--- Round 3/100 ---
+Round 3: Main Acc = 0.2597, Backdoor ASR = 0.0000, Attack Active: False, took 22.56047511100769 seconds
+
+--- Round 4/100 ---
+Round 4: Main Acc = 0.3584, Backdoor ASR = 0.0000, Attack Active: False, took 22.541285276412964 seconds
+
+--- Round 5/100 ---
+Round 5: Main Acc = 0.4376, Backdoor ASR = 0.0000, Attack Active: False, took 22.420792818069458 seconds
+
+--- Round 6/100 ---
+Round 6: Main Acc = 0.5055, Backdoor ASR = 0.0000, Attack Active: False, took 22.257387161254883 seconds
+
+--- Round 7/100 ---
+Round 7: Main Acc = 0.5446, Backdoor ASR = 0.0000, Attack Active: False, took 22.084300994873047 seconds
+
+--- Round 8/100 ---
+Round 8: Main Acc = 0.6038, Backdoor ASR = 0.0000, Attack Active: False, took 22.3278067111969 seconds
+
+--- Round 9/100 ---
+Round 9: Main Acc = 0.6409, Backdoor ASR = 0.0000, Attack Active: False, took 22.13145089149475 seconds
+
+--- Round 10/100 ---
+Round 10: Main Acc = 0.6883, Backdoor ASR = 0.0000, Attack Active: False, took 21.98267412185669 seconds
+
+--- Round 11/100 ---
+Round 11: Main Acc = 0.7065, Backdoor ASR = 0.0000, Attack Active: False, took 22.342965602874756 seconds
+
+--- Round 12/100 ---
+Round 12: Main Acc = 0.7322, Backdoor ASR = 0.0000, Attack Active: False, took 22.252357006072998 seconds
+
+--- Round 13/100 ---
+Round 13: Main Acc = 0.7496, Backdoor ASR = 0.0000, Attack Active: False, took 22.26870822906494 seconds
+
+--- Round 14/100 ---
+Round 14: Main Acc = 0.7761, Backdoor ASR = 0.0000, Attack Active: False, took 22.40670943260193 seconds
+
+--- Round 15/100 ---
+Round 15: Main Acc = 0.7859, Backdoor ASR = 0.0000, Attack Active: False, took 22.087464094161987 seconds
+
+--- Round 16/100 ---
+Round 16: Main Acc = 0.8086, Backdoor ASR = 0.0000, Attack Active: False, took 21.997802257537842 seconds
+
+--- Round 17/100 ---
+Round 17: Main Acc = 0.8218, Backdoor ASR = 0.0000, Attack Active: False, took 21.764933586120605 seconds
+
+--- Round 18/100 ---
+Round 18: Main Acc = 0.8336, Backdoor ASR = 0.0000, Attack Active: False, took 22.06789493560791 seconds
+
+--- Round 19/100 ---
+Round 19: Main Acc = 0.8432, Backdoor ASR = 0.0000, Attack Active: False, took 23.710664987564087 seconds
+
+--- Round 20/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 20: Main Acc = 0.8546, Backdoor ASR = 0.2598, Attack Active: True, took 373.9730501174927 seconds
+
+--- Round 21/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 21: Main Acc = 0.8514, Backdoor ASR = 0.3172, Attack Active: True, took 376.0822956562042 seconds
+
+--- Round 22/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 22: Main Acc = 0.8675, Backdoor ASR = 0.4994, Attack Active: True, took 382.52266359329224 seconds
+
+--- Round 23/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 23: Main Acc = 0.8709, Backdoor ASR = 0.5575, Attack Active: True, took 374.17156505584717 seconds
+
+--- Round 24/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 24: Main Acc = 0.8698, Backdoor ASR = 0.5858, Attack Active: True, took 368.4942162036896 seconds
+
+--- Round 25/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 25: Main Acc = 0.8796, Backdoor ASR = 0.5868, Attack Active: True, took 378.5934932231903 seconds
+
+--- Round 26/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 26: Main Acc = 0.8826, Backdoor ASR = 0.6462, Attack Active: True, took 376.32111287117004 seconds
+
+--- Round 27/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 27: Main Acc = 0.8857, Backdoor ASR = 0.6497, Attack Active: True, took 372.8407118320465 seconds
+
+--- Round 28/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 28: Main Acc = 0.8915, Backdoor ASR = 0.6390, Attack Active: True, took 361.95048785209656 seconds
+
+--- Round 29/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 29: Main Acc = 0.8943, Backdoor ASR = 0.6670, Attack Active: True, took 376.7111358642578 seconds
+
+--- Round 30/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 30: Main Acc = 0.8964, Backdoor ASR = 0.6679, Attack Active: True, took 373.1580355167389 seconds
+
+--- Round 31/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 31: Main Acc = 0.8983, Backdoor ASR = 0.6914, Attack Active: True, took 382.7118535041809 seconds
+
+--- Round 32/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 32: Main Acc = 0.8978, Backdoor ASR = 0.7101, Attack Active: True, took 384.8017830848694 seconds
+
+--- Round 33/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 33: Main Acc = 0.9012, Backdoor ASR = 0.7127, Attack Active: True, took 382.43974137306213 seconds
+
+--- Round 34/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 34: Main Acc = 0.9013, Backdoor ASR = 0.7205, Attack Active: True, took 368.6100170612335 seconds
+
+--- Round 35/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 35: Main Acc = 0.9019, Backdoor ASR = 0.7011, Attack Active: True, took 376.45075941085815 seconds
+
+--- Round 36/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 36: Main Acc = 0.9041, Backdoor ASR = 0.7263, Attack Active: True, took 382.7627909183502 seconds
+
+--- Round 37/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 37: Main Acc = 0.9047, Backdoor ASR = 0.7232, Attack Active: True, took 386.4856696128845 seconds
+
+--- Round 38/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 38: Main Acc = 0.9074, Backdoor ASR = 0.7521, Attack Active: True, took 374.0810556411743 seconds
+
+--- Round 39/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 39: Main Acc = 0.9097, Backdoor ASR = 0.7479, Attack Active: True, took 376.2836797237396 seconds
+
+--- Round 40/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 40: Main Acc = 0.9102, Backdoor ASR = 0.7547, Attack Active: True, took 382.2511696815491 seconds
+
+--- Round 41/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 41: Main Acc = 0.9096, Backdoor ASR = 0.7520, Attack Active: True, took 369.35057520866394 seconds
+
+--- Round 42/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 42: Main Acc = 0.9114, Backdoor ASR = 0.7378, Attack Active: True, took 365.90773606300354 seconds
+
+--- Round 43/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 43: Main Acc = 0.9116, Backdoor ASR = 0.7388, Attack Active: True, took 386.391578912735 seconds
+
+--- Round 44/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 44: Main Acc = 0.9117, Backdoor ASR = 0.7569, Attack Active: True, took 367.95355463027954 seconds
+
+--- Round 45/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 45: Main Acc = 0.9153, Backdoor ASR = 0.7511, Attack Active: True, took 363.13169717788696 seconds
+
+--- Round 46/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 46: Main Acc = 0.9099, Backdoor ASR = 0.7732, Attack Active: True, took 366.90959215164185 seconds
+
+--- Round 47/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 47: Main Acc = 0.9135, Backdoor ASR = 0.7700, Attack Active: True, took 378.0424773693085 seconds
+
+--- Round 48/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 48: Main Acc = 0.9160, Backdoor ASR = 0.7930, Attack Active: True, took 362.6797602176666 seconds
+
+--- Round 49/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 49: Main Acc = 0.9162, Backdoor ASR = 0.7805, Attack Active: True, took 370.7079086303711 seconds
+
+--- Round 50/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 50: Main Acc = 0.9146, Backdoor ASR = 0.7889, Attack Active: True, took 371.9471173286438 seconds
+
+--- Round 51/100 ---
+Round 51: Main Acc = 0.9172, Backdoor ASR = 0.7706, Attack Active: False, took 300.6447401046753 seconds
+
+--- Round 52/100 ---
+Round 52: Main Acc = 0.9179, Backdoor ASR = 0.7426, Attack Active: False, took 301.3328733444214 seconds
+
+--- Round 53/100 ---
+Round 53: Main Acc = 0.9189, Backdoor ASR = 0.7397, Attack Active: False, took 303.1861364841461 seconds
+
+--- Round 54/100 ---
+Round 54: Main Acc = 0.9186, Backdoor ASR = 0.7325, Attack Active: False, took 302.3677010536194 seconds
+
+--- Round 55/100 ---
+Round 55: Main Acc = 0.9212, Backdoor ASR = 0.7309, Attack Active: False, took 302.1723983287811 seconds
+
+--- Round 56/100 ---
+Round 56: Main Acc = 0.9203, Backdoor ASR = 0.7146, Attack Active: False, took 303.7274589538574 seconds
+
+--- Round 57/100 ---
+Round 57: Main Acc = 0.9206, Backdoor ASR = 0.7082, Attack Active: False, took 301.74226546287537 seconds
+
+--- Round 58/100 ---
+Round 58: Main Acc = 0.9209, Backdoor ASR = 0.7173, Attack Active: False, took 302.7810204029083 seconds
+
+--- Round 59/100 ---
+Round 59: Main Acc = 0.9199, Backdoor ASR = 0.6974, Attack Active: False, took 303.81061577796936 seconds
+
+--- Round 60/100 ---
+Round 60: Main Acc = 0.9215, Backdoor ASR = 0.6914, Attack Active: False, took 302.73755955696106 seconds
+
+--- Round 61/100 ---
+Round 61: Main Acc = 0.9230, Backdoor ASR = 0.7001, Attack Active: False, took 301.700471162796 seconds
+
+--- Round 62/100 ---
+Round 62: Main Acc = 0.9253, Backdoor ASR = 0.6791, Attack Active: False, took 301.7685196399689 seconds
+
+--- Round 63/100 ---
+Round 63: Main Acc = 0.9222, Backdoor ASR = 0.6721, Attack Active: False, took 302.383198261261 seconds
+
+--- Round 64/100 ---
+Round 64: Main Acc = 0.9247, Backdoor ASR = 0.6773, Attack Active: False, took 302.0019176006317 seconds
+
+--- Round 65/100 ---
+Round 65: Main Acc = 0.9239, Backdoor ASR = 0.6666, Attack Active: False, took 302.9035596847534 seconds
+
+--- Round 66/100 ---
+Round 66: Main Acc = 0.9253, Backdoor ASR = 0.6628, Attack Active: False, took 302.28812885284424 seconds
+
+--- Round 67/100 ---
+Round 67: Main Acc = 0.9253, Backdoor ASR = 0.6534, Attack Active: False, took 302.4367456436157 seconds
+
+--- Round 68/100 ---
+Round 68: Main Acc = 0.9243, Backdoor ASR = 0.6563, Attack Active: False, took 300.61597514152527 seconds
+
+--- Round 69/100 ---
+Round 69: Main Acc = 0.9271, Backdoor ASR = 0.6392, Attack Active: False, took 302.01204109191895 seconds
+
+--- Round 70/100 ---
+Round 70: Main Acc = 0.9255, Backdoor ASR = 0.6441, Attack Active: False, took 302.56560158729553 seconds
+
+--- Round 71/100 ---
+Round 71: Main Acc = 0.9246, Backdoor ASR = 0.6373, Attack Active: False, took 301.63978695869446 seconds
+
+--- Round 72/100 ---
+Round 72: Main Acc = 0.9260, Backdoor ASR = 0.6553, Attack Active: False, took 301.093049287796 seconds
+
+--- Round 73/100 ---
+Round 73: Main Acc = 0.9258, Backdoor ASR = 0.6517, Attack Active: False, took 302.9556291103363 seconds
+
+--- Round 74/100 ---
+Round 74: Main Acc = 0.9251, Backdoor ASR = 0.6391, Attack Active: False, took 302.45077681541443 seconds
+
+--- Round 75/100 ---
+Round 75: Main Acc = 0.9248, Backdoor ASR = 0.6247, Attack Active: False, took 301.42711901664734 seconds
+
+--- Round 76/100 ---
+Round 76: Main Acc = 0.9244, Backdoor ASR = 0.6181, Attack Active: False, took 300.75629568099976 seconds
+
+--- Round 77/100 ---
+Round 77: Main Acc = 0.9258, Backdoor ASR = 0.6359, Attack Active: False, took 301.51686835289 seconds
+
+--- Round 78/100 ---
+Round 78: Main Acc = 0.9258, Backdoor ASR = 0.6336, Attack Active: False, took 301.9410810470581 seconds
+
+--- Round 79/100 ---
+Round 79: Main Acc = 0.9253, Backdoor ASR = 0.6344, Attack Active: False, took 299.0796060562134 seconds
+
+--- Round 80/100 ---
+Round 80: Main Acc = 0.9260, Backdoor ASR = 0.6131, Attack Active: False, took 304.5255470275879 seconds
+
+--- Round 81/100 ---
+Round 81: Main Acc = 0.9265, Backdoor ASR = 0.6076, Attack Active: False, took 303.27883076667786 seconds
+
+--- Round 82/100 ---
+Round 82: Main Acc = 0.9283, Backdoor ASR = 0.6254, Attack Active: False, took 303.74922227859497 seconds
+
+--- Round 83/100 ---
+Round 83: Main Acc = 0.9257, Backdoor ASR = 0.6067, Attack Active: False, took 301.66420102119446 seconds
+
+--- Round 84/100 ---
+Round 84: Main Acc = 0.9274, Backdoor ASR = 0.6205, Attack Active: False, took 302.4142529964447 seconds
+
+--- Round 85/100 ---
+Round 85: Main Acc = 0.9277, Backdoor ASR = 0.6002, Attack Active: False, took 301.7068519592285 seconds
+
+--- Round 86/100 ---
+Round 86: Main Acc = 0.9278, Backdoor ASR = 0.5977, Attack Active: False, took 302.2072525024414 seconds
+
+--- Round 87/100 ---
+Round 87: Main Acc = 0.9290, Backdoor ASR = 0.5804, Attack Active: False, took 303.7244348526001 seconds
+
+--- Round 88/100 ---
+Round 88: Main Acc = 0.9275, Backdoor ASR = 0.5720, Attack Active: False, took 303.4175190925598 seconds
+
+--- Round 89/100 ---
+Round 89: Main Acc = 0.9291, Backdoor ASR = 0.6111, Attack Active: False, took 302.893771648407 seconds
+
+--- Round 90/100 ---
+Round 90: Main Acc = 0.9293, Backdoor ASR = 0.6006, Attack Active: False, took 301.49855494499207 seconds
+
+--- Round 91/100 ---
+Round 91: Main Acc = 0.9290, Backdoor ASR = 0.5880, Attack Active: False, took 301.56863141059875 seconds
+
+--- Round 92/100 ---
+Round 92: Main Acc = 0.9294, Backdoor ASR = 0.6038, Attack Active: False, took 299.74863600730896 seconds
+
+--- Round 93/100 ---
+Round 93: Main Acc = 0.9306, Backdoor ASR = 0.5730, Attack Active: False, took 301.45600867271423 seconds
+
+--- Round 94/100 ---
+Round 94: Main Acc = 0.9287, Backdoor ASR = 0.5867, Attack Active: False, took 300.8402256965637 seconds
+
+--- Round 95/100 ---
+Round 95: Main Acc = 0.9298, Backdoor ASR = 0.5917, Attack Active: False, took 303.7110252380371 seconds
+
+--- Round 96/100 ---
+Round 96: Main Acc = 0.9295, Backdoor ASR = 0.5907, Attack Active: False, took 299.5425465106964 seconds
+
+--- Round 97/100 ---
+Round 97: Main Acc = 0.9287, Backdoor ASR = 0.5432, Attack Active: False, took 299.7534725666046 seconds
+
+--- Round 98/100 ---
+Round 98: Main Acc = 0.9290, Backdoor ASR = 0.5770, Attack Active: False, took 301.2160499095917 seconds
+
+--- Round 99/100 ---
+Round 99: Main Acc = 0.9298, Backdoor ASR = 0.5590, Attack Active: False, took 300.8927059173584 seconds
+
+--- Round 100/100 ---
+Round 100: Main Acc = 0.9295, Backdoor ASR = 0.5698, Attack Active: False, took 301.795117855072 seconds
+
+--- Training Finished ---
+--- Configuration ---
+experiment_name: mr_fedavg_clip_femnist
+dataset: gtsrb
+num_clients: 5
+num_parallel_clients: 5
+num_rounds: 20
+local_epochs: 1
+batch_size: 32
+test_batch_size: 256
+lr: 0.01
+seed: 42
+attack: scaling
+num_malicious: 1
+target_class: 7
+poisoning_rate: 0.25
+attack_start_round: 18
+attack_end_round: 18
+scale_factor: 5.0
+malicious_epochs: 5
+mask_k_percent: 0.05
+trigger_epochs: 5
+trigger_lr: 0.01
+defense: none
+clipping_norm: 4.0
+dp_std_dev: 0.025
+deepsight_num_samples: 256
+deepsight_num_seeds: 3
+deepsight_batch_size: 64
+deepsight_tau: 0.5
+flame_lamda: 0.001
+flame_eta: 1.0
+krum_f: 2
+krum_m: 5
+device: cuda
+---------------------
+--- ScalingAttack Client [0] acting benignly in round 1 ---
+--- ScalingAttack Client [0] acting benignly in round 2 ---
+--- ScalingAttack Client [0] acting benignly in round 3 ---
+--- ScalingAttack Client [0] EXECUTING ATTACK in round 18 ---
+Client [0]: Using scale factor: 5.00
+--- ScalingAttack Client [0] acting benignly in round 4 ---
+--- ScalingAttack Client [0] acting benignly in round 8 ---
+--- ScalingAttack Client [0] acting benignly in round 15 ---
+--- ScalingAttack Client [0] acting benignly in round 7 ---
+--- ScalingAttack Client [0] acting benignly in round 10 ---
+--- ScalingAttack Client [0] acting benignly in round 16 ---
+--- ScalingAttack Client [0] acting benignly in round 19 ---
+--- ScalingAttack Client [0] acting benignly in round 20 ---
+--- ScalingAttack Client [0] acting benignly in round 5 ---
+--- ScalingAttack Client [0] acting benignly in round 6 ---
+--- ScalingAttack Client [0] acting benignly in round 9 ---
+--- ScalingAttack Client [0] acting benignly in round 11 ---
+--- ScalingAttack Client [0] acting benignly in round 14 ---
+--- ScalingAttack Client [0] acting benignly in round 17 ---
+
+--- Round 1/20 ---
+Round 1: Main Acc = 0.3772, Backdoor ASR = 0.0000, Attack Active: False, took 35.13607358932495 seconds
+
+--- Round 2/20 ---
+Round 2: Main Acc = 0.5688, Backdoor ASR = 0.0000, Attack Active: False, took 20.217597007751465 seconds
+
+--- Round 3/20 ---
+Round 3: Main Acc = 0.7161, Backdoor ASR = 0.0000, Attack Active: False, took 20.258028507232666 seconds
+
+--- Round 4/20 ---
+Round 4: Main Acc = 0.8163, Backdoor ASR = 0.0000, Attack Active: False, took 20.588303327560425 seconds
+
+--- Round 5/20 ---
+Round 5: Main Acc = 0.8674, Backdoor ASR = 0.0000, Attack Active: False, took 20.265528202056885 seconds
+
+--- Round 6/20 ---
+Round 6: Main Acc = 0.8886, Backdoor ASR = 0.0000, Attack Active: False, took 20.468580961227417 seconds
+
+--- Round 7/20 ---
+Round 7: Main Acc = 0.9127, Backdoor ASR = 0.0000, Attack Active: False, took 20.223052501678467 seconds
+
+--- Round 8/20 ---
+Round 8: Main Acc = 0.9177, Backdoor ASR = 0.0000, Attack Active: False, took 20.511353015899658 seconds
+
+--- Round 9/20 ---
+Round 9: Main Acc = 0.9287, Backdoor ASR = 0.0000, Attack Active: False, took 20.75727415084839 seconds
+
+--- Round 10/20 ---
+Round 10: Main Acc = 0.9339, Backdoor ASR = 0.0000, Attack Active: False, took 20.570893049240112 seconds
+
+--- Round 11/20 ---
+Round 11: Main Acc = 0.9359, Backdoor ASR = 0.0000, Attack Active: False, took 20.515248775482178 seconds
+
+--- Round 12/20 ---
+Round 12: Main Acc = 0.9365, Backdoor ASR = 0.0000, Attack Active: False, took 20.854559183120728 seconds
+
+--- Round 13/20 ---
+Round 13: Main Acc = 0.9420, Backdoor ASR = 0.0000, Attack Active: False, took 20.649763584136963 seconds
+
+--- Round 14/20 ---
+Round 14: Main Acc = 0.9424, Backdoor ASR = 0.0000, Attack Active: False, took 20.245830535888672 seconds
+
+--- Round 15/20 ---
+Round 15: Main Acc = 0.9447, Backdoor ASR = 0.0000, Attack Active: False, took 20.74748182296753 seconds
+
+--- Round 16/20 ---
+Round 16: Main Acc = 0.9464, Backdoor ASR = 0.0000, Attack Active: False, took 20.77518653869629 seconds
+
+--- Round 17/20 ---
+Round 17: Main Acc = 0.9443, Backdoor ASR = 0.0000, Attack Active: False, took 20.237813234329224 seconds
+
+--- Round 18/20 ---
+Round 18: Main Acc = 0.9043, Backdoor ASR = 0.7500, Attack Active: True, took 49.051820516586304 seconds
+
+--- Round 19/20 ---
+Round 19: Main Acc = 0.9432, Backdoor ASR = 0.5888, Attack Active: False, took 27.492502450942993 seconds
+
+--- Round 20/20 ---
+Round 20: Main Acc = 0.9457, Backdoor ASR = 0.5641, Attack Active: False, took 27.435837984085083 seconds
+
+--- Training Finished ---
+--- Configuration ---
+experiment_name: mr_clip_mnist
+dataset: mnist
+num_clients: 6
+num_parallel_clients: 6
+num_rounds: 10
+local_epochs: 1
+batch_size: 32
+lr: 0.01
+seed: 42
+attack: scaling
+num_malicious: 1
+target_class: 7
+poisoning_rate: 0.2
+attack_start_round: 8
+attack_end_round: 8
+scale_factor: 5
+malicious_epochs: 5
+mask_k_percent: 0.05
+trigger_epochs: 5
+trigger_lr: 0.01
+defense: krum
+clipping_norm: 4.0
+dp_std_dev: 0.025
+deepsight_num_samples: 256
+deepsight_num_seeds: 3
+deepsight_batch_size: 64
+deepsight_tau: 0.5
+flame_lamda: 0.001
+flame_eta: 1.0
+krum_f: 1
+krum_m: 4
+device: cuda
+---------------------
+Traceback (most recent call last):
+  File "/Utilisateurs/mdif01/llm/BackdoorFramework/experiments/run_parallel.py", line 366, in <module>
+    main(args.config)
+  File "/Utilisateurs/mdif01/llm/BackdoorFramework/experiments/run_parallel.py", line 238, in main
+    test_loader = adapter.get_test_loader(config['test_batch_size'])
+                                          ~~~~~~^^^^^^^^^^^^^^^^^^^
+KeyError: 'test_batch_size'
+--- Configuration ---
+experiment_name: base_fedAvg_femnist
+dataset: femnist
+num_clients: 20
+num_parallel_clients: 20
+num_rounds: 100
+local_epochs: 1
+batch_size: 32
+test_batch_size: 256
+lr: 0.01
+seed: 42
+attack: none
+num_malicious: 1
+target_class: 7
+poisoning_rate: 0.25
+attack_start_round: 50
+attack_end_round: 50
+scale_factor: 20
+malicious_epochs: 5
+mask_k_percent: 0.05
+trigger_epochs: 5
+trigger_lr: 0.01
+defense: none
+clipping_norm: 4.0
+dp_std_dev: 0.025
+deepsight_num_samples: 256
+deepsight_num_seeds: 3
+deepsight_batch_size: 64
+deepsight_tau: 0.5
+flame_lamda: 0.001
+flame_eta: 1.0
+krum_f: 2
+krum_m: 5
+device: cuda
+---------------------
+
+--- Round 1/100 ---
+Round 1: Main Acc = 0.7538, Backdoor ASR = 0.0000, Attack Active: False, took 246.3631410598755 seconds
+
+--- Round 2/100 ---
+Round 2: Main Acc = 0.8085, Backdoor ASR = 0.0000, Attack Active: False, took 179.564453125 seconds
+
+--- Round 3/100 ---
+Round 3: Main Acc = 0.8259, Backdoor ASR = 0.0000, Attack Active: False, took 179.8865203857422 seconds
+
+--- Round 4/100 ---
+Round 4: Main Acc = 0.8350, Backdoor ASR = 0.0000, Attack Active: False, took 179.1710822582245 seconds
+
+--- Round 5/100 ---
+Round 5: Main Acc = 0.8407, Backdoor ASR = 0.0000, Attack Active: False, took 180.1312325000763 seconds
+
+--- Round 6/100 ---
+Round 6: Main Acc = 0.8444, Backdoor ASR = 0.0000, Attack Active: False, took 178.95820236206055 seconds
+
+--- Round 7/100 ---
+Round 7: Main Acc = 0.8464, Backdoor ASR = 0.0000, Attack Active: False, took 179.7554624080658 seconds
+
+--- Round 8/100 ---
+Round 8: Main Acc = 0.8490, Backdoor ASR = 0.0000, Attack Active: False, took 179.7083728313446 seconds
+
+--- Round 9/100 ---
+Round 9: Main Acc = 0.8503, Backdoor ASR = 0.0000, Attack Active: False, took 179.843754529953 seconds
+
+--- Round 10/100 ---
+Round 10: Main Acc = 0.8519, Backdoor ASR = 0.0000, Attack Active: False, took 179.7317807674408 seconds
+
+--- Round 11/100 ---
+Round 11: Main Acc = 0.8530, Backdoor ASR = 0.0000, Attack Active: False, took 179.80983519554138 seconds
+
+--- Round 12/100 ---
+Round 12: Main Acc = 0.8535, Backdoor ASR = 0.0000, Attack Active: False, took 178.76195406913757 seconds
+
+--- Round 13/100 ---
+Round 13: Main Acc = 0.8541, Backdoor ASR = 0.0000, Attack Active: False, took 178.6216471195221 seconds
+
+--- Round 14/100 ---
+Round 14: Main Acc = 0.8551, Backdoor ASR = 0.0000, Attack Active: False, took 178.53232049942017 seconds
+
+--- Round 15/100 ---
+Round 15: Main Acc = 0.8566, Backdoor ASR = 0.0000, Attack Active: False, took 179.26437759399414 seconds
+
+--- Round 16/100 ---
+Round 16: Main Acc = 0.8569, Backdoor ASR = 0.0000, Attack Active: False, took 178.4351406097412 seconds
+
+--- Round 17/100 ---
+Round 17: Main Acc = 0.8569, Backdoor ASR = 0.0000, Attack Active: False, took 179.0502791404724 seconds
+
+--- Round 18/100 ---
+Round 18: Main Acc = 0.8581, Backdoor ASR = 0.0000, Attack Active: False, took 179.25652861595154 seconds
+
+--- Round 19/100 ---
+Round 19: Main Acc = 0.8584, Backdoor ASR = 0.0000, Attack Active: False, took 179.0105276107788 seconds
+
+--- Round 20/100 ---
+Round 20: Main Acc = 0.8588, Backdoor ASR = 0.0000, Attack Active: False, took 179.3693630695343 seconds
+
+--- Round 21/100 ---
+Round 21: Main Acc = 0.8595, Backdoor ASR = 0.0000, Attack Active: False, took 179.36229348182678 seconds
+
+--- Round 22/100 ---
+Round 22: Main Acc = 0.8602, Backdoor ASR = 0.0000, Attack Active: False, took 179.29281330108643 seconds
+
+--- Round 23/100 ---
+Round 23: Main Acc = 0.8592, Backdoor ASR = 0.0000, Attack Active: False, took 179.18655109405518 seconds
+
+--- Round 24/100 ---
+Round 24: Main Acc = 0.8605, Backdoor ASR = 0.0000, Attack Active: False, took 178.90091133117676 seconds
+
+--- Round 25/100 ---
+Round 25: Main Acc = 0.8609, Backdoor ASR = 0.0000, Attack Active: False, took 178.10434246063232 seconds
+
+--- Round 26/100 ---
+Round 26: Main Acc = 0.8608, Backdoor ASR = 0.0000, Attack Active: False, took 178.99620866775513 seconds
+
+--- Round 27/100 ---
+Round 27: Main Acc = 0.8616, Backdoor ASR = 0.0000, Attack Active: False, took 179.128093957901 seconds
+
+--- Round 28/100 ---
+Round 28: Main Acc = 0.8611, Backdoor ASR = 0.0000, Attack Active: False, took 179.20978379249573 seconds
+
+--- Round 29/100 ---
+Round 29: Main Acc = 0.8618, Backdoor ASR = 0.0000, Attack Active: False, took 178.62737894058228 seconds
+
+--- Round 30/100 ---
+Round 30: Main Acc = 0.8620, Backdoor ASR = 0.0000, Attack Active: False, took 178.95518279075623 seconds
+
+--- Round 31/100 ---
+Round 31: Main Acc = 0.8620, Backdoor ASR = 0.0000, Attack Active: False, took 178.75538516044617 seconds
+
+--- Round 32/100 ---
+Round 32: Main Acc = 0.8626, Backdoor ASR = 0.0000, Attack Active: False, took 179.15546870231628 seconds
+
+--- Round 33/100 ---
+Round 33: Main Acc = 0.8620, Backdoor ASR = 0.0000, Attack Active: False, took 178.5289716720581 seconds
+
+--- Round 34/100 ---
+Round 34: Main Acc = 0.8630, Backdoor ASR = 0.0000, Attack Active: False, took 178.3830759525299 seconds
+
+--- Round 35/100 ---
+Round 35: Main Acc = 0.8621, Backdoor ASR = 0.0000, Attack Active: False, took 178.58551740646362 seconds
+
+--- Round 36/100 ---
+Round 36: Main Acc = 0.8635, Backdoor ASR = 0.0000, Attack Active: False, took 179.4595558643341 seconds
+
+--- Round 37/100 ---
+Round 37: Main Acc = 0.8636, Backdoor ASR = 0.0000, Attack Active: False, took 178.8011293411255 seconds
+
+--- Round 38/100 ---
+Round 38: Main Acc = 0.8637, Backdoor ASR = 0.0000, Attack Active: False, took 178.88986110687256 seconds
+
+--- Round 39/100 ---
+Round 39: Main Acc = 0.8640, Backdoor ASR = 0.0000, Attack Active: False, took 178.59997177124023 seconds
+
+--- Round 40/100 ---
+Round 40: Main Acc = 0.8633, Backdoor ASR = 0.0000, Attack Active: False, took 178.48380303382874 seconds
+
+--- Round 41/100 ---
+Round 41: Main Acc = 0.8642, Backdoor ASR = 0.0000, Attack Active: False, took 178.925883769989 seconds
+
+--- Round 42/100 ---
+Round 42: Main Acc = 0.8644, Backdoor ASR = 0.0000, Attack Active: False, took 177.64802980422974 seconds
+
+--- Round 43/100 ---
+Round 43: Main Acc = 0.8631, Backdoor ASR = 0.0000, Attack Active: False, took 179.2910668849945 seconds
+
+--- Round 44/100 ---
+Round 44: Main Acc = 0.8642, Backdoor ASR = 0.0000, Attack Active: False, took 179.0377275943756 seconds
+
+--- Round 45/100 ---
+Round 45: Main Acc = 0.8640, Backdoor ASR = 0.0000, Attack Active: False, took 179.38572001457214 seconds
+
+--- Round 46/100 ---
+Round 46: Main Acc = 0.8650, Backdoor ASR = 0.0000, Attack Active: False, took 179.18992924690247 seconds
+
+--- Round 47/100 ---
+Round 47: Main Acc = 0.8651, Backdoor ASR = 0.0000, Attack Active: False, took 179.76662349700928 seconds
+
+--- Round 48/100 ---
+Round 48: Main Acc = 0.8649, Backdoor ASR = 0.0000, Attack Active: False, took 179.7869029045105 seconds
+
+--- Round 49/100 ---
+Round 49: Main Acc = 0.8647, Backdoor ASR = 0.0000, Attack Active: False, took 179.40116810798645 seconds
+
+--- Round 50/100 ---
+Round 50: Main Acc = 0.8652, Backdoor ASR = 0.0000, Attack Active: False, took 179.79391360282898 seconds
+
+--- Round 51/100 ---
+Round 51: Main Acc = 0.8648, Backdoor ASR = 0.0000, Attack Active: False, took 180.13153290748596 seconds
+
+--- Round 52/100 ---
+Round 52: Main Acc = 0.8658, Backdoor ASR = 0.0000, Attack Active: False, took 180.11888933181763 seconds
+
+--- Round 53/100 ---
+Round 53: Main Acc = 0.8661, Backdoor ASR = 0.0000, Attack Active: False, took 179.04396390914917 seconds
+
+--- Round 54/100 ---
+Round 54: Main Acc = 0.8659, Backdoor ASR = 0.0000, Attack Active: False, took 179.3751256465912 seconds
+
+--- Round 55/100 ---
+Round 55: Main Acc = 0.8654, Backdoor ASR = 0.0000, Attack Active: False, took 180.21262073516846 seconds
+
+--- Round 56/100 ---
+Round 56: Main Acc = 0.8658, Backdoor ASR = 0.0000, Attack Active: False, took 179.61764454841614 seconds
+
+--- Round 57/100 ---
+Round 57: Main Acc = 0.8653, Backdoor ASR = 0.0000, Attack Active: False, took 179.71037578582764 seconds
+
+--- Round 58/100 ---
+Round 58: Main Acc = 0.8660, Backdoor ASR = 0.0000, Attack Active: False, took 180.08297777175903 seconds
+
+--- Round 59/100 ---
+Round 59: Main Acc = 0.8659, Backdoor ASR = 0.0000, Attack Active: False, took 179.27723670005798 seconds
+
+--- Round 60/100 ---
+Round 60: Main Acc = 0.8654, Backdoor ASR = 0.0000, Attack Active: False, took 180.56076741218567 seconds
+
+--- Round 61/100 ---
+Round 61: Main Acc = 0.8658, Backdoor ASR = 0.0000, Attack Active: False, took 180.2018826007843 seconds
+
+--- Round 62/100 ---
+Round 62: Main Acc = 0.8665, Backdoor ASR = 0.0000, Attack Active: False, took 179.15636539459229 seconds
+
+--- Round 63/100 ---
+Round 63: Main Acc = 0.8661, Backdoor ASR = 0.0000, Attack Active: False, took 179.5694019794464 seconds
+
+--- Round 64/100 ---
+Round 64: Main Acc = 0.8661, Backdoor ASR = 0.0000, Attack Active: False, took 177.26803278923035 seconds
+
+--- Round 65/100 ---
+Round 65: Main Acc = 0.8668, Backdoor ASR = 0.0000, Attack Active: False, took 176.4495530128479 seconds
+
+--- Round 66/100 ---
+Round 66: Main Acc = 0.8669, Backdoor ASR = 0.0000, Attack Active: False, took 176.95580577850342 seconds
+
+--- Round 67/100 ---
+Round 67: Main Acc = 0.8665, Backdoor ASR = 0.0000, Attack Active: False, took 176.80406856536865 seconds
+
+--- Round 68/100 ---
+Round 68: Main Acc = 0.8666, Backdoor ASR = 0.0000, Attack Active: False, took 177.01214957237244 seconds
+
+--- Round 69/100 ---
+Round 69: Main Acc = 0.8664, Backdoor ASR = 0.0000, Attack Active: False, took 176.4681146144867 seconds
+
+--- Round 70/100 ---
+Round 70: Main Acc = 0.8663, Backdoor ASR = 0.0000, Attack Active: False, took 177.66374731063843 seconds
+
+--- Round 71/100 ---
+Round 71: Main Acc = 0.8667, Backdoor ASR = 0.0000, Attack Active: False, took 177.32807445526123 seconds
+
+--- Round 72/100 ---
+Round 72: Main Acc = 0.8665, Backdoor ASR = 0.0000, Attack Active: False, took 176.7953016757965 seconds
+
+--- Round 73/100 ---
+Round 73: Main Acc = 0.8666, Backdoor ASR = 0.0000, Attack Active: False, took 176.73411011695862 seconds
+
+--- Round 74/100 ---
+Round 74: Main Acc = 0.8670, Backdoor ASR = 0.0000, Attack Active: False, took 176.74615859985352 seconds
+
+--- Round 75/100 ---
+Round 75: Main Acc = 0.8673, Backdoor ASR = 0.0000, Attack Active: False, took 176.8435070514679 seconds
+
+--- Round 76/100 ---
+Round 76: Main Acc = 0.8671, Backdoor ASR = 0.0000, Attack Active: False, took 177.15374064445496 seconds
+
+--- Round 77/100 ---
+Round 77: Main Acc = 0.8669, Backdoor ASR = 0.0000, Attack Active: False, took 176.49916625022888 seconds
+
+--- Round 78/100 ---
+Round 78: Main Acc = 0.8667, Backdoor ASR = 0.0000, Attack Active: False, took 177.0576093196869 seconds
+
+--- Round 79/100 ---
+Round 79: Main Acc = 0.8670, Backdoor ASR = 0.0000, Attack Active: False, took 177.41102027893066 seconds
+
+--- Round 80/100 ---
+Round 80: Main Acc = 0.8678, Backdoor ASR = 0.0000, Attack Active: False, took 176.3603663444519 seconds
+
+--- Round 81/100 ---
+Round 81: Main Acc = 0.8669, Backdoor ASR = 0.0000, Attack Active: False, took 175.66051721572876 seconds
+
+--- Round 82/100 ---
+Round 82: Main Acc = 0.8675, Backdoor ASR = 0.0000, Attack Active: False, took 176.50745034217834 seconds
+
+--- Round 83/100 ---
+Round 83: Main Acc = 0.8671, Backdoor ASR = 0.0000, Attack Active: False, took 175.72954201698303 seconds
+
+--- Round 84/100 ---
+Round 84: Main Acc = 0.8673, Backdoor ASR = 0.0000, Attack Active: False, took 175.19616198539734 seconds
+
+--- Round 85/100 ---
+Round 85: Main Acc = 0.8672, Backdoor ASR = 0.0000, Attack Active: False, took 176.22516751289368 seconds
+
+--- Round 86/100 ---
+Round 86: Main Acc = 0.8680, Backdoor ASR = 0.0000, Attack Active: False, took 177.96836948394775 seconds
+
+--- Round 87/100 ---
+Round 87: Main Acc = 0.8675, Backdoor ASR = 0.0000, Attack Active: False, took 176.90367984771729 seconds
+
+--- Round 88/100 ---
+Round 88: Main Acc = 0.8679, Backdoor ASR = 0.0000, Attack Active: False, took 177.92324900627136 seconds
+
+--- Round 89/100 ---
+Round 89: Main Acc = 0.8681, Backdoor ASR = 0.0000, Attack Active: False, took 177.62512230873108 seconds
+
+--- Round 90/100 ---
+Round 90: Main Acc = 0.8681, Backdoor ASR = 0.0000, Attack Active: False, took 176.8411512374878 seconds
+
+--- Round 91/100 ---
+Round 91: Main Acc = 0.8681, Backdoor ASR = 0.0000, Attack Active: False, took 176.20296335220337 seconds
+
+--- Round 92/100 ---
+Round 92: Main Acc = 0.8674, Backdoor ASR = 0.0000, Attack Active: False, took 176.79387307167053 seconds
+
+--- Round 93/100 ---
+Round 93: Main Acc = 0.8680, Backdoor ASR = 0.0000, Attack Active: False, took 177.03401970863342 seconds
+
+--- Round 94/100 ---
+Round 94: Main Acc = 0.8677, Backdoor ASR = 0.0000, Attack Active: False, took 177.32445526123047 seconds
+
+--- Round 95/100 ---
+Round 95: Main Acc = 0.8680, Backdoor ASR = 0.0000, Attack Active: False, took 176.81353569030762 seconds
+
+--- Round 96/100 ---
+Round 96: Main Acc = 0.8683, Backdoor ASR = 0.0000, Attack Active: False, took 176.7617437839508 seconds
+
+--- Round 97/100 ---
+Round 97: Main Acc = 0.8684, Backdoor ASR = 0.0000, Attack Active: False, took 176.8983495235443 seconds
+
+--- Round 98/100 ---
+Round 98: Main Acc = 0.8677, Backdoor ASR = 0.0000, Attack Active: False, took 175.82864785194397 seconds
+
+--- Round 99/100 ---
+Round 99: Main Acc = 0.8681, Backdoor ASR = 0.0000, Attack Active: False, took 176.4070909023285 seconds
+
+--- Round 100/100 ---
+Round 100: Main Acc = 0.8683, Backdoor ASR = 0.0000, Attack Active: False, took 176.26415038108826 seconds
+
+--- Training Finished ---
+--- Configuration ---
+experiment_name: a3fl_flame_femnist
+dataset: femnist
+num_clients: 20
+num_parallel_clients: 20
+num_rounds: 100
+local_epochs: 1
+batch_size: 32
+test_batch_size: 256
+lr: 0.01
+seed: 42
+attack: a3fl
+num_malicious: 2
+target_class: 7
+poisoning_rate: 0.25
+attack_start_round: 20
+attack_end_round: 50
+scale_factor: 20.0
+malicious_epochs: 64
+mask_k_percent: 0.05
+trigger_epochs: 5
+trigger_lr: 0.01
+defense: flame
+clipping_norm: 4.0
+dp_std_dev: 0.025
+deepsight_num_samples: 256
+deepsight_num_seeds: 3
+deepsight_batch_size: 64
+deepsight_tau: 0.5
+flame_lamda: 0.001
+flame_eta: 1.0
+krum_f: 2
+krum_m: 5
+device: cuda
+---------------------
+Initialized FlameServer with lamda=0.001, eta=1.0
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+Client [1]: Behaving benignly in round 1 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 22 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 30 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 42 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 50 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [0]: Behaving benignly in round 2 (outside attack window).
+Client [0]: Behaving benignly in round 9 (outside attack window).
+Client [1]: Behaving benignly in round 10 (outside attack window).
+Client [0]: Behaving benignly in round 12 (outside attack window).
+Client [0]: Behaving benignly in round 13 (outside attack window).
+Client [0]: Behaving benignly in round 14 (outside attack window).
+Client [0]: Behaving benignly in round 15 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 20 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 27 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 34 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 39 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 43 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 47 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 50 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [1]: Behaving benignly in round 62 (outside attack window).
+Client [1]: Behaving benignly in round 64 (outside attack window).
+Client [1]: Behaving benignly in round 68 (outside attack window).
+Client [0]: Behaving benignly in round 73 (outside attack window).
+Client [0]: Behaving benignly in round 74 (outside attack window).
+Client [0]: Behaving benignly in round 76 (outside attack window).
+Client [1]: Behaving benignly in round 85 (outside attack window).
+Client [1]: Behaving benignly in round 86 (outside attack window).
+Client [1]: Behaving benignly in round 88 (outside attack window).
+Client [1]: Behaving benignly in round 90 (outside attack window).
+Client [0]: Behaving benignly in round 92 (outside attack window).
+Client [1]: Behaving benignly in round 94 (outside attack window).
+Client [1]: Behaving benignly in round 96 (outside attack window).
+Client [0]: Behaving benignly in round 100 (outside attack window).
+Client [1]: Behaving benignly in round 2 (outside attack window).
+Client [1]: Behaving benignly in round 3 (outside attack window).
+Client [0]: Behaving benignly in round 5 (outside attack window).
+Client [1]: Behaving benignly in round 6 (outside attack window).
+Client [1]: Behaving benignly in round 8 (outside attack window).
+Client [1]: Behaving benignly in round 9 (outside attack window).
+Client [1]: Behaving benignly in round 11 (outside attack window).
+Client [1]: Behaving benignly in round 13 (outside attack window).
+Client [1]: Behaving benignly in round 16 (outside attack window).
+
+--- A3FL Client [0] optimizing trigger for round 20 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 26 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 31 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 37 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 42 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 46 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [1]: Behaving benignly in round 60 (outside attack window).
+Client [0]: Behaving benignly in round 62 (outside attack window).
+Client [0]: Behaving benignly in round 65 (outside attack window).
+Client [1]: Behaving benignly in round 66 (outside attack window).
+Client [1]: Behaving benignly in round 67 (outside attack window).
+Client [1]: Behaving benignly in round 70 (outside attack window).
+Client [1]: Behaving benignly in round 72 (outside attack window).
+Client [1]: Behaving benignly in round 73 (outside attack window).
+Client [1]: Behaving benignly in round 75 (outside attack window).
+Client [1]: Behaving benignly in round 76 (outside attack window).
+Client [1]: Behaving benignly in round 79 (outside attack window).
+Client [0]: Behaving benignly in round 93 (outside attack window).
+Client [0]: Behaving benignly in round 94 (outside attack window).
+Client [0]: Behaving benignly in round 95 (outside attack window).
+Client [0]: Behaving benignly in round 96 (outside attack window).
+Client [1]: Behaving benignly in round 98 (outside attack window).
+Client [1]: Behaving benignly in round 99 (outside attack window).
+Client [1]: Behaving benignly in round 100 (outside attack window).
+Client [0]: Behaving benignly in round 6 (outside attack window).
+Client [0]: Behaving benignly in round 7 (outside attack window).
+Client [1]: Behaving benignly in round 14 (outside attack window).
+Client [0]: Behaving benignly in round 17 (outside attack window).
+Client [0]: Behaving benignly in round 19 (outside attack window).
+
+--- A3FL Client [0] optimizing trigger for round 21 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 30 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 35 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 44 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 49 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [0]: Behaving benignly in round 53 (outside attack window).
+Client [0]: Behaving benignly in round 59 (outside attack window).
+Client [0]: Behaving benignly in round 66 (outside attack window).
+Client [0]: Behaving benignly in round 68 (outside attack window).
+Client [0]: Behaving benignly in round 72 (outside attack window).
+Client [1]: Behaving benignly in round 74 (outside attack window).
+Client [0]: Behaving benignly in round 78 (outside attack window).
+Client [0]: Behaving benignly in round 81 (outside attack window).
+Client [1]: Behaving benignly in round 82 (outside attack window).
+Client [0]: Behaving benignly in round 83 (outside attack window).
+Client [1]: Behaving benignly in round 84 (outside attack window).
+Client [1]: Behaving benignly in round 89 (outside attack window).
+Client [1]: Behaving benignly in round 93 (outside attack window).
+Client [1]: Behaving benignly in round 95 (outside attack window).
+Client [0]: Behaving benignly in round 99 (outside attack window).
+Client [1]: Behaving benignly in round 5 (outside attack window).
+Client [1]: Behaving benignly in round 7 (outside attack window).
+Client [0]: Behaving benignly in round 8 (outside attack window).
+Client [0]: Behaving benignly in round 10 (outside attack window).
+Client [1]: Behaving benignly in round 12 (outside attack window).
+Client [1]: Behaving benignly in round 15 (outside attack window).
+Client [1]: Behaving benignly in round 17 (outside attack window).
+Client [0]: Behaving benignly in round 18 (outside attack window).
+Client [1]: Behaving benignly in round 19 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 21 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 27 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 32 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 36 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 40 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 46 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [1]: Behaving benignly in round 51 (outside attack window).
+Client [1]: Behaving benignly in round 52 (outside attack window).
+Client [1]: Behaving benignly in round 53 (outside attack window).
+Client [1]: Behaving benignly in round 55 (outside attack window).
+Client [0]: Behaving benignly in round 56 (outside attack window).
+Client [0]: Behaving benignly in round 57 (outside attack window).
+Client [1]: Behaving benignly in round 58 (outside attack window).
+Client [0]: Behaving benignly in round 61 (outside attack window).
+Client [0]: Behaving benignly in round 63 (outside attack window).
+Client [0]: Behaving benignly in round 64 (outside attack window).
+Client [1]: Behaving benignly in round 65 (outside attack window).
+Client [0]: Behaving benignly in round 69 (outside attack window).
+Client [0]: Behaving benignly in round 70 (outside attack window).
+Client [0]: Behaving benignly in round 71 (outside attack window).
+Client [0]: Behaving benignly in round 75 (outside attack window).
+Client [1]: Behaving benignly in round 77 (outside attack window).
+Client [0]: Behaving benignly in round 80 (outside attack window).
+Client [0]: Behaving benignly in round 85 (outside attack window).
+Client [0]: Behaving benignly in round 87 (outside attack window).
+Client [0]: Behaving benignly in round 90 (outside attack window).
+Client [0]: Behaving benignly in round 91 (outside attack window).
+Client [1]: Behaving benignly in round 92 (outside attack window).
+Client [0]: Behaving benignly in round 97 (outside attack window).
+Client [0]: Behaving benignly in round 98 (outside attack window).
+
+--- A3FL Client [0] optimizing trigger for round 26 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 39 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 45 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [0]: Behaving benignly in round 52 (outside attack window).
+Client [1]: Behaving benignly in round 69 (outside attack window).
+Client [0]: Behaving benignly in round 3 (outside attack window).
+Client [1]: Behaving benignly in round 4 (outside attack window).
+Client [0]: Behaving benignly in round 11 (outside attack window).
+
+--- A3FL Client [0] optimizing trigger for round 23 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 28 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 36 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 38 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 49 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [0]: Behaving benignly in round 51 (outside attack window).
+Client [0]: Behaving benignly in round 55 (outside attack window).
+Client [1]: Behaving benignly in round 56 (outside attack window).
+Client [1]: Behaving benignly in round 71 (outside attack window).
+Client [1]: Behaving benignly in round 97 (outside attack window).
+
+--- A3FL Client [0] optimizing trigger for round 24 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 37 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [1]: Behaving benignly in round 57 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 24 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 38 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 48 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [0]: Behaving benignly in round 60 (outside attack window).
+Client [1]: Behaving benignly in round 61 (outside attack window).
+Client [1]: Behaving benignly in round 78 (outside attack window).
+Client [0]: Behaving benignly in round 88 (outside attack window).
+Client [1]: Behaving benignly in round 91 (outside attack window).
+
+--- A3FL Client [0] optimizing trigger for round 34 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [0]: Behaving benignly in round 4 (outside attack window).
+Client [0]: Behaving benignly in round 16 (outside attack window).
+Client [1]: Behaving benignly in round 18 (outside attack window).
+
+--- A3FL Client [0] optimizing trigger for round 25 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 29 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 35 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 44 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 48 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [0]: Behaving benignly in round 54 (outside attack window).
+Client [0]: Behaving benignly in round 58 (outside attack window).
+Client [1]: Behaving benignly in round 59 (outside attack window).
+Client [1]: Behaving benignly in round 63 (outside attack window).
+Client [0]: Behaving benignly in round 67 (outside attack window).
+Client [0]: Behaving benignly in round 77 (outside attack window).
+Client [0]: Behaving benignly in round 79 (outside attack window).
+Client [1]: Behaving benignly in round 80 (outside attack window).
+Client [1]: Behaving benignly in round 81 (outside attack window).
+Client [0]: Behaving benignly in round 84 (outside attack window).
+Client [0]: Behaving benignly in round 86 (outside attack window).
+Client [0]: Behaving benignly in round 89 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 23 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 33 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 43 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 31 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 25 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 40 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 45 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [1]: Behaving benignly in round 54 (outside attack window).
+Client [0]: Behaving benignly in round 82 (outside attack window).
+Client [1]: Behaving benignly in round 87 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 28 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 33 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 41 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [1]: Behaving benignly in round 83 (outside attack window).
+Client [0]: Behaving benignly in round 1 (outside attack window).
+
+--- A3FL Client [0] optimizing trigger for round 29 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 22 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 47 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 32 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 41 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- Round 1/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [3, 6, 9, 11, 12, 13, 15, 16, 18]
+Round 1: Main Acc = 0.7457, Backdoor ASR = 0.0000, Attack Active: False, took 245.20361018180847 seconds
+
+--- Round 2/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 5, 6, 8, 11, 12, 15, 16, 18]
+Round 2: Main Acc = 0.8036, Backdoor ASR = 0.0000, Attack Active: False, took 178.1217749118805 seconds
+
+--- Round 3/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [1, 2, 3, 6, 7, 11, 14, 18, 19]
+Round 3: Main Acc = 0.8176, Backdoor ASR = 0.0000, Attack Active: False, took 178.3058042526245 seconds
+
+--- Round 4/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 2, 3, 8, 13, 17, 18, 19]
+Round 4: Main Acc = 0.8298, Backdoor ASR = 0.0000, Attack Active: False, took 178.0422203540802 seconds
+
+--- Round 5/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 2, 3, 4, 7, 8, 11, 12, 16]
+Round 5: Main Acc = 0.8361, Backdoor ASR = 0.0000, Attack Active: False, took 178.43899512290955 seconds
+
+--- Round 6/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 3, 5, 13, 15, 17, 18, 19]
+Round 6: Main Acc = 0.8386, Backdoor ASR = 0.0000, Attack Active: False, took 178.451726436615 seconds
+
+--- Round 7/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 7, 8, 9, 11, 12, 13, 17]
+Round 7: Main Acc = 0.8401, Backdoor ASR = 0.0000, Attack Active: False, took 177.78874611854553 seconds
+
+--- Round 8/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [1, 3, 7, 8, 9, 12, 13, 15, 19]
+Round 8: Main Acc = 0.8413, Backdoor ASR = 0.0000, Attack Active: False, took 177.84901094436646 seconds
+
+--- Round 9/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 2, 3, 4, 8, 11, 16, 19]
+Round 9: Main Acc = 0.8456, Backdoor ASR = 0.0000, Attack Active: False, took 178.1563732624054 seconds
+
+--- Round 10/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 4, 5, 9, 10, 11, 13, 14, 15]
+Round 10: Main Acc = 0.8445, Backdoor ASR = 0.0000, Attack Active: False, took 178.13301181793213 seconds
+
+--- Round 11/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [4, 7, 8, 9, 12, 13, 14, 15, 19]
+Round 11: Main Acc = 0.8475, Backdoor ASR = 0.0000, Attack Active: False, took 177.91735124588013 seconds
+
+--- Round 12/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [1, 2, 4, 8, 10, 12, 14, 15, 16]
+Round 12: Main Acc = 0.8478, Backdoor ASR = 0.0000, Attack Active: False, took 178.05911421775818 seconds
+
+--- Round 13/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 8, 9, 11, 13, 15, 16, 19]
+Round 13: Main Acc = 0.8506, Backdoor ASR = 0.0000, Attack Active: False, took 178.25353813171387 seconds
+
+--- Round 14/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [3, 7, 8, 9, 11, 13, 15, 17, 19]
+Round 14: Main Acc = 0.8502, Backdoor ASR = 0.0000, Attack Active: False, took 177.91331911087036 seconds
+
+--- Round 15/100 ---
+Flame detected 8 anomalous clients.
+Filtering out clients at indices: [1, 2, 4, 7, 10, 11, 14, 18]
+Round 15: Main Acc = 0.8508, Backdoor ASR = 0.0000, Attack Active: False, took 177.81942343711853 seconds
+
+--- Round 16/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 2, 4, 7, 8, 10, 17, 18]
+Round 16: Main Acc = 0.8525, Backdoor ASR = 0.0000, Attack Active: False, took 178.06410360336304 seconds
+
+--- Round 17/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 5, 7, 8, 12, 13, 14, 15]
+Round 17: Main Acc = 0.8519, Backdoor ASR = 0.0000, Attack Active: False, took 178.4901304244995 seconds
+
+--- Round 18/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [1, 4, 8, 11, 12, 14, 15, 18, 19]
+Round 18: Main Acc = 0.8510, Backdoor ASR = 0.0000, Attack Active: False, took 177.6573507785797 seconds
+
+--- Round 19/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 3, 4, 8, 10, 13, 16, 19]
+Round 19: Main Acc = 0.8533, Backdoor ASR = 0.0000, Attack Active: False, took 178.22935724258423 seconds
+
+--- Round 20/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 8, 10, 12, 13, 15, 17, 19]
+Round 20: Main Acc = 0.8545, Backdoor ASR = 0.0046, Attack Active: True, took 521.9583892822266 seconds
+
+--- Round 21/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 4, 8, 9, 10, 11, 13, 19]
+Round 21: Main Acc = 0.8548, Backdoor ASR = 0.0009, Attack Active: True, took 519.8430361747742 seconds
+
+--- Round 22/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 2, 8, 11, 13, 15, 16, 18]
+Round 22: Main Acc = 0.8524, Backdoor ASR = 0.0002, Attack Active: True, took 523.2515964508057 seconds
+
+--- Round 23/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 4, 6, 13, 15, 16, 17, 19]
+Round 23: Main Acc = 0.8532, Backdoor ASR = 0.0004, Attack Active: True, took 520.8981096744537 seconds
+
+--- Round 24/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 4, 5, 6, 11, 13, 18, 19]
+Round 24: Main Acc = 0.8553, Backdoor ASR = 0.0001, Attack Active: True, took 523.5673706531525 seconds
+
+--- Round 25/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 3, 8, 11, 13, 14, 17, 18]
+Round 25: Main Acc = 0.8557, Backdoor ASR = 0.0017, Attack Active: True, took 519.8554434776306 seconds
+
+--- Round 26/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 2, 3, 10, 11, 12, 13, 17]
+Round 26: Main Acc = 0.8561, Backdoor ASR = 0.0015, Attack Active: True, took 521.5513687133789 seconds
+
+--- Round 27/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 3, 8, 11, 14, 15, 16, 18]
+Round 27: Main Acc = 0.8559, Backdoor ASR = 0.0000, Attack Active: True, took 520.3118033409119 seconds
+
+--- Round 28/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 4, 6, 7, 8, 11, 15, 17]
+Round 28: Main Acc = 0.8553, Backdoor ASR = 0.0001, Attack Active: True, took 519.2311444282532 seconds
+
+--- Round 29/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 6, 8, 9, 11, 16, 18, 19]
+Round 29: Main Acc = 0.8563, Backdoor ASR = 0.0000, Attack Active: True, took 524.9233005046844 seconds
+
+--- Round 30/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 4, 6, 7, 9, 10, 13, 19]
+Round 30: Main Acc = 0.8572, Backdoor ASR = 0.0001, Attack Active: True, took 520.6803269386292 seconds
+
+--- Round 31/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 2, 7, 8, 10, 11, 13, 14]
+Round 31: Main Acc = 0.8570, Backdoor ASR = 0.0000, Attack Active: True, took 512.2832412719727 seconds
+
+--- Round 32/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 2, 11, 12, 13, 14, 16, 17]
+Round 32: Main Acc = 0.8561, Backdoor ASR = 0.0000, Attack Active: True, took 510.6458218097687 seconds
+
+--- Round 33/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 4, 5, 6, 8, 9, 14, 16]
+Round 33: Main Acc = 0.8572, Backdoor ASR = 0.0000, Attack Active: True, took 517.1957824230194 seconds
+
+--- Round 34/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 5, 7, 8, 10, 11, 16, 19]
+Round 34: Main Acc = 0.8570, Backdoor ASR = 0.0000, Attack Active: True, took 510.77437233924866 seconds
+
+--- Round 35/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 3, 4, 8, 10, 13, 17, 18]
+Round 35: Main Acc = 0.8571, Backdoor ASR = 0.0000, Attack Active: True, took 515.080938577652 seconds
+
+--- Round 36/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 8, 9, 13, 15, 16, 17, 19]
+Round 36: Main Acc = 0.8564, Backdoor ASR = 0.0000, Attack Active: True, took 512.1145782470703 seconds
+
+--- Round 37/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 3, 4, 5, 8, 12, 13, 15]
+Round 37: Main Acc = 0.8585, Backdoor ASR = 0.0000, Attack Active: True, took 513.5845105648041 seconds
+
+--- Round 38/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 8 anomalous clients.
+Filtering out clients at indices: [0, 1, 2, 8, 9, 10, 12, 15]
+Round 38: Main Acc = 0.8578, Backdoor ASR = 0.0000, Attack Active: True, took 519.4399309158325 seconds
+
+--- Round 39/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 2, 6, 8, 9, 11, 13, 16]
+Round 39: Main Acc = 0.8579, Backdoor ASR = 0.0000, Attack Active: True, took 523.3889057636261 seconds
+
+--- Round 40/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 8 anomalous clients.
+Filtering out clients at indices: [0, 1, 9, 11, 12, 13, 17, 18]
+Round 40: Main Acc = 0.8580, Backdoor ASR = 0.0000, Attack Active: True, took 520.4131710529327 seconds
+
+--- Round 41/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 6, 8, 9, 12, 15, 18, 19]
+Round 41: Main Acc = 0.8580, Backdoor ASR = 0.0000, Attack Active: True, took 523.6900970935822 seconds
+
+--- Round 42/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 4, 6, 8, 10, 13, 15, 19]
+Round 42: Main Acc = 0.8585, Backdoor ASR = 0.0000, Attack Active: True, took 518.358651638031 seconds
+
+--- Round 43/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 8 anomalous clients.
+Filtering out clients at indices: [0, 1, 2, 4, 8, 14, 15, 17]
+Round 43: Main Acc = 0.8577, Backdoor ASR = 0.0000, Attack Active: True, took 521.4377980232239 seconds
+
+--- Round 44/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 4, 11, 13, 15, 17, 18, 19]
+Round 44: Main Acc = 0.8590, Backdoor ASR = 0.0000, Attack Active: True, took 520.8272175788879 seconds
+
+--- Round 45/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 8, 13, 14, 16, 17, 18, 19]
+Round 45: Main Acc = 0.8585, Backdoor ASR = 0.0000, Attack Active: True, took 519.2301032543182 seconds
+
+--- Round 46/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 6, 10, 12, 13, 15, 16, 18]
+Round 46: Main Acc = 0.8580, Backdoor ASR = 0.0000, Attack Active: True, took 518.4296634197235 seconds
+
+--- Round 47/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 5, 8, 10, 13, 14, 15, 17]
+Round 47: Main Acc = 0.8580, Backdoor ASR = 0.0000, Attack Active: True, took 522.1126980781555 seconds
+
+--- Round 48/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 4, 5, 9, 11, 14, 18, 19]
+Round 48: Main Acc = 0.8594, Backdoor ASR = 0.0000, Attack Active: True, took 521.4541823863983 seconds
+
+--- Round 49/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 4, 5, 6, 9, 10, 13, 18]
+Round 49: Main Acc = 0.8585, Backdoor ASR = 0.0000, Attack Active: True, took 517.845575094223 seconds
+
+--- Round 50/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 4, 7, 8, 10, 13, 16, 18]
+Round 50: Main Acc = 0.8589, Backdoor ASR = 0.0000, Attack Active: True, took 520.9188227653503 seconds
+
+--- Round 51/100 ---
+Flame detected 8 anomalous clients.
+Filtering out clients at indices: [0, 2, 7, 9, 10, 14, 17, 18]
+Round 51: Main Acc = 0.8585, Backdoor ASR = 0.0000, Attack Active: False, took 202.27521538734436 seconds
+
+--- Round 52/100 ---
+Flame detected 8 anomalous clients.
+Filtering out clients at indices: [1, 4, 8, 10, 11, 12, 15, 16]
+Round 52: Main Acc = 0.8582, Backdoor ASR = 0.0007, Attack Active: False, took 202.7241930961609 seconds
+
+--- Round 53/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [2, 6, 8, 10, 11, 12, 15, 18, 19]
+Round 53: Main Acc = 0.8580, Backdoor ASR = 0.0007, Attack Active: False, took 201.87825083732605 seconds
+
+--- Round 54/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [4, 5, 8, 11, 13, 14, 15, 17, 18]
+Round 54: Main Acc = 0.8594, Backdoor ASR = 0.0012, Attack Active: False, took 202.92022705078125 seconds
+
+--- Round 55/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [1, 5, 7, 8, 11, 15, 16, 17, 19]
+Round 55: Main Acc = 0.8593, Backdoor ASR = 0.0003, Attack Active: False, took 202.37214469909668 seconds
+
+--- Round 56/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [1, 2, 5, 9, 11, 12, 13, 15, 18]
+Round 56: Main Acc = 0.8594, Backdoor ASR = 0.0000, Attack Active: False, took 202.7167158126831 seconds
+
+--- Round 57/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [1, 5, 8, 11, 13, 15, 16, 17, 18]
+Round 57: Main Acc = 0.8583, Backdoor ASR = 0.0002, Attack Active: False, took 202.365136384964 seconds
+
+--- Round 58/100 ---
+Flame detected 8 anomalous clients.
+Filtering out clients at indices: [2, 4, 5, 8, 13, 14, 15, 19]
+Round 58: Main Acc = 0.8601, Backdoor ASR = 0.0000, Attack Active: False, took 202.4918372631073 seconds
+
+--- Round 59/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [1, 8, 10, 13, 14, 15, 16, 17, 19]
+Round 59: Main Acc = 0.8597, Backdoor ASR = 0.0002, Attack Active: False, took 202.53614354133606 seconds
+
+--- Round 60/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 6, 8, 9, 13, 15, 18, 19]
+Round 60: Main Acc = 0.8599, Backdoor ASR = 0.0003, Attack Active: False, took 201.95857620239258 seconds
+
+--- Round 61/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 3, 7, 8, 10, 11, 17, 18, 19]
+Round 61: Main Acc = 0.8602, Backdoor ASR = 0.0004, Attack Active: False, took 201.94994711875916 seconds
+
+--- Round 62/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [2, 4, 6, 8, 10, 11, 12, 13, 18]
+Round 62: Main Acc = 0.8604, Backdoor ASR = 0.0008, Attack Active: False, took 201.69108653068542 seconds
+
+--- Round 63/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [1, 2, 6, 8, 10, 11, 13, 15, 18]
+Round 63: Main Acc = 0.8597, Backdoor ASR = 0.0002, Attack Active: False, took 203.0370786190033 seconds
+
+--- Round 64/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 2, 7, 9, 10, 13, 16, 18]
+Round 64: Main Acc = 0.8601, Backdoor ASR = 0.0001, Attack Active: False, took 202.36666774749756 seconds
+
+--- Round 65/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 4, 5, 8, 11, 12, 14, 18, 19]
+Round 65: Main Acc = 0.8587, Backdoor ASR = 0.0000, Attack Active: False, took 202.39808177947998 seconds
+
+--- Round 66/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [1, 6, 7, 8, 9, 10, 13, 16, 18]
+Round 66: Main Acc = 0.8598, Backdoor ASR = 0.0001, Attack Active: False, took 201.76930356025696 seconds
+
+--- Round 67/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 5, 6, 8, 10, 12, 16, 18]
+Round 67: Main Acc = 0.8594, Backdoor ASR = 0.0001, Attack Active: False, took 202.20459270477295 seconds
+
+--- Round 68/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 8, 9, 12, 13, 14, 15, 18]
+Round 68: Main Acc = 0.8590, Backdoor ASR = 0.0003, Attack Active: False, took 201.77607107162476 seconds
+
+--- Round 69/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [3, 6, 8, 10, 11, 12, 13, 14, 18]
+Round 69: Main Acc = 0.8604, Backdoor ASR = 0.0002, Attack Active: False, took 202.93586611747742 seconds
+
+--- Round 70/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [7, 8, 9, 13, 14, 15, 16, 17, 18]
+Round 70: Main Acc = 0.8617, Backdoor ASR = 0.0000, Attack Active: False, took 201.7134530544281 seconds
+
+--- Round 71/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [1, 3, 8, 9, 10, 11, 16, 18, 19]
+Round 71: Main Acc = 0.8594, Backdoor ASR = 0.0002, Attack Active: False, took 202.39978003501892 seconds
+
+--- Round 72/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 5, 8, 10, 11, 13, 15, 16]
+Round 72: Main Acc = 0.8609, Backdoor ASR = 0.0001, Attack Active: False, took 202.027188539505 seconds
+
+--- Round 73/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [2, 4, 5, 11, 13, 14, 15, 18, 19]
+Round 73: Main Acc = 0.8606, Backdoor ASR = 0.0002, Attack Active: False, took 203.1721007823944 seconds
+
+--- Round 74/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [2, 4, 7, 8, 9, 13, 14, 15, 19]
+Round 74: Main Acc = 0.8605, Backdoor ASR = 0.0005, Attack Active: False, took 202.08959889411926 seconds
+
+--- Round 75/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [1, 2, 5, 6, 10, 11, 13, 14, 15]
+Round 75: Main Acc = 0.8613, Backdoor ASR = 0.0011, Attack Active: False, took 201.96920776367188 seconds
+
+--- Round 76/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 4, 7, 8, 9, 13, 15, 18, 19]
+Round 76: Main Acc = 0.8609, Backdoor ASR = 0.0007, Attack Active: False, took 199.23482131958008 seconds
+
+--- Round 77/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [1, 2, 8, 10, 12, 13, 14, 17, 19]
+Round 77: Main Acc = 0.8610, Backdoor ASR = 0.0013, Attack Active: False, took 199.37305092811584 seconds
+
+--- Round 78/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 2, 6, 7, 10, 12, 13, 15, 18]
+Round 78: Main Acc = 0.8602, Backdoor ASR = 0.0012, Attack Active: False, took 200.00509476661682 seconds
+
+--- Round 79/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [1, 4, 5, 8, 10, 11, 13, 14, 18]
+Round 79: Main Acc = 0.8606, Backdoor ASR = 0.0004, Attack Active: False, took 200.26550316810608 seconds
+
+--- Round 80/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 8, 10, 11, 13, 15, 16, 17]
+Round 80: Main Acc = 0.8607, Backdoor ASR = 0.0008, Attack Active: False, took 199.32291913032532 seconds
+
+--- Round 81/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [2, 3, 4, 7, 8, 9, 12, 16, 17]
+Round 81: Main Acc = 0.8611, Backdoor ASR = 0.0008, Attack Active: False, took 199.23903799057007 seconds
+
+--- Round 82/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 2, 4, 6, 10, 11, 12, 15, 18]
+Round 82: Main Acc = 0.8620, Backdoor ASR = 0.0009, Attack Active: False, took 198.79368495941162 seconds
+
+--- Round 83/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [1, 2, 8, 11, 12, 14, 16, 17, 18]
+Round 83: Main Acc = 0.8612, Backdoor ASR = 0.0009, Attack Active: False, took 199.9730179309845 seconds
+
+--- Round 84/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [3, 6, 7, 8, 9, 10, 11, 12, 14]
+Round 84: Main Acc = 0.8607, Backdoor ASR = 0.0006, Attack Active: False, took 199.6025092601776 seconds
+
+--- Round 85/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 7, 9, 11, 12, 14, 15, 18]
+Round 85: Main Acc = 0.8606, Backdoor ASR = 0.0014, Attack Active: False, took 199.1739420890808 seconds
+
+--- Round 86/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [1, 3, 5, 8, 10, 16, 17, 18, 19]
+Round 86: Main Acc = 0.8606, Backdoor ASR = 0.0003, Attack Active: False, took 200.1147677898407 seconds
+
+--- Round 87/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [3, 6, 7, 9, 10, 15, 16, 17, 19]
+Round 87: Main Acc = 0.8616, Backdoor ASR = 0.0004, Attack Active: False, took 199.53038263320923 seconds
+
+--- Round 88/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [1, 4, 6, 8, 11, 12, 13, 16, 19]
+Round 88: Main Acc = 0.8608, Backdoor ASR = 0.0000, Attack Active: False, took 199.68329453468323 seconds
+
+--- Round 89/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 8, 10, 12, 13, 14, 15, 16, 18]
+Round 89: Main Acc = 0.8613, Backdoor ASR = 0.0005, Attack Active: False, took 200.49336957931519 seconds
+
+--- Round 90/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [7, 8, 9, 12, 13, 14, 15, 18, 19]
+Round 90: Main Acc = 0.8613, Backdoor ASR = 0.0009, Attack Active: False, took 200.1811146736145 seconds
+
+--- Round 91/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [1, 4, 5, 6, 8, 9, 13, 14, 16]
+Round 91: Main Acc = 0.8612, Backdoor ASR = 0.0004, Attack Active: False, took 200.3256802558899 seconds
+
+--- Round 92/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 2, 4, 7, 11, 12, 13, 15, 16]
+Round 92: Main Acc = 0.8612, Backdoor ASR = 0.0001, Attack Active: False, took 199.21216440200806 seconds
+
+--- Round 93/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 5, 7, 8, 9, 13, 15, 16]
+Round 93: Main Acc = 0.8602, Backdoor ASR = 0.0003, Attack Active: False, took 200.26926040649414 seconds
+
+--- Round 94/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [2, 3, 5, 11, 12, 13, 16, 18, 19]
+Round 94: Main Acc = 0.8610, Backdoor ASR = 0.0004, Attack Active: False, took 201.69748497009277 seconds
+
+--- Round 95/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 7, 8, 10, 13, 15, 18, 19]
+Round 95: Main Acc = 0.8598, Backdoor ASR = 0.0001, Attack Active: False, took 201.26974415779114 seconds
+
+--- Round 96/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 5, 8, 10, 11, 13, 18, 19]
+Round 96: Main Acc = 0.8611, Backdoor ASR = 0.0003, Attack Active: False, took 200.52294039726257 seconds
+
+--- Round 97/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [1, 3, 6, 8, 12, 13, 14, 18, 19]
+Round 97: Main Acc = 0.8624, Backdoor ASR = 0.0013, Attack Active: False, took 200.44665145874023 seconds
+
+--- Round 98/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [1, 5, 8, 10, 11, 12, 13, 15, 16]
+Round 98: Main Acc = 0.8601, Backdoor ASR = 0.0007, Attack Active: False, took 201.3481800556183 seconds
+
+--- Round 99/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 2, 4, 7, 12, 14, 15, 16]
+Round 99: Main Acc = 0.8608, Backdoor ASR = 0.0010, Attack Active: False, took 201.10931968688965 seconds
+
+--- Round 100/100 ---
+Flame detected 9 anomalous clients.
+Filtering out clients at indices: [0, 1, 4, 6, 8, 11, 14, 15, 19]
+Round 100: Main Acc = 0.8612, Backdoor ASR = 0.0006, Attack Active: False, took 201.0850865840912 seconds
+
+--- Training Finished ---
+--- Configuration ---
+experiment_name: iba_base_femnist
+dataset: femnist
+num_clients: 20
+num_parallel_clients: 10
+num_rounds: 100
+local_epochs: 1
+batch_size: 32
+test_batch_size: 256
+lr: 0.01
+seed: 42
+attack: iba
+num_malicious: 2
+target_class: 7
+poisoning_rate: 0.25
+attack_start_round: 20
+attack_end_round: 50
+scale_factor: 5.0
+malicious_epochs: 5
+mask_k_percent: 0.05
+trigger_epochs: 5
+trigger_lr: 0.01
+defense: none
+krumping_norm: 4.0
+dp_std_dev: 0.025
+deepsight_num_samples: 256
+deepsight_num_seeds: 3
+deepsight_batch_size: 64
+deepsight_tau: 0.5
+flame_lamda: 0.001
+flame_eta: 1.0
+krum_f: 5
+krum_m: 15
+device: cuda
+---------------------
+
+--- Round 1/100 ---
+Round 1: Main Acc = 0.7561, Backdoor ASR = 0.0000, Attack Active: False, took 201.98466682434082 seconds
+
+--- Round 2/100 ---
+Round 2: Main Acc = 0.8110, Backdoor ASR = 0.0000, Attack Active: False, took 168.98862147331238 seconds
+
+--- Round 3/100 ---
+Round 3: Main Acc = 0.8280, Backdoor ASR = 0.0000, Attack Active: False, took 168.8039026260376 seconds
+
+--- Round 4/100 ---
+Round 4: Main Acc = 0.8365, Backdoor ASR = 0.0000, Attack Active: False, took 169.19958972930908 seconds
+
+--- Round 5/100 ---
+Round 5: Main Acc = 0.8400, Backdoor ASR = 0.0000, Attack Active: False, took 169.24981927871704 seconds
+
+--- Round 6/100 ---
+Round 6: Main Acc = 0.8437, Backdoor ASR = 0.0000, Attack Active: False, took 169.4054880142212 seconds
+
+--- Round 7/100 ---
+Round 7: Main Acc = 0.8477, Backdoor ASR = 0.0000, Attack Active: False, took 169.03800916671753 seconds
+
+--- Round 8/100 ---
+Round 8: Main Acc = 0.8486, Backdoor ASR = 0.0000, Attack Active: False, took 168.69017505645752 seconds
+
+--- Round 9/100 ---
+Round 9: Main Acc = 0.8500, Backdoor ASR = 0.0000, Attack Active: False, took 168.61645126342773 seconds
+
+--- Round 10/100 ---
+Round 10: Main Acc = 0.8529, Backdoor ASR = 0.0000, Attack Active: False, took 168.72295999526978 seconds
+
+--- Round 11/100 ---
+Round 11: Main Acc = 0.8535, Backdoor ASR = 0.0000, Attack Active: False, took 168.9274184703827 seconds
+
+--- Round 12/100 ---
+Round 12: Main Acc = 0.8553, Backdoor ASR = 0.0000, Attack Active: False, took 168.78567576408386 seconds
+
+--- Round 13/100 ---
+Round 13: Main Acc = 0.8557, Backdoor ASR = 0.0000, Attack Active: False, took 168.74296808242798 seconds
+
+--- Round 14/100 ---
+Round 14: Main Acc = 0.8555, Backdoor ASR = 0.0000, Attack Active: False, took 168.58017492294312 seconds
+
+--- Round 15/100 ---
+Round 15: Main Acc = 0.8571, Backdoor ASR = 0.0000, Attack Active: False, took 168.81277561187744 seconds
+
+--- Round 16/100 ---
+Round 16: Main Acc = 0.8571, Backdoor ASR = 0.0000, Attack Active: False, took 168.79493951797485 seconds
+
+--- Round 17/100 ---
+Round 17: Main Acc = 0.8586, Backdoor ASR = 0.0000, Attack Active: False, took 168.23195552825928 seconds
+
+--- Round 18/100 ---
+Round 18: Main Acc = 0.8578, Backdoor ASR = 0.0000, Attack Active: False, took 168.74069237709045 seconds
+
+--- Round 19/100 ---
+Round 19: Main Acc = 0.8590, Backdoor ASR = 0.0000, Attack Active: False, took 168.84212279319763 seconds
+
+--- Round 20/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 20: Main Acc = 0.8596, Backdoor ASR = 0.0236, Attack Active: True, took 675.8759977817535 seconds
+
+--- Round 21/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 21: Main Acc = 0.8594, Backdoor ASR = 0.2332, Attack Active: True, took 624.2674126625061 seconds
+
+--- Round 22/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 22: Main Acc = 0.8608, Backdoor ASR = 0.8309, Attack Active: True, took 632.7280323505402 seconds
+
+--- Round 23/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 23: Main Acc = 0.8610, Backdoor ASR = 0.9859, Attack Active: True, took 752.9633049964905 seconds
+
+--- Round 24/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 24: Main Acc = 0.8608, Backdoor ASR = 0.9981, Attack Active: True, took 832.1551826000214 seconds
+
+--- Round 25/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 25: Main Acc = 0.8609, Backdoor ASR = 0.9991, Attack Active: True, took 637.9790878295898 seconds
+
+--- Round 26/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 26: Main Acc = 0.8619, Backdoor ASR = 0.9999, Attack Active: True, took 715.5236377716064 seconds
+
+--- Round 27/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 27: Main Acc = 0.8620, Backdoor ASR = 1.0000, Attack Active: True, took 704.5711431503296 seconds
+
+--- Round 28/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 28: Main Acc = 0.8621, Backdoor ASR = 1.0000, Attack Active: True, took 685.7555696964264 seconds
+
+--- Round 29/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 29: Main Acc = 0.8630, Backdoor ASR = 1.0000, Attack Active: True, took 879.8182592391968 seconds
+
+--- Round 30/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 30: Main Acc = 0.8623, Backdoor ASR = 1.0000, Attack Active: True, took 792.4200673103333 seconds
+
+--- Round 31/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 31: Main Acc = 0.8631, Backdoor ASR = 1.0000, Attack Active: True, took 951.8359723091125 seconds
+
+--- Round 32/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 32: Main Acc = 0.8636, Backdoor ASR = 1.0000, Attack Active: True, took 718.8939888477325 seconds
+
+--- Round 33/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 33: Main Acc = 0.8639, Backdoor ASR = 1.0000, Attack Active: True, took 835.2000279426575 seconds
+
+--- Round 34/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 34: Main Acc = 0.8632, Backdoor ASR = 1.0000, Attack Active: True, took 1033.0503158569336 seconds
+
+--- Round 35/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 35: Main Acc = 0.8636, Backdoor ASR = 1.0000, Attack Active: True, took 866.9967339038849 seconds
+
+--- Round 36/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 36: Main Acc = 0.8632, Backdoor ASR = 1.0000, Attack Active: True, took 891.7769482135773 seconds
+
+--- Round 37/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 37: Main Acc = 0.8636, Backdoor ASR = 1.0000, Attack Active: True, took 767.7536916732788 seconds
+
+--- Round 38/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 38: Main Acc = 0.8632, Backdoor ASR = 1.0000, Attack Active: True, took 921.2070937156677 seconds
+
+--- Round 39/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 39: Main Acc = 0.8635, Backdoor ASR = 1.0000, Attack Active: True, took 739.3040852546692 seconds
+
+--- Round 40/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 40: Main Acc = 0.8635, Backdoor ASR = 1.0000, Attack Active: True, took 912.9466776847839 seconds
+
+--- Round 41/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 41: Main Acc = 0.8641, Backdoor ASR = 1.0000, Attack Active: True, took 954.7039358615875 seconds
+
+--- Round 42/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 42: Main Acc = 0.8644, Backdoor ASR = 1.0000, Attack Active: True, took 607.220062494278 seconds
+
+--- Round 43/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 43: Main Acc = 0.8650, Backdoor ASR = 1.0000, Attack Active: True, took 1039.4009926319122 seconds
+
+--- Round 44/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 44: Main Acc = 0.8648, Backdoor ASR = 1.0000, Attack Active: True, took 886.9488897323608 seconds
+
+--- Round 45/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 45: Main Acc = 0.8640, Backdoor ASR = 1.0000, Attack Active: True, took 919.3525676727295 seconds
+
+--- Round 46/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 46: Main Acc = 0.8650, Backdoor ASR = 1.0000, Attack Active: True, took 915.2980363368988 seconds
+
+--- Round 47/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 47: Main Acc = 0.8649, Backdoor ASR = 1.0000, Attack Active: True, took 763.8427450656891 seconds
+
+--- Round 48/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 48: Main Acc = 0.8647, Backdoor ASR = 1.0000, Attack Active: True, took 757.4033298492432 seconds
+
+--- Round 49/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 49: Main Acc = 0.8649, Backdoor ASR = 1.0000, Attack Active: True, took 937.3030519485474 seconds
+
+--- Round 50/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 50: Main Acc = 0.8654, Backdoor ASR = 1.0000, Attack Active: True, took 1012.2028906345367 seconds
+
+--- Round 51/100 ---
+Round 51: Main Acc = 0.8651, Backdoor ASR = 1.0000, Attack Active: False, took 251.18709444999695 seconds
+
+--- Round 52/100 ---
+Round 52: Main Acc = 0.8656, Backdoor ASR = 1.0000, Attack Active: False, took 249.77675914764404 seconds
+
+--- Round 53/100 ---
+Round 53: Main Acc = 0.8658, Backdoor ASR = 1.0000, Attack Active: False, took 249.95208311080933 seconds
+
+--- Round 54/100 ---
+Round 54: Main Acc = 0.8654, Backdoor ASR = 1.0000, Attack Active: False, took 250.33059334754944 seconds
+
+--- Round 55/100 ---
+Round 55: Main Acc = 0.8653, Backdoor ASR = 1.0000, Attack Active: False, took 249.58366703987122 seconds
+
+--- Round 56/100 ---
+Round 56: Main Acc = 0.8655, Backdoor ASR = 0.9999, Attack Active: False, took 251.0271544456482 seconds
+
+--- Round 57/100 ---
+Round 57: Main Acc = 0.8656, Backdoor ASR = 0.9999, Attack Active: False, took 250.69150137901306 seconds
+
+--- Round 58/100 ---
+Round 58: Main Acc = 0.8660, Backdoor ASR = 0.9999, Attack Active: False, took 249.9333610534668 seconds
+
+--- Round 59/100 ---
+Round 59: Main Acc = 0.8657, Backdoor ASR = 0.9998, Attack Active: False, took 250.60405945777893 seconds
+
+--- Round 60/100 ---
+Round 60: Main Acc = 0.8660, Backdoor ASR = 0.9997, Attack Active: False, took 250.7549250125885 seconds
+
+--- Round 61/100 ---
+Round 61: Main Acc = 0.8665, Backdoor ASR = 0.9998, Attack Active: False, took 250.24773025512695 seconds
+
+--- Round 62/100 ---
+Round 62: Main Acc = 0.8646, Backdoor ASR = 0.9996, Attack Active: False, took 248.99110007286072 seconds
+
+--- Round 63/100 ---
+Round 63: Main Acc = 0.8656, Backdoor ASR = 0.9997, Attack Active: False, took 250.12602043151855 seconds
+
+--- Round 64/100 ---
+Round 64: Main Acc = 0.8664, Backdoor ASR = 0.9997, Attack Active: False, took 250.17870140075684 seconds
+
+--- Round 65/100 ---
+Round 65: Main Acc = 0.8665, Backdoor ASR = 0.9997, Attack Active: False, took 251.04496240615845 seconds
+
+--- Round 66/100 ---
+Round 66: Main Acc = 0.8669, Backdoor ASR = 0.9996, Attack Active: False, took 250.13288927078247 seconds
+
+--- Round 67/100 ---
+Round 67: Main Acc = 0.8666, Backdoor ASR = 0.9997, Attack Active: False, took 249.85557341575623 seconds
+
+--- Round 68/100 ---
+Round 68: Main Acc = 0.8671, Backdoor ASR = 0.9994, Attack Active: False, took 250.047678232193 seconds
+
+--- Round 69/100 ---
+Round 69: Main Acc = 0.8668, Backdoor ASR = 0.9990, Attack Active: False, took 248.9692621231079 seconds
+
+--- Round 70/100 ---
+Round 70: Main Acc = 0.8670, Backdoor ASR = 0.9981, Attack Active: False, took 244.07963013648987 seconds
+
+--- Round 71/100 ---
+Round 71: Main Acc = 0.8668, Backdoor ASR = 0.9987, Attack Active: False, took 244.2064507007599 seconds
+
+--- Round 72/100 ---
+Round 72: Main Acc = 0.8674, Backdoor ASR = 0.9989, Attack Active: False, took 243.84857988357544 seconds
+
+--- Round 73/100 ---
+Round 73: Main Acc = 0.8672, Backdoor ASR = 0.9972, Attack Active: False, took 244.49431109428406 seconds
+
+--- Round 74/100 ---
+Round 74: Main Acc = 0.8671, Backdoor ASR = 0.9956, Attack Active: False, took 244.40678691864014 seconds
+
+--- Round 75/100 ---
+Round 75: Main Acc = 0.8671, Backdoor ASR = 0.9974, Attack Active: False, took 243.57072591781616 seconds
+
+--- Round 76/100 ---
+Round 76: Main Acc = 0.8667, Backdoor ASR = 0.9971, Attack Active: False, took 244.32578206062317 seconds
+
+--- Round 77/100 ---
+Round 77: Main Acc = 0.8672, Backdoor ASR = 0.9952, Attack Active: False, took 244.3340549468994 seconds
+
+--- Round 78/100 ---
+Round 78: Main Acc = 0.8675, Backdoor ASR = 0.9917, Attack Active: False, took 244.19937825202942 seconds
+
+--- Round 79/100 ---
+Round 79: Main Acc = 0.8675, Backdoor ASR = 0.9931, Attack Active: False, took 244.1323058605194 seconds
+
+--- Round 80/100 ---
+Round 80: Main Acc = 0.8668, Backdoor ASR = 0.9874, Attack Active: False, took 244.16424703598022 seconds
+
+--- Round 81/100 ---
+Round 81: Main Acc = 0.8680, Backdoor ASR = 0.9785, Attack Active: False, took 243.82676339149475 seconds
+
+--- Round 82/100 ---
+Round 82: Main Acc = 0.8677, Backdoor ASR = 0.9692, Attack Active: False, took 243.46357464790344 seconds
+
+--- Round 83/100 ---
+Round 83: Main Acc = 0.8671, Backdoor ASR = 0.9657, Attack Active: False, took 243.88681030273438 seconds
+
+--- Round 84/100 ---
+Round 84: Main Acc = 0.8676, Backdoor ASR = 0.9543, Attack Active: False, took 244.34932208061218 seconds
+
+--- Round 85/100 ---
+Round 85: Main Acc = 0.8674, Backdoor ASR = 0.9762, Attack Active: False, took 244.86071681976318 seconds
+
+--- Round 86/100 ---
+Round 86: Main Acc = 0.8679, Backdoor ASR = 0.9603, Attack Active: False, took 244.24342679977417 seconds
+
+--- Round 87/100 ---
+Round 87: Main Acc = 0.8681, Backdoor ASR = 0.9566, Attack Active: False, took 243.98388075828552 seconds
+
+--- Round 88/100 ---
+Round 88: Main Acc = 0.8682, Backdoor ASR = 0.9636, Attack Active: False, took 243.36762881278992 seconds
+
+--- Round 89/100 ---
+Round 89: Main Acc = 0.8679, Backdoor ASR = 0.9772, Attack Active: False, took 243.5271918773651 seconds
+
+--- Round 90/100 ---
+Round 90: Main Acc = 0.8679, Backdoor ASR = 0.9660, Attack Active: False, took 243.4254469871521 seconds
+
+--- Round 91/100 ---
+Round 91: Main Acc = 0.8678, Backdoor ASR = 0.9537, Attack Active: False, took 243.56907153129578 seconds
+
+--- Round 92/100 ---
+Round 92: Main Acc = 0.8682, Backdoor ASR = 0.9128, Attack Active: False, took 244.44092226028442 seconds
+
+--- Round 93/100 ---
+Round 93: Main Acc = 0.8679, Backdoor ASR = 0.9322, Attack Active: False, took 243.40450048446655 seconds
+
+--- Round 94/100 ---
+Round 94: Main Acc = 0.8684, Backdoor ASR = 0.9035, Attack Active: False, took 243.3911201953888 seconds
+
+--- Round 95/100 ---
+Round 95: Main Acc = 0.8682, Backdoor ASR = 0.9117, Attack Active: False, took 243.23639798164368 seconds
+
+--- Round 96/100 ---
+Round 96: Main Acc = 0.8687, Backdoor ASR = 0.8838, Attack Active: False, took 243.459228515625 seconds
+
+--- Round 97/100 ---
+Round 97: Main Acc = 0.8684, Backdoor ASR = 0.8747, Attack Active: False, took 243.99936437606812 seconds
+
+--- Round 98/100 ---
+Round 98: Main Acc = 0.8682, Backdoor ASR = 0.9024, Attack Active: False, took 243.33413791656494 seconds
+
+--- Round 99/100 ---
+Round 99: Main Acc = 0.8686, Backdoor ASR = 0.8993, Attack Active: False, took 243.91489100456238 seconds
+
+--- Round 100/100 ---
+Round 100: Main Acc = 0.8680, Backdoor ASR = 0.8757, Attack Active: False, took 243.22994899749756 seconds
+
+--- Training Finished ---
+--- Configuration ---
+experiment_name: mr_fedavg_clip_femnist
+dataset: gtsrb
+num_clients: 5
+num_parallel_clients: 5
+num_rounds: 20
+local_epochs: 1
+batch_size: 32
+test_batch_size: 256
+lr: 0.01
+seed: 42
+attack: scaling
+num_malicious: 1
+target_class: 7
+poisoning_rate: 0.25
+attack_start_round: 18
+attack_end_round: 18
+scale_factor: 5.0
+malicious_epochs: 5
+mask_k_percent: 0.05
+trigger_epochs: 5
+trigger_lr: 0.01
+defense: clip
+clipping_norm: 4.0
+dp_std_dev: 0.025
+deepsight_num_samples: 256
+deepsight_num_seeds: 3
+deepsight_batch_size: 64
+deepsight_tau: 0.5
+flame_lamda: 0.001
+flame_eta: 1.0
+krum_f: 2
+krum_m: 5
+device: cuda
+---------------------
+Initialized NormClippingServer with clipping_norm=4.0, eta=1.0
+
+--- Round 1/20 ---
+Round 1: Main Acc = 0.3751, Backdoor ASR = 0.0000, Attack Active: False, took 38.54667544364929 seconds
+
+--- Round 2/20 ---
+Round 2: Main Acc = 0.5271, Backdoor ASR = 0.0000, Attack Active: False, took 19.960604906082153 seconds
+
+--- Round 3/20 ---
+Round 3: Main Acc = 0.6459, Backdoor ASR = 0.0000, Attack Active: False, took 19.897300004959106 seconds
+
+--- Round 4/20 ---
+Round 4: Main Acc = 0.7548, Backdoor ASR = 0.0000, Attack Active: False, took 20.04593276977539 seconds
+
+--- Round 5/20 ---
+Round 5: Main Acc = 0.8286, Backdoor ASR = 0.0000, Attack Active: False, took 19.836581707000732 seconds
+
+--- Round 6/20 ---
+Round 6: Main Acc = 0.8644, Backdoor ASR = 0.0000, Attack Active: False, took 19.785542726516724 seconds
+
+--- Round 7/20 ---
+Round 7: Main Acc = 0.8823, Backdoor ASR = 0.0000, Attack Active: False, took 19.749754190444946 seconds
+
+--- Round 8/20 ---
+Round 8: Main Acc = 0.9066, Backdoor ASR = 0.0000, Attack Active: False, took 20.66658926010132 seconds
+
+--- Round 9/20 ---
+Round 9: Main Acc = 0.9181, Backdoor ASR = 0.0000, Attack Active: False, took 21.202376127243042 seconds
+
+--- Round 10/20 ---
+Round 10: Main Acc = 0.9182, Backdoor ASR = 0.0000, Attack Active: False, took 21.203296661376953 seconds
+
+--- Round 11/20 ---
+Round 11: Main Acc = 0.9268, Backdoor ASR = 0.0000, Attack Active: False, took 20.396280765533447 seconds
+
+--- Round 12/20 ---
+Round 12: Main Acc = 0.9294, Backdoor ASR = 0.0000, Attack Active: False, took 20.747585773468018 seconds
+
+--- Round 13/20 ---
+Round 13: Main Acc = 0.9368, Backdoor ASR = 0.0000, Attack Active: False, took 19.90252947807312 seconds
+
+--- Round 14/20 ---
+Round 14: Main Acc = 0.9336, Backdoor ASR = 0.0000, Attack Active: False, took 20.83461594581604 seconds
+
+--- Round 15/20 ---
+Round 15: Main Acc = 0.9408, Backdoor ASR = 0.0000, Attack Active: False, took 20.27064347267151 seconds
+
+--- Round 16/20 ---
+Round 16: Main Acc = 0.9423, Backdoor ASR = 0.0000, Attack Active: False, took 20.68856906890869 seconds
+
+--- Round 17/20 ---
+Round 17: Main Acc = 0.9413, Backdoor ASR = 0.0000, Attack Active: False, took 20.888571977615356 seconds
+
+--- Round 18/20 ---
+Round 18: Main Acc = 0.9438, Backdoor ASR = 0.0431, Attack Active: True, took 51.28474473953247 seconds
+
+--- Round 19/20 ---
+Round 19: Main Acc = 0.9432, Backdoor ASR = 0.0395, Attack Active: False, took 30.235965967178345 seconds
+
+--- Round 20/20 ---
+Round 20: Main Acc = 0.9451, Backdoor ASR = 0.0423, Attack Active: False, took 44.44536113739014 seconds
+
+--- Training Finished ---
+--- Configuration ---
+experiment_name: mr_clip_mnist
+dataset: mnist
+num_clients: 5
+num_parallel_clients: 5
+num_rounds: 10
+local_epochs: 1
+batch_size: 32
+lr: 0.01
+seed: 42
+attack: scaling
+num_malicious: 1
+target_class: 7
+poisoning_rate: 0.2
+attack_start_round: 8
+attack_end_round: 8
+scale_factor: 5
+malicious_epochs: 5
+mask_k_percent: 0.05
+trigger_epochs: 5
+trigger_lr: 0.01
+defense: clip
+clipping_norm: 4.0
+dp_std_dev: 0.025
+deepsight_num_samples: 256
+deepsight_num_seeds: 3
+deepsight_batch_size: 64
+deepsight_tau: 0.5
+flame_lamda: 0.001
+flame_eta: 1.0
+krum_f: 2
+krum_m: 5
+device: cuda
+---------------------
+Traceback (most recent call last):
+  File "/Utilisateurs/mdif01/llm/BackdoorFramework/experiments/run_parallel.py", line 366, in <module>
+    main(args.config)
+  File "/Utilisateurs/mdif01/llm/BackdoorFramework/experiments/run_parallel.py", line 238, in main
+    test_loader = adapter.get_test_loader(config['test_batch_size'])
+                                          ~~~~~~^^^^^^^^^^^^^^^^^^^
+KeyError: 'test_batch_size'
+--- Configuration ---
+experiment_name: neurotoxin_base_femnist
+dataset: femnist
+num_clients: 5
+num_parallel_clients: 5
+num_rounds: 50
+local_epochs: 1
+batch_size: 32
+test_batch_size: 256
+lr: 0.01
+seed: 42
+attack: neurotoxin
+num_malicious: 1
+target_class: 7
+poisoning_rate: 0.2
+attack_start_round: 10
+attack_end_round: 40
+scale_factor: 1
+malicious_epochs: 50
+mask_k_percent: 0.05
+trigger_epochs: 5
+trigger_lr: 0.01
+defense: none
+clipping_norm: 4.0
+dp_std_dev: 0.025
+deepsight_num_samples: 256
+deepsight_num_seeds: 3
+deepsight_batch_size: 64
+deepsight_tau: 0.5
+flame_lamda: 0.001
+flame_eta: 1.0
+krum_f: 2
+krum_m: 5
+device: cuda
+---------------------
+
+--- Round 1/50 ---
+Round 1: Main Acc = 0.7874, Backdoor ASR = 0.0000, Attack Active: False, took 180.299218416214 seconds
+
+--- Round 2/50 ---
+Round 2: Main Acc = 0.8406, Backdoor ASR = 0.0000, Attack Active: False, took 163.60418105125427 seconds
+
+--- Round 3/50 ---
+Round 3: Main Acc = 0.8483, Backdoor ASR = 0.0000, Attack Active: False, took 163.96922135353088 seconds
+
+--- Round 4/50 ---
+Round 4: Main Acc = 0.8497, Backdoor ASR = 0.0000, Attack Active: False, took 164.26478147506714 seconds
+
+--- Round 5/50 ---
+Round 5: Main Acc = 0.8537, Backdoor ASR = 0.0000, Attack Active: False, took 163.63034057617188 seconds
+
+--- Round 6/50 ---
+Round 6: Main Acc = 0.8550, Backdoor ASR = 0.0000, Attack Active: False, took 163.14104175567627 seconds
+
+--- Round 7/50 ---
+Round 7: Main Acc = 0.8577, Backdoor ASR = 0.0000, Attack Active: False, took 163.55511498451233 seconds
+
+--- Round 8/50 ---
+Round 8: Main Acc = 0.8589, Backdoor ASR = 0.0000, Attack Active: False, took 163.87285137176514 seconds
+
+--- Round 9/50 ---
+Round 9: Main Acc = 0.8602, Backdoor ASR = 0.0000, Attack Active: False, took 164.04505038261414 seconds
+
+--- Round 10/50 ---
+Round 10: Main Acc = 0.8607, Backdoor ASR = 0.0550, Attack Active: True, took 217.37686896324158 seconds
+
+--- Round 11/50 ---
+Round 11: Main Acc = 0.8614, Backdoor ASR = 0.0931, Attack Active: True, took 216.64785051345825 seconds
+
+--- Round 12/50 ---
+Round 12: Main Acc = 0.8615, Backdoor ASR = 0.3739, Attack Active: True, took 217.27737402915955 seconds
+
+--- Round 13/50 ---
+Round 13: Main Acc = 0.8625, Backdoor ASR = 0.7227, Attack Active: True, took 216.79028010368347 seconds
+
+--- Round 14/50 ---
+Round 14: Main Acc = 0.8626, Backdoor ASR = 0.8361, Attack Active: True, took 217.32391619682312 seconds
+
+--- Round 15/50 ---
+Round 15: Main Acc = 0.8626, Backdoor ASR = 0.9521, Attack Active: True, took 219.95650601387024 seconds
+
+--- Round 16/50 ---
+Round 16: Main Acc = 0.8632, Backdoor ASR = 0.9811, Attack Active: True, took 221.7365939617157 seconds
+
+--- Round 17/50 ---
+Round 17: Main Acc = 0.8641, Backdoor ASR = 0.9925, Attack Active: True, took 220.04659819602966 seconds
+
+--- Round 18/50 ---
+Round 18: Main Acc = 0.8589, Backdoor ASR = 0.9931, Attack Active: True, took 221.34590864181519 seconds
+
+--- Round 19/50 ---
+Round 19: Main Acc = 0.8636, Backdoor ASR = 0.9957, Attack Active: True, took 221.03745293617249 seconds
+
+--- Round 20/50 ---
+Round 20: Main Acc = 0.8639, Backdoor ASR = 0.9966, Attack Active: True, took 219.87121725082397 seconds
+
+--- Round 21/50 ---
+Round 21: Main Acc = 0.8643, Backdoor ASR = 0.9990, Attack Active: True, took 219.63232803344727 seconds
+
+--- Round 22/50 ---
+Round 22: Main Acc = 0.8658, Backdoor ASR = 0.9982, Attack Active: True, took 217.17293000221252 seconds
+
+--- Round 23/50 ---
+Round 23: Main Acc = 0.8652, Backdoor ASR = 0.9984, Attack Active: True, took 219.43567848205566 seconds
+
+--- Round 24/50 ---
+Round 24: Main Acc = 0.8646, Backdoor ASR = 0.9992, Attack Active: True, took 220.1869192123413 seconds
+
+--- Round 25/50 ---
+Round 25: Main Acc = 0.8653, Backdoor ASR = 0.9988, Attack Active: True, took 219.08406352996826 seconds
+
+--- Round 26/50 ---
+Round 26: Main Acc = 0.8654, Backdoor ASR = 0.9992, Attack Active: True, took 219.18953943252563 seconds
+
+--- Round 27/50 ---
+Round 27: Main Acc = 0.8651, Backdoor ASR = 0.9993, Attack Active: True, took 218.06383085250854 seconds
+
+--- Round 28/50 ---
+Round 28: Main Acc = 0.8642, Backdoor ASR = 0.9993, Attack Active: True, took 217.8629994392395 seconds
+
+--- Round 29/50 ---
+Round 29: Main Acc = 0.8661, Backdoor ASR = 0.9995, Attack Active: True, took 218.45682883262634 seconds
+
+--- Round 30/50 ---
+Round 30: Main Acc = 0.8650, Backdoor ASR = 0.9994, Attack Active: True, took 219.52495121955872 seconds
+
+--- Round 31/50 ---
+Round 31: Main Acc = 0.8653, Backdoor ASR = 0.9993, Attack Active: True, took 218.5717658996582 seconds
+
+--- Round 32/50 ---
+Round 32: Main Acc = 0.8658, Backdoor ASR = 0.9996, Attack Active: True, took 218.74855017662048 seconds
+
+--- Round 33/50 ---
+Round 33: Main Acc = 0.8664, Backdoor ASR = 0.9997, Attack Active: True, took 218.95162224769592 seconds
+
+--- Round 34/50 ---
+Round 34: Main Acc = 0.8652, Backdoor ASR = 0.9995, Attack Active: True, took 219.26309394836426 seconds
+
+--- Round 35/50 ---
+Round 35: Main Acc = 0.8673, Backdoor ASR = 0.9994, Attack Active: True, took 219.79078650474548 seconds
+
+--- Round 36/50 ---
+Round 36: Main Acc = 0.8651, Backdoor ASR = 0.9998, Attack Active: True, took 219.17636466026306 seconds
+
+--- Round 37/50 ---
+Round 37: Main Acc = 0.8667, Backdoor ASR = 0.9996, Attack Active: True, took 219.03533267974854 seconds
+
+--- Round 38/50 ---
+Round 38: Main Acc = 0.8667, Backdoor ASR = 0.9998, Attack Active: True, took 219.0153181552887 seconds
+
+--- Round 39/50 ---
+Round 39: Main Acc = 0.8656, Backdoor ASR = 0.9999, Attack Active: True, took 218.90988206863403 seconds
+
+--- Round 40/50 ---
+Round 40: Main Acc = 0.8663, Backdoor ASR = 0.9998, Attack Active: True, took 219.50300574302673 seconds
+
+--- Round 41/50 ---
+Round 41: Main Acc = 0.8668, Backdoor ASR = 0.9990, Attack Active: False, took 194.0922553539276 seconds
+
+--- Round 42/50 ---
+Round 42: Main Acc = 0.8670, Backdoor ASR = 0.9985, Attack Active: False, took 194.4186155796051 seconds
+
+--- Round 43/50 ---
+Round 43: Main Acc = 0.8673, Backdoor ASR = 0.9970, Attack Active: False, took 191.38945651054382 seconds
+
+--- Round 44/50 ---
+Round 44: Main Acc = 0.8661, Backdoor ASR = 0.9939, Attack Active: False, took 189.64270758628845 seconds
+
+--- Round 45/50 ---
+Round 45: Main Acc = 0.8665, Backdoor ASR = 0.9920, Attack Active: False, took 189.47919702529907 seconds
+
+--- Round 46/50 ---
+Round 46: Main Acc = 0.8667, Backdoor ASR = 0.9859, Attack Active: False, took 189.26938390731812 seconds
+
+--- Round 47/50 ---
+Round 47: Main Acc = 0.8660, Backdoor ASR = 0.9830, Attack Active: False, took 189.37590837478638 seconds
+
+--- Round 48/50 ---
+Round 48: Main Acc = 0.8675, Backdoor ASR = 0.9795, Attack Active: False, took 189.33231616020203 seconds
+
+--- Round 49/50 ---
+Round 49: Main Acc = 0.8680, Backdoor ASR = 0.9697, Attack Active: False, took 190.07695126533508 seconds
+
+--- Round 50/50 ---
+Round 50: Main Acc = 0.8672, Backdoor ASR = 0.9627, Attack Active: False, took 188.83329391479492 seconds
+
+--- Training Finished ---
