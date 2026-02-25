@@ -47,6 +47,10 @@ from src.attacks.selectors.randomselector import RandomSelector
 from src.defenses.clip_dp import NormClippingServer, WeakDPServer
 from src.defenses.deepsight import DeepSightServer
 from src.defenses.flame import FlameServer
+from src.defenses.flame_new1 import FlameServer1
+from src.defenses.flame_new import RobustFlameServer
+from src.defenses.nested_flame import FlameNestedServer
+from src.defenses.layer_wise_flame import LayerFlameServer
 from src.defenses.krum import MKrumServer
 
 import inspect, os, sys, traceback
@@ -272,6 +276,16 @@ def main(config_path):
         server = NormClippingServer(server_model, test_loader, device, config)
     elif defense_type == 'flame':
         server = FlameServer(model=server_model, testloader=test_loader, device=device, config= config)
+    elif defense_type == 'flame1':
+        server = FlameServer1(model=server_model, testloader=test_loader, device=device, config= config)    
+    elif defense_type == 'flame_new':
+        server = RobustFlameServer(model=server_model, testloader=test_loader, device=device, config= config)
+    elif defense_type == 'flame_nested':
+        server = FlameNestedServer(model=server_model, testloader=test_loader, device=device, config= config)
+    elif defense_type == 'flame_layer':
+        server = LayerFlameServer(model=server_model, testloader=test_loader, device=device, config= config)
+      
+   
     elif defense_type == 'deepsight':
         server = DeepSightServer(server_model, test_loader, device, config)
     else:

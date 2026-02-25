@@ -1,0 +1,89 @@
+--- Configuration ---
+experiment_name: mr_clip_mnist
+dataset: mnist
+num_clients: 6
+num_parallel_clients: 6
+num_rounds: 10
+local_epochs: 1
+batch_size: 32
+test_batch_size: 256
+lr: 0.01
+seed: 42
+attack: scaling
+num_malicious: 1
+target_class: 7
+poisoning_rate: 0.2
+attack_start_round: 8
+attack_end_round: 8
+scale_factor: 5
+malicious_epochs: 5
+mask_k_percent: 0.05
+trigger_epochs: 5
+trigger_lr: 0.01
+defense: krum
+clipping_norm: 4.0
+dp_std_dev: 0.025
+deepsight_num_samples: 256
+deepsight_num_seeds: 3
+deepsight_batch_size: 64
+deepsight_tau: 0.5
+flame_lamda: 0.001
+flame_eta: 1.0
+krum_f: 1
+krum_m: 4
+device: cuda
+---------------------
+Initialized MKrumServer to tolerate f=1 Byzantine clients and select m=4 for aggregation.
+--- ScalingAttack Client [0] acting benignly in round 5 ---
+--- ScalingAttack Client [0] acting benignly in round 6 ---
+--- ScalingAttack Client [0] acting benignly in round 9 ---
+--- ScalingAttack Client [0] acting benignly in round 1 ---
+--- ScalingAttack Client [0] acting benignly in round 2 ---
+--- ScalingAttack Client [0] acting benignly in round 3 ---
+--- ScalingAttack Client [0] acting benignly in round 10 ---
+--- ScalingAttack Client [0] acting benignly in round 4 ---
+--- ScalingAttack Client [0] acting benignly in round 7 ---
+--- ScalingAttack Client [0] EXECUTING ATTACK in round 8 ---
+Client [0]: Using scale factor: 5.00
+
+--- Round 1/10 ---
+Krum selected clients at indices: [0, 5, 2, 4]
+Round 1: Main Acc = 0.9302, Backdoor ASR = 0.0000, Attack Active: False, took 43.137624979019165 seconds
+
+--- Round 2/10 ---
+Krum selected clients at indices: [3, 0, 1, 4]
+Round 2: Main Acc = 0.9630, Backdoor ASR = 0.0000, Attack Active: False, took 18.079726934432983 seconds
+
+--- Round 3/10 ---
+Krum selected clients at indices: [4, 5, 3, 2]
+Round 3: Main Acc = 0.9733, Backdoor ASR = 0.0000, Attack Active: False, took 18.3483247756958 seconds
+
+--- Round 4/10 ---
+Krum selected clients at indices: [3, 2, 0, 4]
+Round 4: Main Acc = 0.9788, Backdoor ASR = 0.0000, Attack Active: False, took 18.00744938850403 seconds
+
+--- Round 5/10 ---
+Krum selected clients at indices: [3, 2, 5, 0]
+Round 5: Main Acc = 0.9819, Backdoor ASR = 0.0000, Attack Active: False, took 17.737460374832153 seconds
+
+--- Round 6/10 ---
+Krum selected clients at indices: [0, 3, 4, 2]
+Round 6: Main Acc = 0.9836, Backdoor ASR = 0.0000, Attack Active: False, took 18.038392782211304 seconds
+
+--- Round 7/10 ---
+Krum selected clients at indices: [3, 0, 4, 2]
+Round 7: Main Acc = 0.9861, Backdoor ASR = 0.0000, Attack Active: False, took 18.025818586349487 seconds
+
+--- Round 8/10 ---
+Krum selected clients at indices: [3, 2, 4, 5]
+Round 8: Main Acc = 0.9860, Backdoor ASR = 0.1051, Attack Active: True, took 40.44669461250305 seconds
+
+--- Round 9/10 ---
+Krum selected clients at indices: [3, 0, 2, 4]
+Round 9: Main Acc = 0.9889, Backdoor ASR = 0.1052, Attack Active: False, took 31.936350345611572 seconds
+
+--- Round 10/10 ---
+Krum selected clients at indices: [3, 4, 0, 2]
+Round 10: Main Acc = 0.9883, Backdoor ASR = 0.1045, Attack Active: False, took 31.760368824005127 seconds
+
+--- Training Finished ---

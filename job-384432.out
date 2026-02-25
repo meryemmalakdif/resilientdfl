@@ -1,0 +1,1958 @@
+--- Configuration ---
+experiment_name: a3fl_flame_new_femnist
+dataset: femnist
+num_clients: 20
+num_parallel_clients: 20
+num_rounds: 100
+local_epochs: 1
+batch_size: 32
+test_batch_size: 256
+lr: 0.01
+seed: 42
+attack: a3fl
+num_malicious: 2
+target_class: 7
+poisoning_rate: 0.25
+attack_start_round: 20
+attack_end_round: 50
+scale_factor: 20.0
+malicious_epochs: 64
+mask_k_percent: 0.05
+trigger_epochs: 5
+trigger_lr: 0.01
+defense: flame_new
+clipping_norm: 4.0
+dp_std_dev: 0.025
+deepsight_num_samples: 256
+deepsight_num_seeds: 3
+deepsight_batch_size: 64
+deepsight_tau: 0.5
+flame_lamda: 0.001
+flame_eta: 1.0
+krum_f: 2
+krum_m: 5
+device: cuda
+---------------------
+Initialized FlameServer (+S-FPR) | lamda=0.001 eta=1.0 pca_top_k=3 z_thresh=1.5 min_signals=2
+
+
+--- A3FL Client [0] optimizing trigger for round 26 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 43 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 49 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [1]: Behaving benignly in round 90 (outside attack window).
+Client [1]: Behaving benignly in round 98 (outside attack window).
+Client [1]: Behaving benignly in round 10 (outside attack window).
+
+--- A3FL Client [0] optimizing trigger for round 22 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 36 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 46 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 50 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [1]: Behaving benignly in round 64 (outside attack window).
+Client [0]: Behaving benignly in round 65 (outside attack window).
+Client [1]: Behaving benignly in round 73 (outside attack window).
+Client [1]: Behaving benignly in round 76 (outside attack window).
+Client [1]: Behaving benignly in round 77 (outside attack window).
+Client [1]: Behaving benignly in round 96 (outside attack window).
+Client [0]: Behaving benignly in round 99 (outside attack window).
+Client [0]: Behaving benignly in round 100 (outside attack window).
+Client [0]: Behaving benignly in round 5 (outside attack window).
+Client [1]: Behaving benignly in round 6 (outside attack window).
+Client [1]: Behaving benignly in round 7 (outside attack window).
+Client [1]: Behaving benignly in round 8 (outside attack window).
+Client [0]: Behaving benignly in round 9 (outside attack window).
+Client [0]: Behaving benignly in round 13 (outside attack window).
+Client [0]: Behaving benignly in round 14 (outside attack window).
+Client [1]: Behaving benignly in round 15 (outside attack window).
+Client [0]: Behaving benignly in round 17 (outside attack window).
+Client [1]: Behaving benignly in round 18 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 20 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 25 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 32 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 40 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 43 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 45 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 50 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [1]: Behaving benignly in round 54 (outside attack window).
+Client [1]: Behaving benignly in round 57 (outside attack window).
+Client [1]: Behaving benignly in round 60 (outside attack window).
+Client [0]: Behaving benignly in round 63 (outside attack window).
+Client [1]: Behaving benignly in round 70 (outside attack window).
+Client [0]: Behaving benignly in round 71 (outside attack window).
+Client [0]: Behaving benignly in round 75 (outside attack window).
+Client [1]: Behaving benignly in round 88 (outside attack window).
+Client [0]: Behaving benignly in round 97 (outside attack window).
+Client [1]: Behaving benignly in round 99 (outside attack window).
+Client [1]: Behaving benignly in round 1 (outside attack window).
+Client [1]: Behaving benignly in round 2 (outside attack window).
+
+--- A3FL Client [0] optimizing trigger for round 27 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 44 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [0]: Behaving benignly in round 85 (outside attack window).
+Client [1]: Behaving benignly in round 89 (outside attack window).
+Client [0]: Behaving benignly in round 10 (outside attack window).
+Client [1]: Behaving benignly in round 12 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 21 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 33 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 42 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 49 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [0]: Behaving benignly in round 52 (outside attack window).
+Client [0]: Behaving benignly in round 53 (outside attack window).
+Client [0]: Behaving benignly in round 55 (outside attack window).
+Client [0]: Behaving benignly in round 56 (outside attack window).
+Client [0]: Behaving benignly in round 57 (outside attack window).
+Client [1]: Behaving benignly in round 58 (outside attack window).
+Client [0]: Behaving benignly in round 59 (outside attack window).
+Client [0]: Behaving benignly in round 60 (outside attack window).
+Client [0]: Behaving benignly in round 61 (outside attack window).
+Client [1]: Behaving benignly in round 62 (outside attack window).
+Client [1]: Behaving benignly in round 63 (outside attack window).
+Client [1]: Behaving benignly in round 65 (outside attack window).
+Client [0]: Behaving benignly in round 66 (outside attack window).
+Client [1]: Behaving benignly in round 67 (outside attack window).
+Client [1]: Behaving benignly in round 72 (outside attack window).
+Client [0]: Behaving benignly in round 77 (outside attack window).
+Client [1]: Behaving benignly in round 80 (outside attack window).
+Client [1]: Behaving benignly in round 83 (outside attack window).
+Client [0]: Behaving benignly in round 86 (outside attack window).
+Client [0]: Behaving benignly in round 89 (outside attack window).
+Client [0]: Behaving benignly in round 92 (outside attack window).
+Client [0]: Behaving benignly in round 94 (outside attack window).
+Client [0]: Behaving benignly in round 95 (outside attack window).
+Client [0]: Behaving benignly in round 3 (outside attack window).
+Client [0]: Behaving benignly in round 4 (outside attack window).
+Client [0]: Behaving benignly in round 6 (outside attack window).
+Client [0]: Behaving benignly in round 7 (outside attack window).
+Client [1]: Behaving benignly in round 11 (outside attack window).
+Client [1]: Behaving benignly in round 13 (outside attack window).
+Client [1]: Behaving benignly in round 14 (outside attack window).
+Client [0]: Behaving benignly in round 16 (outside attack window).
+
+--- A3FL Client [0] optimizing trigger for round 23 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 32 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [1]: Behaving benignly in round 56 (outside attack window).
+Client [1]: Behaving benignly in round 61 (outside attack window).
+Client [0]: Behaving benignly in round 62 (outside attack window).
+Client [0]: Behaving benignly in round 67 (outside attack window).
+Client [0]: Behaving benignly in round 68 (outside attack window).
+Client [0]: Behaving benignly in round 69 (outside attack window).
+Client [0]: Behaving benignly in round 72 (outside attack window).
+Client [0]: Behaving benignly in round 73 (outside attack window).
+Client [0]: Behaving benignly in round 74 (outside attack window).
+Client [1]: Behaving benignly in round 78 (outside attack window).
+Client [0]: Behaving benignly in round 79 (outside attack window).
+Client [0]: Behaving benignly in round 80 (outside attack window).
+Client [0]: Behaving benignly in round 81 (outside attack window).
+Client [0]: Behaving benignly in round 83 (outside attack window).
+Client [1]: Behaving benignly in round 85 (outside attack window).
+Client [1]: Behaving benignly in round 87 (outside attack window).
+Client [1]: Behaving benignly in round 91 (outside attack window).
+Client [0]: Behaving benignly in round 93 (outside attack window).
+
+--- A3FL Client [0] optimizing trigger for round 24 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 31 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 44 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [0]: Behaving benignly in round 54 (outside attack window).
+Client [1]: Behaving benignly in round 55 (outside attack window).
+Client [1]: Behaving benignly in round 81 (outside attack window).
+Client [0]: Behaving benignly in round 82 (outside attack window).
+Client [1]: Behaving benignly in round 84 (outside attack window).
+Client [0]: Behaving benignly in round 87 (outside attack window).
+Client [0]: Behaving benignly in round 91 (outside attack window).
+Client [1]: Behaving benignly in round 92 (outside attack window).
+Client [1]: Behaving benignly in round 93 (outside attack window).
+Client [0]: Behaving benignly in round 98 (outside attack window).
+Client [1]: Behaving benignly in round 4 (outside attack window).
+Client [1]: Behaving benignly in round 5 (outside attack window).
+Client [0]: Behaving benignly in round 8 (outside attack window).
+Client [1]: Behaving benignly in round 9 (outside attack window).
+Client [0]: Behaving benignly in round 11 (outside attack window).
+Client [0]: Behaving benignly in round 12 (outside attack window).
+Client [0]: Behaving benignly in round 15 (outside attack window).
+Client [1]: Behaving benignly in round 16 (outside attack window).
+Client [1]: Behaving benignly in round 17 (outside attack window).
+Client [1]: Behaving benignly in round 19 (outside attack window).
+
+--- A3FL Client [0] optimizing trigger for round 20 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 28 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 30 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 34 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 46 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [1]: Behaving benignly in round 100 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 22 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 26 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 37 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 41 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 29 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 45 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 48 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [0]: Behaving benignly in round 51 (outside attack window).
+Client [1]: Behaving benignly in round 66 (outside attack window).
+Client [0]: Behaving benignly in round 70 (outside attack window).
+Client [1]: Behaving benignly in round 75 (outside attack window).
+Client [0]: Behaving benignly in round 78 (outside attack window).
+Client [1]: Behaving benignly in round 79 (outside attack window).
+Client [0]: Behaving benignly in round 84 (outside attack window).
+Client [0]: Behaving benignly in round 90 (outside attack window).
+Client [1]: Behaving benignly in round 95 (outside attack window).
+Client [0]: Behaving benignly in round 96 (outside attack window).
+Client [1]: Behaving benignly in round 97 (outside attack window).
+Client [0]: Behaving benignly in round 2 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 29 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 40 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 23 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 28 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 31 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 35 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 48 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [0]: Behaving benignly in round 64 (outside attack window).
+Client [1]: Behaving benignly in round 68 (outside attack window).
+Client [1]: Behaving benignly in round 69 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 24 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 39 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [0]: Behaving benignly in round 18 (outside attack window).
+Client [0]: Behaving benignly in round 19 (outside attack window).
+
+--- A3FL Client [0] optimizing trigger for round 25 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 34 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 39 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 42 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [1]: Behaving benignly in round 59 (outside attack window).
+Client [1]: Behaving benignly in round 74 (outside attack window).
+Client [0]: Behaving benignly in round 76 (outside attack window).
+Client [1]: Behaving benignly in round 82 (outside attack window).
+Client [1]: Behaving benignly in round 86 (outside attack window).
+Client [0]: Behaving benignly in round 88 (outside attack window).
+Client [1]: Behaving benignly in round 94 (outside attack window).
+Client [1]: Behaving benignly in round 3 (outside attack window).
+
+--- A3FL Client [0] optimizing trigger for round 21 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 35 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [0]: Behaving benignly in round 58 (outside attack window).
+Client [1]: Behaving benignly in round 71 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 33 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 27 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 30 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 38 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 47 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 36 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 41 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 38 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [1]: Behaving benignly in round 51 (outside attack window).
+Client [1]: Behaving benignly in round 52 (outside attack window).
+Client [1]: Behaving benignly in round 53 (outside attack window).
+Client [0]: Behaving benignly in round 1 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 37 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 47 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- Round 1/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [2, 3, 6, 8, 10, 12, 13, 15, 18]
+    client   2 │ sparsity_z=-0.04  spectral_z=-1.11  last_layer_z=-0.66  votes=0/2 → FALSE POS
+    client   3 │ sparsity_z=+0.78  spectral_z=-0.43  last_layer_z=+1.44  votes=0/2 → FALSE POS
+    client   6 │ sparsity_z=-1.68  spectral_z=+0.60  last_layer_z=-0.53  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=-1.04  spectral_z=+1.90  last_layer_z=-1.25  votes=1/2 → FALSE POS
+    client  10 │ sparsity_z=+2.07  spectral_z=-1.48  last_layer_z=+0.60  votes=1/2 → FALSE POS
+    client  12 │ sparsity_z=-0.22  spectral_z=+1.12  last_layer_z=-1.01  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.18  spectral_z=-0.35  last_layer_z=-0.84  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+0.18  spectral_z=-0.16  last_layer_z=+1.27  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=-0.24  spectral_z=-0.08  last_layer_z=+0.98  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [2, 3, 6, 8, 10, 12, 13, 15, 18]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 1: Main Acc = 0.7454, Backdoor ASR = 0.0000, Attack Active: False, took 336.9276180267334 seconds
+
+--- Round 2/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [1, 3, 8, 9, 10, 15, 17, 18, 19]
+    client   1 │ sparsity_z=+1.91  spectral_z=-0.88  last_layer_z=+0.56  votes=1/2 → FALSE POS
+    client   3 │ sparsity_z=-0.71  spectral_z=+1.27  last_layer_z=+0.14  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=-0.83  spectral_z=-0.92  last_layer_z=-0.75  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=-0.62  spectral_z=-0.92  last_layer_z=+0.60  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=-1.50  spectral_z=-0.75  last_layer_z=+0.63  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+0.30  spectral_z=-0.92  last_layer_z=+1.80  votes=1/2 → FALSE POS
+    client  17 │ sparsity_z=+0.87  spectral_z=+0.70  last_layer_z=-0.17  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=+0.80  spectral_z=+0.99  last_layer_z=-1.12  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=-0.23  spectral_z=+1.43  last_layer_z=-1.68  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [1, 3, 8, 9, 10, 15, 17, 18, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 2: Main Acc = 0.8038, Backdoor ASR = 0.0000, Attack Active: False, took 194.11511325836182 seconds
+
+--- Round 3/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [3, 4, 5, 6, 8, 10, 12, 13, 15]
+    client   3 │ sparsity_z=-0.19  spectral_z=-1.10  last_layer_z=-0.18  votes=0/2 → FALSE POS
+    client   4 │ sparsity_z=-0.49  spectral_z=-0.85  last_layer_z=-1.01  votes=0/2 → FALSE POS
+    client   5 │ sparsity_z=-0.56  spectral_z=+1.33  last_layer_z=+2.33  votes=1/2 → FALSE POS
+    client   6 │ sparsity_z=-1.82  spectral_z=+1.15  last_layer_z=-1.37  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=-0.36  spectral_z=+1.53  last_layer_z=+0.10  votes=1/2 → FALSE POS
+    client  10 │ sparsity_z=+1.68  spectral_z=-0.62  last_layer_z=-0.38  votes=1/2 → FALSE POS
+    client  12 │ sparsity_z=+0.67  spectral_z=-0.55  last_layer_z=+0.46  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=-0.20  spectral_z=+0.09  last_layer_z=+0.40  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+1.28  spectral_z=-0.97  last_layer_z=-0.35  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [3, 4, 5, 6, 8, 10, 12, 13, 15]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 3: Main Acc = 0.8196, Backdoor ASR = 0.0000, Attack Active: False, took 194.06098985671997 seconds
+
+--- Round 4/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [1, 4, 7, 9, 13, 14, 15, 18, 19]
+    client   1 │ sparsity_z=+0.92  spectral_z=-0.80  last_layer_z=+0.56  votes=0/2 → FALSE POS
+    client   4 │ sparsity_z=-0.69  spectral_z=-0.72  last_layer_z=-1.86  votes=0/2 → FALSE POS
+    client   7 │ sparsity_z=+0.75  spectral_z=+0.99  last_layer_z=-0.60  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=-0.59  spectral_z=-1.04  last_layer_z=-0.20  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=-0.08  spectral_z=+1.11  last_layer_z=+0.49  votes=0/2 → FALSE POS
+    client  14 │ sparsity_z=-2.26  spectral_z=-0.94  last_layer_z=+1.00  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+0.49  spectral_z=+1.73  last_layer_z=+1.59  votes=2/2 → MALICIOUS
+    client  18 │ sparsity_z=+0.31  spectral_z=+0.37  last_layer_z=-1.02  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=+1.15  spectral_z=-0.72  last_layer_z=+0.03  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [1, 4, 7, 9, 13, 14, 18, 19]
+  [S-FPR  Stage 2] Confirmed malicious           : [15]
+  [FLAME  Final  ] Aggregating 19/20 clients.
+Round 4: Main Acc = 0.8284, Backdoor ASR = 0.0000, Attack Active: False, took 194.1553566455841 seconds
+
+--- Round 5/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [4, 5, 8, 10, 11, 12, 15, 18, 19]
+    client   4 │ sparsity_z=+0.59  spectral_z=-0.47  last_layer_z=+0.03  votes=0/2 → FALSE POS
+    client   5 │ sparsity_z=+1.46  spectral_z=-1.06  last_layer_z=+1.31  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.36  spectral_z=+1.16  last_layer_z=-1.14  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=+0.96  spectral_z=-0.50  last_layer_z=-0.98  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=-1.34  spectral_z=-1.19  last_layer_z=+0.70  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=-0.40  spectral_z=+1.19  last_layer_z=+0.66  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=-0.07  spectral_z=+1.16  last_layer_z=+1.00  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=-1.85  spectral_z=-1.11  last_layer_z=+0.16  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=+0.30  spectral_z=+0.82  last_layer_z=-1.75  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [4, 5, 8, 10, 11, 12, 15, 18, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 5: Main Acc = 0.8350, Backdoor ASR = 0.0000, Attack Active: False, took 194.0872106552124 seconds
+
+--- Round 6/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [1, 2, 6, 9, 14, 16, 17, 18, 19]
+    client   1 │ sparsity_z=-0.85  spectral_z=-0.99  last_layer_z=+1.55  votes=1/2 → FALSE POS
+    client   2 │ sparsity_z=+1.26  spectral_z=+1.10  last_layer_z=+0.29  votes=0/2 → FALSE POS
+    client   6 │ sparsity_z=-0.41  spectral_z=+1.05  last_layer_z=-0.54  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=+1.07  spectral_z=-0.98  last_layer_z=+0.32  votes=0/2 → FALSE POS
+    client  14 │ sparsity_z=-0.08  spectral_z=-0.75  last_layer_z=+1.46  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=-1.54  spectral_z=-0.70  last_layer_z=-0.18  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=+0.87  spectral_z=-0.98  last_layer_z=-0.23  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=-1.20  spectral_z=+1.41  last_layer_z=-1.74  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=+0.89  spectral_z=+0.84  last_layer_z=-0.94  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [1, 2, 6, 9, 14, 16, 17, 18, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 6: Main Acc = 0.8393, Backdoor ASR = 0.0000, Attack Active: False, took 194.25027418136597 seconds
+
+--- Round 7/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 2, 5, 11, 13, 14, 15, 19]
+    client   0 │ sparsity_z=-0.44  spectral_z=-0.79  last_layer_z=+0.30  votes=0/2 → FALSE POS
+    client   1 │ sparsity_z=+1.45  spectral_z=+1.18  last_layer_z=-1.25  votes=0/2 → FALSE POS
+    client   2 │ sparsity_z=+1.22  spectral_z=-0.06  last_layer_z=-0.67  votes=0/2 → FALSE POS
+    client   5 │ sparsity_z=-1.36  spectral_z=-0.72  last_layer_z=-0.56  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=+0.06  spectral_z=-0.92  last_layer_z=+0.84  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=-0.17  spectral_z=-1.04  last_layer_z=+0.30  votes=0/2 → FALSE POS
+    client  14 │ sparsity_z=+0.90  spectral_z=-0.57  last_layer_z=-0.09  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=-1.58  spectral_z=+1.48  last_layer_z=-1.04  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=-0.08  spectral_z=+1.43  last_layer_z=+2.17  votes=1/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 2, 5, 11, 13, 14, 15, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 7: Main Acc = 0.8422, Backdoor ASR = 0.0000, Attack Active: False, took 194.35419249534607 seconds
+
+--- Round 8/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [7, 8, 10, 13, 14, 15, 16, 17, 18]
+    client   7 │ sparsity_z=+1.13  spectral_z=-0.84  last_layer_z=+0.38  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=-1.34  spectral_z=+1.95  last_layer_z=-1.08  votes=1/2 → FALSE POS
+    client  10 │ sparsity_z=+1.21  spectral_z=+0.35  last_layer_z=+0.39  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.65  spectral_z=+0.46  last_layer_z=-0.59  votes=0/2 → FALSE POS
+    client  14 │ sparsity_z=-0.59  spectral_z=+0.21  last_layer_z=+0.16  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=-1.02  spectral_z=-0.76  last_layer_z=+1.52  votes=1/2 → FALSE POS
+    client  16 │ sparsity_z=+1.07  spectral_z=-1.26  last_layer_z=+0.24  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=+0.09  spectral_z=-1.04  last_layer_z=+0.95  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=-1.21  spectral_z=+0.93  last_layer_z=-1.97  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [7, 8, 10, 13, 14, 15, 16, 17, 18]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 8: Main Acc = 0.8438, Backdoor ASR = 0.0000, Attack Active: False, took 194.08221125602722 seconds
+
+--- Round 9/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [2, 3, 4, 5, 6, 8, 11, 12, 16]
+    client   2 │ sparsity_z=+0.96  spectral_z=-0.19  last_layer_z=-0.88  votes=0/2 → FALSE POS
+    client   3 │ sparsity_z=+0.75  spectral_z=-0.94  last_layer_z=+1.45  votes=0/2 → FALSE POS
+    client   4 │ sparsity_z=+0.71  spectral_z=+0.85  last_layer_z=-0.59  votes=0/2 → FALSE POS
+    client   5 │ sparsity_z=-1.01  spectral_z=-0.77  last_layer_z=+1.59  votes=1/2 → FALSE POS
+    client   6 │ sparsity_z=-1.05  spectral_z=+1.53  last_layer_z=-1.29  votes=1/2 → FALSE POS
+    client   8 │ sparsity_z=-1.82  spectral_z=+1.55  last_layer_z=-1.06  votes=1/2 → FALSE POS
+    client  11 │ sparsity_z=+0.04  spectral_z=-1.09  last_layer_z=+0.65  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=+0.20  spectral_z=-0.92  last_layer_z=-0.07  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+1.23  spectral_z=-0.01  last_layer_z=+0.20  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [2, 3, 4, 5, 6, 8, 11, 12, 16]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 9: Main Acc = 0.8458, Backdoor ASR = 0.0000, Attack Active: False, took 194.19260334968567 seconds
+
+--- Round 10/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 3, 4, 8, 9, 16, 18, 19]
+    client   0 │ sparsity_z=-2.16  spectral_z=+0.72  last_layer_z=-0.85  votes=0/2 → FALSE POS
+    client   1 │ sparsity_z=-0.02  spectral_z=-1.12  last_layer_z=+0.02  votes=0/2 → FALSE POS
+    client   3 │ sparsity_z=+0.49  spectral_z=-1.18  last_layer_z=+0.63  votes=0/2 → FALSE POS
+    client   4 │ sparsity_z=+0.47  spectral_z=-0.38  last_layer_z=-0.29  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.17  spectral_z=+1.51  last_layer_z=-1.54  votes=1/2 → FALSE POS
+    client   9 │ sparsity_z=-0.86  spectral_z=-0.70  last_layer_z=-0.06  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+1.14  spectral_z=-0.73  last_layer_z=+1.26  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=-0.47  spectral_z=+1.49  last_layer_z=-0.90  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=+1.25  spectral_z=+0.40  last_layer_z=+1.74  votes=1/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 3, 4, 8, 9, 16, 18, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 10: Main Acc = 0.8464, Backdoor ASR = 0.0000, Attack Active: False, took 193.83639240264893 seconds
+
+--- Round 11/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 7, 12, 13, 14, 16, 17, 19]
+    client   0 │ sparsity_z=+0.14  spectral_z=+0.42  last_layer_z=+0.66  votes=0/2 → FALSE POS
+    client   1 │ sparsity_z=+1.24  spectral_z=+0.89  last_layer_z=-0.17  votes=0/2 → FALSE POS
+    client   7 │ sparsity_z=-0.58  spectral_z=-1.11  last_layer_z=-0.73  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=-2.15  spectral_z=+1.74  last_layer_z=-1.51  votes=1/2 → FALSE POS
+    client  13 │ sparsity_z=+1.39  spectral_z=+0.99  last_layer_z=+1.20  votes=0/2 → FALSE POS
+    client  14 │ sparsity_z=-0.44  spectral_z=-1.08  last_layer_z=-1.29  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=-0.25  spectral_z=-0.87  last_layer_z=+1.08  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=+0.13  spectral_z=-0.95  last_layer_z=-0.39  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=+0.53  spectral_z=-0.04  last_layer_z=+1.15  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 7, 12, 13, 14, 16, 17, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 11: Main Acc = 0.8469, Backdoor ASR = 0.0000, Attack Active: False, took 193.87891054153442 seconds
+
+--- Round 12/100 ---
+  [FLAME  Stage 1] Flagged 8/20: [2, 10, 11, 13, 14, 15, 16, 17]
+    client   2 │ sparsity_z=-0.53  spectral_z=-0.74  last_layer_z=-0.37  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=-0.23  spectral_z=+1.72  last_layer_z=-2.33  votes=1/2 → FALSE POS
+    client  11 │ sparsity_z=+0.56  spectral_z=+0.20  last_layer_z=+0.30  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.14  spectral_z=-1.15  last_layer_z=+0.73  votes=0/2 → FALSE POS
+    client  14 │ sparsity_z=-1.81  spectral_z=-1.16  last_layer_z=-0.33  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+1.71  spectral_z=-0.25  last_layer_z=+1.08  votes=1/2 → FALSE POS
+    client  16 │ sparsity_z=+0.84  spectral_z=+0.06  last_layer_z=+0.20  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=-0.68  spectral_z=+1.32  last_layer_z=+0.71  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [2, 10, 11, 13, 14, 15, 16, 17]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 12: Main Acc = 0.8474, Backdoor ASR = 0.0000, Attack Active: False, took 193.8711678981781 seconds
+
+--- Round 13/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [0, 2, 3, 4, 6, 15, 17, 18, 19]
+    client   0 │ sparsity_z=-0.48  spectral_z=+1.50  last_layer_z=+0.14  votes=0/2 → FALSE POS
+    client   2 │ sparsity_z=-0.93  spectral_z=-0.78  last_layer_z=+1.77  votes=1/2 → FALSE POS
+    client   3 │ sparsity_z=+1.55  spectral_z=-0.21  last_layer_z=-1.28  votes=1/2 → FALSE POS
+    client   4 │ sparsity_z=+1.08  spectral_z=-0.83  last_layer_z=-0.10  votes=0/2 → FALSE POS
+    client   6 │ sparsity_z=-1.24  spectral_z=+1.04  last_layer_z=+0.92  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+0.15  spectral_z=-0.62  last_layer_z=-0.79  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=+0.10  spectral_z=-0.78  last_layer_z=+0.07  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=-1.29  spectral_z=+1.59  last_layer_z=-1.47  votes=1/2 → FALSE POS
+    client  19 │ sparsity_z=+1.05  spectral_z=-0.91  last_layer_z=+0.74  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 2, 3, 4, 6, 15, 17, 18, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 13: Main Acc = 0.8489, Backdoor ASR = 0.0000, Attack Active: False, took 193.626042842865 seconds
+
+--- Round 14/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [3, 8, 10, 12, 13, 14, 15, 16, 19]
+    client   3 │ sparsity_z=-1.50  spectral_z=-1.10  last_layer_z=+0.31  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=-0.13  spectral_z=+0.97  last_layer_z=+0.63  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=+0.28  spectral_z=+1.48  last_layer_z=-1.59  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=+1.06  spectral_z=-0.11  last_layer_z=-1.62  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=-0.65  spectral_z=-0.77  last_layer_z=+0.88  votes=0/2 → FALSE POS
+    client  14 │ sparsity_z=+1.50  spectral_z=-1.02  last_layer_z=+1.44  votes=1/2 → FALSE POS
+    client  15 │ sparsity_z=+1.14  spectral_z=-1.00  last_layer_z=+0.53  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=-1.07  spectral_z=+1.41  last_layer_z=-0.48  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=-0.64  spectral_z=+0.16  last_layer_z=-0.10  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [3, 8, 10, 12, 13, 14, 15, 16, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 14: Main Acc = 0.8504, Backdoor ASR = 0.0000, Attack Active: False, took 194.1316442489624 seconds
+
+--- Round 15/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 3, 8, 9, 13, 14, 17, 19]
+    client   0 │ sparsity_z=+0.68  spectral_z=-1.04  last_layer_z=-0.76  votes=0/2 → FALSE POS
+    client   1 │ sparsity_z=-2.46  spectral_z=-0.15  last_layer_z=-0.50  votes=0/2 → FALSE POS
+    client   3 │ sparsity_z=-0.19  spectral_z=+1.59  last_layer_z=-0.45  votes=1/2 → FALSE POS
+    client   8 │ sparsity_z=+0.11  spectral_z=+0.40  last_layer_z=+0.77  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=-0.62  spectral_z=-0.94  last_layer_z=+1.02  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.21  spectral_z=+1.44  last_layer_z=-1.25  votes=0/2 → FALSE POS
+    client  14 │ sparsity_z=+1.13  spectral_z=+0.63  last_layer_z=-0.95  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=+0.39  spectral_z=-0.93  last_layer_z=+1.96  votes=1/2 → FALSE POS
+    client  19 │ sparsity_z=+0.74  spectral_z=-1.00  last_layer_z=+0.16  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 3, 8, 9, 13, 14, 17, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 15: Main Acc = 0.8505, Backdoor ASR = 0.0000, Attack Active: False, took 194.3802318572998 seconds
+
+--- Round 16/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [1, 7, 12, 13, 15, 16, 17, 18, 19]
+    client   1 │ sparsity_z=-0.38  spectral_z=-1.02  last_layer_z=+0.50  votes=0/2 → FALSE POS
+    client   7 │ sparsity_z=+2.06  spectral_z=-0.79  last_layer_z=+1.31  votes=1/2 → FALSE POS
+    client  12 │ sparsity_z=-0.32  spectral_z=+1.65  last_layer_z=-1.34  votes=1/2 → FALSE POS
+    client  13 │ sparsity_z=-0.58  spectral_z=+0.32  last_layer_z=-0.77  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=-1.15  spectral_z=+0.09  last_layer_z=-0.87  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+0.04  spectral_z=-0.84  last_layer_z=-0.07  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=+0.16  spectral_z=-0.85  last_layer_z=+1.00  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=-1.10  spectral_z=+1.73  last_layer_z=-1.07  votes=1/2 → FALSE POS
+    client  19 │ sparsity_z=+1.27  spectral_z=-0.29  last_layer_z=+1.31  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [1, 7, 12, 13, 15, 16, 17, 18, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 16: Main Acc = 0.8524, Backdoor ASR = 0.0000, Attack Active: False, took 189.30897116661072 seconds
+
+--- Round 17/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 8, 11, 12, 13, 15, 16, 18]
+    client   0 │ sparsity_z=+1.13  spectral_z=-1.08  last_layer_z=-0.22  votes=0/2 → FALSE POS
+    client   1 │ sparsity_z=-0.54  spectral_z=+1.79  last_layer_z=+0.03  votes=1/2 → FALSE POS
+    client   8 │ sparsity_z=+0.14  spectral_z=-0.04  last_layer_z=+0.07  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=+0.52  spectral_z=-0.93  last_layer_z=+0.27  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=-1.11  spectral_z=-0.87  last_layer_z=-0.96  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=-0.42  spectral_z=+1.10  last_layer_z=-0.55  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=-0.91  spectral_z=-1.08  last_layer_z=+1.71  votes=1/2 → FALSE POS
+    client  16 │ sparsity_z=+2.04  spectral_z=+0.55  last_layer_z=+1.35  votes=1/2 → FALSE POS
+    client  18 │ sparsity_z=-0.86  spectral_z=+0.57  last_layer_z=-1.70  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 8, 11, 12, 13, 15, 16, 18]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 17: Main Acc = 0.8524, Backdoor ASR = 0.0000, Attack Active: False, took 189.17295384407043 seconds
+
+--- Round 18/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [0, 2, 3, 4, 6, 8, 11, 13, 18]
+    client   0 │ sparsity_z=-1.26  spectral_z=+1.53  last_layer_z=-1.84  votes=1/2 → FALSE POS
+    client   2 │ sparsity_z=-0.58  spectral_z=+0.68  last_layer_z=-1.06  votes=0/2 → FALSE POS
+    client   3 │ sparsity_z=+2.08  spectral_z=-1.00  last_layer_z=+0.83  votes=1/2 → FALSE POS
+    client   4 │ sparsity_z=+0.90  spectral_z=-0.39  last_layer_z=+0.32  votes=0/2 → FALSE POS
+    client   6 │ sparsity_z=-0.34  spectral_z=-0.92  last_layer_z=+1.22  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=-0.82  spectral_z=+1.66  last_layer_z=-0.71  votes=1/2 → FALSE POS
+    client  11 │ sparsity_z=-0.86  spectral_z=-0.75  last_layer_z=+0.07  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.36  spectral_z=-0.94  last_layer_z=+1.29  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=+0.52  spectral_z=+0.12  last_layer_z=-0.12  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 2, 3, 4, 6, 8, 11, 13, 18]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 18: Main Acc = 0.8535, Backdoor ASR = 0.0000, Attack Active: False, took 194.38949966430664 seconds
+
+--- Round 19/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [7, 8, 9, 10, 11, 12, 14, 16, 18]
+    client   7 │ sparsity_z=-1.36  spectral_z=-0.73  last_layer_z=-1.50  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=-1.78  spectral_z=+0.14  last_layer_z=-1.28  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=-0.52  spectral_z=-0.86  last_layer_z=+1.57  votes=1/2 → FALSE POS
+    client  10 │ sparsity_z=+0.79  spectral_z=+1.76  last_layer_z=-0.64  votes=1/2 → FALSE POS
+    client  11 │ sparsity_z=+0.42  spectral_z=-0.70  last_layer_z=-0.57  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=+1.25  spectral_z=+0.70  last_layer_z=+0.84  votes=0/2 → FALSE POS
+    client  14 │ sparsity_z=-0.36  spectral_z=-1.15  last_layer_z=+0.39  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+0.82  spectral_z=-0.56  last_layer_z=+1.02  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=+0.75  spectral_z=+1.41  last_layer_z=+0.18  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [7, 8, 9, 10, 11, 12, 14, 16, 18]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 19: Main Acc = 0.8526, Backdoor ASR = 0.0000, Attack Active: False, took 188.05949759483337 seconds
+
+--- Round 20/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 3, 4, 7, 9, 13, 15, 17]
+    client   0 │ sparsity_z=-1.85  spectral_z=+1.52  last_layer_z=-1.86  votes=1/2 → FALSE POS
+    client   1 │ sparsity_z=-1.88  spectral_z=+1.52  last_layer_z=-1.88  votes=1/2 → FALSE POS
+    client   3 │ sparsity_z=+0.57  spectral_z=-0.83  last_layer_z=+0.50  votes=0/2 → FALSE POS
+    client   4 │ sparsity_z=+0.46  spectral_z=-0.51  last_layer_z=+0.47  votes=0/2 → FALSE POS
+    client   7 │ sparsity_z=+0.49  spectral_z=-0.81  last_layer_z=+0.55  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=+0.53  spectral_z=-0.73  last_layer_z=+0.60  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.60  spectral_z=+1.14  last_layer_z=+0.53  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+0.50  spectral_z=-0.48  last_layer_z=+0.46  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=+0.58  spectral_z=-0.82  last_layer_z=+0.61  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 3, 4, 7, 9, 13, 15, 17]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 20: Main Acc = 0.8540, Backdoor ASR = 0.0002, Attack Active: True, took 533.368890285492 seconds
+
+--- Round 21/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 4, 7, 11, 14, 15, 16, 18]
+    client   0 │ sparsity_z=-1.88  spectral_z=+1.58  last_layer_z=-1.91  votes=1/2 → FALSE POS
+    client   1 │ sparsity_z=-1.86  spectral_z=+1.58  last_layer_z=-1.83  votes=1/2 → FALSE POS
+    client   4 │ sparsity_z=+0.56  spectral_z=-0.80  last_layer_z=+0.50  votes=0/2 → FALSE POS
+    client   7 │ sparsity_z=+0.57  spectral_z=-0.80  last_layer_z=+0.51  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=+0.47  spectral_z=-0.86  last_layer_z=+0.55  votes=0/2 → FALSE POS
+    client  14 │ sparsity_z=+0.55  spectral_z=-0.86  last_layer_z=+0.50  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+0.63  spectral_z=+0.36  last_layer_z=+0.64  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+0.50  spectral_z=-0.84  last_layer_z=+0.57  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=+0.46  spectral_z=+0.64  last_layer_z=+0.47  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 4, 7, 11, 14, 15, 16, 18]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 21: Main Acc = 0.8553, Backdoor ASR = 0.0014, Attack Active: True, took 538.1897547245026 seconds
+
+--- Round 22/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 4, 6, 7, 10, 13, 16, 19]
+    client   0 │ sparsity_z=-1.87  spectral_z=+1.53  last_layer_z=-1.87  votes=1/2 → FALSE POS
+    client   1 │ sparsity_z=-1.87  spectral_z=+1.53  last_layer_z=-1.87  votes=1/2 → FALSE POS
+    client   4 │ sparsity_z=+0.46  spectral_z=-0.27  last_layer_z=+0.55  votes=0/2 → FALSE POS
+    client   6 │ sparsity_z=+0.55  spectral_z=-0.60  last_layer_z=+0.54  votes=0/2 → FALSE POS
+    client   7 │ sparsity_z=+0.56  spectral_z=+1.10  last_layer_z=+0.45  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=+0.60  spectral_z=-0.82  last_layer_z=+0.52  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.54  spectral_z=-0.83  last_layer_z=+0.56  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+0.52  spectral_z=-0.82  last_layer_z=+0.58  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=+0.52  spectral_z=-0.80  last_layer_z=+0.53  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 4, 6, 7, 10, 13, 16, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 22: Main Acc = 0.8554, Backdoor ASR = 0.0009, Attack Active: True, took 540.8248507976532 seconds
+
+--- Round 23/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 2, 9, 12, 13, 16, 17, 18]
+    client   0 │ sparsity_z=-1.87  spectral_z=+1.61  last_layer_z=-1.84  votes=1/2 → FALSE POS
+    client   1 │ sparsity_z=-1.87  spectral_z=+1.61  last_layer_z=-1.89  votes=1/2 → FALSE POS
+    client   2 │ sparsity_z=+0.56  spectral_z=-0.88  last_layer_z=+0.55  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=+0.51  spectral_z=+0.34  last_layer_z=+0.48  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=+0.44  spectral_z=+0.57  last_layer_z=+0.47  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.58  spectral_z=-0.80  last_layer_z=+0.56  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+0.60  spectral_z=-0.76  last_layer_z=+0.60  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=+0.50  spectral_z=-0.82  last_layer_z=+0.55  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=+0.55  spectral_z=-0.87  last_layer_z=+0.53  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 2, 9, 12, 13, 16, 17, 18]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 23: Main Acc = 0.8555, Backdoor ASR = 0.0104, Attack Active: True, took 539.365371465683 seconds
+
+--- Round 24/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 2, 4, 8, 10, 13, 15, 18]
+    client   0 │ sparsity_z=-1.89  spectral_z=+1.59  last_layer_z=-1.87  votes=1/2 → FALSE POS
+    client   1 │ sparsity_z=-1.85  spectral_z=+1.59  last_layer_z=-1.87  votes=1/2 → FALSE POS
+    client   2 │ sparsity_z=+0.57  spectral_z=-0.87  last_layer_z=+0.56  votes=0/2 → FALSE POS
+    client   4 │ sparsity_z=+0.60  spectral_z=-0.87  last_layer_z=+0.48  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.49  spectral_z=-0.61  last_layer_z=+0.56  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=+0.50  spectral_z=-0.68  last_layer_z=+0.48  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.52  spectral_z=+0.95  last_layer_z=+0.55  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+0.49  spectral_z=-0.75  last_layer_z=+0.57  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=+0.56  spectral_z=-0.35  last_layer_z=+0.56  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 2, 4, 8, 10, 13, 15, 18]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 24: Main Acc = 0.8558, Backdoor ASR = 0.0405, Attack Active: True, took 539.4691486358643 seconds
+
+--- Round 25/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 2, 3, 6, 8, 12, 13, 18]
+    client   0 │ sparsity_z=-1.88  spectral_z=+1.43  last_layer_z=-1.89  votes=0/2 → FALSE POS
+    client   1 │ sparsity_z=-1.85  spectral_z=+1.43  last_layer_z=-1.84  votes=0/2 → FALSE POS
+    client   2 │ sparsity_z=+0.53  spectral_z=-0.75  last_layer_z=+0.62  votes=0/2 → FALSE POS
+    client   3 │ sparsity_z=+0.62  spectral_z=-0.75  last_layer_z=+0.59  votes=0/2 → FALSE POS
+    client   6 │ sparsity_z=+0.59  spectral_z=-0.61  last_layer_z=+0.55  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.47  spectral_z=+1.37  last_layer_z=+0.36  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=+0.40  spectral_z=-0.74  last_layer_z=+0.57  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.59  spectral_z=-0.76  last_layer_z=+0.54  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=+0.53  spectral_z=-0.61  last_layer_z=+0.51  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 2, 3, 6, 8, 12, 13, 18]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 25: Main Acc = 0.8568, Backdoor ASR = 0.0765, Attack Active: True, took 535.8078284263611 seconds
+
+--- Round 26/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 6, 7, 8, 11, 12, 13, 15]
+    client   0 │ sparsity_z=-1.83  spectral_z=+1.55  last_layer_z=-1.85  votes=1/2 → FALSE POS
+    client   1 │ sparsity_z=-1.91  spectral_z=+1.55  last_layer_z=-1.88  votes=1/2 → FALSE POS
+    client   6 │ sparsity_z=+0.59  spectral_z=-0.82  last_layer_z=+0.57  votes=0/2 → FALSE POS
+    client   7 │ sparsity_z=+0.51  spectral_z=+0.07  last_layer_z=+0.55  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.49  spectral_z=+0.92  last_layer_z=+0.55  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=+0.51  spectral_z=-0.85  last_layer_z=+0.42  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=+0.53  spectral_z=-0.81  last_layer_z=+0.57  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.60  spectral_z=-0.79  last_layer_z=+0.54  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+0.51  spectral_z=-0.81  last_layer_z=+0.55  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 6, 7, 8, 11, 12, 13, 15]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 26: Main Acc = 0.8576, Backdoor ASR = 0.1310, Attack Active: True, took 540.3091819286346 seconds
+
+--- Round 27/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 4, 9, 10, 12, 13, 15, 16]
+    client   0 │ sparsity_z=-1.86  spectral_z=+1.61  last_layer_z=-1.84  votes=1/2 → FALSE POS
+    client   1 │ sparsity_z=-1.87  spectral_z=+1.61  last_layer_z=-1.90  votes=1/2 → FALSE POS
+    client   4 │ sparsity_z=+0.60  spectral_z=+0.78  last_layer_z=+0.42  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=+0.53  spectral_z=-0.85  last_layer_z=+0.59  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=+0.57  spectral_z=-0.83  last_layer_z=+0.53  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=+0.50  spectral_z=-0.03  last_layer_z=+0.58  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.54  spectral_z=-0.82  last_layer_z=+0.52  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+0.57  spectral_z=-0.70  last_layer_z=+0.53  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+0.44  spectral_z=-0.77  last_layer_z=+0.56  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 4, 9, 10, 12, 13, 15, 16]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 27: Main Acc = 0.8574, Backdoor ASR = 0.2147, Attack Active: True, took 540.1534378528595 seconds
+
+--- Round 28/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 2, 4, 9, 10, 13, 14, 17]
+    client   0 │ sparsity_z=-1.85  spectral_z=+1.71  last_layer_z=-1.90  votes=1/2 → FALSE POS
+    client   1 │ sparsity_z=-1.89  spectral_z=+1.71  last_layer_z=-1.84  votes=1/2 → FALSE POS
+    client   2 │ sparsity_z=+0.55  spectral_z=-0.78  last_layer_z=+0.57  votes=0/2 → FALSE POS
+    client   4 │ sparsity_z=+0.57  spectral_z=-0.92  last_layer_z=+0.58  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=+0.51  spectral_z=-0.27  last_layer_z=+0.51  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=+0.43  spectral_z=-0.71  last_layer_z=+0.44  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.57  spectral_z=+0.53  last_layer_z=+0.57  votes=0/2 → FALSE POS
+    client  14 │ sparsity_z=+0.55  spectral_z=-0.83  last_layer_z=+0.51  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=+0.56  spectral_z=-0.44  last_layer_z=+0.56  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 2, 4, 9, 10, 13, 14, 17]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 28: Main Acc = 0.8581, Backdoor ASR = 0.3697, Attack Active: True, took 539.4386718273163 seconds
+
+--- Round 29/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 3, 8, 12, 14, 15, 16, 17]
+    client   0 │ sparsity_z=-1.89  spectral_z=+1.57  last_layer_z=-1.90  votes=1/2 → FALSE POS
+    client   1 │ sparsity_z=-1.85  spectral_z=+1.57  last_layer_z=-1.84  votes=1/2 → FALSE POS
+    client   3 │ sparsity_z=+0.50  spectral_z=-0.82  last_layer_z=+0.58  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.53  spectral_z=-0.78  last_layer_z=+0.52  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=+0.58  spectral_z=-0.74  last_layer_z=+0.56  votes=0/2 → FALSE POS
+    client  14 │ sparsity_z=+0.55  spectral_z=-0.25  last_layer_z=+0.56  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+0.54  spectral_z=-0.69  last_layer_z=+0.52  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+0.50  spectral_z=+1.00  last_layer_z=+0.42  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=+0.54  spectral_z=-0.84  last_layer_z=+0.58  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 3, 8, 12, 14, 15, 16, 17]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 29: Main Acc = 0.8584, Backdoor ASR = 0.5794, Attack Active: True, took 540.3333315849304 seconds
+
+--- Round 30/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 9, 13, 14, 15, 17, 18, 19]
+    client   0 │ sparsity_z=-1.83  spectral_z=+1.47  last_layer_z=-1.88  votes=0/2 → FALSE POS
+    client   1 │ sparsity_z=-1.90  spectral_z=+1.47  last_layer_z=-1.85  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=+0.65  spectral_z=-0.81  last_layer_z=+0.63  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.47  spectral_z=+1.29  last_layer_z=+0.41  votes=0/2 → FALSE POS
+    client  14 │ sparsity_z=+0.47  spectral_z=-0.77  last_layer_z=+0.49  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+0.44  spectral_z=-0.67  last_layer_z=+0.60  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=+0.61  spectral_z=-0.75  last_layer_z=+0.53  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=+0.57  spectral_z=-0.46  last_layer_z=+0.55  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=+0.52  spectral_z=-0.77  last_layer_z=+0.52  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 9, 13, 14, 15, 17, 18, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 30: Main Acc = 0.8585, Backdoor ASR = 0.6947, Attack Active: True, took 536.89022564888 seconds
+
+--- Round 31/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 2, 4, 6, 8, 11, 13, 17]
+    client   0 │ sparsity_z=-1.93  spectral_z=+1.66  last_layer_z=-1.87  votes=1/2 → FALSE POS
+    client   1 │ sparsity_z=-1.80  spectral_z=+1.66  last_layer_z=-1.86  votes=1/2 → FALSE POS
+    client   2 │ sparsity_z=+0.59  spectral_z=-0.86  last_layer_z=+0.52  votes=0/2 → FALSE POS
+    client   4 │ sparsity_z=+0.42  spectral_z=+0.68  last_layer_z=+0.42  votes=0/2 → FALSE POS
+    client   6 │ sparsity_z=+0.55  spectral_z=-0.80  last_layer_z=+0.51  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.51  spectral_z=-0.81  last_layer_z=+0.54  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=+0.56  spectral_z=-0.19  last_layer_z=+0.62  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.48  spectral_z=-0.45  last_layer_z=+0.51  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=+0.62  spectral_z=-0.89  last_layer_z=+0.60  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 2, 4, 6, 8, 11, 13, 17]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 31: Main Acc = 0.8585, Backdoor ASR = 0.7340, Attack Active: True, took 540.1741635799408 seconds
+
+--- Round 32/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 3, 8, 9, 12, 13, 14, 19]
+    client   0 │ sparsity_z=-1.89  spectral_z=+1.56  last_layer_z=-1.86  votes=1/2 → FALSE POS
+    client   1 │ sparsity_z=-1.85  spectral_z=+1.56  last_layer_z=-1.88  votes=1/2 → FALSE POS
+    client   3 │ sparsity_z=+0.58  spectral_z=-0.85  last_layer_z=+0.64  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.49  spectral_z=+0.82  last_layer_z=+0.51  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=+0.49  spectral_z=-0.78  last_layer_z=+0.51  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=+0.56  spectral_z=+0.21  last_layer_z=+0.50  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.56  spectral_z=-0.85  last_layer_z=+0.60  votes=0/2 → FALSE POS
+    client  14 │ sparsity_z=+0.48  spectral_z=-0.83  last_layer_z=+0.50  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=+0.57  spectral_z=-0.83  last_layer_z=+0.48  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 3, 8, 9, 12, 13, 14, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 32: Main Acc = 0.8587, Backdoor ASR = 0.8089, Attack Active: True, took 538.5396389961243 seconds
+
+--- Round 33/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 6, 8, 12, 15, 16, 17, 19]
+    client   0 │ sparsity_z=-1.87  spectral_z=+1.48  last_layer_z=-1.93  votes=0/2 → FALSE POS
+    client   1 │ sparsity_z=-1.86  spectral_z=+1.48  last_layer_z=-1.81  votes=0/2 → FALSE POS
+    client   6 │ sparsity_z=+0.57  spectral_z=-0.78  last_layer_z=+0.55  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.44  spectral_z=+1.24  last_layer_z=+0.46  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=+0.55  spectral_z=-0.41  last_layer_z=+0.47  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+0.45  spectral_z=-0.68  last_layer_z=+0.56  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+0.61  spectral_z=-0.81  last_layer_z=+0.58  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=+0.56  spectral_z=-0.80  last_layer_z=+0.56  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=+0.56  spectral_z=-0.72  last_layer_z=+0.56  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 6, 8, 12, 15, 16, 17, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 33: Main Acc = 0.8583, Backdoor ASR = 0.8739, Attack Active: True, took 541.395122051239 seconds
+
+--- Round 34/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 4, 7, 11, 12, 13, 16, 17]
+    client   0 │ sparsity_z=-1.87  spectral_z=+1.58  last_layer_z=-1.84  votes=1/2 → FALSE POS
+    client   1 │ sparsity_z=-1.86  spectral_z=+1.58  last_layer_z=-1.90  votes=1/2 → FALSE POS
+    client   4 │ sparsity_z=+0.53  spectral_z=+0.08  last_layer_z=+0.49  votes=0/2 → FALSE POS
+    client   7 │ sparsity_z=+0.57  spectral_z=-0.86  last_layer_z=+0.50  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=+0.44  spectral_z=-0.85  last_layer_z=+0.57  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=+0.58  spectral_z=-0.66  last_layer_z=+0.51  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.53  spectral_z=+0.83  last_layer_z=+0.51  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+0.58  spectral_z=-0.85  last_layer_z=+0.61  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=+0.50  spectral_z=-0.85  last_layer_z=+0.55  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 4, 7, 11, 12, 13, 16, 17]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 34: Main Acc = 0.8587, Backdoor ASR = 0.9004, Attack Active: True, took 544.3928563594818 seconds
+
+--- Round 35/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 6, 8, 9, 10, 13, 16, 18]
+    client   0 │ sparsity_z=-1.86  spectral_z=+1.67  last_layer_z=-1.90  votes=1/2 → FALSE POS
+    client   1 │ sparsity_z=-1.88  spectral_z=+1.67  last_layer_z=-1.84  votes=1/2 → FALSE POS
+    client   6 │ sparsity_z=+0.58  spectral_z=-0.74  last_layer_z=+0.59  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.43  spectral_z=+0.72  last_layer_z=+0.52  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=+0.52  spectral_z=-0.57  last_layer_z=+0.56  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=+0.56  spectral_z=-0.82  last_layer_z=+0.54  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.54  spectral_z=-0.73  last_layer_z=+0.49  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+0.61  spectral_z=-0.82  last_layer_z=+0.52  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=+0.51  spectral_z=-0.38  last_layer_z=+0.51  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 6, 8, 9, 10, 13, 16, 18]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 35: Main Acc = 0.8573, Backdoor ASR = 0.9242, Attack Active: True, took 538.2947914600372 seconds
+
+--- Round 36/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 7, 8, 10, 12, 13, 18, 19]
+    client   0 │ sparsity_z=-1.81  spectral_z=+1.58  last_layer_z=-1.84  votes=1/2 → FALSE POS
+    client   1 │ sparsity_z=-1.93  spectral_z=+1.58  last_layer_z=-1.89  votes=1/2 → FALSE POS
+    client   7 │ sparsity_z=+0.53  spectral_z=-0.80  last_layer_z=+0.47  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.45  spectral_z=-0.26  last_layer_z=+0.47  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=+0.55  spectral_z=+0.97  last_layer_z=+0.45  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=+0.55  spectral_z=-0.79  last_layer_z=+0.61  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.56  spectral_z=-0.83  last_layer_z=+0.63  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=+0.58  spectral_z=-0.79  last_layer_z=+0.62  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=+0.51  spectral_z=-0.65  last_layer_z=+0.47  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 7, 8, 10, 12, 13, 18, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 36: Main Acc = 0.8590, Backdoor ASR = 0.9745, Attack Active: True, took 540.7183299064636 seconds
+
+--- Round 37/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 3, 7, 8, 11, 15, 16, 18]
+    client   0 │ sparsity_z=-1.88  spectral_z=+1.54  last_layer_z=-1.89  votes=1/2 → FALSE POS
+    client   1 │ sparsity_z=-1.86  spectral_z=+1.54  last_layer_z=-1.84  votes=1/2 → FALSE POS
+    client   3 │ sparsity_z=+0.57  spectral_z=-0.76  last_layer_z=+0.59  votes=0/2 → FALSE POS
+    client   7 │ sparsity_z=+0.55  spectral_z=-0.75  last_layer_z=+0.61  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.40  spectral_z=+1.06  last_layer_z=+0.46  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=+0.65  spectral_z=-0.79  last_layer_z=+0.50  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+0.54  spectral_z=-0.81  last_layer_z=+0.51  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+0.56  spectral_z=-0.82  last_layer_z=+0.62  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=+0.46  spectral_z=-0.21  last_layer_z=+0.45  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 3, 7, 8, 11, 15, 16, 18]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 37: Main Acc = 0.8598, Backdoor ASR = 0.9751, Attack Active: True, took 544.0180926322937 seconds
+
+--- Round 38/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 2, 4, 8, 9, 11, 16, 18]
+    client   0 │ sparsity_z=-1.87  spectral_z=+1.64  last_layer_z=-1.86  votes=1/2 → FALSE POS
+    client   1 │ sparsity_z=-1.87  spectral_z=+1.64  last_layer_z=-1.88  votes=1/2 → FALSE POS
+    client   2 │ sparsity_z=+0.60  spectral_z=-0.88  last_layer_z=+0.57  votes=0/2 → FALSE POS
+    client   4 │ sparsity_z=+0.53  spectral_z=-0.32  last_layer_z=+0.53  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.48  spectral_z=-0.84  last_layer_z=+0.65  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=+0.53  spectral_z=-0.87  last_layer_z=+0.51  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=+0.54  spectral_z=+0.77  last_layer_z=+0.44  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+0.55  spectral_z=-0.70  last_layer_z=+0.56  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=+0.52  spectral_z=-0.45  last_layer_z=+0.48  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 2, 4, 8, 9, 11, 16, 18]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 38: Main Acc = 0.8592, Backdoor ASR = 0.9838, Attack Active: True, took 542.2122714519501 seconds
+
+--- Round 39/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 4, 11, 12, 13, 15, 16, 18]
+    client   0 │ sparsity_z=-1.87  spectral_z=+1.63  last_layer_z=-1.89  votes=1/2 → FALSE POS
+    client   1 │ sparsity_z=-1.86  spectral_z=+1.63  last_layer_z=-1.84  votes=1/2 → FALSE POS
+    client   4 │ sparsity_z=+0.47  spectral_z=-0.87  last_layer_z=+0.53  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=+0.52  spectral_z=-0.78  last_layer_z=+0.48  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=+0.59  spectral_z=-0.86  last_layer_z=+0.60  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.52  spectral_z=+0.31  last_layer_z=+0.52  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+0.56  spectral_z=-0.87  last_layer_z=+0.62  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+0.61  spectral_z=-0.69  last_layer_z=+0.57  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=+0.48  spectral_z=+0.50  last_layer_z=+0.42  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 4, 11, 12, 13, 15, 16, 18]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 39: Main Acc = 0.8590, Backdoor ASR = 0.9874, Attack Active: True, took 543.6519572734833 seconds
+
+--- Round 40/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 8/20: [0, 1, 2, 8, 11, 13, 16, 18]
+    client   0 │ sparsity_z=-1.75  spectral_z=+1.41  last_layer_z=-1.72  votes=0/2 → FALSE POS
+    client   1 │ sparsity_z=-1.71  spectral_z=+1.41  last_layer_z=-1.74  votes=0/2 → FALSE POS
+    client   2 │ sparsity_z=+0.59  spectral_z=-0.53  last_layer_z=+0.63  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.55  spectral_z=+0.98  last_layer_z=+0.60  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=+0.56  spectral_z=-0.78  last_layer_z=+0.52  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.58  spectral_z=-0.65  last_layer_z=+0.59  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+0.61  spectral_z=-0.92  last_layer_z=+0.54  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=+0.57  spectral_z=-0.93  last_layer_z=+0.59  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 2, 8, 11, 13, 16, 18]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 40: Main Acc = 0.8593, Backdoor ASR = 0.9916, Attack Active: True, took 538.9190721511841 seconds
+
+--- Round 41/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 9, 12, 13, 15, 16, 18, 19]
+    client   0 │ sparsity_z=-1.88  spectral_z=+1.47  last_layer_z=-1.89  votes=0/2 → FALSE POS
+    client   1 │ sparsity_z=-1.86  spectral_z=+1.47  last_layer_z=-1.85  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=+0.48  spectral_z=-0.77  last_layer_z=+0.53  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=+0.56  spectral_z=-0.42  last_layer_z=+0.56  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.53  spectral_z=+1.28  last_layer_z=+0.46  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+0.57  spectral_z=-0.78  last_layer_z=+0.63  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+0.58  spectral_z=-0.67  last_layer_z=+0.56  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=+0.48  spectral_z=-0.81  last_layer_z=+0.47  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=+0.54  spectral_z=-0.76  last_layer_z=+0.54  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 9, 12, 13, 15, 16, 18, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 41: Main Acc = 0.8590, Backdoor ASR = 0.9958, Attack Active: True, took 543.4619846343994 seconds
+
+--- Round 42/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 2, 8, 9, 11, 14, 15, 18]
+    client   0 │ sparsity_z=-1.88  spectral_z=+1.61  last_layer_z=-1.91  votes=1/2 → FALSE POS
+    client   1 │ sparsity_z=-1.86  spectral_z=+1.61  last_layer_z=-1.83  votes=1/2 → FALSE POS
+    client   2 │ sparsity_z=+0.58  spectral_z=-0.71  last_layer_z=+0.46  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.50  spectral_z=-0.77  last_layer_z=+0.53  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=+0.49  spectral_z=+0.09  last_layer_z=+0.55  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=+0.55  spectral_z=-0.86  last_layer_z=+0.59  votes=0/2 → FALSE POS
+    client  14 │ sparsity_z=+0.52  spectral_z=+0.73  last_layer_z=+0.48  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+0.56  spectral_z=-0.84  last_layer_z=+0.60  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=+0.53  spectral_z=-0.87  last_layer_z=+0.53  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 2, 8, 9, 11, 14, 15, 18]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 42: Main Acc = 0.8588, Backdoor ASR = 0.9980, Attack Active: True, took 542.2262306213379 seconds
+
+--- Round 43/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 2, 4, 7, 8, 13, 15, 17]
+    client   0 │ sparsity_z=-1.87  spectral_z=+1.41  last_layer_z=-1.86  votes=0/2 → FALSE POS
+    client   1 │ sparsity_z=-1.82  spectral_z=+1.41  last_layer_z=-1.76  votes=0/2 → FALSE POS
+    client   2 │ sparsity_z=+0.99  spectral_z=+1.41  last_layer_z=-0.16  votes=0/2 → FALSE POS
+    client   4 │ sparsity_z=+0.42  spectral_z=-0.70  last_layer_z=+0.55  votes=0/2 → FALSE POS
+    client   7 │ sparsity_z=+0.52  spectral_z=-0.70  last_layer_z=+0.71  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.40  spectral_z=-0.73  last_layer_z=+0.52  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.41  spectral_z=-0.70  last_layer_z=+0.65  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+0.52  spectral_z=-0.69  last_layer_z=+0.65  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=+0.42  spectral_z=-0.72  last_layer_z=+0.71  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 2, 4, 7, 8, 13, 15, 17]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 43: Main Acc = 0.8587, Backdoor ASR = 0.9983, Attack Active: True, took 538.5488409996033 seconds
+
+--- Round 44/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 8/20: [0, 1, 7, 8, 11, 13, 18, 19]
+    client   0 │ sparsity_z=-1.73  spectral_z=+1.54  last_layer_z=-1.75  votes=1/2 → FALSE POS
+    client   1 │ sparsity_z=-1.73  spectral_z=+1.54  last_layer_z=-1.71  votes=1/2 → FALSE POS
+    client   7 │ sparsity_z=+0.60  spectral_z=-1.00  last_layer_z=+0.59  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.57  spectral_z=+0.21  last_layer_z=+0.59  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=+0.58  spectral_z=-0.94  last_layer_z=+0.55  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.54  spectral_z=-0.59  last_layer_z=+0.59  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=+0.55  spectral_z=-0.97  last_layer_z=+0.62  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=+0.63  spectral_z=+0.23  last_layer_z=+0.53  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 7, 8, 11, 13, 18, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 44: Main Acc = 0.8606, Backdoor ASR = 0.9987, Attack Active: True, took 544.1616463661194 seconds
+
+--- Round 45/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 4, 6, 8, 10, 11, 13, 17]
+    client   0 │ sparsity_z=-1.85  spectral_z=+1.44  last_layer_z=-1.85  votes=0/2 → FALSE POS
+    client   1 │ sparsity_z=-1.89  spectral_z=+1.44  last_layer_z=-1.88  votes=0/2 → FALSE POS
+    client   4 │ sparsity_z=+0.53  spectral_z=-0.64  last_layer_z=+0.42  votes=0/2 → FALSE POS
+    client   6 │ sparsity_z=+0.51  spectral_z=-0.72  last_layer_z=+0.55  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.49  spectral_z=-0.59  last_layer_z=+0.53  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=+0.54  spectral_z=+1.35  last_layer_z=+0.43  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=+0.48  spectral_z=-0.78  last_layer_z=+0.57  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.57  spectral_z=-0.76  last_layer_z=+0.59  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=+0.60  spectral_z=-0.75  last_layer_z=+0.65  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 4, 6, 8, 10, 11, 13, 17]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 45: Main Acc = 0.8593, Backdoor ASR = 0.9984, Attack Active: True, took 540.0181710720062 seconds
+
+--- Round 46/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 4, 7, 8, 11, 13, 17, 19]
+    client   0 │ sparsity_z=-1.88  spectral_z=+1.45  last_layer_z=-1.86  votes=0/2 → FALSE POS
+    client   1 │ sparsity_z=-1.86  spectral_z=+1.45  last_layer_z=-1.87  votes=0/2 → FALSE POS
+    client   4 │ sparsity_z=+0.56  spectral_z=-0.75  last_layer_z=+0.49  votes=0/2 → FALSE POS
+    client   7 │ sparsity_z=+0.53  spectral_z=-0.64  last_layer_z=+0.59  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.52  spectral_z=-0.79  last_layer_z=+0.52  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=+0.48  spectral_z=-0.60  last_layer_z=+0.49  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.53  spectral_z=-0.71  last_layer_z=+0.57  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=+0.53  spectral_z=-0.75  last_layer_z=+0.58  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=+0.59  spectral_z=+1.34  last_layer_z=+0.51  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 4, 7, 8, 11, 13, 17, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 46: Main Acc = 0.8605, Backdoor ASR = 0.9999, Attack Active: True, took 541.1740379333496 seconds
+
+--- Round 47/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 5, 7, 10, 12, 13, 15, 17]
+    client   0 │ sparsity_z=-1.88  spectral_z=+1.47  last_layer_z=-1.84  votes=0/2 → FALSE POS
+    client   1 │ sparsity_z=-1.86  spectral_z=+1.47  last_layer_z=-1.89  votes=0/2 → FALSE POS
+    client   5 │ sparsity_z=+0.57  spectral_z=-0.75  last_layer_z=+0.59  votes=0/2 → FALSE POS
+    client   7 │ sparsity_z=+0.58  spectral_z=-0.80  last_layer_z=+0.65  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=+0.43  spectral_z=+1.28  last_layer_z=+0.37  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=+0.52  spectral_z=-0.43  last_layer_z=+0.44  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.51  spectral_z=-0.72  last_layer_z=+0.48  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+0.52  spectral_z=-0.74  last_layer_z=+0.59  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=+0.61  spectral_z=-0.78  last_layer_z=+0.61  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 5, 7, 10, 12, 13, 15, 17]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 47: Main Acc = 0.8592, Backdoor ASR = 0.9999, Attack Active: True, took 543.4177367687225 seconds
+
+--- Round 48/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 8/20: [0, 1, 5, 7, 8, 12, 15, 19]
+    client   0 │ sparsity_z=-1.76  spectral_z=+1.43  last_layer_z=-1.77  votes=0/2 → FALSE POS
+    client   1 │ sparsity_z=-1.70  spectral_z=+1.43  last_layer_z=-1.69  votes=0/2 → FALSE POS
+    client   5 │ sparsity_z=+0.58  spectral_z=-0.96  last_layer_z=+0.57  votes=0/2 → FALSE POS
+    client   7 │ sparsity_z=+0.54  spectral_z=-0.94  last_layer_z=+0.59  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.63  spectral_z=-0.90  last_layer_z=+0.64  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=+0.58  spectral_z=+0.32  last_layer_z=+0.52  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+0.58  spectral_z=-0.94  last_layer_z=+0.60  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=+0.55  spectral_z=+0.56  last_layer_z=+0.53  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 5, 7, 8, 12, 15, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 48: Main Acc = 0.8602, Backdoor ASR = 0.9998, Attack Active: True, took 539.0504095554352 seconds
+
+--- Round 49/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 2, 3, 14, 15, 16, 17, 19]
+    client   0 │ sparsity_z=-1.88  spectral_z=+1.56  last_layer_z=-1.85  votes=1/2 → FALSE POS
+    client   1 │ sparsity_z=-1.86  spectral_z=+1.56  last_layer_z=-1.89  votes=1/2 → FALSE POS
+    client   2 │ sparsity_z=+0.57  spectral_z=+1.07  last_layer_z=+0.55  votes=0/2 → FALSE POS
+    client   3 │ sparsity_z=+0.58  spectral_z=-0.55  last_layer_z=+0.56  votes=0/2 → FALSE POS
+    client  14 │ sparsity_z=+0.50  spectral_z=-0.84  last_layer_z=+0.58  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+0.61  spectral_z=-0.62  last_layer_z=+0.60  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+0.48  spectral_z=-0.74  last_layer_z=+0.51  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=+0.46  spectral_z=-0.72  last_layer_z=+0.46  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=+0.53  spectral_z=-0.71  last_layer_z=+0.47  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 2, 3, 14, 15, 16, 17, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 49: Main Acc = 0.8607, Backdoor ASR = 0.9992, Attack Active: True, took 544.9751243591309 seconds
+
+--- Round 50/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 6, 8, 9, 10, 12, 13, 15]
+    client   0 │ sparsity_z=-1.87  spectral_z=+1.61  last_layer_z=-1.91  votes=1/2 → FALSE POS
+    client   1 │ sparsity_z=-1.87  spectral_z=+1.61  last_layer_z=-1.82  votes=1/2 → FALSE POS
+    client   6 │ sparsity_z=+0.53  spectral_z=-0.42  last_layer_z=+0.57  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.50  spectral_z=+0.90  last_layer_z=+0.44  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=+0.53  spectral_z=-0.87  last_layer_z=+0.48  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=+0.53  spectral_z=-0.84  last_layer_z=+0.55  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=+0.48  spectral_z=-0.75  last_layer_z=+0.62  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.65  spectral_z=-0.51  last_layer_z=+0.60  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+0.53  spectral_z=-0.74  last_layer_z=+0.48  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 6, 8, 9, 10, 12, 13, 15]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 50: Main Acc = 0.8602, Backdoor ASR = 0.9999, Attack Active: True, took 546.1774671077728 seconds
+
+--- Round 51/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 8, 9, 10, 11, 13, 14, 18]
+    client   0 │ sparsity_z=+0.58  spectral_z=-0.89  last_layer_z=+1.17  votes=0/2 → FALSE POS
+    client   1 │ sparsity_z=-0.58  spectral_z=+0.20  last_layer_z=-0.69  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=-0.30  spectral_z=+1.64  last_layer_z=-1.39  votes=1/2 → FALSE POS
+    client   9 │ sparsity_z=-0.48  spectral_z=+1.72  last_layer_z=-0.74  votes=1/2 → FALSE POS
+    client  10 │ sparsity_z=+0.85  spectral_z=-0.96  last_layer_z=+0.70  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=-1.64  spectral_z=-0.92  last_layer_z=+0.25  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=-0.78  spectral_z=+0.15  last_layer_z=+1.23  votes=0/2 → FALSE POS
+    client  14 │ sparsity_z=+1.96  spectral_z=-0.86  last_layer_z=+0.84  votes=1/2 → FALSE POS
+    client  18 │ sparsity_z=+0.38  spectral_z=-0.08  last_layer_z=-1.37  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 8, 9, 10, 11, 13, 14, 18]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 51: Main Acc = 0.8607, Backdoor ASR = 0.9999, Attack Active: False, took 219.7581570148468 seconds
+
+--- Round 52/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [6, 8, 10, 11, 12, 13, 15, 18, 19]
+    client   6 │ sparsity_z=+1.81  spectral_z=-0.88  last_layer_z=+1.05  votes=1/2 → FALSE POS
+    client   8 │ sparsity_z=-0.83  spectral_z=+1.37  last_layer_z=-1.02  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=-1.05  spectral_z=+1.46  last_layer_z=-1.52  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=-0.47  spectral_z=-0.01  last_layer_z=+1.03  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=+0.11  spectral_z=+1.27  last_layer_z=-1.21  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+1.45  spectral_z=-0.71  last_layer_z=+1.40  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=-1.21  spectral_z=-0.93  last_layer_z=+0.17  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=-0.12  spectral_z=-0.90  last_layer_z=-0.04  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=+0.32  spectral_z=-0.67  last_layer_z=+0.13  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [6, 8, 10, 11, 12, 13, 15, 18, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 52: Main Acc = 0.8602, Backdoor ASR = 0.9997, Attack Active: False, took 221.39213824272156 seconds
+
+--- Round 53/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [1, 2, 8, 10, 11, 13, 15, 16, 19]
+    client   1 │ sparsity_z=+0.40  spectral_z=-0.56  last_layer_z=-0.05  votes=0/2 → FALSE POS
+    client   2 │ sparsity_z=-0.12  spectral_z=-0.71  last_layer_z=+0.56  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.86  spectral_z=-0.88  last_layer_z=+0.56  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=-0.97  spectral_z=+1.37  last_layer_z=-0.39  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=-1.89  spectral_z=+1.45  last_layer_z=-1.42  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=-0.22  spectral_z=+1.39  last_layer_z=-1.52  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=-0.39  spectral_z=-0.72  last_layer_z=-0.43  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+1.76  spectral_z=-0.46  last_layer_z=+1.18  votes=1/2 → FALSE POS
+    client  19 │ sparsity_z=+0.55  spectral_z=-0.89  last_layer_z=+1.51  votes=1/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [1, 2, 8, 10, 11, 13, 15, 16, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 53: Main Acc = 0.8605, Backdoor ASR = 0.9991, Attack Active: False, took 217.95059156417847 seconds
+
+--- Round 54/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 2, 4, 8, 10, 12, 15, 19]
+    client   0 │ sparsity_z=+1.43  spectral_z=-1.00  last_layer_z=+1.83  votes=1/2 → FALSE POS
+    client   1 │ sparsity_z=+0.41  spectral_z=-0.80  last_layer_z=+0.78  votes=0/2 → FALSE POS
+    client   2 │ sparsity_z=-0.09  spectral_z=-0.95  last_layer_z=+0.24  votes=0/2 → FALSE POS
+    client   4 │ sparsity_z=-0.98  spectral_z=+1.09  last_layer_z=-0.89  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.44  spectral_z=+0.52  last_layer_z=-1.13  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=-2.03  spectral_z=+1.56  last_layer_z=-1.63  votes=1/2 → FALSE POS
+    client  12 │ sparsity_z=+0.27  spectral_z=-0.84  last_layer_z=+0.48  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+1.08  spectral_z=+1.16  last_layer_z=+0.09  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=-0.51  spectral_z=-0.74  last_layer_z=+0.23  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 2, 4, 8, 10, 12, 15, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 54: Main Acc = 0.8608, Backdoor ASR = 0.9988, Attack Active: False, took 218.42990827560425 seconds
+
+--- Round 55/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 4, 7, 8, 9, 13, 17, 18]
+    client   0 │ sparsity_z=+1.50  spectral_z=-0.86  last_layer_z=+1.27  votes=1/2 → FALSE POS
+    client   1 │ sparsity_z=+0.84  spectral_z=-0.98  last_layer_z=+1.54  votes=1/2 → FALSE POS
+    client   4 │ sparsity_z=+0.02  spectral_z=+1.16  last_layer_z=-0.37  votes=0/2 → FALSE POS
+    client   7 │ sparsity_z=-0.04  spectral_z=-0.77  last_layer_z=-0.43  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=-2.11  spectral_z=+1.65  last_layer_z=-0.72  votes=1/2 → FALSE POS
+    client   9 │ sparsity_z=+0.95  spectral_z=-0.87  last_layer_z=+0.45  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=-0.62  spectral_z=+0.49  last_layer_z=-0.21  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=+0.02  spectral_z=-0.82  last_layer_z=+0.41  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=-0.56  spectral_z=+0.99  last_layer_z=-1.94  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 4, 7, 8, 9, 13, 17, 18]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 55: Main Acc = 0.8609, Backdoor ASR = 0.9985, Attack Active: False, took 218.55323791503906 seconds
+
+--- Round 56/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [0, 2, 8, 9, 11, 13, 16, 17, 19]
+    client   0 │ sparsity_z=-0.46  spectral_z=-0.70  last_layer_z=-0.19  votes=0/2 → FALSE POS
+    client   2 │ sparsity_z=-0.60  spectral_z=+1.42  last_layer_z=-2.12  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=-1.55  spectral_z=+0.96  last_layer_z=-0.67  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=-0.56  spectral_z=-0.54  last_layer_z=+0.32  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=-0.09  spectral_z=+0.55  last_layer_z=+0.28  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.72  spectral_z=+1.36  last_layer_z=+0.88  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+0.19  spectral_z=-0.96  last_layer_z=+0.41  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=+0.09  spectral_z=-0.92  last_layer_z=-0.54  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=+2.27  spectral_z=-1.16  last_layer_z=+1.61  votes=2/2 → MALICIOUS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 2, 8, 9, 11, 13, 16, 17]
+  [S-FPR  Stage 2] Confirmed malicious           : [19]
+  [FLAME  Final  ] Aggregating 19/20 clients.
+Round 56: Main Acc = 0.8608, Backdoor ASR = 0.9969, Attack Active: False, took 218.77179741859436 seconds
+
+--- Round 57/100 ---
+  [FLAME  Stage 1] Flagged 8/20: [1, 4, 6, 11, 13, 15, 16, 17]
+    client   1 │ sparsity_z=+1.79  spectral_z=-1.02  last_layer_z=+0.52  votes=1/2 → FALSE POS
+    client   4 │ sparsity_z=+0.71  spectral_z=+1.24  last_layer_z=+0.30  votes=0/2 → FALSE POS
+    client   6 │ sparsity_z=-0.94  spectral_z=-0.59  last_layer_z=+0.33  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=-0.26  spectral_z=+1.22  last_layer_z=-0.97  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.90  spectral_z=-0.86  last_layer_z=+1.79  votes=1/2 → FALSE POS
+    client  15 │ sparsity_z=-1.46  spectral_z=-0.50  last_layer_z=-1.28  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=-0.60  spectral_z=+1.36  last_layer_z=-1.21  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=-0.16  spectral_z=-0.86  last_layer_z=+0.52  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [1, 4, 6, 11, 13, 15, 16, 17]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 57: Main Acc = 0.8605, Backdoor ASR = 0.9931, Attack Active: False, took 218.1882243156433 seconds
+
+--- Round 58/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [1, 2, 3, 5, 6, 8, 13, 18, 19]
+    client   1 │ sparsity_z=+1.51  spectral_z=-0.51  last_layer_z=-0.21  votes=1/2 → FALSE POS
+    client   2 │ sparsity_z=-0.39  spectral_z=+0.82  last_layer_z=-1.09  votes=0/2 → FALSE POS
+    client   3 │ sparsity_z=-1.58  spectral_z=-0.95  last_layer_z=+0.11  votes=0/2 → FALSE POS
+    client   5 │ sparsity_z=+0.95  spectral_z=-1.05  last_layer_z=+1.34  votes=0/2 → FALSE POS
+    client   6 │ sparsity_z=+1.03  spectral_z=-1.08  last_layer_z=+1.80  votes=1/2 → FALSE POS
+    client   8 │ sparsity_z=-1.34  spectral_z=+0.31  last_layer_z=-1.26  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.37  spectral_z=-0.53  last_layer_z=+0.29  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=-0.15  spectral_z=+1.70  last_layer_z=+0.06  votes=1/2 → FALSE POS
+    client  19 │ sparsity_z=-0.41  spectral_z=+1.27  last_layer_z=-1.03  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [1, 2, 3, 5, 6, 8, 13, 18, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 58: Main Acc = 0.8613, Backdoor ASR = 0.9951, Attack Active: False, took 218.5392496585846 seconds
+
+--- Round 59/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [0, 8, 12, 13, 14, 15, 16, 17, 18]
+    client   0 │ sparsity_z=-1.11  spectral_z=+1.25  last_layer_z=-0.60  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=-1.19  spectral_z=+1.56  last_layer_z=-1.00  votes=1/2 → FALSE POS
+    client  12 │ sparsity_z=+0.06  spectral_z=+1.23  last_layer_z=-1.02  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=-1.16  spectral_z=-0.92  last_layer_z=-0.66  votes=0/2 → FALSE POS
+    client  14 │ sparsity_z=+0.91  spectral_z=-0.94  last_layer_z=+0.57  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=-0.77  spectral_z=+0.01  last_layer_z=-0.65  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+1.04  spectral_z=-0.88  last_layer_z=+0.47  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=+0.99  spectral_z=-0.39  last_layer_z=+2.15  votes=1/2 → FALSE POS
+    client  18 │ sparsity_z=+1.22  spectral_z=-0.92  last_layer_z=+0.74  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 8, 12, 13, 14, 15, 16, 17, 18]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 59: Main Acc = 0.8612, Backdoor ASR = 0.9897, Attack Active: False, took 217.9224750995636 seconds
+
+--- Round 60/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [0, 2, 3, 4, 6, 8, 12, 15, 16]
+    client   0 │ sparsity_z=-0.79  spectral_z=-0.61  last_layer_z=+1.74  votes=1/2 → FALSE POS
+    client   2 │ sparsity_z=-0.06  spectral_z=-0.89  last_layer_z=+1.29  votes=0/2 → FALSE POS
+    client   3 │ sparsity_z=+1.30  spectral_z=-0.88  last_layer_z=+0.22  votes=0/2 → FALSE POS
+    client   4 │ sparsity_z=-1.01  spectral_z=-0.58  last_layer_z=+0.44  votes=0/2 → FALSE POS
+    client   6 │ sparsity_z=+0.42  spectral_z=-0.78  last_layer_z=+0.21  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=-1.37  spectral_z=+1.21  last_layer_z=-0.68  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=-0.82  spectral_z=-0.44  last_layer_z=-0.99  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+1.51  spectral_z=+1.57  last_layer_z=-1.32  votes=2/2 → MALICIOUS
+    client  16 │ sparsity_z=+0.82  spectral_z=+1.41  last_layer_z=-0.91  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 2, 3, 4, 6, 8, 12, 16]
+  [S-FPR  Stage 2] Confirmed malicious           : [15]
+  [FLAME  Final  ] Aggregating 19/20 clients.
+Round 60: Main Acc = 0.8607, Backdoor ASR = 0.9924, Attack Active: False, took 218.8629698753357 seconds
+
+--- Round 61/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 5, 10, 11, 13, 14, 15, 18]
+    client   0 │ sparsity_z=-0.08  spectral_z=-0.69  last_layer_z=-0.04  votes=0/2 → FALSE POS
+    client   1 │ sparsity_z=-1.14  spectral_z=-0.37  last_layer_z=-0.28  votes=0/2 → FALSE POS
+    client   5 │ sparsity_z=+1.66  spectral_z=-1.13  last_layer_z=+1.64  votes=2/2 → MALICIOUS
+    client  10 │ sparsity_z=+0.92  spectral_z=-1.03  last_layer_z=+0.49  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=-1.33  spectral_z=+0.23  last_layer_z=+0.20  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=-0.24  spectral_z=+0.65  last_layer_z=-0.86  votes=0/2 → FALSE POS
+    client  14 │ sparsity_z=+1.03  spectral_z=-0.80  last_layer_z=+0.15  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+0.26  spectral_z=+1.53  last_layer_z=-2.12  votes=1/2 → FALSE POS
+    client  18 │ sparsity_z=-1.06  spectral_z=+1.61  last_layer_z=+0.82  votes=1/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 10, 11, 13, 14, 15, 18]
+  [S-FPR  Stage 2] Confirmed malicious           : [5]
+  [FLAME  Final  ] Aggregating 19/20 clients.
+Round 61: Main Acc = 0.8614, Backdoor ASR = 0.9828, Attack Active: False, took 218.18859195709229 seconds
+
+--- Round 62/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [5, 6, 8, 9, 10, 11, 12, 13, 18]
+    client   5 │ sparsity_z=+1.23  spectral_z=-0.80  last_layer_z=+1.68  votes=1/2 → FALSE POS
+    client   6 │ sparsity_z=+0.61  spectral_z=-0.84  last_layer_z=+0.56  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.25  spectral_z=-0.88  last_layer_z=+0.21  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=-0.84  spectral_z=-0.90  last_layer_z=+0.10  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=+0.48  spectral_z=+0.07  last_layer_z=+1.04  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=-0.75  spectral_z=-0.69  last_layer_z=-1.07  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=-1.34  spectral_z=+1.09  last_layer_z=-0.97  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=-1.18  spectral_z=+1.66  last_layer_z=-1.62  votes=1/2 → FALSE POS
+    client  18 │ sparsity_z=+1.54  spectral_z=+1.29  last_layer_z=+0.06  votes=1/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [5, 6, 8, 9, 10, 11, 12, 13, 18]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 62: Main Acc = 0.8599, Backdoor ASR = 0.9774, Attack Active: False, took 218.02770924568176 seconds
+
+--- Round 63/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [2, 4, 7, 8, 9, 13, 15, 16, 18]
+    client   2 │ sparsity_z=+1.11  spectral_z=-0.79  last_layer_z=+1.15  votes=0/2 → FALSE POS
+    client   4 │ sparsity_z=-0.08  spectral_z=+1.56  last_layer_z=-2.02  votes=1/2 → FALSE POS
+    client   7 │ sparsity_z=-2.27  spectral_z=-0.88  last_layer_z=-0.78  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=-0.13  spectral_z=+0.74  last_layer_z=+0.33  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=+0.55  spectral_z=+0.86  last_layer_z=+0.28  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=-0.55  spectral_z=+1.20  last_layer_z=-0.60  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+1.00  spectral_z=-0.93  last_layer_z=+1.34  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+0.87  spectral_z=-0.80  last_layer_z=-0.39  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=-0.49  spectral_z=-0.96  last_layer_z=+0.70  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [2, 4, 7, 8, 9, 13, 15, 16, 18]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 63: Main Acc = 0.8608, Backdoor ASR = 0.9798, Attack Active: False, took 217.856262922287 seconds
+
+--- Round 64/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [1, 3, 5, 7, 8, 11, 13, 16, 18]
+    client   1 │ sparsity_z=+1.05  spectral_z=+1.65  last_layer_z=+2.19  votes=2/2 → MALICIOUS
+    client   3 │ sparsity_z=+1.30  spectral_z=-0.58  last_layer_z=-0.80  votes=0/2 → FALSE POS
+    client   5 │ sparsity_z=-0.95  spectral_z=+0.24  last_layer_z=-0.34  votes=0/2 → FALSE POS
+    client   7 │ sparsity_z=+1.01  spectral_z=-1.34  last_layer_z=+1.20  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=-0.36  spectral_z=+0.34  last_layer_z=+0.32  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=-0.79  spectral_z=-1.28  last_layer_z=-1.04  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=-0.84  spectral_z=+1.22  last_layer_z=-0.40  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+0.96  spectral_z=-0.76  last_layer_z=-0.60  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=-1.39  spectral_z=+0.51  last_layer_z=-0.55  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [3, 5, 7, 8, 11, 13, 16, 18]
+  [S-FPR  Stage 2] Confirmed malicious           : [1]
+  [FLAME  Final  ] Aggregating 19/20 clients.
+Round 64: Main Acc = 0.8613, Backdoor ASR = 0.9749, Attack Active: False, took 218.3571527004242 seconds
+
+--- Round 65/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [1, 7, 8, 10, 11, 13, 15, 16, 19]
+    client   1 │ sparsity_z=+0.05  spectral_z=-1.73  last_layer_z=+0.39  votes=0/2 → FALSE POS
+    client   7 │ sparsity_z=+0.44  spectral_z=-1.18  last_layer_z=+1.28  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.93  spectral_z=+0.83  last_layer_z=+1.08  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=-0.92  spectral_z=+0.72  last_layer_z=-0.53  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=-0.44  spectral_z=+1.18  last_layer_z=-1.91  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=-1.66  spectral_z=+0.20  last_layer_z=+0.53  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=-0.91  spectral_z=+0.80  last_layer_z=-1.27  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+1.54  spectral_z=+0.31  last_layer_z=-0.05  votes=1/2 → FALSE POS
+    client  19 │ sparsity_z=+0.97  spectral_z=-1.12  last_layer_z=+0.49  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [1, 7, 8, 10, 11, 13, 15, 16, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 65: Main Acc = 0.8612, Backdoor ASR = 0.9618, Attack Active: False, took 217.61789512634277 seconds
+
+--- Round 66/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [0, 6, 9, 10, 13, 14, 16, 17, 19]
+    client   0 │ sparsity_z=-1.90  spectral_z=-0.38  last_layer_z=-0.10  votes=0/2 → FALSE POS
+    client   6 │ sparsity_z=-0.70  spectral_z=-0.75  last_layer_z=-0.38  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=-0.72  spectral_z=+1.47  last_layer_z=+0.51  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=+0.09  spectral_z=+1.52  last_layer_z=-2.02  votes=1/2 → FALSE POS
+    client  13 │ sparsity_z=+0.42  spectral_z=-0.78  last_layer_z=+0.15  votes=0/2 → FALSE POS
+    client  14 │ sparsity_z=+1.65  spectral_z=-0.82  last_layer_z=+0.24  votes=1/2 → FALSE POS
+    client  16 │ sparsity_z=-0.15  spectral_z=-0.91  last_layer_z=+1.40  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=+1.21  spectral_z=-0.53  last_layer_z=+1.20  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=+0.08  spectral_z=+1.19  last_layer_z=-1.01  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 6, 9, 10, 13, 14, 16, 17, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 66: Main Acc = 0.8620, Backdoor ASR = 0.9367, Attack Active: False, took 218.4885332584381 seconds
+
+--- Round 67/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [1, 2, 6, 8, 9, 11, 13, 16, 19]
+    client   1 │ sparsity_z=+0.38  spectral_z=-0.94  last_layer_z=+0.09  votes=0/2 → FALSE POS
+    client   2 │ sparsity_z=+0.01  spectral_z=+0.97  last_layer_z=-0.48  votes=0/2 → FALSE POS
+    client   6 │ sparsity_z=-1.29  spectral_z=-0.27  last_layer_z=-0.34  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=-0.29  spectral_z=+1.53  last_layer_z=-0.78  votes=1/2 → FALSE POS
+    client   9 │ sparsity_z=+1.53  spectral_z=-0.98  last_layer_z=+1.89  votes=2/2 → MALICIOUS
+    client  11 │ sparsity_z=-0.17  spectral_z=-0.92  last_layer_z=+0.13  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=-1.41  spectral_z=+1.40  last_layer_z=-0.97  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+1.62  spectral_z=-0.99  last_layer_z=+1.53  votes=2/2 → MALICIOUS
+    client  19 │ sparsity_z=-0.37  spectral_z=+0.21  last_layer_z=-1.07  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [1, 2, 6, 8, 11, 13, 19]
+  [S-FPR  Stage 2] Confirmed malicious           : [9, 16]
+  [FLAME  Final  ] Aggregating 18/20 clients.
+Round 67: Main Acc = 0.8613, Backdoor ASR = 0.9475, Attack Active: False, took 218.26161098480225 seconds
+
+--- Round 68/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [1, 3, 4, 9, 11, 12, 15, 16, 19]
+    client   1 │ sparsity_z=-0.37  spectral_z=-1.09  last_layer_z=-0.40  votes=0/2 → FALSE POS
+    client   3 │ sparsity_z=-0.36  spectral_z=-0.26  last_layer_z=-1.38  votes=0/2 → FALSE POS
+    client   4 │ sparsity_z=+1.59  spectral_z=-1.07  last_layer_z=+2.04  votes=2/2 → MALICIOUS
+    client   9 │ sparsity_z=-1.82  spectral_z=-0.40  last_layer_z=+0.37  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=+0.27  spectral_z=-1.16  last_layer_z=+0.36  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=-1.16  spectral_z=+1.67  last_layer_z=-1.20  votes=1/2 → FALSE POS
+    client  15 │ sparsity_z=+0.49  spectral_z=+0.19  last_layer_z=-0.32  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+0.31  spectral_z=+0.95  last_layer_z=+0.90  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=+1.05  spectral_z=+1.17  last_layer_z=-0.37  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [1, 3, 9, 11, 12, 15, 16, 19]
+  [S-FPR  Stage 2] Confirmed malicious           : [4]
+  [FLAME  Final  ] Aggregating 19/20 clients.
+Round 68: Main Acc = 0.8618, Backdoor ASR = 0.9507, Attack Active: False, took 218.08651757240295 seconds
+
+--- Round 69/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [0, 6, 7, 10, 12, 13, 15, 16, 18]
+    client   0 │ sparsity_z=-0.68  spectral_z=-0.72  last_layer_z=+0.70  votes=0/2 → FALSE POS
+    client   6 │ sparsity_z=+1.24  spectral_z=+1.10  last_layer_z=-0.39  votes=0/2 → FALSE POS
+    client   7 │ sparsity_z=+0.31  spectral_z=-0.81  last_layer_z=+0.30  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=-1.96  spectral_z=+1.50  last_layer_z=-2.42  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=-0.96  spectral_z=-0.83  last_layer_z=+1.04  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+1.01  spectral_z=+1.45  last_layer_z=-0.34  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+1.02  spectral_z=+0.10  last_layer_z=-0.05  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+0.21  spectral_z=-0.93  last_layer_z=+1.09  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=-0.20  spectral_z=-0.86  last_layer_z=+0.08  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 6, 7, 10, 12, 13, 15, 16, 18]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 69: Main Acc = 0.8622, Backdoor ASR = 0.9334, Attack Active: False, took 218.1990795135498 seconds
+
+--- Round 70/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [1, 2, 4, 5, 7, 8, 14, 15, 19]
+    client   1 │ sparsity_z=-0.61  spectral_z=+1.47  last_layer_z=+0.54  votes=0/2 → FALSE POS
+    client   2 │ sparsity_z=-0.45  spectral_z=-0.84  last_layer_z=+1.34  votes=0/2 → FALSE POS
+    client   4 │ sparsity_z=+0.00  spectral_z=+1.27  last_layer_z=+0.01  votes=0/2 → FALSE POS
+    client   5 │ sparsity_z=+0.46  spectral_z=-0.66  last_layer_z=+0.48  votes=0/2 → FALSE POS
+    client   7 │ sparsity_z=-0.22  spectral_z=-0.37  last_layer_z=-1.26  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=-2.11  spectral_z=+1.44  last_layer_z=-0.30  votes=0/2 → FALSE POS
+    client  14 │ sparsity_z=+1.32  spectral_z=-0.91  last_layer_z=+1.15  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+0.22  spectral_z=-0.87  last_layer_z=-1.92  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=+1.38  spectral_z=-0.53  last_layer_z=-0.04  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [1, 2, 4, 5, 7, 8, 14, 15, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 70: Main Acc = 0.8612, Backdoor ASR = 0.9189, Attack Active: False, took 218.14890265464783 seconds
+
+--- Round 71/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [0, 6, 8, 9, 10, 11, 12, 14, 19]
+    client   0 │ sparsity_z=-0.56  spectral_z=-1.15  last_layer_z=+1.15  votes=0/2 → FALSE POS
+    client   6 │ sparsity_z=-0.26  spectral_z=-0.82  last_layer_z=-0.05  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.61  spectral_z=+1.24  last_layer_z=+0.76  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=-1.88  spectral_z=-0.78  last_layer_z=-0.31  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=-0.56  spectral_z=+0.52  last_layer_z=-1.28  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=-0.39  spectral_z=+0.75  last_layer_z=-0.40  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=+1.70  spectral_z=-0.21  last_layer_z=+0.59  votes=1/2 → FALSE POS
+    client  14 │ sparsity_z=+1.15  spectral_z=-1.17  last_layer_z=+1.31  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=+0.19  spectral_z=+1.62  last_layer_z=-1.77  votes=1/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 6, 8, 9, 10, 11, 12, 14, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 71: Main Acc = 0.8611, Backdoor ASR = 0.9288, Attack Active: False, took 217.67677330970764 seconds
+
+--- Round 72/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 8, 9, 10, 11, 13, 16, 19]
+    client   0 │ sparsity_z=-0.93  spectral_z=-0.79  last_layer_z=-1.74  votes=0/2 → FALSE POS
+    client   1 │ sparsity_z=-1.44  spectral_z=+1.41  last_layer_z=+0.02  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.86  spectral_z=-0.97  last_layer_z=+0.61  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=+1.93  spectral_z=-0.87  last_layer_z=+1.30  votes=1/2 → FALSE POS
+    client  10 │ sparsity_z=-0.04  spectral_z=+1.45  last_layer_z=-1.05  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=-0.26  spectral_z=+0.96  last_layer_z=-0.90  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=-0.91  spectral_z=+0.49  last_layer_z=+0.06  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+0.83  spectral_z=-0.89  last_layer_z=+1.38  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=-0.04  spectral_z=-0.79  last_layer_z=+0.31  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 8, 9, 10, 11, 13, 16, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 72: Main Acc = 0.8624, Backdoor ASR = 0.8964, Attack Active: False, took 217.76660871505737 seconds
+
+--- Round 73/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [1, 2, 3, 5, 8, 9, 10, 11, 13]
+    client   1 │ sparsity_z=+0.76  spectral_z=-0.61  last_layer_z=+2.06  votes=1/2 → FALSE POS
+    client   2 │ sparsity_z=-0.84  spectral_z=-0.85  last_layer_z=-0.32  votes=0/2 → FALSE POS
+    client   3 │ sparsity_z=+1.36  spectral_z=+1.40  last_layer_z=-1.11  votes=0/2 → FALSE POS
+    client   5 │ sparsity_z=-0.64  spectral_z=+1.47  last_layer_z=-0.86  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=-1.31  spectral_z=-0.73  last_layer_z=-0.43  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=+1.19  spectral_z=+1.25  last_layer_z=-0.83  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=+1.03  spectral_z=-0.08  last_layer_z=+0.75  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=-0.94  spectral_z=-0.90  last_layer_z=+1.07  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=-0.61  spectral_z=-0.95  last_layer_z=-0.33  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [1, 2, 3, 5, 8, 9, 10, 11, 13]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 73: Main Acc = 0.8610, Backdoor ASR = 0.9139, Attack Active: False, took 217.73488521575928 seconds
+
+--- Round 74/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [1, 2, 5, 7, 8, 9, 11, 18, 19]
+    client   1 │ sparsity_z=-0.28  spectral_z=-0.77  last_layer_z=+0.51  votes=0/2 → FALSE POS
+    client   2 │ sparsity_z=-0.03  spectral_z=-0.38  last_layer_z=+0.99  votes=0/2 → FALSE POS
+    client   5 │ sparsity_z=-0.04  spectral_z=-0.61  last_layer_z=-0.44  votes=0/2 → FALSE POS
+    client   7 │ sparsity_z=+2.05  spectral_z=-0.90  last_layer_z=+1.82  votes=2/2 → MALICIOUS
+    client   8 │ sparsity_z=-1.63  spectral_z=+1.46  last_layer_z=-0.72  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=+1.08  spectral_z=-0.84  last_layer_z=+0.60  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=-0.78  spectral_z=+1.34  last_layer_z=-0.97  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=+0.14  spectral_z=-0.70  last_layer_z=-0.27  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=-0.51  spectral_z=+1.39  last_layer_z=-1.53  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [1, 2, 5, 8, 9, 11, 18, 19]
+  [S-FPR  Stage 2] Confirmed malicious           : [7]
+  [FLAME  Final  ] Aggregating 19/20 clients.
+Round 74: Main Acc = 0.8604, Backdoor ASR = 0.9012, Attack Active: False, took 217.13050937652588 seconds
+
+--- Round 75/100 ---
+  [FLAME  Stage 1] Flagged 8/20: [0, 1, 4, 5, 6, 8, 10, 13]
+    client   0 │ sparsity_z=+0.12  spectral_z=+1.20  last_layer_z=-1.94  votes=0/2 → FALSE POS
+    client   1 │ sparsity_z=-1.89  spectral_z=+1.03  last_layer_z=+0.62  votes=0/2 → FALSE POS
+    client   4 │ sparsity_z=+0.91  spectral_z=+0.21  last_layer_z=+0.79  votes=0/2 → FALSE POS
+    client   5 │ sparsity_z=+1.18  spectral_z=+0.75  last_layer_z=-0.88  votes=0/2 → FALSE POS
+    client   6 │ sparsity_z=+0.22  spectral_z=-1.34  last_layer_z=+1.19  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.98  spectral_z=-1.20  last_layer_z=+0.55  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=-0.68  spectral_z=-1.18  last_layer_z=+0.42  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=-0.85  spectral_z=+0.52  last_layer_z=-0.74  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 4, 5, 6, 8, 10, 13]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 75: Main Acc = 0.8618, Backdoor ASR = 0.8507, Attack Active: False, took 217.38547921180725 seconds
+
+--- Round 76/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 2, 5, 8, 11, 15, 16, 18]
+    client   0 │ sparsity_z=+0.09  spectral_z=-1.05  last_layer_z=+0.96  votes=0/2 → FALSE POS
+    client   1 │ sparsity_z=+0.12  spectral_z=-0.57  last_layer_z=-0.54  votes=0/2 → FALSE POS
+    client   2 │ sparsity_z=+1.81  spectral_z=-1.07  last_layer_z=+0.06  votes=1/2 → FALSE POS
+    client   5 │ sparsity_z=+1.54  spectral_z=-0.54  last_layer_z=+0.54  votes=1/2 → FALSE POS
+    client   8 │ sparsity_z=-0.65  spectral_z=+1.65  last_layer_z=-2.33  votes=1/2 → FALSE POS
+    client  11 │ sparsity_z=-1.02  spectral_z=+1.61  last_layer_z=+0.32  votes=1/2 → FALSE POS
+    client  15 │ sparsity_z=-0.03  spectral_z=+0.68  last_layer_z=+0.99  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=-1.21  spectral_z=-0.11  last_layer_z=-0.70  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=-0.65  spectral_z=-0.59  last_layer_z=+0.69  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 2, 5, 8, 11, 15, 16, 18]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 76: Main Acc = 0.8600, Backdoor ASR = 0.8871, Attack Active: False, took 217.6321897506714 seconds
+
+--- Round 77/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [1, 5, 7, 8, 9, 11, 15, 16, 17]
+    client   1 │ sparsity_z=-0.85  spectral_z=-0.36  last_layer_z=+0.47  votes=0/2 → FALSE POS
+    client   5 │ sparsity_z=-0.44  spectral_z=-0.86  last_layer_z=+1.21  votes=0/2 → FALSE POS
+    client   7 │ sparsity_z=+1.07  spectral_z=-0.82  last_layer_z=+0.88  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=-1.17  spectral_z=+1.40  last_layer_z=-0.12  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=+1.83  spectral_z=-0.84  last_layer_z=+1.09  votes=1/2 → FALSE POS
+    client  11 │ sparsity_z=-1.05  spectral_z=+1.14  last_layer_z=+0.05  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+0.55  spectral_z=-0.77  last_layer_z=-0.98  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+0.66  spectral_z=+1.62  last_layer_z=-2.00  votes=1/2 → FALSE POS
+    client  17 │ sparsity_z=-0.60  spectral_z=-0.51  last_layer_z=-0.61  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [1, 5, 7, 8, 9, 11, 15, 16, 17]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 77: Main Acc = 0.8611, Backdoor ASR = 0.8103, Attack Active: False, took 217.99563264846802 seconds
+
+--- Round 78/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [0, 4, 5, 6, 11, 15, 16, 17, 19]
+    client   0 │ sparsity_z=-0.39  spectral_z=+1.47  last_layer_z=-1.35  votes=0/2 → FALSE POS
+    client   4 │ sparsity_z=-1.21  spectral_z=+1.76  last_layer_z=-1.09  votes=1/2 → FALSE POS
+    client   5 │ sparsity_z=-0.17  spectral_z=-1.01  last_layer_z=+0.50  votes=0/2 → FALSE POS
+    client   6 │ sparsity_z=+0.85  spectral_z=-1.12  last_layer_z=+0.10  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=-0.80  spectral_z=-0.34  last_layer_z=-0.52  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+0.83  spectral_z=-0.07  last_layer_z=-0.34  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+1.55  spectral_z=-0.00  last_layer_z=-0.43  votes=1/2 → FALSE POS
+    client  17 │ sparsity_z=+0.83  spectral_z=-1.08  last_layer_z=+1.93  votes=1/2 → FALSE POS
+    client  19 │ sparsity_z=-1.49  spectral_z=+0.41  last_layer_z=+1.20  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 4, 5, 6, 11, 15, 16, 17, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 78: Main Acc = 0.8617, Backdoor ASR = 0.7913, Attack Active: False, took 217.44890594482422 seconds
+
+--- Round 79/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [1, 5, 6, 7, 10, 11, 14, 16, 18]
+    client   1 │ sparsity_z=+1.00  spectral_z=+0.32  last_layer_z=+0.84  votes=0/2 → FALSE POS
+    client   5 │ sparsity_z=-0.29  spectral_z=+1.17  last_layer_z=-0.56  votes=0/2 → FALSE POS
+    client   6 │ sparsity_z=+0.41  spectral_z=-1.26  last_layer_z=+2.03  votes=1/2 → FALSE POS
+    client   7 │ sparsity_z=+0.06  spectral_z=-1.32  last_layer_z=+0.16  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=-1.43  spectral_z=+1.02  last_layer_z=+0.12  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=-0.33  spectral_z=+1.02  last_layer_z=-1.40  votes=0/2 → FALSE POS
+    client  14 │ sparsity_z=-1.64  spectral_z=-0.47  last_layer_z=-1.35  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+1.58  spectral_z=-1.18  last_layer_z=+0.08  votes=1/2 → FALSE POS
+    client  18 │ sparsity_z=+0.63  spectral_z=+0.70  last_layer_z=+0.08  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [1, 5, 6, 7, 10, 11, 14, 16, 18]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 79: Main Acc = 0.8609, Backdoor ASR = 0.7466, Attack Active: False, took 217.15553641319275 seconds
+
+--- Round 80/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [1, 2, 4, 6, 10, 15, 16, 17, 18]
+    client   1 │ sparsity_z=-0.35  spectral_z=+0.43  last_layer_z=+0.92  votes=0/2 → FALSE POS
+    client   2 │ sparsity_z=-0.07  spectral_z=-0.69  last_layer_z=-1.61  votes=0/2 → FALSE POS
+    client   4 │ sparsity_z=-0.26  spectral_z=-1.01  last_layer_z=+1.30  votes=0/2 → FALSE POS
+    client   6 │ sparsity_z=+1.51  spectral_z=-0.76  last_layer_z=+1.09  votes=1/2 → FALSE POS
+    client  10 │ sparsity_z=-1.60  spectral_z=+1.66  last_layer_z=-1.48  votes=1/2 → FALSE POS
+    client  15 │ sparsity_z=-1.13  spectral_z=-0.91  last_layer_z=+0.50  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+1.53  spectral_z=+0.70  last_layer_z=-0.08  votes=1/2 → FALSE POS
+    client  17 │ sparsity_z=+0.57  spectral_z=-0.82  last_layer_z=-0.27  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=-0.18  spectral_z=+1.41  last_layer_z=-0.37  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [1, 2, 4, 6, 10, 15, 16, 17, 18]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 80: Main Acc = 0.8613, Backdoor ASR = 0.6911, Attack Active: False, took 216.61036467552185 seconds
+
+--- Round 81/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [1, 4, 5, 6, 8, 12, 13, 14, 15]
+    client   1 │ sparsity_z=-1.29  spectral_z=-0.91  last_layer_z=+1.03  votes=0/2 → FALSE POS
+    client   4 │ sparsity_z=-0.58  spectral_z=-0.43  last_layer_z=-0.01  votes=0/2 → FALSE POS
+    client   5 │ sparsity_z=+0.64  spectral_z=+1.14  last_layer_z=-1.71  votes=0/2 → FALSE POS
+    client   6 │ sparsity_z=+1.72  spectral_z=+1.43  last_layer_z=-0.16  votes=1/2 → FALSE POS
+    client   8 │ sparsity_z=-1.47  spectral_z=+1.59  last_layer_z=-1.59  votes=1/2 → FALSE POS
+    client  12 │ sparsity_z=-0.15  spectral_z=-0.66  last_layer_z=+0.43  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=-0.39  spectral_z=-0.76  last_layer_z=+0.42  votes=0/2 → FALSE POS
+    client  14 │ sparsity_z=+0.49  spectral_z=-0.48  last_layer_z=+1.45  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+1.03  spectral_z=-0.92  last_layer_z=+0.14  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [1, 4, 5, 6, 8, 12, 13, 14, 15]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 81: Main Acc = 0.8621, Backdoor ASR = 0.5669, Attack Active: False, took 217.679505109787 seconds
+
+--- Round 82/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 5, 6, 7, 11, 15, 18, 19]
+    client   0 │ sparsity_z=+0.92  spectral_z=-0.45  last_layer_z=+0.33  votes=0/2 → FALSE POS
+    client   1 │ sparsity_z=-1.88  spectral_z=-0.72  last_layer_z=+0.40  votes=0/2 → FALSE POS
+    client   5 │ sparsity_z=-0.80  spectral_z=+1.38  last_layer_z=-1.05  votes=0/2 → FALSE POS
+    client   6 │ sparsity_z=+0.62  spectral_z=-0.99  last_layer_z=+1.86  votes=1/2 → FALSE POS
+    client   7 │ sparsity_z=+1.06  spectral_z=-0.98  last_layer_z=+0.22  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=-1.09  spectral_z=+0.74  last_layer_z=-1.73  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+0.84  spectral_z=+0.27  last_layer_z=+0.62  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=-0.35  spectral_z=+1.71  last_layer_z=-0.84  votes=1/2 → FALSE POS
+    client  19 │ sparsity_z=+0.69  spectral_z=-0.95  last_layer_z=+0.18  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 5, 6, 7, 11, 15, 18, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 82: Main Acc = 0.8619, Backdoor ASR = 0.5512, Attack Active: False, took 217.40167951583862 seconds
+
+--- Round 83/100 ---
+  [FLAME  Stage 1] Flagged 8/20: [0, 1, 8, 9, 11, 14, 17, 18]
+    client   0 │ sparsity_z=-0.63  spectral_z=+1.54  last_layer_z=-1.66  votes=1/2 → FALSE POS
+    client   1 │ sparsity_z=+0.10  spectral_z=-0.92  last_layer_z=+0.42  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.94  spectral_z=-0.96  last_layer_z=+1.47  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=-1.62  spectral_z=+0.43  last_layer_z=-0.25  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=-0.79  spectral_z=+0.84  last_layer_z=+0.23  votes=0/2 → FALSE POS
+    client  14 │ sparsity_z=+0.85  spectral_z=-1.19  last_layer_z=+1.28  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=+1.60  spectral_z=+1.01  last_layer_z=-0.87  votes=1/2 → FALSE POS
+    client  18 │ sparsity_z=-0.44  spectral_z=-0.75  last_layer_z=-0.62  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 8, 9, 11, 14, 17, 18]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 83: Main Acc = 0.8621, Backdoor ASR = 0.6504, Attack Active: False, took 216.83016681671143 seconds
+
+--- Round 84/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [1, 3, 8, 9, 11, 12, 13, 18, 19]
+    client   1 │ sparsity_z=+1.87  spectral_z=+0.88  last_layer_z=-0.02  votes=1/2 → FALSE POS
+    client   3 │ sparsity_z=-1.71  spectral_z=-0.56  last_layer_z=+1.17  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=-0.34  spectral_z=-1.11  last_layer_z=+0.44  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=-1.12  spectral_z=-0.73  last_layer_z=+1.55  votes=1/2 → FALSE POS
+    client  11 │ sparsity_z=-0.21  spectral_z=+1.64  last_layer_z=-1.64  votes=1/2 → FALSE POS
+    client  12 │ sparsity_z=+0.86  spectral_z=-0.92  last_layer_z=+0.60  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.57  spectral_z=-0.55  last_layer_z=-0.12  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=-0.15  spectral_z=-0.17  last_layer_z=-0.87  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=+0.22  spectral_z=+1.51  last_layer_z=-1.10  votes=1/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [1, 3, 8, 9, 11, 12, 13, 18, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 84: Main Acc = 0.8622, Backdoor ASR = 0.6652, Attack Active: False, took 217.33935952186584 seconds
+
+--- Round 85/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 3, 4, 8, 10, 11, 12, 18]
+    client   0 │ sparsity_z=-0.48  spectral_z=+0.85  last_layer_z=-0.63  votes=0/2 → FALSE POS
+    client   1 │ sparsity_z=+1.27  spectral_z=-0.89  last_layer_z=+0.54  votes=0/2 → FALSE POS
+    client   3 │ sparsity_z=+0.49  spectral_z=-0.82  last_layer_z=+0.62  votes=0/2 → FALSE POS
+    client   4 │ sparsity_z=+0.11  spectral_z=+1.55  last_layer_z=-1.46  votes=1/2 → FALSE POS
+    client   8 │ sparsity_z=-1.73  spectral_z=+0.13  last_layer_z=-1.05  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=+0.69  spectral_z=-0.77  last_layer_z=+2.13  votes=1/2 → FALSE POS
+    client  11 │ sparsity_z=-0.73  spectral_z=-0.87  last_layer_z=+0.25  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=+1.39  spectral_z=-0.75  last_layer_z=-0.25  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=-0.99  spectral_z=+1.57  last_layer_z=-0.15  votes=1/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 3, 4, 8, 10, 11, 12, 18]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 85: Main Acc = 0.8621, Backdoor ASR = 0.6099, Attack Active: False, took 217.5975022315979 seconds
+
+--- Round 86/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [0, 2, 3, 8, 9, 10, 13, 15, 18]
+    client   0 │ sparsity_z=+1.61  spectral_z=+1.50  last_layer_z=-0.23  votes=2/2 → MALICIOUS
+    client   2 │ sparsity_z=-0.01  spectral_z=-1.24  last_layer_z=+1.37  votes=0/2 → FALSE POS
+    client   3 │ sparsity_z=+0.62  spectral_z=-0.16  last_layer_z=-0.19  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=-0.70  spectral_z=+0.88  last_layer_z=+0.66  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=+1.19  spectral_z=-0.99  last_layer_z=+0.11  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=+0.08  spectral_z=-0.72  last_layer_z=+1.03  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.02  spectral_z=-1.11  last_layer_z=-1.68  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=-1.09  spectral_z=+0.86  last_layer_z=-1.57  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=-1.71  spectral_z=+0.97  last_layer_z=+0.50  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [2, 3, 8, 9, 10, 13, 15, 18]
+  [S-FPR  Stage 2] Confirmed malicious           : [0]
+  [FLAME  Final  ] Aggregating 19/20 clients.
+Round 86: Main Acc = 0.8625, Backdoor ASR = 0.5935, Attack Active: False, took 216.80874800682068 seconds
+
+--- Round 87/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 8, 9, 10, 11, 12, 15, 16]
+    client   0 │ sparsity_z=-1.89  spectral_z=-1.13  last_layer_z=+1.48  votes=0/2 → FALSE POS
+    client   1 │ sparsity_z=-1.53  spectral_z=+1.68  last_layer_z=-1.91  votes=1/2 → FALSE POS
+    client   8 │ sparsity_z=+0.71  spectral_z=-0.76  last_layer_z=+0.27  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=-0.38  spectral_z=-0.58  last_layer_z=-0.09  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=+0.92  spectral_z=+0.71  last_layer_z=-0.79  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=+0.79  spectral_z=-0.33  last_layer_z=+0.92  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=+0.49  spectral_z=+1.59  last_layer_z=-0.98  votes=1/2 → FALSE POS
+    client  15 │ sparsity_z=+0.86  spectral_z=-0.86  last_layer_z=+0.68  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+0.03  spectral_z=-0.32  last_layer_z=+0.43  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 8, 9, 10, 11, 12, 15, 16]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 87: Main Acc = 0.8620, Backdoor ASR = 0.6211, Attack Active: False, took 217.12095713615417 seconds
+
+--- Round 88/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [1, 4, 7, 8, 13, 15, 16, 17, 19]
+    client   1 │ sparsity_z=-1.56  spectral_z=+1.54  last_layer_z=-1.78  votes=1/2 → FALSE POS
+    client   4 │ sparsity_z=+0.76  spectral_z=-0.27  last_layer_z=+0.64  votes=0/2 → FALSE POS
+    client   7 │ sparsity_z=+0.27  spectral_z=+1.08  last_layer_z=-1.03  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.80  spectral_z=-0.91  last_layer_z=+1.59  votes=1/2 → FALSE POS
+    client  13 │ sparsity_z=-0.76  spectral_z=-0.78  last_layer_z=-0.06  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=-1.13  spectral_z=-0.80  last_layer_z=+0.71  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+1.84  spectral_z=-0.71  last_layer_z=+0.49  votes=1/2 → FALSE POS
+    client  17 │ sparsity_z=-0.03  spectral_z=+1.53  last_layer_z=-0.96  votes=1/2 → FALSE POS
+    client  19 │ sparsity_z=-0.19  spectral_z=-0.68  last_layer_z=+0.40  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [1, 4, 7, 8, 13, 15, 16, 17, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 88: Main Acc = 0.8615, Backdoor ASR = 0.5669, Attack Active: False, took 217.48818111419678 seconds
+
+--- Round 89/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 4, 8, 10, 11, 17, 18, 19]
+    client   0 │ sparsity_z=-0.59  spectral_z=-0.79  last_layer_z=+0.78  votes=0/2 → FALSE POS
+    client   1 │ sparsity_z=+1.21  spectral_z=+1.46  last_layer_z=-0.33  votes=0/2 → FALSE POS
+    client   4 │ sparsity_z=+0.76  spectral_z=-0.90  last_layer_z=+0.96  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=-1.32  spectral_z=-0.41  last_layer_z=+0.30  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=-0.40  spectral_z=+1.46  last_layer_z=-2.57  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=-0.77  spectral_z=-0.86  last_layer_z=-0.01  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=+1.72  spectral_z=+1.25  last_layer_z=+0.23  votes=1/2 → FALSE POS
+    client  18 │ sparsity_z=-0.99  spectral_z=-0.80  last_layer_z=+0.76  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=+0.39  spectral_z=-0.41  last_layer_z=-0.11  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 4, 8, 10, 11, 17, 18, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 89: Main Acc = 0.8627, Backdoor ASR = 0.5684, Attack Active: False, took 217.05736136436462 seconds
+
+--- Round 90/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [1, 2, 3, 8, 10, 12, 15, 16, 17]
+    client   1 │ sparsity_z=+0.25  spectral_z=-0.62  last_layer_z=+1.95  votes=1/2 → FALSE POS
+    client   2 │ sparsity_z=-1.42  spectral_z=+1.52  last_layer_z=-1.43  votes=1/2 → FALSE POS
+    client   3 │ sparsity_z=+2.50  spectral_z=-0.79  last_layer_z=+0.80  votes=1/2 → FALSE POS
+    client   8 │ sparsity_z=-0.11  spectral_z=+1.72  last_layer_z=-0.61  votes=1/2 → FALSE POS
+    client  10 │ sparsity_z=-0.55  spectral_z=-0.41  last_layer_z=-0.23  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=-0.53  spectral_z=-0.99  last_layer_z=+1.08  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+0.16  spectral_z=+0.80  last_layer_z=-0.24  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=-0.08  spectral_z=-0.93  last_layer_z=-0.74  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=-0.22  spectral_z=-0.32  last_layer_z=-0.57  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [1, 2, 3, 8, 10, 12, 15, 16, 17]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 90: Main Acc = 0.8614, Backdoor ASR = 0.6238, Attack Active: False, took 217.33861565589905 seconds
+
+--- Round 91/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [1, 5, 9, 10, 12, 13, 17, 18, 19]
+    client   1 │ sparsity_z=-0.63  spectral_z=-0.46  last_layer_z=+0.47  votes=0/2 → FALSE POS
+    client   5 │ sparsity_z=-0.79  spectral_z=-0.42  last_layer_z=+0.62  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=+0.45  spectral_z=-0.66  last_layer_z=+1.56  votes=1/2 → FALSE POS
+    client  10 │ sparsity_z=+2.27  spectral_z=-0.76  last_layer_z=-1.45  votes=1/2 → FALSE POS
+    client  12 │ sparsity_z=-1.27  spectral_z=+1.39  last_layer_z=-0.36  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=-0.47  spectral_z=+0.82  last_layer_z=+1.02  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=+0.41  spectral_z=-0.74  last_layer_z=-0.16  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=-0.54  spectral_z=+1.85  last_layer_z=-1.63  votes=1/2 → FALSE POS
+    client  19 │ sparsity_z=+0.57  spectral_z=-1.01  last_layer_z=-0.07  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [1, 5, 9, 10, 12, 13, 17, 18, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 91: Main Acc = 0.8623, Backdoor ASR = 0.5158, Attack Active: False, took 217.17962670326233 seconds
+
+--- Round 92/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [1, 3, 7, 10, 11, 13, 16, 18, 19]
+    client   1 │ sparsity_z=+0.80  spectral_z=-0.94  last_layer_z=+0.52  votes=0/2 → FALSE POS
+    client   3 │ sparsity_z=+0.93  spectral_z=-0.93  last_layer_z=+1.45  votes=0/2 → FALSE POS
+    client   7 │ sparsity_z=+1.30  spectral_z=-0.88  last_layer_z=+0.29  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=+0.01  spectral_z=+1.32  last_layer_z=-1.03  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=-1.64  spectral_z=+0.53  last_layer_z=-0.84  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=-0.55  spectral_z=-0.64  last_layer_z=-0.00  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+0.75  spectral_z=-0.95  last_layer_z=+1.53  votes=1/2 → FALSE POS
+    client  18 │ sparsity_z=-0.11  spectral_z=+1.44  last_layer_z=-1.49  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=-1.50  spectral_z=+1.05  last_layer_z=-0.42  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [1, 3, 7, 10, 11, 13, 16, 18, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 92: Main Acc = 0.8624, Backdoor ASR = 0.5297, Attack Active: False, took 217.33952498435974 seconds
+
+--- Round 93/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [1, 3, 8, 13, 14, 15, 16, 18, 19]
+    client   1 │ sparsity_z=-0.31  spectral_z=+1.22  last_layer_z=+1.53  votes=1/2 → FALSE POS
+    client   3 │ sparsity_z=+0.05  spectral_z=-0.61  last_layer_z=-0.18  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=-1.14  spectral_z=+1.88  last_layer_z=-1.16  votes=1/2 → FALSE POS
+    client  13 │ sparsity_z=+1.62  spectral_z=+0.43  last_layer_z=-0.75  votes=1/2 → FALSE POS
+    client  14 │ sparsity_z=+0.02  spectral_z=-1.45  last_layer_z=+0.52  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=-0.19  spectral_z=+0.13  last_layer_z=-0.68  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+0.64  spectral_z=-0.34  last_layer_z=-0.32  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=-1.81  spectral_z=-0.17  last_layer_z=-0.78  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=+1.12  spectral_z=-1.08  last_layer_z=+1.81  votes=1/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [1, 3, 8, 13, 14, 15, 16, 18, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 93: Main Acc = 0.8615, Backdoor ASR = 0.4657, Attack Active: False, took 217.01357984542847 seconds
+
+--- Round 94/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [1, 2, 3, 5, 8, 10, 11, 12, 13]
+    client   1 │ sparsity_z=-0.16  spectral_z=-0.53  last_layer_z=-1.53  votes=0/2 → FALSE POS
+    client   2 │ sparsity_z=-2.40  spectral_z=-0.62  last_layer_z=-0.56  votes=0/2 → FALSE POS
+    client   3 │ sparsity_z=+1.04  spectral_z=-0.76  last_layer_z=+0.56  votes=0/2 → FALSE POS
+    client   5 │ sparsity_z=+0.60  spectral_z=-0.87  last_layer_z=+1.99  votes=1/2 → FALSE POS
+    client   8 │ sparsity_z=-0.88  spectral_z=+1.47  last_layer_z=+0.13  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=+0.49  spectral_z=-0.67  last_layer_z=-0.22  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=+0.75  spectral_z=-0.77  last_layer_z=+0.16  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=+0.38  spectral_z=+1.41  last_layer_z=-1.21  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.18  spectral_z=+1.35  last_layer_z=+0.69  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [1, 2, 3, 5, 8, 10, 11, 12, 13]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 94: Main Acc = 0.8617, Backdoor ASR = 0.4524, Attack Active: False, took 217.16342401504517 seconds
+
+--- Round 95/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [5, 6, 8, 11, 12, 13, 15, 18, 19]
+    client   5 │ sparsity_z=+0.33  spectral_z=-0.78  last_layer_z=+0.48  votes=0/2 → FALSE POS
+    client   6 │ sparsity_z=-0.31  spectral_z=-0.67  last_layer_z=+0.59  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.94  spectral_z=+1.67  last_layer_z=-2.56  votes=1/2 → FALSE POS
+    client  11 │ sparsity_z=-1.79  spectral_z=+1.27  last_layer_z=-0.65  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=-0.28  spectral_z=-0.69  last_layer_z=+0.84  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.74  spectral_z=+1.20  last_layer_z=+0.66  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+1.70  spectral_z=-0.88  last_layer_z=-0.08  votes=1/2 → FALSE POS
+    client  18 │ sparsity_z=-0.27  spectral_z=-0.22  last_layer_z=+0.42  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=-1.06  spectral_z=-0.89  last_layer_z=+0.31  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [5, 6, 8, 11, 12, 13, 15, 18, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 95: Main Acc = 0.8625, Backdoor ASR = 0.4301, Attack Active: False, took 214.16872024536133 seconds
+
+--- Round 96/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [1, 7, 9, 10, 13, 15, 16, 17, 19]
+    client   1 │ sparsity_z=-1.25  spectral_z=+1.43  last_layer_z=+1.73  votes=1/2 → FALSE POS
+    client   7 │ sparsity_z=+0.54  spectral_z=-0.50  last_layer_z=+0.28  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=-0.11  spectral_z=-0.59  last_layer_z=-0.21  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=-0.33  spectral_z=-0.41  last_layer_z=-0.92  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+2.41  spectral_z=+1.24  last_layer_z=-1.12  votes=1/2 → FALSE POS
+    client  15 │ sparsity_z=-0.45  spectral_z=-0.93  last_layer_z=+0.38  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=-0.37  spectral_z=-0.91  last_layer_z=+1.41  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=+0.40  spectral_z=+1.50  last_layer_z=-1.25  votes=1/2 → FALSE POS
+    client  19 │ sparsity_z=-0.84  spectral_z=-0.83  last_layer_z=-0.31  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [1, 7, 9, 10, 13, 15, 16, 17, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 96: Main Acc = 0.8616, Backdoor ASR = 0.3757, Attack Active: False, took 208.1817045211792 seconds
+
+--- Round 97/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [0, 4, 9, 10, 11, 16, 17, 18, 19]
+    client   0 │ sparsity_z=+0.16  spectral_z=-0.81  last_layer_z=+0.51  votes=0/2 → FALSE POS
+    client   4 │ sparsity_z=-1.08  spectral_z=+1.76  last_layer_z=-2.13  votes=1/2 → FALSE POS
+    client   9 │ sparsity_z=+0.89  spectral_z=-0.87  last_layer_z=+0.23  votes=0/2 → FALSE POS
+    client  10 │ sparsity_z=+0.37  spectral_z=+0.43  last_layer_z=+0.19  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=-1.12  spectral_z=-0.75  last_layer_z=+0.84  votes=0/2 → FALSE POS
+    client  16 │ sparsity_z=+1.43  spectral_z=-0.63  last_layer_z=+0.46  votes=0/2 → FALSE POS
+    client  17 │ sparsity_z=+1.02  spectral_z=-0.66  last_layer_z=+0.69  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=-0.09  spectral_z=-0.17  last_layer_z=+0.69  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=-1.59  spectral_z=+1.70  last_layer_z=-1.50  votes=1/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 4, 9, 10, 11, 16, 17, 18, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 97: Main Acc = 0.8616, Backdoor ASR = 0.4206, Attack Active: False, took 207.9927635192871 seconds
+
+--- Round 98/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 6, 8, 9, 11, 13, 15, 19]
+    client   0 │ sparsity_z=-1.25  spectral_z=-1.01  last_layer_z=+0.74  votes=0/2 → FALSE POS
+    client   1 │ sparsity_z=-0.76  spectral_z=+0.75  last_layer_z=-0.17  votes=0/2 → FALSE POS
+    client   6 │ sparsity_z=+0.38  spectral_z=-1.06  last_layer_z=+0.33  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=+0.92  spectral_z=-0.60  last_layer_z=+0.37  votes=0/2 → FALSE POS
+    client   9 │ sparsity_z=+1.12  spectral_z=+1.54  last_layer_z=-0.46  votes=1/2 → FALSE POS
+    client  11 │ sparsity_z=-1.17  spectral_z=+0.30  last_layer_z=-1.36  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.58  spectral_z=-0.73  last_layer_z=+1.77  votes=1/2 → FALSE POS
+    client  15 │ sparsity_z=-1.11  spectral_z=+1.55  last_layer_z=-1.67  votes=1/2 → FALSE POS
+    client  19 │ sparsity_z=+1.30  spectral_z=-0.73  last_layer_z=+0.44  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 6, 8, 9, 11, 13, 15, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 98: Main Acc = 0.8614, Backdoor ASR = 0.4111, Attack Active: False, took 208.0152769088745 seconds
+
+--- Round 99/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 7, 8, 11, 12, 13, 14, 19]
+    client   0 │ sparsity_z=+0.52  spectral_z=+1.44  last_layer_z=+0.75  votes=0/2 → FALSE POS
+    client   1 │ sparsity_z=+0.80  spectral_z=+0.56  last_layer_z=-0.31  votes=0/2 → FALSE POS
+    client   7 │ sparsity_z=-1.46  spectral_z=+1.61  last_layer_z=-1.17  votes=1/2 → FALSE POS
+    client   8 │ sparsity_z=+1.01  spectral_z=-0.90  last_layer_z=+1.93  votes=1/2 → FALSE POS
+    client  11 │ sparsity_z=-1.54  spectral_z=-0.68  last_layer_z=+0.35  votes=0/2 → FALSE POS
+    client  12 │ sparsity_z=+1.15  spectral_z=+0.29  last_layer_z=-1.52  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=+0.59  spectral_z=-1.39  last_layer_z=+0.24  votes=0/2 → FALSE POS
+    client  14 │ sparsity_z=-0.94  spectral_z=-0.08  last_layer_z=+0.47  votes=0/2 → FALSE POS
+    client  19 │ sparsity_z=-0.13  spectral_z=-0.86  last_layer_z=-0.73  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 7, 8, 11, 12, 13, 14, 19]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 99: Main Acc = 0.8616, Backdoor ASR = 0.4246, Attack Active: False, took 208.32233095169067 seconds
+
+--- Round 100/100 ---
+  [FLAME  Stage 1] Flagged 9/20: [0, 1, 2, 8, 11, 13, 15, 16, 18]
+    client   0 │ sparsity_z=+0.47  spectral_z=-0.48  last_layer_z=-0.13  votes=0/2 → FALSE POS
+    client   1 │ sparsity_z=+0.56  spectral_z=-1.81  last_layer_z=+1.57  votes=1/2 → FALSE POS
+    client   2 │ sparsity_z=+0.57  spectral_z=+0.08  last_layer_z=-0.45  votes=0/2 → FALSE POS
+    client   8 │ sparsity_z=-1.67  spectral_z=+1.23  last_layer_z=-1.56  votes=0/2 → FALSE POS
+    client  11 │ sparsity_z=-1.21  spectral_z=-0.56  last_layer_z=+0.31  votes=0/2 → FALSE POS
+    client  13 │ sparsity_z=-0.38  spectral_z=-0.79  last_layer_z=-0.57  votes=0/2 → FALSE POS
+    client  15 │ sparsity_z=+1.19  spectral_z=+1.68  last_layer_z=+0.75  votes=1/2 → FALSE POS
+    client  16 │ sparsity_z=+1.29  spectral_z=+0.41  last_layer_z=-1.16  votes=0/2 → FALSE POS
+    client  18 │ sparsity_z=-0.81  spectral_z=+0.25  last_layer_z=+1.24  votes=0/2 → FALSE POS
+  [S-FPR  Stage 2] Reinstated (false positives) : [0, 1, 2, 8, 11, 13, 15, 16, 18]
+  [FLAME  Final  ] Aggregating 20/20 clients.
+Round 100: Main Acc = 0.8623, Backdoor ASR = 0.4756, Attack Active: False, took 207.8441445827484 seconds
+
+--- Training Finished ---

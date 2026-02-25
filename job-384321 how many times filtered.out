@@ -1,0 +1,1156 @@
+--- Configuration ---
+experiment_name: a3fl_flame_new_femnist
+dataset: femnist
+num_clients: 20
+num_parallel_clients: 20
+num_rounds: 100
+local_epochs: 1
+batch_size: 32
+test_batch_size: 256
+lr: 0.01
+seed: 42
+attack: a3fl
+num_malicious: 2
+target_class: 7
+poisoning_rate: 0.25
+attack_start_round: 20
+attack_end_round: 50
+scale_factor: 20.0
+malicious_epochs: 64
+mask_k_percent: 0.05
+trigger_epochs: 5
+trigger_lr: 0.01
+defense: flame_new
+clipping_norm: 4.0
+dp_std_dev: 0.025
+deepsight_num_samples: 256
+deepsight_num_seeds: 3
+deepsight_batch_size: 64
+deepsight_tau: 0.5
+flame_lamda: 0.001
+flame_eta: 1.0
+krum_f: 2
+krum_m: 5
+device: cuda
+---------------------
+Initialized FLAME (Temporal) | lamda=0.001, eta=1.0, tau=0.6
+
+Client [1]: Behaving benignly in round 10 (outside attack window).
+Client [0]: Behaving benignly in round 16 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 20 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 24 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 34 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [1]: Behaving benignly in round 59 (outside attack window).
+Client [1]: Behaving benignly in round 60 (outside attack window).
+Client [0]: Behaving benignly in round 61 (outside attack window).
+Client [0]: Behaving benignly in round 62 (outside attack window).
+Client [1]: Behaving benignly in round 64 (outside attack window).
+Client [0]: Behaving benignly in round 67 (outside attack window).
+Client [1]: Behaving benignly in round 70 (outside attack window).
+Client [1]: Behaving benignly in round 71 (outside attack window).
+Client [0]: Behaving benignly in round 76 (outside attack window).
+Client [0]: Behaving benignly in round 77 (outside attack window).
+Client [0]: Behaving benignly in round 79 (outside attack window).
+Client [1]: Behaving benignly in round 82 (outside attack window).
+Client [1]: Behaving benignly in round 88 (outside attack window).
+Client [0]: Behaving benignly in round 95 (outside attack window).
+Client [0]: Behaving benignly in round 97 (outside attack window).
+Client [1]: Behaving benignly in round 99 (outside attack window).
+Client [0]: Behaving benignly in round 3 (outside attack window).
+Client [0]: Behaving benignly in round 4 (outside attack window).
+Client [1]: Behaving benignly in round 5 (outside attack window).
+Client [1]: Behaving benignly in round 6 (outside attack window).
+Client [1]: Behaving benignly in round 8 (outside attack window).
+Client [1]: Behaving benignly in round 9 (outside attack window).
+Client [0]: Behaving benignly in round 10 (outside attack window).
+Client [0]: Behaving benignly in round 11 (outside attack window).
+Client [0]: Behaving benignly in round 12 (outside attack window).
+Client [0]: Behaving benignly in round 15 (outside attack window).
+Client [1]: Behaving benignly in round 16 (outside attack window).
+Client [0]: Behaving benignly in round 17 (outside attack window).
+Client [1]: Behaving benignly in round 19 (outside attack window).
+
+--- A3FL Client [0] optimizing trigger for round 22 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 24 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 28 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 31 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 36 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [0]: Behaving benignly in round 54 (outside attack window).
+Client [0]: Behaving benignly in round 55 (outside attack window).
+Client [1]: Behaving benignly in round 56 (outside attack window).
+Client [1]: Behaving benignly in round 57 (outside attack window).
+Client [0]: Behaving benignly in round 59 (outside attack window).
+Client [0]: Behaving benignly in round 60 (outside attack window).
+Client [1]: Behaving benignly in round 61 (outside attack window).
+Client [0]: Behaving benignly in round 64 (outside attack window).
+Client [0]: Behaving benignly in round 66 (outside attack window).
+Client [0]: Behaving benignly in round 68 (outside attack window).
+Client [0]: Behaving benignly in round 69 (outside attack window).
+Client [1]: Behaving benignly in round 74 (outside attack window).
+Client [1]: Behaving benignly in round 75 (outside attack window).
+Client [0]: Behaving benignly in round 81 (outside attack window).
+Client [0]: Behaving benignly in round 82 (outside attack window).
+Client [0]: Behaving benignly in round 83 (outside attack window).
+Client [0]: Behaving benignly in round 84 (outside attack window).
+Client [0]: Behaving benignly in round 86 (outside attack window).
+Client [1]: Behaving benignly in round 87 (outside attack window).
+Client [0]: Behaving benignly in round 90 (outside attack window).
+Client [0]: Behaving benignly in round 91 (outside attack window).
+Client [0]: Behaving benignly in round 92 (outside attack window).
+Client [1]: Behaving benignly in round 93 (outside attack window).
+Client [1]: Behaving benignly in round 94 (outside attack window).
+Client [1]: Behaving benignly in round 95 (outside attack window).
+Client [0]: Behaving benignly in round 7 (outside attack window).
+Client [0]: Behaving benignly in round 8 (outside attack window).
+Client [0]: Behaving benignly in round 9 (outside attack window).
+Client [1]: Behaving benignly in round 11 (outside attack window).
+Client [1]: Behaving benignly in round 12 (outside attack window).
+Client [1]: Behaving benignly in round 17 (outside attack window).
+Client [0]: Behaving benignly in round 19 (outside attack window).
+
+--- A3FL Client [0] optimizing trigger for round 21 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 26 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 30 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 35 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [1]: Behaving benignly in round 65 (outside attack window).
+Client [1]: Behaving benignly in round 67 (outside attack window).
+Client [1]: Behaving benignly in round 69 (outside attack window).
+Client [0]: Behaving benignly in round 71 (outside attack window).
+Client [1]: Behaving benignly in round 72 (outside attack window).
+Client [0]: Behaving benignly in round 73 (outside attack window).
+Client [0]: Behaving benignly in round 80 (outside attack window).
+Client [1]: Behaving benignly in round 81 (outside attack window).
+Client [1]: Behaving benignly in round 83 (outside attack window).
+Client [0]: Behaving benignly in round 85 (outside attack window).
+Client [0]: Behaving benignly in round 87 (outside attack window).
+Client [0]: Behaving benignly in round 88 (outside attack window).
+Client [0]: Behaving benignly in round 89 (outside attack window).
+Client [1]: Behaving benignly in round 98 (outside attack window).
+Client [1]: Behaving benignly in round 100 (outside attack window).
+Client [1]: Behaving benignly in round 7 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 21 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 26 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 31 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [0]: Behaving benignly in round 57 (outside attack window).
+Client [1]: Behaving benignly in round 58 (outside attack window).
+Client [0]: Behaving benignly in round 72 (outside attack window).
+Client [1]: Behaving benignly in round 92 (outside attack window).
+Client [1]: Behaving benignly in round 13 (outside attack window).
+Client [1]: Behaving benignly in round 14 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 22 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 27 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 32 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 38 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 42 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 44 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 48 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 50 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [1]: Behaving benignly in round 62 (outside attack window).
+Client [1]: Behaving benignly in round 63 (outside attack window).
+Client [1]: Behaving benignly in round 68 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 25 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 32 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [0]: Behaving benignly in round 99 (outside attack window).
+Client [1]: Behaving benignly in round 2 (outside attack window).
+Client [1]: Behaving benignly in round 3 (outside attack window).
+Client [1]: Behaving benignly in round 4 (outside attack window).
+Client [0]: Behaving benignly in round 5 (outside attack window).
+Client [0]: Behaving benignly in round 6 (outside attack window).
+Client [0]: Behaving benignly in round 13 (outside attack window).
+Client [0]: Behaving benignly in round 14 (outside attack window).
+Client [1]: Behaving benignly in round 15 (outside attack window).
+
+--- A3FL Client [0] optimizing trigger for round 20 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 25 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 37 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 39 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 41 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 43 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 45 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 48 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [0]: Behaving benignly in round 51 (outside attack window).
+Client [0]: Behaving benignly in round 52 (outside attack window).
+Client [0]: Behaving benignly in round 53 (outside attack window).
+Client [1]: Behaving benignly in round 54 (outside attack window).
+Client [1]: Behaving benignly in round 55 (outside attack window).
+Client [0]: Behaving benignly in round 58 (outside attack window).
+Client [0]: Behaving benignly in round 63 (outside attack window).
+Client [0]: Behaving benignly in round 65 (outside attack window).
+Client [1]: Behaving benignly in round 66 (outside attack window).
+Client [0]: Behaving benignly in round 70 (outside attack window).
+Client [0]: Behaving benignly in round 74 (outside attack window).
+Client [0]: Behaving benignly in round 75 (outside attack window).
+Client [1]: Behaving benignly in round 76 (outside attack window).
+Client [1]: Behaving benignly in round 78 (outside attack window).
+Client [1]: Behaving benignly in round 79 (outside attack window).
+Client [1]: Behaving benignly in round 84 (outside attack window).
+Client [1]: Behaving benignly in round 89 (outside attack window).
+Client [1]: Behaving benignly in round 90 (outside attack window).
+Client [1]: Behaving benignly in round 91 (outside attack window).
+Client [0]: Behaving benignly in round 93 (outside attack window).
+Client [0]: Behaving benignly in round 94 (outside attack window).
+Client [0]: Behaving benignly in round 96 (outside attack window).
+Client [0]: Behaving benignly in round 98 (outside attack window).
+Client [0]: Behaving benignly in round 100 (outside attack window).
+
+--- A3FL Client [0] optimizing trigger for round 33 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 43 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 45 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 47 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [1]: Behaving benignly in round 51 (outside attack window).
+Client [1]: Behaving benignly in round 52 (outside attack window).
+Client [1]: Behaving benignly in round 53 (outside attack window).
+Client [0]: Behaving benignly in round 56 (outside attack window).
+Client [1]: Behaving benignly in round 77 (outside attack window).
+Client [0]: Behaving benignly in round 78 (outside attack window).
+Client [1]: Behaving benignly in round 80 (outside attack window).
+Client [0]: Behaving benignly in round 1 (outside attack window).
+
+--- A3FL Client [0] optimizing trigger for round 23 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 37 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 39 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 41 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 46 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 49 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [1]: Behaving benignly in round 85 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 28 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 35 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [1]: Behaving benignly in round 73 (outside attack window).
+Client [1]: Behaving benignly in round 86 (outside attack window).
+Client [1]: Behaving benignly in round 96 (outside attack window).
+Client [1]: Behaving benignly in round 97 (outside attack window).
+Client [1]: Behaving benignly in round 18 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 27 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 50 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 30 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [0]: Behaving benignly in round 18 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 23 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 33 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 29 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 36 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 38 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 40 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 44 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 46 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [1]: Behaving benignly in round 1 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 34 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 40 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 42 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 47 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [0]: Behaving benignly in round 2 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 29 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 49 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- Round 1/100 ---
+
+--- Round 1 ---
+FLAME spatially filtered 8/20 clients this round.
+Persistent malicious (ratio > 0.6): [3, 7, 8, 9, 12, 15, 16, 17]
+Round 1: Main Acc = 0.7462, Backdoor ASR = 0.0000, Attack Active: False, took 246.5365126132965 seconds
+
+--- Round 2/100 ---
+
+--- Round 2 ---
+FLAME spatially filtered 8/20 clients this round.
+Persistent malicious (ratio > 0.6): [3, 17]
+Round 2: Main Acc = 0.8036, Backdoor ASR = 0.0000, Attack Active: False, took 178.4941487312317 seconds
+
+--- Round 3/100 ---
+
+--- Round 3 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [2, 3, 5, 15, 17, 19]
+Round 3: Main Acc = 0.8219, Backdoor ASR = 0.0000, Attack Active: False, took 178.26554608345032 seconds
+
+--- Round 4/100 ---
+
+--- Round 4 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [3, 5, 17]
+Round 4: Main Acc = 0.8311, Backdoor ASR = 0.0000, Attack Active: False, took 179.33597564697266 seconds
+
+--- Round 5/100 ---
+
+--- Round 5 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [17]
+Round 5: Main Acc = 0.8354, Backdoor ASR = 0.0000, Attack Active: False, took 177.98900365829468 seconds
+
+--- Round 6/100 ---
+
+--- Round 6 ---
+FLAME spatially filtered 8/20 clients this round.
+Persistent malicious (ratio > 0.6): [11, 16, 17]
+Round 6: Main Acc = 0.8369, Backdoor ASR = 0.0000, Attack Active: False, took 178.10226464271545 seconds
+
+--- Round 7/100 ---
+
+--- Round 7 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [11, 16, 17]
+Round 7: Main Acc = 0.8422, Backdoor ASR = 0.0000, Attack Active: False, took 179.70747661590576 seconds
+
+--- Round 8/100 ---
+
+--- Round 8 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [11, 12, 15, 16, 17]
+Round 8: Main Acc = 0.8437, Backdoor ASR = 0.0000, Attack Active: False, took 179.21338748931885 seconds
+
+--- Round 9/100 ---
+
+--- Round 9 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [12, 15, 17]
+Round 9: Main Acc = 0.8460, Backdoor ASR = 0.0000, Attack Active: False, took 179.72377943992615 seconds
+
+--- Round 10/100 ---
+
+--- Round 10 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [12, 17]
+Round 10: Main Acc = 0.8480, Backdoor ASR = 0.0000, Attack Active: False, took 178.51668572425842 seconds
+
+--- Round 11/100 ---
+
+--- Round 11 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [11, 12, 17]
+Round 11: Main Acc = 0.8494, Backdoor ASR = 0.0000, Attack Active: False, took 178.9780445098877 seconds
+
+--- Round 12/100 ---
+
+--- Round 12 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [12]
+Round 12: Main Acc = 0.8492, Backdoor ASR = 0.0000, Attack Active: False, took 179.9474470615387 seconds
+
+--- Round 13/100 ---
+
+--- Round 13 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [11, 12]
+Round 13: Main Acc = 0.8487, Backdoor ASR = 0.0000, Attack Active: False, took 178.8166959285736 seconds
+
+--- Round 14/100 ---
+
+--- Round 14 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [12]
+Round 14: Main Acc = 0.8505, Backdoor ASR = 0.0000, Attack Active: False, took 178.2103955745697 seconds
+
+--- Round 15/100 ---
+
+--- Round 15 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [12]
+Round 15: Main Acc = 0.8521, Backdoor ASR = 0.0000, Attack Active: False, took 179.63551425933838 seconds
+
+--- Round 16/100 ---
+
+--- Round 16 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [12, 16]
+Round 16: Main Acc = 0.8518, Backdoor ASR = 0.0000, Attack Active: False, took 179.78232645988464 seconds
+
+--- Round 17/100 ---
+
+--- Round 17 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [12]
+Round 17: Main Acc = 0.8521, Backdoor ASR = 0.0000, Attack Active: False, took 178.63605070114136 seconds
+
+--- Round 18/100 ---
+
+--- Round 18 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [8, 12, 16]
+Round 18: Main Acc = 0.8530, Backdoor ASR = 0.0000, Attack Active: False, took 178.53700947761536 seconds
+
+--- Round 19/100 ---
+
+--- Round 19 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [8, 12]
+Round 19: Main Acc = 0.8531, Backdoor ASR = 0.0000, Attack Active: False, took 178.6636254787445 seconds
+
+--- Round 20/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 20 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [8, 12]
+Round 20: Main Acc = 0.8540, Backdoor ASR = 0.0011, Attack Active: True, took 519.1034061908722 seconds
+
+--- Round 21/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 21 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [8, 11, 12]
+Round 21: Main Acc = 0.8541, Backdoor ASR = 0.0024, Attack Active: True, took 508.53952622413635 seconds
+
+--- Round 22/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 22 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [8, 12]
+Round 22: Main Acc = 0.8547, Backdoor ASR = 0.0015, Attack Active: True, took 507.1942160129547 seconds
+
+--- Round 23/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 23 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [8, 11, 12]
+Round 23: Main Acc = 0.8539, Backdoor ASR = 0.0116, Attack Active: True, took 505.6917052268982 seconds
+
+--- Round 24/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 24 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [8, 12]
+Round 24: Main Acc = 0.8556, Backdoor ASR = 0.0451, Attack Active: True, took 509.88415145874023 seconds
+
+--- Round 25/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 25 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [8, 12]
+Round 25: Main Acc = 0.8561, Backdoor ASR = 0.1018, Attack Active: True, took 506.3039696216583 seconds
+
+--- Round 26/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 26 ---
+FLAME spatially filtered 8/20 clients this round.
+Persistent malicious (ratio > 0.6): [1, 8, 11, 12]
+Round 26: Main Acc = 0.8572, Backdoor ASR = 0.1025, Attack Active: True, took 506.73552417755127 seconds
+
+--- Round 27/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 27 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [1, 8, 11, 12]
+Round 27: Main Acc = 0.8571, Backdoor ASR = 0.0957, Attack Active: True, took 504.8753254413605 seconds
+
+--- Round 28/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 28 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [1, 8, 11, 12]
+Round 28: Main Acc = 0.8573, Backdoor ASR = 0.1103, Attack Active: True, took 507.08990931510925 seconds
+
+--- Round 29/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 29 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [1, 8, 11]
+Round 29: Main Acc = 0.8567, Backdoor ASR = 0.1321, Attack Active: True, took 513.2991304397583 seconds
+
+--- Round 30/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 30 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [1, 8, 11]
+Round 30: Main Acc = 0.8584, Backdoor ASR = 0.1595, Attack Active: True, took 520.0427856445312 seconds
+
+--- Round 31/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 31 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [1, 8, 11]
+Round 31: Main Acc = 0.8584, Backdoor ASR = 0.2298, Attack Active: True, took 518.2997310161591 seconds
+
+--- Round 32/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 32 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [1, 8, 11]
+Round 32: Main Acc = 0.8571, Backdoor ASR = 0.2264, Attack Active: True, took 519.042564868927 seconds
+
+--- Round 33/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 33 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8, 11]
+Round 33: Main Acc = 0.8572, Backdoor ASR = 0.1925, Attack Active: True, took 521.4330325126648 seconds
+
+--- Round 34/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 34 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8, 11]
+Round 34: Main Acc = 0.8580, Backdoor ASR = 0.1363, Attack Active: True, took 521.5892283916473 seconds
+
+--- Round 35/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 35 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8, 11]
+Round 35: Main Acc = 0.8583, Backdoor ASR = 0.1300, Attack Active: True, took 518.8055145740509 seconds
+
+--- Round 36/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 36 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8, 11, 13]
+Round 36: Main Acc = 0.8580, Backdoor ASR = 0.1342, Attack Active: True, took 514.2460248470306 seconds
+
+--- Round 37/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 37 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8, 11, 13]
+Round 37: Main Acc = 0.8580, Backdoor ASR = 0.1155, Attack Active: True, took 513.9587411880493 seconds
+
+--- Round 38/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 38 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8, 11, 13]
+Round 38: Main Acc = 0.8586, Backdoor ASR = 0.0922, Attack Active: True, took 515.8459002971649 seconds
+
+--- Round 39/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 39 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8, 11, 13]
+Round 39: Main Acc = 0.8593, Backdoor ASR = 0.0802, Attack Active: True, took 514.5745115280151 seconds
+
+--- Round 40/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 40 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8, 11, 13]
+Round 40: Main Acc = 0.8587, Backdoor ASR = 0.0886, Attack Active: True, took 514.2513258457184 seconds
+
+--- Round 41/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 41 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8, 11, 13]
+Round 41: Main Acc = 0.8584, Backdoor ASR = 0.1053, Attack Active: True, took 513.4683358669281 seconds
+
+--- Round 42/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 42 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8, 11, 13]
+Round 42: Main Acc = 0.8594, Backdoor ASR = 0.1138, Attack Active: True, took 512.1437611579895 seconds
+
+--- Round 43/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 43 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8, 11, 13]
+Round 43: Main Acc = 0.8592, Backdoor ASR = 0.1159, Attack Active: True, took 510.4083652496338 seconds
+
+--- Round 44/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 44 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8, 11, 13]
+Round 44: Main Acc = 0.8599, Backdoor ASR = 0.1027, Attack Active: True, took 512.9695181846619 seconds
+
+--- Round 45/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 45 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8, 13]
+Round 45: Main Acc = 0.8593, Backdoor ASR = 0.0842, Attack Active: True, took 509.9970097541809 seconds
+
+--- Round 46/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 46 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8, 13]
+Round 46: Main Acc = 0.8599, Backdoor ASR = 0.0680, Attack Active: True, took 513.4632382392883 seconds
+
+--- Round 47/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 47 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8, 13]
+Round 47: Main Acc = 0.8599, Backdoor ASR = 0.0840, Attack Active: True, took 512.7329473495483 seconds
+
+--- Round 48/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 48 ---
+FLAME spatially filtered 8/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8, 13]
+Round 48: Main Acc = 0.8598, Backdoor ASR = 0.0735, Attack Active: True, took 514.3887665271759 seconds
+
+--- Round 49/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 49 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 49: Main Acc = 0.8599, Backdoor ASR = 0.0503, Attack Active: True, took 516.8825585842133 seconds
+
+--- Round 50/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+
+--- Round 50 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 50: Main Acc = 0.8608, Backdoor ASR = 0.0503, Attack Active: True, took 510.6154930591583 seconds
+
+--- Round 51/100 ---
+
+--- Round 51 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8, 13]
+Round 51: Main Acc = 0.8598, Backdoor ASR = 0.0442, Attack Active: False, took 200.68864846229553 seconds
+
+--- Round 52/100 ---
+
+--- Round 52 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 52: Main Acc = 0.8602, Backdoor ASR = 0.0280, Attack Active: False, took 200.37846732139587 seconds
+
+--- Round 53/100 ---
+
+--- Round 53 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 53: Main Acc = 0.8607, Backdoor ASR = 0.0184, Attack Active: False, took 199.0236427783966 seconds
+
+--- Round 54/100 ---
+
+--- Round 54 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 54: Main Acc = 0.8597, Backdoor ASR = 0.0318, Attack Active: False, took 200.1521806716919 seconds
+
+--- Round 55/100 ---
+
+--- Round 55 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 55: Main Acc = 0.8596, Backdoor ASR = 0.0385, Attack Active: False, took 199.55763292312622 seconds
+
+--- Round 56/100 ---
+
+--- Round 56 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8, 13]
+Round 56: Main Acc = 0.8593, Backdoor ASR = 0.0337, Attack Active: False, took 198.88099193572998 seconds
+
+--- Round 57/100 ---
+
+--- Round 57 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 57: Main Acc = 0.8601, Backdoor ASR = 0.0287, Attack Active: False, took 199.5360987186432 seconds
+
+--- Round 58/100 ---
+
+--- Round 58 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 58: Main Acc = 0.8594, Backdoor ASR = 0.0271, Attack Active: False, took 199.36651968955994 seconds
+
+--- Round 59/100 ---
+
+--- Round 59 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 59: Main Acc = 0.8595, Backdoor ASR = 0.0204, Attack Active: False, took 200.7807068824768 seconds
+
+--- Round 60/100 ---
+
+--- Round 60 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 60: Main Acc = 0.8607, Backdoor ASR = 0.0196, Attack Active: False, took 199.1684970855713 seconds
+
+--- Round 61/100 ---
+
+--- Round 61 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 61: Main Acc = 0.8606, Backdoor ASR = 0.0175, Attack Active: False, took 200.7157802581787 seconds
+
+--- Round 62/100 ---
+
+--- Round 62 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 62: Main Acc = 0.8583, Backdoor ASR = 0.0119, Attack Active: False, took 198.98031735420227 seconds
+
+--- Round 63/100 ---
+
+--- Round 63 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 63: Main Acc = 0.8602, Backdoor ASR = 0.0207, Attack Active: False, took 198.5482964515686 seconds
+
+--- Round 64/100 ---
+
+--- Round 64 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 64: Main Acc = 0.8607, Backdoor ASR = 0.0242, Attack Active: False, took 199.36930131912231 seconds
+
+--- Round 65/100 ---
+
+--- Round 65 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 65: Main Acc = 0.8606, Backdoor ASR = 0.0145, Attack Active: False, took 200.37480783462524 seconds
+
+--- Round 66/100 ---
+
+--- Round 66 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 66: Main Acc = 0.8607, Backdoor ASR = 0.0111, Attack Active: False, took 198.54103779792786 seconds
+
+--- Round 67/100 ---
+
+--- Round 67 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 67: Main Acc = 0.8587, Backdoor ASR = 0.0098, Attack Active: False, took 198.9550518989563 seconds
+
+--- Round 68/100 ---
+
+--- Round 68 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 68: Main Acc = 0.8611, Backdoor ASR = 0.0106, Attack Active: False, took 198.87652206420898 seconds
+
+--- Round 69/100 ---
+
+--- Round 69 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 69: Main Acc = 0.8615, Backdoor ASR = 0.0119, Attack Active: False, took 200.62913513183594 seconds
+
+--- Round 70/100 ---
+
+--- Round 70 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 70: Main Acc = 0.8617, Backdoor ASR = 0.0081, Attack Active: False, took 199.67812824249268 seconds
+
+--- Round 71/100 ---
+
+--- Round 71 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 71: Main Acc = 0.8611, Backdoor ASR = 0.0130, Attack Active: False, took 198.2869851589203 seconds
+
+--- Round 72/100 ---
+
+--- Round 72 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 72: Main Acc = 0.8617, Backdoor ASR = 0.0100, Attack Active: False, took 198.75986647605896 seconds
+
+--- Round 73/100 ---
+
+--- Round 73 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 73: Main Acc = 0.8602, Backdoor ASR = 0.0127, Attack Active: False, took 198.296222448349 seconds
+
+--- Round 74/100 ---
+
+--- Round 74 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 74: Main Acc = 0.8615, Backdoor ASR = 0.0112, Attack Active: False, took 198.19342350959778 seconds
+
+--- Round 75/100 ---
+
+--- Round 75 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 75: Main Acc = 0.8614, Backdoor ASR = 0.0123, Attack Active: False, took 198.10025644302368 seconds
+
+--- Round 76/100 ---
+
+--- Round 76 ---
+FLAME spatially filtered 8/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 76: Main Acc = 0.8612, Backdoor ASR = 0.0097, Attack Active: False, took 199.1237964630127 seconds
+
+--- Round 77/100 ---
+
+--- Round 77 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 77: Main Acc = 0.8616, Backdoor ASR = 0.0089, Attack Active: False, took 199.09752368927002 seconds
+
+--- Round 78/100 ---
+
+--- Round 78 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 78: Main Acc = 0.8616, Backdoor ASR = 0.0061, Attack Active: False, took 194.28010821342468 seconds
+
+--- Round 79/100 ---
+
+--- Round 79 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 79: Main Acc = 0.8611, Backdoor ASR = 0.0037, Attack Active: False, took 193.40195155143738 seconds
+
+--- Round 80/100 ---
+
+--- Round 80 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 80: Main Acc = 0.8610, Backdoor ASR = 0.0049, Attack Active: False, took 195.23107171058655 seconds
+
+--- Round 81/100 ---
+
+--- Round 81 ---
+FLAME spatially filtered 8/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 81: Main Acc = 0.8610, Backdoor ASR = 0.0099, Attack Active: False, took 193.62372970581055 seconds
+
+--- Round 82/100 ---
+
+--- Round 82 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 82: Main Acc = 0.8609, Backdoor ASR = 0.0096, Attack Active: False, took 193.74961805343628 seconds
+
+--- Round 83/100 ---
+
+--- Round 83 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 83: Main Acc = 0.8604, Backdoor ASR = 0.0022, Attack Active: False, took 194.21773171424866 seconds
+
+--- Round 84/100 ---
+
+--- Round 84 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 84: Main Acc = 0.8616, Backdoor ASR = 0.0042, Attack Active: False, took 195.6229863166809 seconds
+
+--- Round 85/100 ---
+
+--- Round 85 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [1, 8]
+Round 85: Main Acc = 0.8613, Backdoor ASR = 0.0018, Attack Active: False, took 195.33476996421814 seconds
+
+--- Round 86/100 ---
+
+--- Round 86 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 86: Main Acc = 0.8615, Backdoor ASR = 0.0024, Attack Active: False, took 194.43617939949036 seconds
+
+--- Round 87/100 ---
+
+--- Round 87 ---
+FLAME spatially filtered 8/20 clients this round.
+Persistent malicious (ratio > 0.6): [1, 8]
+Round 87: Main Acc = 0.8617, Backdoor ASR = 0.0024, Attack Active: False, took 194.13152933120728 seconds
+
+--- Round 88/100 ---
+
+--- Round 88 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [0, 1, 8]
+Round 88: Main Acc = 0.8602, Backdoor ASR = 0.0031, Attack Active: False, took 196.10037183761597 seconds
+
+--- Round 89/100 ---
+
+--- Round 89 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [1, 8]
+Round 89: Main Acc = 0.8618, Backdoor ASR = 0.0025, Attack Active: False, took 194.2023458480835 seconds
+
+--- Round 90/100 ---
+
+--- Round 90 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [1, 8]
+Round 90: Main Acc = 0.8613, Backdoor ASR = 0.0096, Attack Active: False, took 193.34319829940796 seconds
+
+--- Round 91/100 ---
+
+--- Round 91 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [1, 8]
+Round 91: Main Acc = 0.8603, Backdoor ASR = 0.0010, Attack Active: False, took 196.55585741996765 seconds
+
+--- Round 92/100 ---
+
+--- Round 92 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [1, 8]
+Round 92: Main Acc = 0.8618, Backdoor ASR = 0.0013, Attack Active: False, took 195.02742958068848 seconds
+
+--- Round 93/100 ---
+
+--- Round 93 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [1, 8]
+Round 93: Main Acc = 0.8615, Backdoor ASR = 0.0020, Attack Active: False, took 193.81443977355957 seconds
+
+--- Round 94/100 ---
+
+--- Round 94 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [1, 8]
+Round 94: Main Acc = 0.8598, Backdoor ASR = 0.0022, Attack Active: False, took 194.1213779449463 seconds
+
+--- Round 95/100 ---
+
+--- Round 95 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [1, 8]
+Round 95: Main Acc = 0.8621, Backdoor ASR = 0.0020, Attack Active: False, took 194.2003149986267 seconds
+
+--- Round 96/100 ---
+
+--- Round 96 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [1, 8]
+Round 96: Main Acc = 0.8612, Backdoor ASR = 0.0024, Attack Active: False, took 194.3123321533203 seconds
+
+--- Round 97/100 ---
+
+--- Round 97 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [1, 8]
+Round 97: Main Acc = 0.8615, Backdoor ASR = 0.0098, Attack Active: False, took 195.092378616333 seconds
+
+--- Round 98/100 ---
+
+--- Round 98 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [1, 8]
+Round 98: Main Acc = 0.8617, Backdoor ASR = 0.0096, Attack Active: False, took 194.99029421806335 seconds
+
+--- Round 99/100 ---
+
+--- Round 99 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [1, 8]
+Round 99: Main Acc = 0.8597, Backdoor ASR = 0.0082, Attack Active: False, took 193.9188940525055 seconds
+
+--- Round 100/100 ---
+
+--- Round 100 ---
+FLAME spatially filtered 9/20 clients this round.
+Persistent malicious (ratio > 0.6): [1, 8]
+Round 100: Main Acc = 0.8626, Backdoor ASR = 0.0125, Attack Active: False, took 194.89288854599 seconds
+
+--- Training Finished ---

@@ -1,0 +1,1255 @@
+--- Configuration ---
+experiment_name: a3fl_flame_femnist
+dataset: femnist
+num_clients: 20
+num_parallel_clients: 20
+num_rounds: 100
+local_epochs: 1
+batch_size: 32
+test_batch_size: 256
+lr: 0.01
+seed: 42
+attack: a3fl
+num_malicious: 2
+target_class: 7
+poisoning_rate: 0.25
+attack_start_round: 20
+attack_end_round: 50
+scale_factor: 20.0
+malicious_epochs: 64
+mask_k_percent: 0.05
+trigger_epochs: 5
+trigger_lr: 0.01
+defense: flame1
+clipping_norm: 4.0
+dp_std_dev: 0.025
+deepsight_num_samples: 256
+deepsight_num_seeds: 3
+deepsight_batch_size: 64
+deepsight_tau: 0.5
+flame_lamda: 0.001
+flame_eta: 1.0
+krum_f: 2
+krum_m: 5
+device: cuda
+---------------------
+Initialized FlameServer | lamda=0.001, eta=1.0, max_filter_fraction=0.3, min_cluster_ratio=2.0
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Utilisateurs/mdif01/.local/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+Client [1]: Behaving benignly in round 1 (outside attack window).
+Client [0]: Behaving benignly in round 4 (outside attack window).
+Client [1]: Behaving benignly in round 9 (outside attack window).
+Client [0]: Behaving benignly in round 11 (outside attack window).
+Client [0]: Behaving benignly in round 15 (outside attack window).
+Client [0]: Behaving benignly in round 17 (outside attack window).
+Client [1]: Behaving benignly in round 18 (outside attack window).
+
+--- A3FL Client [0] optimizing trigger for round 20 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 25 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 28 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 32 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 37 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 43 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 48 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [0]: Behaving benignly in round 51 (outside attack window).
+Client [0]: Behaving benignly in round 53 (outside attack window).
+Client [1]: Behaving benignly in round 57 (outside attack window).
+Client [0]: Behaving benignly in round 58 (outside attack window).
+Client [1]: Behaving benignly in round 60 (outside attack window).
+Client [0]: Behaving benignly in round 65 (outside attack window).
+Client [0]: Behaving benignly in round 66 (outside attack window).
+Client [0]: Behaving benignly in round 72 (outside attack window).
+Client [0]: Behaving benignly in round 74 (outside attack window).
+Client [0]: Behaving benignly in round 75 (outside attack window).
+Client [1]: Behaving benignly in round 78 (outside attack window).
+Client [1]: Behaving benignly in round 85 (outside attack window).
+Client [1]: Behaving benignly in round 88 (outside attack window).
+Client [1]: Behaving benignly in round 89 (outside attack window).
+Client [1]: Behaving benignly in round 90 (outside attack window).
+Client [0]: Behaving benignly in round 91 (outside attack window).
+Client [0]: Behaving benignly in round 92 (outside attack window).
+Client [0]: Behaving benignly in round 93 (outside attack window).
+Client [1]: Behaving benignly in round 94 (outside attack window).
+Client [0]: Behaving benignly in round 95 (outside attack window).
+Client [0]: Behaving benignly in round 96 (outside attack window).
+Client [0]: Behaving benignly in round 98 (outside attack window).
+Client [0]: Behaving benignly in round 99 (outside attack window).
+Client [0]: Behaving benignly in round 100 (outside attack window).
+
+--- A3FL Client [0] optimizing trigger for round 24 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 38 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [0]: Behaving benignly in round 94 (outside attack window).
+Client [1]: Behaving benignly in round 95 (outside attack window).
+Client [1]: Behaving benignly in round 96 (outside attack window).
+Client [1]: Behaving benignly in round 97 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 41 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [1]: Behaving benignly in round 62 (outside attack window).
+Client [0]: Behaving benignly in round 67 (outside attack window).
+Client [0]: Behaving benignly in round 97 (outside attack window).
+Client [1]: Behaving benignly in round 99 (outside attack window).
+Client [1]: Behaving benignly in round 100 (outside attack window).
+Client [1]: Behaving benignly in round 86 (outside attack window).
+Client [0]: Behaving benignly in round 87 (outside attack window).
+Client [0]: Behaving benignly in round 88 (outside attack window).
+Client [0]: Behaving benignly in round 89 (outside attack window).
+Client [0]: Behaving benignly in round 90 (outside attack window).
+Client [1]: Behaving benignly in round 91 (outside attack window).
+Client [1]: Behaving benignly in round 92 (outside attack window).
+Client [1]: Behaving benignly in round 93 (outside attack window).
+Client [1]: Behaving benignly in round 98 (outside attack window).
+
+--- A3FL Client [0] optimizing trigger for round 31 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [0]: Behaving benignly in round 6 (outside attack window).
+Client [0]: Behaving benignly in round 7 (outside attack window).
+Client [1]: Behaving benignly in round 8 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 21 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 26 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 33 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 38 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 42 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 47 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [1]: Behaving benignly in round 51 (outside attack window).
+Client [1]: Behaving benignly in round 52 (outside attack window).
+Client [0]: Behaving benignly in round 54 (outside attack window).
+Client [1]: Behaving benignly in round 55 (outside attack window).
+Client [1]: Behaving benignly in round 56 (outside attack window).
+Client [1]: Behaving benignly in round 64 (outside attack window).
+Client [1]: Behaving benignly in round 65 (outside attack window).
+Client [1]: Behaving benignly in round 69 (outside attack window).
+Client [1]: Behaving benignly in round 70 (outside attack window).
+Client [1]: Behaving benignly in round 71 (outside attack window).
+Client [1]: Behaving benignly in round 72 (outside attack window).
+Client [1]: Behaving benignly in round 75 (outside attack window).
+Client [1]: Behaving benignly in round 77 (outside attack window).
+Client [1]: Behaving benignly in round 80 (outside attack window).
+Client [0]: Behaving benignly in round 2 (outside attack window).
+Client [0]: Behaving benignly in round 3 (outside attack window).
+Client [0]: Behaving benignly in round 5 (outside attack window).
+Client [1]: Behaving benignly in round 6 (outside attack window).
+Client [0]: Behaving benignly in round 8 (outside attack window).
+Client [1]: Behaving benignly in round 10 (outside attack window).
+Client [1]: Behaving benignly in round 12 (outside attack window).
+Client [1]: Behaving benignly in round 13 (outside attack window).
+Client [0]: Behaving benignly in round 14 (outside attack window).
+Client [1]: Behaving benignly in round 15 (outside attack window).
+Client [0]: Behaving benignly in round 16 (outside attack window).
+Client [1]: Behaving benignly in round 17 (outside attack window).
+Client [0]: Behaving benignly in round 18 (outside attack window).
+Client [0]: Behaving benignly in round 19 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 20 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 24 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 27 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 30 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 35 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 39 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 42 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 45 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 49 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [1]: Behaving benignly in round 53 (outside attack window).
+Client [0]: Behaving benignly in round 55 (outside attack window).
+Client [0]: Behaving benignly in round 60 (outside attack window).
+Client [1]: Behaving benignly in round 61 (outside attack window).
+Client [0]: Behaving benignly in round 63 (outside attack window).
+Client [0]: Behaving benignly in round 64 (outside attack window).
+Client [1]: Behaving benignly in round 66 (outside attack window).
+Client [1]: Behaving benignly in round 67 (outside attack window).
+Client [0]: Behaving benignly in round 68 (outside attack window).
+Client [0]: Behaving benignly in round 69 (outside attack window).
+Client [0]: Behaving benignly in round 70 (outside attack window).
+Client [0]: Behaving benignly in round 71 (outside attack window).
+Client [0]: Behaving benignly in round 73 (outside attack window).
+Client [1]: Behaving benignly in round 74 (outside attack window).
+Client [0]: Behaving benignly in round 76 (outside attack window).
+Client [0]: Behaving benignly in round 77 (outside attack window).
+Client [0]: Behaving benignly in round 80 (outside attack window).
+Client [0]: Behaving benignly in round 81 (outside attack window).
+Client [1]: Behaving benignly in round 83 (outside attack window).
+Client [1]: Behaving benignly in round 84 (outside attack window).
+Client [0]: Behaving benignly in round 86 (outside attack window).
+Client [1]: Behaving benignly in round 87 (outside attack window).
+Client [1]: Behaving benignly in round 2 (outside attack window).
+Client [1]: Behaving benignly in round 5 (outside attack window).
+Client [0]: Behaving benignly in round 12 (outside attack window).
+Client [0]: Behaving benignly in round 13 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 23 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 41 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 46 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [0]: Behaving benignly in round 57 (outside attack window).
+Client [1]: Behaving benignly in round 58 (outside attack window).
+Client [1]: Behaving benignly in round 76 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 29 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 34 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 45 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 23 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [1]: Behaving benignly in round 3 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 25 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 37 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 47 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [1]: Behaving benignly in round 16 (outside attack window).
+Client [1]: Behaving benignly in round 19 (outside attack window).
+
+--- A3FL Client [0] optimizing trigger for round 26 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 33 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 40 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 43 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [1]: Behaving benignly in round 54 (outside attack window).
+Client [0]: Behaving benignly in round 59 (outside attack window).
+Client [0]: Behaving benignly in round 61 (outside attack window).
+Client [0]: Behaving benignly in round 62 (outside attack window).
+Client [1]: Behaving benignly in round 79 (outside attack window).
+Client [1]: Behaving benignly in round 82 (outside attack window).
+Client [0]: Behaving benignly in round 9 (outside attack window).
+Client [0]: Behaving benignly in round 10 (outside attack window).
+
+--- A3FL Client [0] optimizing trigger for round 22 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 30 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 34 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 44 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 50 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [0]: Behaving benignly in round 56 (outside attack window).
+Client [1]: Behaving benignly in round 59 (outside attack window).
+Client [0]: Behaving benignly in round 78 (outside attack window).
+Client [1]: Behaving benignly in round 4 (outside attack window).
+Client [1]: Behaving benignly in round 7 (outside attack window).
+Client [1]: Behaving benignly in round 14 (outside attack window).
+
+--- A3FL Client [0] optimizing trigger for round 21 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 28 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 31 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 35 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 39 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 44 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 49 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [0]: Behaving benignly in round 52 (outside attack window).
+Client [1]: Behaving benignly in round 63 (outside attack window).
+Client [1]: Behaving benignly in round 81 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 32 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [0]: Behaving benignly in round 1 (outside attack window).
+Client [1]: Behaving benignly in round 11 (outside attack window).
+
+--- A3FL Client [1] optimizing trigger for round 22 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 29 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 36 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 40 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 46 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [0] optimizing trigger for round 50 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+Client [1]: Behaving benignly in round 68 (outside attack window).
+Client [1]: Behaving benignly in round 73 (outside attack window).
+Client [0]: Behaving benignly in round 79 (outside attack window).
+Client [0]: Behaving benignly in round 82 (outside attack window).
+Client [0]: Behaving benignly in round 83 (outside attack window).
+Client [0]: Behaving benignly in round 84 (outside attack window).
+Client [0]: Behaving benignly in round 85 (outside attack window).
+
+--- A3FL Client [0] optimizing trigger for round 27 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 48 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- A3FL Client [1] optimizing trigger for round 36 ---
+--- Training A3FL Trigger (aligned with official repo) ---
+--- A3FL Trigger training finished ---
+
+--- Round 1/100 ---
+FLAME filtered 0/20 client(s).
+Round 1: Main Acc = 0.7425, Backdoor ASR = 0.0000, Attack Active: False, took 244.81982445716858 seconds
+
+--- Round 2/100 ---
+FLAME filtered 0/20 client(s).
+Round 2: Main Acc = 0.8001, Backdoor ASR = 0.0000, Attack Active: False, took 175.99947381019592 seconds
+
+--- Round 3/100 ---
+FLAME filtered 0/20 client(s).
+Round 3: Main Acc = 0.8142, Backdoor ASR = 0.0000, Attack Active: False, took 176.37150621414185 seconds
+
+--- Round 4/100 ---
+FLAME filtered 0/20 client(s).
+Round 4: Main Acc = 0.8303, Backdoor ASR = 0.0000, Attack Active: False, took 175.66607213020325 seconds
+
+--- Round 5/100 ---
+FLAME filtered 0/20 client(s).
+Round 5: Main Acc = 0.8362, Backdoor ASR = 0.0000, Attack Active: False, took 176.1922836303711 seconds
+
+--- Round 6/100 ---
+FLAME filtered 0/20 client(s).
+Round 6: Main Acc = 0.8372, Backdoor ASR = 0.0000, Attack Active: False, took 174.8240306377411 seconds
+
+--- Round 7/100 ---
+FLAME filtered 0/20 client(s).
+Round 7: Main Acc = 0.8418, Backdoor ASR = 0.0000, Attack Active: False, took 176.24567246437073 seconds
+
+--- Round 8/100 ---
+FLAME filtered 0/20 client(s).
+Round 8: Main Acc = 0.8434, Backdoor ASR = 0.0000, Attack Active: False, took 175.5772476196289 seconds
+
+--- Round 9/100 ---
+FLAME filtered 0/20 client(s).
+Round 9: Main Acc = 0.8459, Backdoor ASR = 0.0000, Attack Active: False, took 174.79676747322083 seconds
+
+--- Round 10/100 ---
+FLAME filtered 0/20 client(s).
+Round 10: Main Acc = 0.8468, Backdoor ASR = 0.0000, Attack Active: False, took 178.0912787914276 seconds
+
+--- Round 11/100 ---
+FLAME filtered 0/20 client(s).
+Round 11: Main Acc = 0.8470, Backdoor ASR = 0.0000, Attack Active: False, took 177.82937240600586 seconds
+
+--- Round 12/100 ---
+FLAME filtered 0/20 client(s).
+Round 12: Main Acc = 0.8483, Backdoor ASR = 0.0000, Attack Active: False, took 178.39470767974854 seconds
+
+--- Round 13/100 ---
+FLAME filtered 0/20 client(s).
+Round 13: Main Acc = 0.8494, Backdoor ASR = 0.0000, Attack Active: False, took 178.23839402198792 seconds
+
+--- Round 14/100 ---
+FLAME filtered 0/20 client(s).
+Round 14: Main Acc = 0.8500, Backdoor ASR = 0.0000, Attack Active: False, took 178.14121961593628 seconds
+
+--- Round 15/100 ---
+FLAME filtered 0/20 client(s).
+Round 15: Main Acc = 0.8501, Backdoor ASR = 0.0000, Attack Active: False, took 178.0954327583313 seconds
+
+--- Round 16/100 ---
+FLAME filtered 0/20 client(s).
+Round 16: Main Acc = 0.8513, Backdoor ASR = 0.0000, Attack Active: False, took 177.96690773963928 seconds
+
+--- Round 17/100 ---
+FLAME filtered 0/20 client(s).
+Round 17: Main Acc = 0.8519, Backdoor ASR = 0.0000, Attack Active: False, took 177.5614151954651 seconds
+
+--- Round 18/100 ---
+FLAME filtered 0/20 client(s).
+Round 18: Main Acc = 0.8534, Backdoor ASR = 0.0000, Attack Active: False, took 178.27577877044678 seconds
+
+--- Round 19/100 ---
+FLAME filtered 0/20 client(s).
+Round 19: Main Acc = 0.8528, Backdoor ASR = 0.0000, Attack Active: False, took 178.51731276512146 seconds
+
+--- Round 20/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 20: Main Acc = 0.8525, Backdoor ASR = 0.0052, Attack Active: True, took 521.5728056430817 seconds
+
+--- Round 21/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 21: Main Acc = 0.8543, Backdoor ASR = 0.0063, Attack Active: True, took 516.7896580696106 seconds
+
+--- Round 22/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 22: Main Acc = 0.8549, Backdoor ASR = 0.0108, Attack Active: True, took 521.6122937202454 seconds
+
+--- Round 23/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 23: Main Acc = 0.8546, Backdoor ASR = 0.0201, Attack Active: True, took 518.5982983112335 seconds
+
+--- Round 24/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 24: Main Acc = 0.8548, Backdoor ASR = 0.0255, Attack Active: True, took 520.8903074264526 seconds
+
+--- Round 25/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 25: Main Acc = 0.8563, Backdoor ASR = 0.0518, Attack Active: True, took 522.2161903381348 seconds
+
+--- Round 26/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 26: Main Acc = 0.8572, Backdoor ASR = 0.0715, Attack Active: True, took 519.6588702201843 seconds
+
+--- Round 27/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 27: Main Acc = 0.8572, Backdoor ASR = 0.1079, Attack Active: True, took 518.2038266658783 seconds
+
+--- Round 28/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 28: Main Acc = 0.8568, Backdoor ASR = 0.1627, Attack Active: True, took 522.7888691425323 seconds
+
+--- Round 29/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 29: Main Acc = 0.8573, Backdoor ASR = 0.2850, Attack Active: True, took 520.2976474761963 seconds
+
+--- Round 30/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 30: Main Acc = 0.8592, Backdoor ASR = 0.3856, Attack Active: True, took 518.6022818088531 seconds
+
+--- Round 31/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 31: Main Acc = 0.8578, Backdoor ASR = 0.4972, Attack Active: True, took 518.3583843708038 seconds
+
+--- Round 32/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 32: Main Acc = 0.8574, Backdoor ASR = 0.6344, Attack Active: True, took 522.8102424144745 seconds
+
+--- Round 33/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 33: Main Acc = 0.8584, Backdoor ASR = 0.6813, Attack Active: True, took 520.1061434745789 seconds
+
+--- Round 34/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 34: Main Acc = 0.8584, Backdoor ASR = 0.7357, Attack Active: True, took 520.5253381729126 seconds
+
+--- Round 35/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 35: Main Acc = 0.8580, Backdoor ASR = 0.7316, Attack Active: True, took 517.830185174942 seconds
+
+--- Round 36/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 36: Main Acc = 0.8583, Backdoor ASR = 0.8567, Attack Active: True, took 522.7521784305573 seconds
+
+--- Round 37/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 37: Main Acc = 0.8589, Backdoor ASR = 0.9135, Attack Active: True, took 522.5476891994476 seconds
+
+--- Round 38/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 38: Main Acc = 0.8574, Backdoor ASR = 0.9024, Attack Active: True, took 522.4749884605408 seconds
+
+--- Round 39/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 39: Main Acc = 0.8589, Backdoor ASR = 0.9335, Attack Active: True, took 520.4650990962982 seconds
+
+--- Round 40/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 40: Main Acc = 0.8591, Backdoor ASR = 0.9700, Attack Active: True, took 517.9962966442108 seconds
+
+--- Round 41/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 41: Main Acc = 0.8594, Backdoor ASR = 0.9803, Attack Active: True, took 519.6216185092926 seconds
+
+--- Round 42/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 42: Main Acc = 0.8596, Backdoor ASR = 0.9920, Attack Active: True, took 518.6400904655457 seconds
+
+--- Round 43/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 43: Main Acc = 0.8590, Backdoor ASR = 0.9971, Attack Active: True, took 521.4922766685486 seconds
+
+--- Round 44/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 44: Main Acc = 0.8602, Backdoor ASR = 0.9977, Attack Active: True, took 520.3973495960236 seconds
+
+--- Round 45/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 45: Main Acc = 0.8600, Backdoor ASR = 0.9979, Attack Active: True, took 520.2276055812836 seconds
+
+--- Round 46/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 46: Main Acc = 0.8604, Backdoor ASR = 0.9991, Attack Active: True, took 519.878782749176 seconds
+
+--- Round 47/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 47: Main Acc = 0.8596, Backdoor ASR = 0.9992, Attack Active: True, took 518.7091648578644 seconds
+
+--- Round 48/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 48: Main Acc = 0.8600, Backdoor ASR = 0.9990, Attack Active: True, took 512.4280405044556 seconds
+
+--- Round 49/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 49: Main Acc = 0.8605, Backdoor ASR = 0.9995, Attack Active: True, took 510.569797039032 seconds
+
+--- Round 50/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+FLAME filtered 0/20 client(s).
+Round 50: Main Acc = 0.8608, Backdoor ASR = 0.9994, Attack Active: True, took 511.54818964004517 seconds
+
+--- Round 51/100 ---
+FLAME filtered 0/20 client(s).
+Round 51: Main Acc = 0.8611, Backdoor ASR = 0.9995, Attack Active: False, took 200.61461448669434 seconds
+
+--- Round 52/100 ---
+FLAME filtered 0/20 client(s).
+Round 52: Main Acc = 0.8611, Backdoor ASR = 0.9991, Attack Active: False, took 197.5985095500946 seconds
+
+--- Round 53/100 ---
+FLAME filtered 0/20 client(s).
+Round 53: Main Acc = 0.8609, Backdoor ASR = 0.9984, Attack Active: False, took 199.10579085350037 seconds
+
+--- Round 54/100 ---
+FLAME filtered 0/20 client(s).
+Round 54: Main Acc = 0.8608, Backdoor ASR = 0.9985, Attack Active: False, took 199.3425793647766 seconds
+
+--- Round 55/100 ---
+FLAME filtered 0/20 client(s).
+Round 55: Main Acc = 0.8603, Backdoor ASR = 0.9984, Attack Active: False, took 198.093688249588 seconds
+
+--- Round 56/100 ---
+FLAME filtered 0/20 client(s).
+Round 56: Main Acc = 0.8598, Backdoor ASR = 0.9979, Attack Active: False, took 199.36062026023865 seconds
+
+--- Round 57/100 ---
+FLAME filtered 0/20 client(s).
+Round 57: Main Acc = 0.8614, Backdoor ASR = 0.9910, Attack Active: False, took 200.13077998161316 seconds
+
+--- Round 58/100 ---
+FLAME filtered 0/20 client(s).
+Round 58: Main Acc = 0.8610, Backdoor ASR = 0.9959, Attack Active: False, took 199.89437198638916 seconds
+
+--- Round 59/100 ---
+FLAME filtered 0/20 client(s).
+Round 59: Main Acc = 0.8608, Backdoor ASR = 0.9945, Attack Active: False, took 199.36814260482788 seconds
+
+--- Round 60/100 ---
+FLAME filtered 0/20 client(s).
+Round 60: Main Acc = 0.8617, Backdoor ASR = 0.9947, Attack Active: False, took 199.9761176109314 seconds
+
+--- Round 61/100 ---
+FLAME filtered 0/20 client(s).
+Round 61: Main Acc = 0.8614, Backdoor ASR = 0.9913, Attack Active: False, took 200.25901007652283 seconds
+
+--- Round 62/100 ---
+FLAME filtered 0/20 client(s).
+Round 62: Main Acc = 0.8600, Backdoor ASR = 0.9897, Attack Active: False, took 199.5980110168457 seconds
+
+--- Round 63/100 ---
+FLAME filtered 0/20 client(s).
+Round 63: Main Acc = 0.8621, Backdoor ASR = 0.9878, Attack Active: False, took 202.1754388809204 seconds
+
+--- Round 64/100 ---
+FLAME filtered 0/20 client(s).
+Round 64: Main Acc = 0.8621, Backdoor ASR = 0.9865, Attack Active: False, took 202.55776190757751 seconds
+
+--- Round 65/100 ---
+FLAME filtered 0/20 client(s).
+Round 65: Main Acc = 0.8598, Backdoor ASR = 0.9686, Attack Active: False, took 202.22697687149048 seconds
+
+--- Round 66/100 ---
+FLAME filtered 0/20 client(s).
+Round 66: Main Acc = 0.8615, Backdoor ASR = 0.9611, Attack Active: False, took 201.8079125881195 seconds
+
+--- Round 67/100 ---
+FLAME filtered 0/20 client(s).
+Round 67: Main Acc = 0.8615, Backdoor ASR = 0.9572, Attack Active: False, took 202.70813155174255 seconds
+
+--- Round 68/100 ---
+FLAME filtered 0/20 client(s).
+Round 68: Main Acc = 0.8614, Backdoor ASR = 0.9725, Attack Active: False, took 202.72052216529846 seconds
+
+--- Round 69/100 ---
+FLAME filtered 0/20 client(s).
+Round 69: Main Acc = 0.8614, Backdoor ASR = 0.9545, Attack Active: False, took 202.66437363624573 seconds
+
+--- Round 70/100 ---
+FLAME filtered 0/20 client(s).
+Round 70: Main Acc = 0.8620, Backdoor ASR = 0.9439, Attack Active: False, took 201.63925981521606 seconds
+
+--- Round 71/100 ---
+FLAME filtered 0/20 client(s).
+Round 71: Main Acc = 0.8622, Backdoor ASR = 0.9375, Attack Active: False, took 202.77845931053162 seconds
+
+--- Round 72/100 ---
+FLAME filtered 0/20 client(s).
+Round 72: Main Acc = 0.8627, Backdoor ASR = 0.8875, Attack Active: False, took 202.40110993385315 seconds
+
+--- Round 73/100 ---
+FLAME filtered 0/20 client(s).
+Round 73: Main Acc = 0.8608, Backdoor ASR = 0.9086, Attack Active: False, took 202.13526344299316 seconds
+
+--- Round 74/100 ---
+FLAME filtered 0/20 client(s).
+Round 74: Main Acc = 0.8617, Backdoor ASR = 0.9235, Attack Active: False, took 203.2441852092743 seconds
+
+--- Round 75/100 ---
+FLAME filtered 0/20 client(s).
+Round 75: Main Acc = 0.8617, Backdoor ASR = 0.9103, Attack Active: False, took 201.40945267677307 seconds
+
+--- Round 76/100 ---
+FLAME filtered 0/20 client(s).
+Round 76: Main Acc = 0.8617, Backdoor ASR = 0.8934, Attack Active: False, took 203.1594603061676 seconds
+
+--- Round 77/100 ---
+FLAME filtered 0/20 client(s).
+Round 77: Main Acc = 0.8623, Backdoor ASR = 0.8171, Attack Active: False, took 201.73751068115234 seconds
+
+--- Round 78/100 ---
+FLAME filtered 0/20 client(s).
+Round 78: Main Acc = 0.8621, Backdoor ASR = 0.7905, Attack Active: False, took 201.0760955810547 seconds
+
+--- Round 79/100 ---
+FLAME filtered 0/20 client(s).
+Round 79: Main Acc = 0.8614, Backdoor ASR = 0.7824, Attack Active: False, took 201.8909933567047 seconds
+
+--- Round 80/100 ---
+FLAME filtered 0/20 client(s).
+Round 80: Main Acc = 0.8615, Backdoor ASR = 0.8242, Attack Active: False, took 202.84278917312622 seconds
+
+--- Round 81/100 ---
+FLAME filtered 0/20 client(s).
+Round 81: Main Acc = 0.8620, Backdoor ASR = 0.7234, Attack Active: False, took 202.34744477272034 seconds
+
+--- Round 82/100 ---
+FLAME filtered 0/20 client(s).
+Round 82: Main Acc = 0.8624, Backdoor ASR = 0.7496, Attack Active: False, took 202.97226405143738 seconds
+
+--- Round 83/100 ---
+FLAME filtered 0/20 client(s).
+Round 83: Main Acc = 0.8618, Backdoor ASR = 0.7405, Attack Active: False, took 201.71711611747742 seconds
+
+--- Round 84/100 ---
+FLAME filtered 0/20 client(s).
+Round 84: Main Acc = 0.8628, Backdoor ASR = 0.8275, Attack Active: False, took 203.10039258003235 seconds
+
+--- Round 85/100 ---
+FLAME filtered 0/20 client(s).
+Round 85: Main Acc = 0.8621, Backdoor ASR = 0.8457, Attack Active: False, took 201.9966447353363 seconds
+
+--- Round 86/100 ---
+FLAME filtered 0/20 client(s).
+Round 86: Main Acc = 0.8625, Backdoor ASR = 0.7693, Attack Active: False, took 202.03501892089844 seconds
+
+--- Round 87/100 ---
+FLAME filtered 0/20 client(s).
+Round 87: Main Acc = 0.8624, Backdoor ASR = 0.7893, Attack Active: False, took 201.8641541004181 seconds
+
+--- Round 88/100 ---
+FLAME filtered 0/20 client(s).
+Round 88: Main Acc = 0.8628, Backdoor ASR = 0.6691, Attack Active: False, took 201.65172576904297 seconds
+
+--- Round 89/100 ---
+FLAME filtered 0/20 client(s).
+Round 89: Main Acc = 0.8625, Backdoor ASR = 0.6934, Attack Active: False, took 201.83775997161865 seconds
+
+--- Round 90/100 ---
+FLAME filtered 0/20 client(s).
+Round 90: Main Acc = 0.8626, Backdoor ASR = 0.7726, Attack Active: False, took 201.7797932624817 seconds
+
+--- Round 91/100 ---
+FLAME filtered 0/20 client(s).
+Round 91: Main Acc = 0.8626, Backdoor ASR = 0.7259, Attack Active: False, took 202.0079469680786 seconds
+
+--- Round 92/100 ---
+FLAME filtered 0/20 client(s).
+Round 92: Main Acc = 0.8626, Backdoor ASR = 0.8326, Attack Active: False, took 201.64182257652283 seconds
+
+--- Round 93/100 ---
+FLAME filtered 0/20 client(s).
+Round 93: Main Acc = 0.8627, Backdoor ASR = 0.7993, Attack Active: False, took 202.617520570755 seconds
+
+--- Round 94/100 ---
+FLAME filtered 0/20 client(s).
+Round 94: Main Acc = 0.8619, Backdoor ASR = 0.7641, Attack Active: False, took 202.42389822006226 seconds
+
+--- Round 95/100 ---
+FLAME filtered 0/20 client(s).
+Round 95: Main Acc = 0.8619, Backdoor ASR = 0.7673, Attack Active: False, took 202.5053505897522 seconds
+
+--- Round 96/100 ---
+FLAME filtered 0/20 client(s).
+Round 96: Main Acc = 0.8621, Backdoor ASR = 0.7080, Attack Active: False, took 201.56620597839355 seconds
+
+--- Round 97/100 ---
+FLAME filtered 0/20 client(s).
+Round 97: Main Acc = 0.8616, Backdoor ASR = 0.7666, Attack Active: False, took 201.60920310020447 seconds
+
+--- Round 98/100 ---
+FLAME filtered 0/20 client(s).
+Round 98: Main Acc = 0.8616, Backdoor ASR = 0.7144, Attack Active: False, took 201.74059462547302 seconds
+
+--- Round 99/100 ---
+FLAME filtered 0/20 client(s).
+Round 99: Main Acc = 0.8612, Backdoor ASR = 0.6866, Attack Active: False, took 200.79442286491394 seconds
+
+--- Round 100/100 ---
+FLAME filtered 0/20 client(s).
+Round 100: Main Acc = 0.8622, Backdoor ASR = 0.6835, Attack Active: False, took 200.4357783794403 seconds
+
+--- Training Finished ---

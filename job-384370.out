@@ -1,0 +1,448 @@
+--- Configuration ---
+experiment_name: a3fl_clip_cifar
+dataset: cifar10
+num_clients: 5
+num_parallel_clients: 5
+num_rounds: 100
+local_epochs: 1
+batch_size: 32
+test_batch_size: 256
+lr: 0.01
+seed: 42
+attack: a3fl
+num_malicious: 2
+target_class: 7
+poisoning_rate: 0.25
+attack_start_round: 20
+attack_end_round: 50
+scale_factor: 5.0
+malicious_epochs: 5
+mask_k_percent: 0.05
+trigger_epochs: 5
+trigger_lr: 0.01
+defense: clip
+clipping_norm: 4.0
+dp_std_dev: 0.025
+deepsight_num_samples: 256
+deepsight_num_seeds: 3
+deepsight_batch_size: 64
+deepsight_tau: 0.5
+flame_lamda: 0.001
+flame_eta: 1.0
+krum_f: 2
+krum_m: 5
+device: cuda
+---------------------
+Files already downloaded and verified
+Files already downloaded and verified
+Initialized NormClippingServer with clipping_norm=4.0, eta=1.0
+
+--- Round 1/100 ---
+Round 1: Main Acc = 0.2907, Backdoor ASR = 0.0000, Attack Active: False, took 279.0414226055145 seconds
+
+--- Round 2/100 ---
+Round 2: Main Acc = 0.3892, Backdoor ASR = 0.0000, Attack Active: False, took 29.352855920791626 seconds
+
+--- Round 3/100 ---
+Round 3: Main Acc = 0.4197, Backdoor ASR = 0.0000, Attack Active: False, took 28.701019763946533 seconds
+
+--- Round 4/100 ---
+Round 4: Main Acc = 0.4492, Backdoor ASR = 0.0000, Attack Active: False, took 29.032309532165527 seconds
+
+--- Round 5/100 ---
+Round 5: Main Acc = 0.4703, Backdoor ASR = 0.0000, Attack Active: False, took 28.549463510513306 seconds
+
+--- Round 6/100 ---
+Round 6: Main Acc = 0.4962, Backdoor ASR = 0.0000, Attack Active: False, took 29.158875942230225 seconds
+
+--- Round 7/100 ---
+Round 7: Main Acc = 0.5134, Backdoor ASR = 0.0000, Attack Active: False, took 28.691211700439453 seconds
+
+--- Round 8/100 ---
+Round 8: Main Acc = 0.5265, Backdoor ASR = 0.0000, Attack Active: False, took 28.549356937408447 seconds
+
+--- Round 9/100 ---
+Round 9: Main Acc = 0.5377, Backdoor ASR = 0.0000, Attack Active: False, took 28.948285579681396 seconds
+
+--- Round 10/100 ---
+Round 10: Main Acc = 0.5748, Backdoor ASR = 0.0000, Attack Active: False, took 28.87263035774231 seconds
+
+--- Round 11/100 ---
+Round 11: Main Acc = 0.5998, Backdoor ASR = 0.0000, Attack Active: False, took 29.03505229949951 seconds
+
+--- Round 12/100 ---
+Round 12: Main Acc = 0.6111, Backdoor ASR = 0.0000, Attack Active: False, took 29.098730087280273 seconds
+
+--- Round 13/100 ---
+Round 13: Main Acc = 0.6131, Backdoor ASR = 0.0000, Attack Active: False, took 28.585923194885254 seconds
+
+--- Round 14/100 ---
+Round 14: Main Acc = 0.6419, Backdoor ASR = 0.0000, Attack Active: False, took 29.343907594680786 seconds
+
+--- Round 15/100 ---
+Round 15: Main Acc = 0.6606, Backdoor ASR = 0.0000, Attack Active: False, took 29.037331104278564 seconds
+
+--- Round 16/100 ---
+Round 16: Main Acc = 0.6739, Backdoor ASR = 0.0000, Attack Active: False, took 29.295336484909058 seconds
+
+--- Round 17/100 ---
+Round 17: Main Acc = 0.6889, Backdoor ASR = 0.0000, Attack Active: False, took 29.232579946517944 seconds
+
+--- Round 18/100 ---
+Round 18: Main Acc = 0.6847, Backdoor ASR = 0.0000, Attack Active: False, took 29.095492839813232 seconds
+
+--- Round 19/100 ---
+Round 19: Main Acc = 0.7119, Backdoor ASR = 0.0000, Attack Active: False, took 29.04211711883545 seconds
+
+--- Round 20/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 20: Main Acc = 0.7160, Backdoor ASR = 0.1407, Attack Active: True, took 237.35058283805847 seconds
+
+--- Round 21/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 21: Main Acc = 0.7421, Backdoor ASR = 0.1321, Attack Active: True, took 237.04387187957764 seconds
+
+--- Round 22/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 22: Main Acc = 0.7589, Backdoor ASR = 0.1609, Attack Active: True, took 236.31919050216675 seconds
+
+--- Round 23/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 23: Main Acc = 0.7691, Backdoor ASR = 0.1749, Attack Active: True, took 232.70373606681824 seconds
+
+--- Round 24/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 24: Main Acc = 0.7777, Backdoor ASR = 0.1868, Attack Active: True, took 234.77191638946533 seconds
+
+--- Round 25/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 25: Main Acc = 0.7933, Backdoor ASR = 0.2348, Attack Active: True, took 236.5254077911377 seconds
+
+--- Round 26/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 26: Main Acc = 0.8008, Backdoor ASR = 0.3256, Attack Active: True, took 235.43235802650452 seconds
+
+--- Round 27/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 27: Main Acc = 0.8081, Backdoor ASR = 0.3903, Attack Active: True, took 234.43787050247192 seconds
+
+--- Round 28/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 28: Main Acc = 0.8158, Backdoor ASR = 0.4591, Attack Active: True, took 234.6508810520172 seconds
+
+--- Round 29/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 29: Main Acc = 0.8228, Backdoor ASR = 0.5495, Attack Active: True, took 233.2107334136963 seconds
+
+--- Round 30/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 30: Main Acc = 0.8262, Backdoor ASR = 0.6285, Attack Active: True, took 234.26343035697937 seconds
+
+--- Round 31/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 31: Main Acc = 0.8338, Backdoor ASR = 0.7114, Attack Active: True, took 230.44437170028687 seconds
+
+--- Round 32/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 32: Main Acc = 0.8379, Backdoor ASR = 0.7912, Attack Active: True, took 224.87665343284607 seconds
+
+--- Round 33/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 33: Main Acc = 0.8468, Backdoor ASR = 0.8472, Attack Active: True, took 225.42632627487183 seconds
+
+--- Round 34/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 34: Main Acc = 0.8465, Backdoor ASR = 0.9154, Attack Active: True, took 225.38983607292175 seconds
+
+--- Round 35/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 35: Main Acc = 0.8536, Backdoor ASR = 0.9143, Attack Active: True, took 229.6558575630188 seconds
+
+--- Round 36/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 36: Main Acc = 0.8543, Backdoor ASR = 0.9339, Attack Active: True, took 231.71893310546875 seconds
+
+--- Round 37/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 37: Main Acc = 0.8544, Backdoor ASR = 0.9588, Attack Active: True, took 231.71748042106628 seconds
+
+--- Round 38/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 38: Main Acc = 0.8580, Backdoor ASR = 0.9701, Attack Active: True, took 233.01655626296997 seconds
+
+--- Round 39/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 39: Main Acc = 0.8620, Backdoor ASR = 0.9822, Attack Active: True, took 231.56884288787842 seconds
+
+--- Round 40/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 40: Main Acc = 0.8618, Backdoor ASR = 0.9747, Attack Active: True, took 233.80559515953064 seconds
+
+--- Round 41/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 41: Main Acc = 0.8687, Backdoor ASR = 0.9905, Attack Active: True, took 231.838782787323 seconds
+
+--- Round 42/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 42: Main Acc = 0.8698, Backdoor ASR = 0.9895, Attack Active: True, took 230.59215831756592 seconds
+
+--- Round 43/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 43: Main Acc = 0.8722, Backdoor ASR = 0.9785, Attack Active: True, took 235.00257802009583 seconds
+
+--- Round 44/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 44: Main Acc = 0.8751, Backdoor ASR = 0.9865, Attack Active: True, took 233.85109114646912 seconds
+
+--- Round 45/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 45: Main Acc = 0.8778, Backdoor ASR = 0.9876, Attack Active: True, took 236.6961851119995 seconds
+
+--- Round 46/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 46: Main Acc = 0.8780, Backdoor ASR = 0.9869, Attack Active: True, took 235.90651297569275 seconds
+
+--- Round 47/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 47: Main Acc = 0.8813, Backdoor ASR = 0.9871, Attack Active: True, took 234.66597032546997 seconds
+
+--- Round 48/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 48: Main Acc = 0.8823, Backdoor ASR = 0.9879, Attack Active: True, took 235.2133228778839 seconds
+
+--- Round 49/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 49: Main Acc = 0.8846, Backdoor ASR = 0.9893, Attack Active: True, took 233.58768343925476 seconds
+
+--- Round 50/100 ---
+Stateful trigger updated. Recreating ASR test loader...
+Round 50: Main Acc = 0.8833, Backdoor ASR = 0.9891, Attack Active: True, took 236.96974182128906 seconds
+
+--- Round 51/100 ---
+Round 51: Main Acc = 0.8829, Backdoor ASR = 0.9907, Attack Active: False, took 31.937078714370728 seconds
+
+--- Round 52/100 ---
+Round 52: Main Acc = 0.8881, Backdoor ASR = 0.9835, Attack Active: False, took 32.091848611831665 seconds
+
+--- Round 53/100 ---
+Round 53: Main Acc = 0.8873, Backdoor ASR = 0.9846, Attack Active: False, took 32.0863995552063 seconds
+
+--- Round 54/100 ---
+Round 54: Main Acc = 0.8877, Backdoor ASR = 0.9881, Attack Active: False, took 32.04315900802612 seconds
+
+--- Round 55/100 ---
+Round 55: Main Acc = 0.8860, Backdoor ASR = 0.9845, Attack Active: False, took 32.11834502220154 seconds
+
+--- Round 56/100 ---
+Round 56: Main Acc = 0.8839, Backdoor ASR = 0.9830, Attack Active: False, took 32.10407304763794 seconds
+
+--- Round 57/100 ---
+Round 57: Main Acc = 0.8881, Backdoor ASR = 0.9744, Attack Active: False, took 32.01245307922363 seconds
+
+--- Round 58/100 ---
+Round 58: Main Acc = 0.8905, Backdoor ASR = 0.9606, Attack Active: False, took 32.27242183685303 seconds
+
+--- Round 59/100 ---
+Round 59: Main Acc = 0.8910, Backdoor ASR = 0.9820, Attack Active: False, took 31.75828742980957 seconds
+
+--- Round 60/100 ---
+Round 60: Main Acc = 0.8915, Backdoor ASR = 0.9568, Attack Active: False, took 32.076709508895874 seconds
+
+--- Round 61/100 ---
+Round 61: Main Acc = 0.8916, Backdoor ASR = 0.9548, Attack Active: False, took 31.922428607940674 seconds
+
+--- Round 62/100 ---
+Round 62: Main Acc = 0.8891, Backdoor ASR = 0.9587, Attack Active: False, took 32.06895351409912 seconds
+
+--- Round 63/100 ---
+Round 63: Main Acc = 0.8909, Backdoor ASR = 0.9525, Attack Active: False, took 31.84375262260437 seconds
+
+--- Round 64/100 ---
+Round 64: Main Acc = 0.8928, Backdoor ASR = 0.9646, Attack Active: False, took 31.751346826553345 seconds
+
+--- Round 65/100 ---
+Round 65: Main Acc = 0.8899, Backdoor ASR = 0.9428, Attack Active: False, took 32.10064697265625 seconds
+
+--- Round 66/100 ---
+Round 66: Main Acc = 0.8889, Backdoor ASR = 0.9429, Attack Active: False, took 32.09785747528076 seconds
+
+--- Round 67/100 ---
+Round 67: Main Acc = 0.8935, Backdoor ASR = 0.9434, Attack Active: False, took 32.0990891456604 seconds
+
+--- Round 68/100 ---
+Round 68: Main Acc = 0.8952, Backdoor ASR = 0.9348, Attack Active: False, took 32.0824191570282 seconds
+
+--- Round 69/100 ---
+Round 69: Main Acc = 0.8957, Backdoor ASR = 0.9290, Attack Active: False, took 32.08722186088562 seconds
+
+--- Round 70/100 ---
+Round 70: Main Acc = 0.8920, Backdoor ASR = 0.9367, Attack Active: False, took 32.087311029434204 seconds
+
+--- Round 71/100 ---
+Round 71: Main Acc = 0.8924, Backdoor ASR = 0.9347, Attack Active: False, took 31.99857234954834 seconds
+
+--- Round 72/100 ---
+Round 72: Main Acc = 0.8942, Backdoor ASR = 0.9108, Attack Active: False, took 32.064876556396484 seconds
+
+--- Round 73/100 ---
+Round 73: Main Acc = 0.8956, Backdoor ASR = 0.9014, Attack Active: False, took 32.09471893310547 seconds
+
+--- Round 74/100 ---
+Round 74: Main Acc = 0.8964, Backdoor ASR = 0.9020, Attack Active: False, took 32.1987738609314 seconds
+
+--- Round 75/100 ---
+Round 75: Main Acc = 0.8968, Backdoor ASR = 0.8981, Attack Active: False, took 31.7039692401886 seconds
+
+--- Round 76/100 ---
+Round 76: Main Acc = 0.8989, Backdoor ASR = 0.8918, Attack Active: False, took 32.02060008049011 seconds
+
+--- Round 77/100 ---
+Round 77: Main Acc = 0.8959, Backdoor ASR = 0.9097, Attack Active: False, took 32.024643898010254 seconds
+
+--- Round 78/100 ---
+Round 78: Main Acc = 0.8991, Backdoor ASR = 0.9112, Attack Active: False, took 32.19243121147156 seconds
+
+--- Round 79/100 ---
+Round 79: Main Acc = 0.8971, Backdoor ASR = 0.8972, Attack Active: False, took 32.191670417785645 seconds
+
+--- Round 80/100 ---
+Round 80: Main Acc = 0.8989, Backdoor ASR = 0.8846, Attack Active: False, took 31.841106176376343 seconds
+
+--- Round 81/100 ---
+Round 81: Main Acc = 0.8992, Backdoor ASR = 0.8620, Attack Active: False, took 32.110379695892334 seconds
+
+--- Round 82/100 ---
+Round 82: Main Acc = 0.8966, Backdoor ASR = 0.9071, Attack Active: False, took 32.05853605270386 seconds
+
+--- Round 83/100 ---
+Round 83: Main Acc = 0.9012, Backdoor ASR = 0.8586, Attack Active: False, took 31.962947130203247 seconds
+
+--- Round 84/100 ---
+Round 84: Main Acc = 0.9000, Backdoor ASR = 0.8644, Attack Active: False, took 32.06769108772278 seconds
+
+--- Round 85/100 ---
+Round 85: Main Acc = 0.8957, Backdoor ASR = 0.8209, Attack Active: False, took 32.16603708267212 seconds
+
+--- Round 86/100 ---
+Round 86: Main Acc = 0.8969, Backdoor ASR = 0.8438, Attack Active: False, took 32.043455839157104 seconds
+
+--- Round 87/100 ---
+Round 87: Main Acc = 0.8991, Backdoor ASR = 0.8778, Attack Active: False, took 32.14453387260437 seconds
+
+--- Round 88/100 ---
+Round 88: Main Acc = 0.8962, Backdoor ASR = 0.8523, Attack Active: False, took 31.99231719970703 seconds
+
+--- Round 89/100 ---
+Round 89: Main Acc = 0.8998, Backdoor ASR = 0.8534, Attack Active: False, took 31.904980182647705 seconds
+
+--- Round 90/100 ---
+Round 90: Main Acc = 0.8976, Backdoor ASR = 0.8458, Attack Active: False, took 31.845513343811035 seconds
+
+--- Round 91/100 ---
+Round 91: Main Acc = 0.9007, Backdoor ASR = 0.7949, Attack Active: False, took 32.02971839904785 seconds
+
+--- Round 92/100 ---
+Round 92: Main Acc = 0.9046, Backdoor ASR = 0.8168, Attack Active: False, took 32.23763823509216 seconds
+
+--- Round 93/100 ---
+Round 93: Main Acc = 0.9040, Backdoor ASR = 0.8124, Attack Active: False, took 32.00841760635376 seconds
+
+--- Round 94/100 ---
+Round 94: Main Acc = 0.9004, Backdoor ASR = 0.7875, Attack Active: False, took 31.940762042999268 seconds
+
+--- Round 95/100 ---
+Round 95: Main Acc = 0.8971, Backdoor ASR = 0.8389, Attack Active: False, took 31.928094625473022 seconds
+
+--- Round 96/100 ---
+Round 96: Main Acc = 0.9020, Backdoor ASR = 0.7928, Attack Active: False, took 31.994001626968384 seconds
+
+--- Round 97/100 ---
+Round 97: Main Acc = 0.9014, Backdoor ASR = 0.7786, Attack Active: False, took 32.336467027664185 seconds
+
+--- Round 98/100 ---
+Round 98: Main Acc = 0.8986, Backdoor ASR = 0.7793, Attack Active: False, took 31.965120315551758 seconds
+
+--- Round 99/100 ---
+Round 99: Main Acc = 0.9005, Backdoor ASR = 0.8339, Attack Active: False, took 32.04403614997864 seconds
+
+--- Round 100/100 ---
+Round 100: Main Acc = 0.8983, Backdoor ASR = 0.8089, Attack Active: False, took 31.78059434890747 seconds
+
+--- Training Finished ---
+--- Configuration ---
+experiment_name: base_experiment_mnist
+dataset: mnist
+num_clients: 5
+num_parallel_clients: 5
+num_rounds: 20
+local_epochs: 1
+batch_size: 32
+lr: 0.01
+seed: 42
+attack: badnets
+num_malicious: 2
+target_class: 7
+poisoning_rate: 0.5
+attack_start_round: 1
+attack_end_round: 20
+scale_factor: 20.0
+malicious_epochs: 5
+mask_k_percent: 0.05
+trigger_epochs: 5
+trigger_lr: 0.01
+defense: none
+clipping_norm: 4.0
+dp_std_dev: 0.025
+deepsight_num_samples: 256
+deepsight_num_seeds: 3
+deepsight_batch_size: 64
+deepsight_tau: 0.5
+flame_lamda: 0.001
+flame_eta: 1.0
+krum_f: 2
+krum_m: 5
+device: cuda
+---------------------
+Traceback (most recent call last):
+  File "/Utilisateurs/mdif01/llm/BackdoorFramework/experiments/run_parallel.py", line 380, in <module>
+    main(args.config)
+  File "/Utilisateurs/mdif01/llm/BackdoorFramework/experiments/run_parallel.py", line 242, in main
+    test_loader = adapter.get_test_loader(config['test_batch_size'])
+                                          ~~~~~~^^^^^^^^^^^^^^^^^^^
+KeyError: 'test_batch_size'
+--- Configuration ---
+experiment_name: iba_fedAvg_gtsrb
+dataset: gtsrb
+num_clients: 20
+num_parallel_clients: 20
+num_rounds: 100
+local_epochs: 1
+batch_size: 32
+test_batch_size: 256
+lr: 0.01
+seed: 42
+attack: iba
+num_malicious: 2
+target_class: 7
+poisoning_rate: 0.25
+attack_start_round: 20
+attack_end_round: 50
+scale_factor: 5.0
+malicious_epochs: 5
+mask_k_percent: 0.05
+trigger_epochs: 5
+trigger_lr: 0.01
+defense: none
+clipping_norm: 4.0
+dp_std_dev: 0.025
+deepsight_num_samples: 256
+deepsight_num_seeds: 3
+deepsight_batch_size: 64
+deepsight_tau: 0.5
+flame_lamda: 0.001
+flame_eta: 1.0
+krum_f: 2
+krum_m: 5
+device: cuda
+---------------------
+[2026-02-22T23:34:19.064] error: *** JOB 384370 ON l3icalcul10 CANCELLED AT 2026-02-22T23:34:19 DUE to SIGNAL Terminated ***

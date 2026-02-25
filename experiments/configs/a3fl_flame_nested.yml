@@ -1,0 +1,45 @@
+# --- Experiment Metadata ---
+experiment_name: "a3fl_flame_nested_femnist"
+
+# --- FL Parameters ---
+dataset: "femnist"
+num_clients: 20
+# --- MODIFICATION: Added parameter for parallel execution ---
+num_parallel_clients: 20 # Number of clients to train in parallel
+num_rounds: 100
+local_epochs: 1
+batch_size: 32
+test_batch_size: 256
+lr: 0.01
+seed: 42
+
+# --- Attack Parameters ---
+attack: "a3fl"      # none, badnets, scaling, neurotoxin, a3fl, dba
+num_malicious: 2
+target_class: 7
+poisoning_rate: 0.25    # Fraction of data to poison on malicious clients
+attack_start_round: 20  # The round the attack begins (inclusive)
+attack_end_round: 50   # The round the attack ends (inclusive)
+
+# -- Attack-specific Parameters --
+scale_factor: 20.0     # 0.0 for dynamic scaling: n / num_malicious
+malicious_epochs: 64    # Used by Neurotoxin to generate a stronger update
+mask_k_percent: 0.05   # Used by Neurotoxin
+trigger_epochs: 5
+trigger_lr: 0.01
+
+# --- Defense Parameters ---
+defense: "flame_nested" # none, norm_clipping, weak_dp, deepsight, flame, krum
+
+# -- Defense-specific Parameters --
+clipping_norm: 4.0
+dp_std_dev: 0.025
+deepsight_num_samples: 256
+deepsight_num_seeds: 3
+deepsight_batch_size: 64
+deepsight_tau: 0.5
+flame_lamda: 0.001
+flame_eta: 1.0
+krum_f: 2 
+krum_m: 5
+
