@@ -1,0 +1,4 @@
+data/
+*.zip
+*.tar.gz
+*.idx3-ubyte
